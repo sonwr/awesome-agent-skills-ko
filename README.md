@@ -32,6 +32,17 @@ English mirror:
 - **What can I do immediately?** Find the first validation command and next doc directly from the README landing area.
 - **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
 
+## 이 저장소를 읽는 법 / How to read this repo
+
+- **1단계 / Step 1** — `프로젝트 소개 / Project overview`와 `프로젝트 한눈에 보기 / Project at a glance`만 읽고 대상 사용자와 핵심 가치를 먼저 잡습니다.
+- **2단계 / Step 2** — `프로젝트 시작 맵 / Project start map`에서 탐색/검증/기여/운영 중 지금 필요한 경로를 고릅니다.
+- **3단계 / Step 3** — 첫 실행은 `python3 templates/scripts/validate_template.py`, 다음 문서는 `examples/quickstart.md`로 이어갑니다.
+
+English mirror:
+- **Step 1** — read `Project overview` and `Project at a glance` first to understand the audience and value.
+- **Step 2** — use the `Project start map` to pick the right route: explore, validate, contribute, or audit.
+- **Step 3** — run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
+
 ## 프로젝트 스냅샷 / Project snapshot
 
 - **한 줄 설명**: 한국어 기본 문서 흐름으로 스킬을 찾고, 검증 명령까지 바로 실행할 수 있는 큐레이션 저장소입니다.

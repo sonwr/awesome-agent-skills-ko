@@ -35,6 +35,9 @@ BILINGUAL_SECTION_MARKERS = {
         "English mirror:",
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 이 저장소를 읽는 법 / How to read this repo",
+        "## 이 저장소를 읽는 법 / How to read this repo",
+        "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
@@ -190,6 +193,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     for required_heading in [
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 이 저장소를 읽는 법 / How to read this repo",
+        "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
@@ -292,6 +297,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"
         )
     project_snapshot_section = _extract_section(text, "프로젝트 스냅샷 / Project snapshot")
+    how_to_read_section = _extract_section(text, "이 저장소를 읽는 법 / How to read this repo")
     project_glance_section = _extract_section(text, "프로젝트 한눈에 보기 / Project at a glance")
     if "누구를 위한 저장소인가요?" not in project_glance_section or "무엇이 바로 되나요?" not in project_glance_section or "어디서 시작하나요?" not in project_glance_section:
         errors.append(
@@ -300,6 +306,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "Who is this for?" not in project_glance_section or "What can I do immediately?" not in project_glance_section or "Where do I start?" not in project_glance_section:
         errors.append(
             "README.md: project at a glance must keep English mirror prompts for audience/immediate action/where-to-start near the top"
+        )
+    if "Step 1" not in how_to_read_section or "Step 2" not in how_to_read_section or "Step 3" not in how_to_read_section or "python3 templates/scripts/validate_template.py" not in how_to_read_section or "examples/quickstart.md" not in how_to_read_section:
+        errors.append(
+            "README.md: how-to-read section must explain the 3-step intro -> route choice -> first validation flow in Korean/English near the top"
         )
     if "python3 templates/scripts/validate_template.py" not in project_snapshot_section or "examples/quickstart.md" not in project_snapshot_section:
         errors.append(
@@ -486,6 +496,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     ordered_sections = [
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 이 저장소를 읽는 법 / How to read this repo",
+        "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",

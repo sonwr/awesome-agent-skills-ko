@@ -9,6 +9,20 @@ from templates.scripts import validate_template
 
 class ValidateTemplateTests(unittest.TestCase):
 
+    def test_readme_requires_how_to_read_repo_section_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 이 저장소를 읽는 법 / How to read this repo\n\n- **1단계 / Step 1** — `프로젝트 소개 / Project overview`와 `프로젝트 한눈에 보기 / Project at a glance`만 읽고 대상 사용자와 핵심 가치를 먼저 잡습니다.\n- **2단계 / Step 2** — `프로젝트 시작 맵 / Project start map`에서 탐색/검증/기여/운영 중 지금 필요한 경로를 고릅니다.\n- **3단계 / Step 3** — 첫 실행은 `python3 templates/scripts/validate_template.py`, 다음 문서는 `examples/quickstart.md`로 이어갑니다.\n\nEnglish mirror:\n- **Step 1** — read `Project overview` and `Project at a glance` first to understand the audience and value.\n- **Step 2** — use the `Project start map` to pick the right route: explore, validate, contribute, or audit.\n- **Step 3** — run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.\n\n",
+                "",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("how-to-read section" in error for error in errors))
+
     def test_readme_requires_role_based_instant_jump_deep_links(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
