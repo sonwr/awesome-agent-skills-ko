@@ -126,6 +126,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 탐색형 60초 경로 / Explorer 60-second path",
         "## 기여형 60초 경로 / Contributor 60-second path",
         "## 운영형 60초 경로 / Operator 60-second path",
+        "## README 역할 카드와의 연결 / How this maps to README role cards",
         "English mirror:",
     ],
     "docs/README_TOP_CALLOUTS.md": [
@@ -223,6 +224,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "## 역할별 30초 선택 카드 / 30-second role chooser cards" not in text or "python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md" not in text:
         errors.append(
             "README.md: landing section must include bilingual 30-second role chooser cards so explorer/contributor/operator paths stay compressed near the top"
+        )
+    if "60-second role guide" not in text or "docs/README_FAST_PATHS.md" not in text:
+        errors.append(
+            "README.md: landing section must explicitly hand role-based paths off to docs/README_FAST_PATHS.md with a bilingual 60-second role-guide cue"
         )
     role_first_open_section = _extract_section(text, "역할별 바로 열 문서 / Role-based first-open docs")
     required_role_docs = [

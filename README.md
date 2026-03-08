@@ -99,11 +99,13 @@ English mirror:
 - **탐색형 / Explorer path** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md` 순서로 이 저장소의 가치와 예시를 가장 빠르게 파악합니다.
 - **기여형 / Contributor path** — `python3 templates/scripts/validate_template.py` 실행 후 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`로 바로 이어집니다.
 - **운영형 / Operator path** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md` 순서로 랜딩 구조와 운영 기준을 점검합니다.
+- **60-second role guide / 역할별 60초 압축 가이드** — 세 경로 모두 `docs/README_FAST_PATHS.md`에 같은 순서로 정리되어 있어 README 상단에서 바로 다음 문서로 점프할 수 있습니다.
 
 English mirror:
 - **Explorer path** — follow `project overview -> featured categories -> examples/quickstart.md` to understand the repo's value and examples fast.
 - **Contributor path** — run `python3 templates/scripts/validate_template.py`, then continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md`.
 - **Operator path** — review `docs/README_FAST_PATHS.md` -> `docs/README_INFORMATION_ARCHITECTURE.md` -> `docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
+- **60-second role guide / 역할별 60초 압축 가이드** — all three paths are mirrored in `docs/README_FAST_PATHS.md` so the README landing area can hand visitors to the next document in one click.
 
 ## 빠른 시작 한눈에 보기 / Quick start at a glance
 
