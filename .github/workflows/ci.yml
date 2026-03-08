@@ -9,5 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Run validator unit tests
+        run: python3 -m unittest discover -s tests -p "test_*.py" -v
       - name: Validate baseline files
         run: python3 templates/scripts/validate_template.py
