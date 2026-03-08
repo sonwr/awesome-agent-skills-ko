@@ -9,6 +9,21 @@ from templates.scripts import validate_template
 
 class ValidateTemplateTests(unittest.TestCase):
 
+
+    def test_readme_requires_30_second_landing_summary_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 첫 화면 30초 요약 / 30-second landing summary\n\n- **프로젝트 소개 한 줄 / Project intro** — 한국어 기본 큐레이션 저장소이며, 첫 화면에서 바로 검증 명령과 다음 문서를 찾게 만드는 구조를 지향합니다.\n- **대상 사용자 / Best-fit audience** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 빌더/팀에게 맞습니다.\n- **대표 카테고리 / Featured categories** — 온보딩/기여 가이드, PR 증빙 템플릿, 큐레이션/운영 기준 문서를 우선 노출합니다.\n- **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 이동합니다.\n\nEnglish mirror:\n- **Project intro** — a Korean-first curation repo designed so the first screen points directly to the validation command and next document.\n- **Best-fit audience** — builders and teams who want fast Korean-first discovery, validation, and contribution flows.\n- **Featured categories** — onboarding/contribution guides, PR evidence templates, and curation/governance docs.\n- **Quick start** — run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.\n\n",
+                "",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("30-second landing summary" in error for error in errors))
+
     def test_readme_requires_how_to_read_repo_section_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

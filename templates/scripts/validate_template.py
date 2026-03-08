@@ -35,6 +35,7 @@ BILINGUAL_SECTION_MARKERS = {
         "English mirror:",
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 첫 화면 30초 요약 / 30-second landing summary",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 이 저장소를 읽는 법 / How to read this repo",
@@ -292,6 +293,25 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: role-based first-open docs must keep explorer/contributor/operator handoff links together -> "
             + ", ".join(missing_role_docs)
         )
+    landing_summary_section = _extract_section(text, "첫 화면 30초 요약 / 30-second landing summary")
+    for required_landing_summary_marker in [
+        "프로젝트 소개 한 줄",
+        "Project intro",
+        "대상 사용자",
+        "Best-fit audience",
+        "대표 카테고리",
+        "Featured categories",
+        "빠른 시작",
+        "Quick start",
+        "python3 templates/scripts/validate_template.py",
+        "examples/quickstart.md",
+    ]:
+        if required_landing_summary_marker not in landing_summary_section:
+            errors.append(
+                "README.md: 30-second landing summary must expose intro/audience/categories/quick-start markers in Korean/English near the top -> "
+                + required_landing_summary_marker
+            )
+
     if "대표 시작점" not in text or "Landing-page rule" not in text:
         errors.append(
             "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"

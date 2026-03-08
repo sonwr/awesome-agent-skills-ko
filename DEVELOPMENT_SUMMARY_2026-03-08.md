@@ -488,3 +488,31 @@
 
 ### 다음 실행 우선순위
 - README 첫 화면의 역할 카드/핵심 버튼/첫 클릭 묶음 사이 중복 라벨을 더 줄여 정보 밀도는 유지하고 스캔 속도를 높이기.
+
+## 실행 @ 21:20 UTC (cron)
+
+### 계획
+- README 상단을 더 소개형 랜딩에 가깝게 압축한다.
+- 첫 화면에서 프로젝트 소개/대상/카테고리/빠른 시작이 즉시 보이도록 검증 규칙도 함께 강화한다.
+
+### 변경 사항
+- `README.md` 상단에 **첫 화면 30초 요약 / 30-second landing summary** 섹션 추가.
+  - 프로젝트 소개 한 줄
+  - 대상 사용자
+  - 대표 카테고리
+  - 빠른 시작
+  을 한/영 병기로 압축 배치했습니다.
+- `templates/scripts/validate_template.py` 강화:
+  - 새 30초 요약 섹션과 핵심 마커(소개/대상/카테고리/빠른 시작/첫 명령/다음 문서)를 필수 검증 항목으로 추가.
+- `tests/test_validate_template.py`에 새 상단 요약 섹션 회귀 테스트 추가.
+
+### 검증
+- `python3 -m unittest tests.test_validate_template`
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS**
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- 30초 요약 아래에 역할별(탐색형/기여형/운영형) 1줄 CTA를 더 압축한 상단 카드형 배치를 검토한다.

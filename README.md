@@ -32,6 +32,19 @@ English mirror:
 - **What can I do immediately?** Find the first validation command and next doc directly from the README landing area.
 - **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
 
+## 첫 화면 30초 요약 / 30-second landing summary
+
+- **프로젝트 소개 한 줄 / Project intro** — 한국어 기본 큐레이션 저장소이며, 첫 화면에서 바로 검증 명령과 다음 문서를 찾게 만드는 구조를 지향합니다.
+- **대상 사용자 / Best-fit audience** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 빌더/팀에게 맞습니다.
+- **대표 카테고리 / Featured categories** — 온보딩/기여 가이드, PR 증빙 템플릿, 큐레이션/운영 기준 문서를 우선 노출합니다.
+- **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 이동합니다.
+
+English mirror:
+- **Project intro** — a Korean-first curation repo designed so the first screen points directly to the validation command and next document.
+- **Best-fit audience** — builders and teams who want fast Korean-first discovery, validation, and contribution flows.
+- **Featured categories** — onboarding/contribution guides, PR evidence templates, and curation/governance docs.
+- **Quick start** — run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
+
 ## 이 저장소를 읽는 법 / How to read this repo
 
 - **1단계 / Step 1** — `프로젝트 소개 / Project overview`와 `프로젝트 한눈에 보기 / Project at a glance`만 읽고 대상 사용자와 핵심 가치를 먼저 잡습니다.
