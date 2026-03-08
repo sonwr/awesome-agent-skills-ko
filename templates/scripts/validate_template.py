@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Minimal repository validation utility.
+"""저장소 기본 품질 검증 스크립트 / Baseline repository quality validator.
 
-This script checks whether key project files exist.
-Comments and docs are intentionally in English for consistency.
+한국어 기본 원칙을 유지하면서, 핵심 문서의 한/영 병기 여부를 점검한다.
+Keep Korean-first docs while checking that key bilingual sections are present.
 """
 
 from pathlib import Path
+import re
 import sys
 
 REQUIRED_FILES = [
@@ -14,20 +15,180 @@ REQUIRED_FILES = [
     "docs/ROADMAP.md",
     "docs/CURATION_POLICY.md",
     "docs/TEMPLATE_STANDARD.md",
+    "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+    "docs/README_TOP_CALLOUTS.md",
+    "examples/pr-evidence-mini-walkthrough.md",
+    "examples/quickstart.md",
 ]
+
+
+BILINGUAL_SECTION_MARKERS = {
+    "README.md": [
+        "English mirror:",
+        "## 상단 핵심 콜아웃 / Top contributor callouts",
+        "최소 증빙 3종 필수",
+        "Document blockers with the next-run priority",
+        "처음 5분 기여 흐름",
+        "first 5-minute contribution flow",
+    ],
+    "docs/README_TOP_CALLOUTS.md": [
+        "README 상단 콜아웃 문안 / README top callout copy",
+        "English mirror:",
+    ],
+    "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md": [
+        "## 한국어 체크리스트 (Primary)",
+        "## English mirror",
+        "## 자동 검증 명령 / Validation commands",
+        "## 처음 기여할 때 읽는 순서 / First-time contributor reading order",
+        "예상 3분 이내",
+        "Estimated within 3 minutes",
+        "## 리뷰어 메모 템플릿 / Reviewer note template",
+        "## 반복 작업 방지 로그 / Anti-repeat run log",
+    ],
+    "examples/pr-evidence-mini-walkthrough.md": [
+        "## 목적 (한국어)",
+        "## Purpose (English)",
+        "## PR 코멘트 예시 (한국어)",
+        "## PR comment example (English)",
+    ],
+    "examples/quickstart.md": [
+        "처음 5분 기여 흐름",
+        "first 5-minute contribution flow",
+        "## Copyable first command",
+        "## Next reading step",
+        "English mirror:",
+    ],
+}
+
+
+def _check_required_files(root: Path) -> list[str]:
+    return [f for f in REQUIRED_FILES if not (root / f).exists()]
+
+
+def _extract_section(text: str, heading: str) -> str:
+    pattern = rf"(?ms)^##\s*{re.escape(heading)}\s*$\n(?P<body>.*?)(?=^##\s|\Z)"
+    match = re.search(pattern, text)
+    return match.group("body") if match else ""
+
+
+def _check_quickstart_validation_command(root: Path) -> list[str]:
+    readme_path = root / "README.md"
+    if not readme_path.exists():
+        return []
+    text = readme_path.read_text(encoding="utf-8")
+    errors: list[str] = []
+    if "python3 templates/scripts/validate_template.py" not in text:
+        errors.append(
+            "README.md: quick start must include `python3 templates/scripts/validate_template.py` for reproducible validation"
+        )
+    if "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md" not in text:
+        errors.append(
+            "README.md: quick start/contribution section must link to docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md"
+        )
+    if "### 빠른 기여 체크 / Quick contribution check" not in text:
+        errors.append(
+            "README.md: quick start must include the condensed bilingual contribution check heading"
+        )
+    if "## 처음 기여할 때 읽는 순서 / First-time contributor reading order" not in text:
+        errors.append(
+            "README.md: must include the first-time contributor reading order section near quick start"
+        )
+    if "Estimated 1 min" not in text or "Estimated 2 min" not in text:
+        errors.append(
+            "README.md: first-time contributor reading order must include estimated onboarding times"
+        )
+    return errors
+
+
+def _check_bilingual_markers(root: Path) -> list[str]:
+    errors: list[str] = []
+    for rel_path, markers in BILINGUAL_SECTION_MARKERS.items():
+        path = root / rel_path
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        missing_markers = [marker for marker in markers if marker not in text]
+        if missing_markers:
+            marker_list = ", ".join(missing_markers)
+            errors.append(f"{rel_path}: missing bilingual markers -> {marker_list}")
+
+    checklist_path = root / "docs" / "BILINGUAL_CONTRIBUTION_CHECKLIST.md"
+    if checklist_path.exists():
+        text = checklist_path.read_text(encoding="utf-8")
+        ko_items = re.findall(r"(?mi)^\s*- \[ \] .+$", _extract_section(text, "한국어 체크리스트 (Primary)"))
+        en_items = re.findall(r"(?mi)^\s*- \[ \] .+$", _extract_section(text, "English mirror"))
+        if ko_items and en_items and len(ko_items) != len(en_items):
+            errors.append(
+                "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md: Korean/English checklist item counts must match"
+            )
+
+        validation_section = _extract_section(text, "자동 검증 명령 / Validation commands")
+        ko_command_block = re.search(r"(?ms)^한국어:\s*$\n(?P<body>.*?)(?=^English mirror:|\Z)", validation_section)
+        en_command_block = re.search(r"(?ms)^English mirror:\s*$\n(?P<body>.*)$", validation_section)
+        ko_command_items = (
+            re.findall(r"(?mi)^\s*-\s+.+$", ko_command_block.group("body")) if ko_command_block else []
+        )
+        en_command_items = (
+            re.findall(r"(?mi)^\s*-\s+.+$", en_command_block.group("body")) if en_command_block else []
+        )
+        if ko_command_items and en_command_items and len(ko_command_items) != len(en_command_items):
+            errors.append(
+                "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md: Korean/English validation command counts must match"
+            )
+
+    readme_path = root / "README.md"
+    if readme_path.exists():
+        text = readme_path.read_text(encoding="utf-8")
+        english_mirror_line = next(
+            (line for line in text.splitlines() if line.strip().startswith("English mirror:")),
+            None,
+        )
+        if english_mirror_line is not None:
+            mirror_body = english_mirror_line.split(":", 1)[1].strip()
+            if len(mirror_body) < 12:
+                errors.append(
+                    "README.md: English mirror line must include a meaningful translated summary (>=12 chars)"
+                )
+
+    run_log_path = root / "docs" / "BILINGUAL_CONTRIBUTION_CHECKLIST.md"
+    if run_log_path.exists():
+        text = run_log_path.read_text(encoding="utf-8")
+        run_log_section = _extract_section(text, "반복 작업 방지 로그 / Anti-repeat run log")
+        ko_log_block = re.search(r"(?ms)^한국어:\s*$\n(?P<body>.*?)(?=^English mirror:|\Z)", run_log_section)
+        en_log_block = re.search(r"(?ms)^English mirror:\s*$\n(?P<body>.*)$", run_log_section)
+        ko_log_items = re.findall(r"(?mi)^\s*-\s+.+$", ko_log_block.group("body")) if ko_log_block else []
+        en_log_items = re.findall(r"(?mi)^\s*-\s+.+$", en_log_block.group("body")) if en_log_block else []
+        if ko_log_items and en_log_items and len(ko_log_items) != len(en_log_items):
+            errors.append(
+                "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md: Korean/English anti-repeat run-log item counts must match"
+            )
+
+    return errors
 
 
 def main() -> int:
     root = Path(__file__).resolve().parents[2]
-    missing = [f for f in REQUIRED_FILES if not (root / f).exists()]
 
-    if missing:
-        print("Missing required files:")
-        for item in missing:
-            print(f"- {item}")
+    missing_files = _check_required_files(root)
+    bilingual_errors = _check_bilingual_markers(root)
+    quickstart_errors = _check_quickstart_validation_command(root)
+
+    if missing_files or bilingual_errors or quickstart_errors:
+        if missing_files:
+            print("필수 파일 누락 / Missing required files:")
+            for item in missing_files:
+                print(f"- {item}")
+        if bilingual_errors:
+            print("한/영 병기 검증 실패 / Bilingual marker check failed:")
+            for item in bilingual_errors:
+                print(f"- {item}")
+        if quickstart_errors:
+            print("퀵스타트 재현성 검증 실패 / Quickstart reproducibility check failed:")
+            for item in quickstart_errors:
+                print(f"- {item}")
         return 1
 
-    print("Validation passed: baseline files are present.")
+    print("검증 통과 / Validation passed: baseline + bilingual markers are present.")
     return 0
 
 

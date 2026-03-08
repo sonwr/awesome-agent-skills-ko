@@ -1,0 +1,287 @@
+# 개발 요약 — 2026-03-08
+
+## 실행 @ 04:53 UTC (cron)
+
+### 계획
+- 한국어 기본 + 영어 병기 품질 가이드를 README 흐름에 더 명확히 연결한다.
+- 템플릿 검증 스크립트로 문서 품질 회귀를 즉시 확인한다.
+
+### 변경 사항
+- `README.md`의 실무용 체크리스트 섹션에 영어 병기 운영 원칙을 1줄 추가:
+  - `English mirror: Use the same checklist to keep Korean-first docs and English mirrors synchronized in every PR.`
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`에 PR 리뷰어용 최소 증빙(명령 출력 샘플) 항목을 한/영으로 추가.
+
+## 실행 @ 05:23 UTC (cron)
+
+### 계획
+- 이전 실행의 TODO였던 PR 최소 증빙 항목(명령/종료코드/핵심 출력)을 실제 체크리스트에 반영한다.
+- 문서 검증 스크립트로 한/영 마커 정합성을 재확인한다.
+
+### 변경 사항
+- `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`에 **최소 증빙 스니펫 / Minimal evidence snippet** 섹션 추가.
+  - 한국어/영어 체크 항목을 같은 구조로 제공해 리뷰 재현성 기준을 고정.
+- `README.md` 체크리스트 섹션에 최소 증빙 반영 사실을 1줄 추가.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- 최소 증빙 스니펫을 실제 PR 코멘트 예시(`docs/` 예제 블록)로 확장해 신규 기여자 온보딩 시간을 줄이기.
+
+## 실행 @ 05:53 UTC (cron)
+
+### 계획
+- 이전 TODO였던 PR 코멘트 예시를 한/영으로 실제 복붙 가능한 형태로 문서화한다.
+- README에도 반영 사실을 연결해 신규 기여자 진입 경로를 줄인다.
+
+### 변경 사항
+- `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`에 **PR 코멘트 예시 / PR comment examples** 섹션 추가.
+  - 한국어/영어 각각 `[재현 증빙]` 템플릿(명령/종료코드/핵심 출력) 제공.
+- `README.md` 기여 체크리스트 안내에 PR 코멘트 예시 추가 사실 1줄 반영.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- PR 코멘트 예시를 `examples/`의 짧은 실제 변경 사례와 연결해, 리뷰어/기여자가 즉시 대조 가능한 mini walkthrough를 추가.
+
+## 실행 @ 06:23 UTC (cron)
+
+### 계획
+- 이전 TODO였던 "실제 변경 사례 기반 mini walkthrough"를 examples로 추가한다.
+- README에서 바로 접근 가능하도록 링크를 연결한다.
+
+### 변경 사항
+- `examples/pr-evidence-mini-walkthrough.md` 신규 추가.
+  - 한국어 기본 설명 + 영어 미러를 같은 구조로 제공.
+  - PR 코멘트 증빙 포맷(명령/종료코드/핵심 출력) 복붙 예시 수록.
+- `README.md` 실무용 기여 체크리스트 섹션에 mini walkthrough 링크 추가.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- mini walkthrough를 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`의 해당 항목과 교차 링크해 온보딩 동선을 한 단계 줄이기.
+
+## 실행 @ 06:53 UTC (cron)
+
+### 계획
+- 한/영 병기 품질 검증을 예시 문서까지 확장해 신규 기여자 온보딩 회귀를 줄인다.
+- 템플릿 검증 스크립트로 즉시 회귀 여부를 확인한다.
+
+### 변경 사항
+- `templates/scripts/validate_template.py` 강화:
+  - 필수 파일 목록에 `examples/pr-evidence-mini-walkthrough.md` 추가.
+  - 해당 예시 문서의 핵심 한/영 섹션 마커(목적/예시 코멘트) 검증 로직 추가.
+- `README.md`에 "미니 워크스루 문서 마커도 자동 검증한다"는 안내 1줄 추가.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- 체크리스트 문서에서 mini walkthrough로의 역방향 링크를 추가해 리뷰/기여 동선을 더 짧게 만든다.
+
+## 실행 @ 07:23 UTC (cron)
+
+### 계획
+- README의 빠른 시작/기여 흐름이 병기 체크리스트로 반드시 연결되도록 자동 검증을 강화한다.
+- 스크립트 변경 후 즉시 템플릿 검증을 재실행한다.
+
+### 변경 사항
+- `templates/scripts/validate_template.py` 강화:
+  - README에 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` 링크가 없으면 실패하도록 규칙 추가.
+  - 기존 quick start 재현성 명령 검증과 함께 병기 거버넌스 연결성까지 점검.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`의 핵심 체크 항목을 README quick start 근처에 축약판으로 노출해 신규 기여자 탐색 비용을 줄인다.
+
+## 실행 @ 08:23 UTC (cron)
+
+### 계획
+- 이전 TODO였던 README quick start 근처 축약 체크를 실제로 노출한다.
+- 검증 스크립트도 같은 축약 섹션을 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md` quick start 아래에 **빠른 기여 체크 / Quick contribution check** 축약 섹션 추가.
+  - 한국어 기본 + 영어 미러 + 상세 체크리스트 링크를 한 번에 노출.
+- `templates/scripts/validate_template.py` 강화:
+  - README에 축약 체크 섹션 헤더가 없으면 실패하도록 규칙 추가.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- README 축약 섹션 존재 확인 스모크 파이썬 검사
+- 결과: **PASS** (`baseline + bilingual markers are present` + quick contribution check present)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`의 핵심 3~4개 항목을 배지/콜아웃 형태로 더 압축해 README 상단 탐색 속도를 높이기.
+
+## 실행 @ 09:00 UTC (cron)
+
+### 계획
+- README 상단에서 신규 기여자가 바로 보는 최소 규칙을 더 압축해 노출한다.
+- 검증 스크립트도 같은 상단 콜아웃 구조를 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md` 상단에 **상단 핵심 콜아웃 / Top contributor callouts** 섹션 추가.
+- `docs/README_TOP_CALLOUTS.md`를 신설해 README 상단 문안을 별도 관리 문서로 분리.
+- `templates/scripts/validate_template.py` 강화:
+  - `docs/README_TOP_CALLOUTS.md`를 필수 파일로 요구
+  - README 상단 콜아웃 헤더와 핵심 문구 존재 여부를 검증
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- README 상단 콜아웃과 예시 워크스루를 연결하는 "처음 기여할 때 읽는 순서" 섹션을 추가해 탐색 흐름을 더 짧게 만든다.
+
+## 실행 @ 09:10 UTC (cron)
+
+### 계획
+- 이전 TODO였던 "처음 기여할 때 읽는 순서"를 README/체크리스트 양쪽에 추가한다.
+- 검증 스크립트도 같은 온보딩 섹션을 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md`에 **처음 기여할 때 읽는 순서 / First-time contributor reading order** 섹션 추가.
+- `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`에도 동일한 읽기 순서를 한/영으로 교차 링크.
+- `templates/scripts/validate_template.py` 강화:
+  - README의 읽기 순서 섹션이 없으면 실패
+  - 체크리스트 문서의 읽기 순서 섹션 마커도 검증
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- README의 읽기 순서 각 단계에 예상 소요 시간(예: 1분/2분)을 붙여 신규 기여자 온보딩 속도를 더 예측 가능하게 만들기.
+
+## 실행 @ 09:20 UTC (cron)
+
+### 계획
+- README/체크리스트의 "처음 기여할 때 읽는 순서"에 예상 소요 시간을 붙여 온보딩 속도를 더 예측 가능하게 만든다.
+- 템플릿 검증 스크립트도 같은 시간 표기를 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md`의 읽기 순서 3단계에 예상 소요 시간(1분/2분/2분)을 한/영 병기로 추가.
+- `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`의 읽기 순서에도 단계별 예상 시간(3분/2분)을 추가.
+- `templates/scripts/validate_template.py` 강화:
+  - README의 읽기 순서 섹션에 estimated time 문구가 없으면 실패
+  - 체크리스트 문서의 예상 시간 한/영 마커도 검증
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- README 상단 콜아웃에 "처음 5분 안에 끝내는 기여 흐름" 요약 문구를 추가해, 읽기 순서/예상 시간을 더 빠르게 발견하게 만들기.
+
+## 실행 @ 09:30 UTC (cron)
+
+### 계획
+- README 상단 콜아웃에서 신규 기여자가 5분 온보딩 흐름을 즉시 발견하도록 문구를 더 압축한다.
+- 검증 스크립트도 같은 상단 요약 문구를 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md` 상단 핵심 콜아웃과 영어 미러에 **처음 5분 기여 흐름 / first 5-minute contribution flow** 문구를 추가.
+- `docs/README_TOP_CALLOUTS.md` 원본 문안에도 같은 5분 흐름 문구를 반영.
+- `templates/scripts/validate_template.py` 강화:
+  - README에 `처음 5분 기여 흐름` / `first 5-minute contribution flow` 문구가 없으면 실패하도록 검증 추가.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- README 상단 5분 흐름을 `examples/quickstart.md`와 직접 연결해, README를 떠나지 않고도 첫 복붙 명령으로 내려가게 만들기.
+
+## 실행 @ 09:40 UTC (cron)
+
+### 계획
+- README 상단 5분 흐름에서 quickstart 예시로 바로 이어지는 링크/문안을 실제로 만든다.
+- 템플릿 검증 스크립트도 같은 quickstart 연결성을 요구하도록 맞춘다.
+
+### 변경 사항
+- `examples/quickstart.md`에 README의 **처음 5분 기여 흐름 / first 5-minute contribution flow**를 직접 참조하는 안내 문구 추가.
+- `examples/quickstart.md`에 **Copyable first command**와 **Next reading step** 섹션을 추가해 첫 검증 명령과 다음 문서 이동 경로를 명확히 함.
+- `README.md` 상단 콜아웃의 5분 흐름 문구에 `examples/quickstart.md` 연결 사실을 1줄 반영.
+- `templates/scripts/validate_template.py` 강화:
+  - `examples/quickstart.md`를 필수 파일로 추가
+  - quickstart 문서의 5분 흐름/영어 미러/복붙 명령/다음 읽기 단계 마커를 검증하도록 확장
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- `examples/quickstart.md`에서 `examples/pr-evidence-mini-walkthrough.md`까지 이어지는 1분짜리 "PR 증빙 복붙 예시" 링크를 추가해 첫 기여 종료 경로를 더 짧게 만들기.
+
+## 실행 @ 09:50 UTC (cron)
+
+### 계획
+- README 상단 5분 흐름을 quickstart 이후 PR 증빙 워크스루까지 더 짧게 연결한다.
+- 템플릿 검증 스크립트가 이 온보딩 연결성을 실제로 강제하도록 맞춘다.
+
+### 변경 사항
+- `README.md`에 첫 5분 기여 흐름과 병기 체크리스트/워크스루 연결 문구를 보강했다.
+- `examples/quickstart.md`와 `templates/scripts/validate_template.py`를 업데이트해 quickstart -> 체크리스트 -> PR 증빙 워크스루 흐름과 한/영 마커를 함께 검증하도록 확장했다.
+- 신규 문서(`docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `docs/README_TOP_CALLOUTS.md`, `examples/pr-evidence-mini-walkthrough.md`)를 포함한 온보딩 동선을 실제 저장소 구조에 반영했다.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- `examples/quickstart.md`에서 `examples/pr-evidence-mini-walkthrough.md`로 바로 점프하는 1분짜리 PR 증빙 복붙 링크/섹션을 추가해 첫 기여 종료 경로를 더 짧게 만들기.
