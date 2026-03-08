@@ -168,7 +168,7 @@ English mirror:
 
 
 
-## Quick start
+## 빠른 시작 / Quick start
 
 ### 처음 5분 기여 흐름 / First 5-minute contribution flow
 

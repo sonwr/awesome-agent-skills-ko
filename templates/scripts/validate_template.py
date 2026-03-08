@@ -36,6 +36,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 빠른 시작 / Quick start",
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
@@ -219,6 +220,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "Minute 4-5" not in text or "2분" not in text:
         errors.append(
             "README.md: first 5-minute contribution flow must include time-boxed Korean/English steps"
+        )
+    if "## 빠른 시작 / Quick start" not in text:
+        errors.append(
+            "README.md: README must include a bilingual `## 빠른 시작 / Quick start` section after the landing-first overview block"
         )
     if "python3 templates/scripts/validate_template.py" not in text:
         errors.append(
