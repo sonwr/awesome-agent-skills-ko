@@ -22,6 +22,7 @@ REQUIRED_FILES = [
     "docs/PROJECT_DIRECTION.md",
     "docs/README_INFORMATION_ARCHITECTURE.md",
     "docs/README_FIRST_SCREEN_CHECKLIST.md",
+    "docs/README_FIRST_SCREEN_SCRIPT.md",
     "docs/README_USER_JOURNEYS.md",
     "docs/README_FAST_PATHS.md",
     "examples/pr-evidence-mini-walkthrough.md",
@@ -105,6 +106,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "프로젝트 소개 → 대상 사용자 → 제공 가치",
         "overview -> audience -> value",
+    ],
+    "docs/README_FIRST_SCREEN_SCRIPT.md": [
+        "README 첫 화면 스크립트 / README first-screen script",
+        "English mirror:",
+        "## 첫 화면 60초 스크립트 / 60-second first-screen script",
+        "## README 상단에서 바로 보여줄 문장 유형 / Sentence types to keep near the top",
+        "## 뒤로 내려도 되는 내용 / What can move lower",
     ],
     "docs/README_USER_JOURNEYS.md": [
         "README 사용자 여정 / README user journeys",
@@ -214,6 +222,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "examples/pr-evidence-mini-walkthrough.md",
         "docs/README_FAST_PATHS.md",
         "docs/README_FIRST_SCREEN_CHECKLIST.md",
+        "docs/README_FIRST_SCREEN_SCRIPT.md",
         "docs/README_INFORMATION_ARCHITECTURE.md",
         "docs/CURATION_POLICY.md",
     ]
@@ -263,6 +272,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "Minute 4-5" not in text or "2분" not in text:
         errors.append(
             "README.md: first 5-minute contribution flow must include time-boxed Korean/English steps"
+        )
+    if "docs/README_FIRST_SCREEN_SCRIPT.md" not in text:
+        errors.append(
+            "README.md: landing or learn-more sections must link to docs/README_FIRST_SCREEN_SCRIPT.md so intro-first copy guidance stays discoverable"
         )
     if "## 빠른 시작 / Quick start" not in text:
         errors.append(

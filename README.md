@@ -92,6 +92,7 @@ English mirror:
 - 첫 실행 명령은 무엇인가요? `python3 templates/scripts/validate_template.py`
 - 다음 온보딩 문서는 어디인가요? `examples/quickstart.md`
 - 60초 경로 선택 문서는 어디인가요? `docs/README_FAST_PATHS.md`
+- 첫 화면 카피 원칙 요약은 어디인가요? `docs/README_FIRST_SCREEN_SCRIPT.md`
 - 첫 PR 전에 무엇을 보나요? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 - 역할별 바로 시작하려면?
   - 탐색형: `examples/quickstart.md`
@@ -184,13 +185,13 @@ English mirror:
 
 - **탐색형 / Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
 - **기여형 / Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **운영형 / Operator** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FIRST_SCREEN_SCRIPT.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
   - 목적 / Goal: 소개형 랜딩 구조가 유지되는지 빠르게 감사합니다.
 
 English mirror:
 - **Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
 - **Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+- **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FIRST_SCREEN_SCRIPT.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
   - Goal: audit whether the intro-first landing structure stays intact.
 
 ## 상단 핵심 콜아웃 / Top contributor callouts
@@ -257,6 +258,7 @@ English mirror: Keep the landing view focused on overview/value/quick start, and
 - README 사용자 여정 / README user journeys: `docs/README_USER_JOURNEYS.md`
 - README 빠른 진입 경로 / README fast paths: `docs/README_FAST_PATHS.md`
 - README 첫 화면 체크 / README first-screen checklist: `docs/README_FIRST_SCREEN_CHECKLIST.md`
+- README 첫 화면 스크립트 / README first-screen script: `docs/README_FIRST_SCREEN_SCRIPT.md`
 - 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
 - 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
 - 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
