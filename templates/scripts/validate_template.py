@@ -56,6 +56,8 @@ BILINGUAL_SECTION_MARKERS = {
         "first 5-minute contribution flow",
         "## Copyable first command",
         "## Next reading step",
+        "## 1분 PR 증빙 점프 / 1-minute PR evidence jump",
+        "examples/pr-evidence-mini-walkthrough.md",
         "English mirror:",
     ],
 }

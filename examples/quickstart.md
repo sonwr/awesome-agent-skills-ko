@@ -18,3 +18,8 @@ python3 templates/scripts/validate_template.py
 
 - 한국어: 검증이 끝나면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 돌아가 최소 증빙 3종(명령/종료코드/핵심 출력)을 PR 코멘트에 남깁니다.
 - English mirror: After validation, return to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and paste the three minimum evidence items (command / exit code / key output) into the PR comment.
+
+## 1분 PR 증빙 점프 / 1-minute PR evidence jump
+
+- 한국어: 바로 복붙 가능한 PR 코멘트 예시는 `examples/pr-evidence-mini-walkthrough.md`에서 확인합니다. quickstart 다음 단계에서 가장 빠른 종료 경로입니다.
+- English mirror: For a copy-paste PR comment example, jump straight to `examples/pr-evidence-mini-walkthrough.md`. It is the fastest finish path after quickstart.
