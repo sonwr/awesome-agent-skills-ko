@@ -19,6 +19,7 @@ REQUIRED_FILES = [
     "docs/README_TOP_CALLOUTS.md",
     "docs/PROJECT_OVERVIEW.md",
     "docs/PROJECT_DIRECTION.md",
+    "docs/README_INFORMATION_ARCHITECTURE.md",
     "examples/pr-evidence-mini-walkthrough.md",
     "examples/quickstart.md",
 ]
@@ -54,6 +55,13 @@ BILINGUAL_SECTION_MARKERS = {
         "English mirror:",
         "README 상단 랜딩 구조",
         "README landing order",
+    ],
+    "docs/README_INFORMATION_ARCHITECTURE.md": [
+        "README 정보 구조 가이드 / README information architecture guide",
+        "## 상단 우선순위 / Top-of-page priorities",
+        "## 뒤로 보내는 내용 / What belongs lower in the page",
+        "## 검증 기준 / Validation rule",
+        "English mirror:",
     ],
     "docs/README_TOP_CALLOUTS.md": [
         "README 상단 콜아웃 문안 / README top callout copy",
@@ -166,6 +174,17 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             errors.append(
                 "README.md: landing-page sections must stay in order overview -> audience -> value -> quick-start-at-a-glance -> 30-second-fit-check -> featured categories -> quick start"
             )
+
+    quick_start_idx = text.find("## Quick start")
+    for lower_heading in [
+        "## 실무용 기여 체크리스트 / Practical contribution checklist",
+        "## Roadmap summary",
+    ]:
+        lower_idx = text.find(lower_heading)
+        if quick_start_idx != -1 and lower_idx != -1 and lower_idx < quick_start_idx:
+            errors.append(
+                f"README.md: {lower_heading} must stay below the Quick start section to preserve the intro-first landing flow"
+            )
     return errors
 
 
@@ -209,6 +228,7 @@ def _check_readme_top_callout_sync(root: Path) -> list[str]:
         "docs/README_TOP_CALLOUTS.md",
     "docs/PROJECT_OVERVIEW.md",
     "docs/PROJECT_DIRECTION.md",
+    "docs/README_INFORMATION_ARCHITECTURE.md",
     ]
     missing_markers = [marker for marker in required_markers if marker not in readme_section]
     if missing_markers:

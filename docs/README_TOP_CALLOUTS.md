@@ -32,3 +32,5 @@ English mirror:
 English mirror:
 
 - Read project philosophy in `docs/PROJECT_OVERVIEW.md` and long-term direction in `docs/PROJECT_DIRECTION.md`.
+
+- README information architecture source: `docs/README_INFORMATION_ARCHITECTURE.md` keeps the intro-first landing priorities explicit.

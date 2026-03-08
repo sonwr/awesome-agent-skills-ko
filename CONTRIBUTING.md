@@ -48,8 +48,10 @@ Include all of the following in every PR:
 - `README.md` — 프로젝트 소개와 빠른 시작 흐름
 - `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — 한/영 병기 및 최소 증빙 기준
 - `examples/pr-evidence-mini-walkthrough.md` — PR 설명 예시
+- `docs/README_INFORMATION_ARCHITECTURE.md` — README 랜딩 우선순위 기준
 
 English mirror:
 - `README.md` — overview and quick start flow
 - `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — bilingual and minimum-evidence rules
 - `examples/pr-evidence-mini-walkthrough.md` — PR evidence example
+- `docs/README_INFORMATION_ARCHITECTURE.md` — README landing-page priority guide

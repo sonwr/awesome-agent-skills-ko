@@ -157,6 +157,7 @@ English mirror: Keep the landing view focused on overview/value/quick start, and
 - 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
 - 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
 - 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
+- README 정보 구조 가이드 / README information architecture guide: `docs/README_INFORMATION_ARCHITECTURE.md`
 
 ---
 
@@ -235,6 +236,7 @@ A contribution is acceptable when:
 - **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
 - **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
 - **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.
+- **README 정보 구조 기준 유지** — 랜딩 우선순위 기준은 `docs/README_INFORMATION_ARCHITECTURE.md`에서 관리하고, 소개형 첫 화면이 흐려지지 않도록 검증 스크립트로 확인합니다.
 
 English mirror:
 

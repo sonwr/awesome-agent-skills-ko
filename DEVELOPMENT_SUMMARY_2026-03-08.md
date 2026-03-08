@@ -350,3 +350,28 @@
 
 ### 다음 실행 우선순위
 - CONTRIBUTING/quickstart/examples 간 링크 중복을 줄이면서 README 상단 카드형 진입점을 더 압축.
+
+
+## 실행 @ 11:40 UTC (cron)
+
+### 계획
+- README 소개 우선 구조를 문서 규칙으로 명시하고 자동 검증까지 연결한다.
+- 기여 문서에도 같은 랜딩 우선순위 기준을 연결한다.
+
+### 변경 사항
+- `docs/README_INFORMATION_ARCHITECTURE.md` 신규 추가.
+  - README 첫 화면에서 소개/대상 사용자/제공 가치/대표 카테고리/빠른 시작을 우선 노출해야 한다는 기준을 한/영으로 문서화.
+- `templates/scripts/validate_template.py` 강화:
+  - 새 정보 구조 가이드 문서를 필수 파일/병기 마커 검증 대상에 추가.
+  - `실무용 기여 체크리스트`, `Roadmap summary`가 `Quick start` 위로 올라오면 실패하도록 intro-first 검증 추가.
+- `README.md`, `CONTRIBUTING.md`, `docs/README_TOP_CALLOUTS.md`에 새 정보 구조 가이드 링크를 연결.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 새 문서를 추가하면서 README 상단 콜아웃 동기화 검증이 한 번 실패했고, 상단 콜아웃에도 동일 링크를 연결해 드리프트를 해소함.
+
+### 다음 실행 우선순위
+- README 상단 대표 카테고리 블록을 카드형/선택형 구조로 더 다듬고, 예시 링크 밀도를 높여 첫 방문자 스캔 시간을 더 줄이기.
