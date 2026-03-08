@@ -28,6 +28,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 프로젝트 소개 / Project overview",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
+        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -92,6 +93,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 소개 / Project overview",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
+        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -123,6 +125,27 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: first-time contributor reading order must include estimated onboarding times"
         )
+
+    ordered_sections = [
+        "## 프로젝트 소개 / Project overview",
+        "## 대상 사용자 / Who this is for",
+        "## 제공 가치 / What you get",
+        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 대표 카테고리와 예시 / Featured categories and examples",
+        "## Quick start",
+    ]
+    positions = []
+    for heading in ordered_sections:
+        idx = text.find(heading)
+        if idx == -1:
+            continue
+        positions.append((heading, idx))
+    if len(positions) == len(ordered_sections):
+        only_positions = [idx for _, idx in positions]
+        if only_positions != sorted(only_positions):
+            errors.append(
+                "README.md: landing-page sections must stay in order overview -> audience -> value -> quick-start-at-a-glance -> featured categories -> quick start"
+            )
     return errors
 
 

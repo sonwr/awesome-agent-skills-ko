@@ -38,6 +38,17 @@ English mirror:
 2. **Runnable starter templates** connected to quickstart docs, validation scripts, and PR evidence examples.
 3. **Governance rails** for Korean-first docs, English mirrors, reproducible evidence, and anti-repeat workflows.
 
+## 빠른 시작 한눈에 보기 / Quick start at a glance
+
+- 무엇부터 보면 되나요? **프로젝트 소개 → 대상 사용자 → 제공 가치 → 빠른 시작 명령** 순서로 1분 안에 핵심을 파악할 수 있습니다.
+- 첫 실행 명령은 무엇인가요? `python3 templates/scripts/validate_template.py`
+- 첫 PR 전에 무엇을 보나요? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
+
+English mirror:
+- Where should I start? Read **project overview → audience → value → quick start command** to understand the repo in under a minute.
+- What is the first command to run? `python3 templates/scripts/validate_template.py`
+- What should I open before a first PR? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
+
 ## 대표 카테고리와 예시 / Featured categories and examples
 
 - **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
