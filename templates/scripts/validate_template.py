@@ -17,6 +17,8 @@ REQUIRED_FILES = [
     "docs/TEMPLATE_STANDARD.md",
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
     "docs/README_TOP_CALLOUTS.md",
+    "docs/PROJECT_OVERVIEW.md",
+    "docs/PROJECT_DIRECTION.md",
     "examples/pr-evidence-mini-walkthrough.md",
     "examples/quickstart.md",
 ]
@@ -36,6 +38,7 @@ BILINGUAL_SECTION_MARKERS = {
         "### 빠른 선택 카드 / Quick chooser cards",
         "탐색형 / Explorer path",
         "기여형 / Contributor path",
+        "## 더 읽기 / Learn more",
         "## 상단 핵심 콜아웃 / Top contributor callouts",
         "최소 증빙 3종 필수",
         "Document blockers with the next-run priority",
@@ -125,6 +128,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: quick start/contribution section must link to docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md"
         )
+    if "docs/PROJECT_OVERVIEW.md" not in text or "docs/PROJECT_DIRECTION.md" not in text:
+        errors.append(
+            "README.md: learn-more section must link to docs/PROJECT_OVERVIEW.md and docs/PROJECT_DIRECTION.md"
+        )
     if "### 빠른 기여 체크 / Quick contribution check" not in text:
         errors.append(
             "README.md: quick start must include the condensed bilingual contribution check heading"
@@ -200,6 +207,8 @@ def _check_readme_top_callout_sync(root: Path) -> list[str]:
         "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
         "5-minute contribution flow",
         "docs/README_TOP_CALLOUTS.md",
+    "docs/PROJECT_OVERVIEW.md",
+    "docs/PROJECT_DIRECTION.md",
     ]
     missing_markers = [marker for marker in required_markers if marker not in readme_section]
     if missing_markers:

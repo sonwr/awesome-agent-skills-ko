@@ -149,75 +149,14 @@ English mirror:
 - Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
 
-## Why this project exists
+## 더 읽기 / Learn more
 
-Most skill collections are either:
+랜딩 화면에서는 소개/가치/빠른 시작을 먼저 보여주고, 운영 철학과 장기 방향은 별도 문서로 분리합니다.
+English mirror: Keep the landing view focused on overview/value/quick start, and move governance philosophy plus long-term direction into dedicated docs.
 
-- too abstract to run immediately, or
-- too coupled to one runtime/toolchain.
-
-This repository focuses on a practical middle ground:
-
-1. **curated skill patterns** that are easy to understand,
-2. **runnable starter templates** that work with minimal setup,
-3. **long-term governance** so quality does not decay as the repo grows.
-
----
-
-## Project Direction (Long-term)
-
-This project is intended to be maintained as a long-lived public resource, not a one-off list.
-
-### 1) Curation over volume
-
-We prioritize fewer, better entries.
-
-Every added skill or template should prove:
-
-- practical use-case clarity,
-- reproducible setup,
-- maintainability over time.
-
-### 2) Runtime-portable standards
-
-We avoid locking the collection to a single vendor runtime.
-
-Each template should document:
-
-- what is runtime-specific,
-- what is portable,
-- what needs adaptation.
-
-### 3) Evidence-driven quality
-
-No “looks good” approvals.
-
-For template PRs, we require:
-
-- setup steps,
-- expected output,
-- validation notes,
-- limitations and known failure modes.
-
-### 4) Contributor-friendly governance
-
-The project should scale with community contributions.
-
-We maintain:
-
-- clear review criteria,
-- issue labels for newcomers,
-- stable docs for onboarding.
-
-### 5) Sustainable release discipline
-
-We prefer predictable progress over chaotic bursts.
-
-Planned cadence:
-
-- small, frequent updates,
-- periodic curation cleanups,
-- versioned snapshots of recommended template sets.
+- 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
+- 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
+- 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
 
 ---
 
@@ -295,6 +234,7 @@ A contribution is acceptable when:
 - **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md)에서 관리합니다.
 - **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
 - **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
+- **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.
 
 English mirror:
 
@@ -303,6 +243,7 @@ English mirror:
 - **Document blockers with the next-run priority** instead of leaving failures context-free.
 - **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
 - **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
+- **Keep philosophy and long-term direction in dedicated docs**: use `docs/PROJECT_OVERVIEW.md` and `docs/PROJECT_DIRECTION.md` so the landing page stays focused.
 
 ---
 

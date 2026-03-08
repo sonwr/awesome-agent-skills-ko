@@ -26,3 +26,9 @@ English mirror:
 English mirror:
 
 - Keep README top callouts synchronized with `docs/README_TOP_CALLOUTS.md` as the source copy.
+
+- 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽습니다.
+
+English mirror:
+
+- Read project philosophy in `docs/PROJECT_OVERVIEW.md` and long-term direction in `docs/PROJECT_DIRECTION.md`.
