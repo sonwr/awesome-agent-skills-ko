@@ -39,6 +39,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
+        "## 역할별 첫 성과 / First wins by role",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 대표 시작 예시 / Featured starter examples",
@@ -356,6 +357,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "첫 PR 준비" not in text or "Prepare the first PR" not in text:
         errors.append(
             "README.md: 3-step start path must include a Korean/English first-PR prep step near the landing section"
+        )
+    if "## 역할별 첫 성과 / First wins by role" not in text or "find the first validation command" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual first wins by role so explorer/contributor/operator visitors see immediate value before governance details"
         )
     if "이 저장소가 특히 맞는 경우 / Best-fit scenarios" not in text or "Teams that need Korean-first docs with English mirrors" not in text:
         errors.append(

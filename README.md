@@ -109,6 +109,17 @@ English mirror:
 - For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md`.
 - Full contribution policy lives in `CONTRIBUTING.md`.
 
+## 역할별 첫 성과 / First wins by role
+
+- **탐색형 / Explorer** — 60초 안에 프로젝트 가치와 대표 문서를 파악하고 `examples/quickstart.md`까지 도착합니다.
+- **기여형 / Contributor** — 첫 검증 명령과 PR 최소 증빙 문서를 바로 찾아 첫 변경 준비를 끝냅니다.
+- **운영형 / Operator** — README 상단 구조 감사 경로를 따라 소개 우선 IA가 유지되는지 바로 확인합니다.
+
+English mirror:
+- **Explorer** — understand the repo value and land on `examples/quickstart.md` within the first minute.
+- **Contributor** — find the first validation command and minimum PR evidence docs immediately.
+- **Operator** — follow the README audit route to confirm the intro-first IA still holds.
+
 ## 대상 사용자 / Who this is for
 
 - 한국어로 스킬/프롬프트/자동화 자산을 빠르게 탐색하고 싶은 개발자
