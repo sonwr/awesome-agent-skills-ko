@@ -52,6 +52,19 @@ English mirror:
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
 - **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
 
+## 프로젝트 시작 맵 / Project start map
+
+- **탐색 먼저 / Explore first** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md`
+- **바로 검증 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+- **바로 기여 / Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **운영 점검 / Audit the structure** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Explore first** — `project overview -> featured categories -> examples/quickstart.md`
+- **Validate now** — `python3 templates/scripts/validate_template.py -> examples/quickstart.md`
+- **Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md -> examples/pr-evidence-mini-walkthrough.md`
+- **Audit the structure** — `docs/README_FAST_PATHS.md -> docs/README_FIRST_SCREEN_CHECKLIST.md -> docs/CURATION_POLICY.md`
+
 ## 1분 빠른 시작 / 1-minute quick start
 
 ```bash
