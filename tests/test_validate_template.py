@@ -2386,3 +2386,20 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
             self.assertIn("First-screen maintenance loop", content)
             self.assertIn("python3 templates/scripts/validate_template.py", content)
             self.assertIn("docs/README_FIRST_SCREEN_CHECKLIST.md", content)
+
+
+class ReadmeProjectStartMapOrderTests(unittest.TestCase):
+
+    def test_readme_requires_project_start_map_order(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "- **탐색 먼저 / Explore first** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md`\n- **바로 검증 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`\n- **바로 기여 / Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`\n- **운영 점검 / Audit the structure** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`",
+                "- **바로 기여 / Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`\n- **탐색 먼저 / Explore first** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md`\n- **바로 검증 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`\n- **운영 점검 / Audit the structure** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("project start map must keep explore -> validate -> contribute -> audit order" in error for error in errors))

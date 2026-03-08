@@ -43,3 +43,4 @@ English mirror:
 - 한국어: 구조를 바꾼 뒤에는 `python3 templates/scripts/validate_template.py`를 실행하고, `docs/README_FIRST_SCREEN_CHECKLIST.md`로 사람이 다시 읽어봅니다.
 - English mirror: When editing the README top, keep **overview -> audience -> value -> featured examples/quick start** visible before governance detail.
 - English mirror: After every structural edit, run `python3 templates/scripts/validate_template.py` and then re-read `docs/README_FIRST_SCREEN_CHECKLIST.md` for a human check.
+- English mirror: Keep the project start map in `Explore first -> Validate now -> Contribute now -> Audit the structure` order so the first screen stays predictable.

@@ -324,6 +324,21 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             break
     project_start_map_section = _extract_section(text, "프로젝트 시작 맵 / Project start map")
     core_start_buttons_section = _extract_section(text, "핵심 시작 버튼 / Core start buttons")
+    ordered_start_map_markers = [
+        "탐색 먼저 / Explore first",
+        "바로 검증 / Validate now",
+        "바로 기여 / Contribute now",
+        "운영 점검 / Audit the structure",
+    ]
+    ordered_start_map_positions = [project_start_map_section.find(marker) for marker in ordered_start_map_markers]
+    if any(position < 0 for position in ordered_start_map_positions):
+        errors.append(
+            "README.md: project start map must keep explore/validate/contribute/audit routes together near the intro-first landing block"
+        )
+    elif ordered_start_map_positions != sorted(ordered_start_map_positions):
+        errors.append(
+            "README.md: project start map must keep explore -> validate -> contribute -> audit order so first-screen routing stays predictable"
+        )
     for required_button in [
         "Understand the project",
         "Validate now",
