@@ -21,6 +21,7 @@ REQUIRED_FILES = [
     "docs/PROJECT_ENTRY_PATHS.md",
     "docs/PROJECT_DIRECTION.md",
     "docs/README_INFORMATION_ARCHITECTURE.md",
+    "docs/README_FIRST_SCREEN_CHECKLIST.md",
     "examples/pr-evidence-mini-walkthrough.md",
     "examples/quickstart.md",
 ]
@@ -79,6 +80,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 뒤로 보내는 내용 / What belongs lower in the page",
         "## 검증 기준 / Validation rule",
         "English mirror:",
+    ],
+    "docs/README_FIRST_SCREEN_CHECKLIST.md": [
+        "README 첫 화면 체크리스트 / README first-screen checklist",
+        "## 한국어 체크 / Korean checks",
+        "## English mirror",
+        "프로젝트 소개 → 대상 사용자 → 제공 가치",
+        "overview -> audience -> value",
     ],
     "docs/README_TOP_CALLOUTS.md": [
         "README 상단 콜아웃 문안 / README top callout copy",

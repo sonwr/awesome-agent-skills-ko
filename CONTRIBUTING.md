@@ -46,12 +46,14 @@ Include all of the following in every PR:
 ## 첫 기여 전에 볼 문서 / Read these before the first PR
 
 - `README.md` — 프로젝트 소개와 빠른 시작 흐름
+- `docs/README_FIRST_SCREEN_CHECKLIST.md` — README 첫 화면이 소개형 랜딩을 유지하는지 빠르게 점검
 - `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — 한/영 병기 및 최소 증빙 기준
 - `examples/pr-evidence-mini-walkthrough.md` — PR 설명 예시
 - `docs/README_INFORMATION_ARCHITECTURE.md` — README 랜딩 우선순위 기준
 
 English mirror:
 - `README.md` — overview and quick start flow
+- `docs/README_FIRST_SCREEN_CHECKLIST.md` — quick check for keeping the README opening intro-first
 - `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — bilingual and minimum-evidence rules
 - `examples/pr-evidence-mini-walkthrough.md` — PR evidence example
 - `docs/README_INFORMATION_ARCHITECTURE.md` — README landing-page priority guide

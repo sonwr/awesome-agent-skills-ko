@@ -167,6 +167,7 @@ English mirror:
 English mirror: Keep the landing view focused on overview/value/quick start, and move governance philosophy plus long-term direction into dedicated docs.
 
 - 프로젝트 진입 경로 / Project entry paths: `docs/PROJECT_ENTRY_PATHS.md`
+- README 첫 화면 체크 / README first-screen checklist: `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
 - 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
 - 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
