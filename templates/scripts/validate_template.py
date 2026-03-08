@@ -273,12 +273,19 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         if idx == -1:
             continue
         positions.append((heading, idx))
-    if len(positions) == len(ordered_sections):
+    if len(positions) >= 2:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
                 "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> first-visit-chooser -> 30-second-fit-check -> quick start"
             )
+
+    top_callout_idx = text.find("## 상단 핵심 콜아웃 / Top contributor callouts")
+    fit_check_idx = text.find("## 30초 적합성 체크 / 30-second fit check")
+    if top_callout_idx != -1 and fit_check_idx != -1 and top_callout_idx < fit_check_idx:
+        errors.append(
+            "README.md: Top contributor callouts must stay below the 30-second fit check so the landing page introduces project value before contribution guardrails"
+        )
 
     quick_start_idx = text.find("## Quick start")
     repo_structure_idx = text.find("## Repository structure")

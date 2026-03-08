@@ -139,6 +139,33 @@ English mirror:
 - What do you get immediately? The README landing flow surfaces project value, quick start, and key follow-up docs without hunting.
 - What is it not? It is not just a link dump or a runtime-locked prompt bundle.
 
+
+---
+
+## 상단 핵심 콜아웃 / Top contributor callouts
+
+
+- **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
+- **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
+- **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
+- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md)에서 관리합니다.
+- **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
+- **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
+- **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.
+- **README 정보 구조 기준 유지** — 랜딩 우선순위 기준은 `docs/README_INFORMATION_ARCHITECTURE.md`에서 관리하고, 소개형 첫 화면이 흐려지지 않도록 검증 스크립트로 확인합니다.
+- **다음 문서 이동 경로 고정** — README 다음 이동 기준은 `docs/PROJECT_ENTRY_PATHS.md`에서 관리해 탐색/기여/운영 흐름을 빠르게 고를 수 있게 합니다.
+
+English mirror:
+
+- **Keep Korean-first docs with English mirrors** so new contributors can review both local clarity and global portability.
+- **Always record three evidence items**: reproduction command, exit code, and key output.
+- **Document blockers with the next-run priority** instead of leaving failures context-free.
+- **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
+- **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
+- **Keep philosophy and long-term direction in dedicated docs**: use `docs/PROJECT_OVERVIEW.md` and `docs/PROJECT_DIRECTION.md` so the landing page stays focused.
+
+
+
 ## Quick start
 
 ### 처음 5분 기여 흐름 / First 5-minute contribution flow
@@ -305,30 +332,6 @@ A contribution is acceptable when:
 3. expected output is documented,
 4. risks/limitations are written,
 5. review checklist passes.
-
----
-
-## 상단 핵심 콜아웃 / Top contributor callouts
-
-
-- **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
-- **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
-- **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
-- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md)에서 관리합니다.
-- **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
-- **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
-- **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.
-- **README 정보 구조 기준 유지** — 랜딩 우선순위 기준은 `docs/README_INFORMATION_ARCHITECTURE.md`에서 관리하고, 소개형 첫 화면이 흐려지지 않도록 검증 스크립트로 확인합니다.
-- **다음 문서 이동 경로 고정** — README 다음 이동 기준은 `docs/PROJECT_ENTRY_PATHS.md`에서 관리해 탐색/기여/운영 흐름을 빠르게 고를 수 있게 합니다.
-
-English mirror:
-
-- **Keep Korean-first docs with English mirrors** so new contributors can review both local clarity and global portability.
-- **Always record three evidence items**: reproduction command, exit code, and key output.
-- **Document blockers with the next-run priority** instead of leaving failures context-free.
-- **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
-- **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
-- **Keep philosophy and long-term direction in dedicated docs**: use `docs/PROJECT_OVERVIEW.md` and `docs/PROJECT_DIRECTION.md` so the landing page stays focused.
 
 ---
 

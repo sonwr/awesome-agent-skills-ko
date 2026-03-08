@@ -570,3 +570,78 @@ class ValidateTemplateTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+    def test_top_callouts_must_stay_after_fit_check_and_before_role_paths(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "## 프로젝트 소개 / Project overview",
+                        "## 프로젝트 스냅샷 / Project snapshot",
+                        "대표 시작점",
+                        "Landing-page rule",
+                        "## 대상 사용자 / Who this is for",
+                        "## 제공 가치 / What you get",
+                        "## 카테고리 바로가기 / Category jump links",
+                        "Jump to onboarding",
+                        "Jump to evidence examples",
+                        "Jump to governance docs",
+                        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+                        "## 한눈에 보는 3단계 시작 / 3-step start path",
+                        "프로젝트 이해",
+                        "Understand the project",
+                        "첫 검증 실행",
+                        "Run the first validation",
+                        "첫 PR 준비",
+                        "Prepare the first PR",
+                        "## 첫 방문자 체크 / First-visit chooser",
+                        "탐색이 먼저인가요?",
+                        "Just exploring first?",
+                        "바로 기여할 건가요?",
+                        "Ready to contribute now?",
+                        "## 상단 핵심 콜아웃 / Top contributor callouts",
+                        "## 30초 적합성 체크 / 30-second fit check",
+                        "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+                        "**탐색형 / Explorer**",
+                        "**기여형 / Contributor**",
+                        "**운영형 / Operator**",
+                        "탐색형 / Explorer",
+                        "기여형 / Contributor",
+                        "운영형 / Operator",
+                        "## 대표 카테고리와 예시 / Featured categories and examples",
+                        "## 대표 활용 시나리오 / Featured use cases",
+                        "## 추천 시작 경로 / Recommended starting paths",
+                        "### 빠른 선택 카드 / Quick chooser cards",
+                        "탐색형 / Explorer path",
+                        "기여형 / Contributor path",
+                        "운영형 / Operator path",
+                        "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
+                        "2분",
+                        "Minute 4-5",
+                        "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
+                        "### 빠른 기여 체크 / Quick contribution check",
+                        "## 처음 기여할 때 읽는 순서 / First-time contributor reading order",
+                        "Estimated 1 min",
+                        "Estimated 2 min",
+                        "python3 templates/scripts/validate_template.py",
+                        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "docs/PROJECT_OVERVIEW.md",
+                        "docs/PROJECT_DIRECTION.md",
+                        "docs/PROJECT_ENTRY_PATHS.md",
+                        "docs/README_USER_JOURNEYS.md",
+                        "examples/quickstart.md",
+                        "새 저장소 온보딩",
+                        "New repo onboarding",
+                        "First PR prep",
+                        "## Quick start",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("Top contributor callouts must stay below the 30-second fit check" in error for error in errors))
+
+
