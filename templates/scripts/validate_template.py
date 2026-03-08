@@ -36,6 +36,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
+        "## 대표 활용 시나리오 / Featured use cases",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 빠른 선택 카드 / Quick chooser cards",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -131,6 +132,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
+        "## 대표 활용 시나리오 / Featured use cases",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 빠른 선택 카드 / Quick chooser cards",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -141,6 +143,14 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "대표 시작점" not in text or "Landing-page rule" not in text:
         errors.append(
             "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"
+        )
+    if "새 저장소 온보딩" not in text or "New repo onboarding" not in text:
+        errors.append(
+            "README.md: featured use cases must include a Korean/English onboarding scenario near the landing section"
+        )
+    if "첫 PR 준비" not in text or "First PR prep" not in text:
+        errors.append(
+            "README.md: featured use cases must include a Korean/English first-PR scenario near the landing section"
         )
     if "Minute 4-5" not in text or "2분" not in text:
         errors.append(
@@ -183,6 +193,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
+        "## 대표 활용 시나리오 / Featured use cases",
         "## Quick start",
     ]
     positions = []
@@ -195,7 +206,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
-                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> quick-start-at-a-glance -> 30-second-fit-check -> featured categories -> quick start"
+                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> quick-start-at-a-glance -> 30-second-fit-check -> featured categories -> featured use cases -> quick start"
             )
 
     quick_start_idx = text.find("## Quick start")
