@@ -82,6 +82,10 @@ English mirror:
 - 다음 온보딩 문서는 어디인가요? `examples/quickstart.md`
 - 60초 경로 선택 문서는 어디인가요? `docs/README_FAST_PATHS.md`
 - 첫 PR 전에 무엇을 보나요? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
+- 역할별 바로 시작하려면?
+  - 탐색형: `examples/quickstart.md`
+  - 기여형: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+  - 운영형: `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`
 
 English mirror:
 - Where should I start? Read **project overview → audience → value → quick start command** to understand the repo in under a minute.
@@ -89,6 +93,10 @@ English mirror:
 - What is the next onboarding doc to open? `examples/quickstart.md`
 - Where is the 60-second path chooser? `docs/README_FAST_PATHS.md`
 - What should I open before a first PR? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
+- Need the fastest role-based entry?
+  - Explorer: `examples/quickstart.md`
+  - Contributor: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+  - Operator: `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`
 
 ## 한눈에 보는 3단계 시작 / 3-step start path
 
