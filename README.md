@@ -73,6 +73,17 @@ English mirror:
 - **Contributor** — best when you want the first validation command plus PR evidence docs immediately.
 - **Operator** — best when you want to audit information architecture, curation policy, and governance docs first.
 
+## 역할별 30초 선택 카드 / 30-second role chooser cards
+
+- **탐색형 / Explorer** — `프로젝트 소개 → 대표 카테고리 → examples/quickstart.md` 순서로 30초 안에 가치와 예시를 파악합니다.
+- **기여형 / Contributor** — `python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md → examples/pr-evidence-mini-walkthrough.md` 순서로 첫 검증과 PR 증빙 준비를 끝냅니다.
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md → docs/README_INFORMATION_ARCHITECTURE.md → docs/CURATION_POLICY.md` 순서로 랜딩 구조와 운영 기준을 점검합니다.
+
+English mirror:
+- **Explorer** — use `project overview → featured categories → examples/quickstart.md` to understand value and sample paths within 30 seconds.
+- **Contributor** — use `python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md → examples/pr-evidence-mini-walkthrough.md` to finish the first validation plus PR evidence prep fast.
+- **Operator** — use `docs/README_FAST_PATHS.md → docs/README_INFORMATION_ARCHITECTURE.md → docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
+
 ## 역할별 바로 열 문서 / Role-based first-open docs
 
 - **탐색형 / Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`

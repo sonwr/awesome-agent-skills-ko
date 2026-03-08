@@ -398,3 +398,26 @@
 
 ### 다음 실행 우선순위
 - 카테고리 바로가기와 추천 시작 경로 카드를 더 압축해서, README 상단에서 역할별(탐색/기여/운영) 진입점이 한 번에 보이도록 정리.
+
+## 실행 @ 15:50 UTC (cron)
+
+### 계획
+- README 상단에서 탐색/기여/운영 역할별 진입 경로를 더 압축해 첫 클릭 수를 줄인다.
+- intro-first README 구조가 유지되도록 validator/test에도 같은 규칙을 반영한다.
+
+### 변경 사항
+- `README.md`에 **역할별 30초 선택 카드 / 30-second role chooser cards** 섹션 추가.
+  - Explorer / Contributor / Operator별 첫 30초 이동 경로를 한·영으로 압축 노출.
+- `templates/scripts/validate_template.py`를 업데이트해 새 역할 카드 섹션과 contributor 경로 마커를 요구하도록 검증 강화.
+- `tests/test_validate_template.py`에 역할 카드 누락 시 실패하는 회귀 테스트를 추가.
+
+### 검증
+- `python3 -m unittest discover -s tests -p 'test_*.py' -v`
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (15 tests + template validation pass)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- 역할별 30초 선택 카드와 `docs/README_FAST_PATHS.md`를 더 강하게 연결해, README 상단만 읽고도 바로 다음 문서로 점프하게 만들기.
