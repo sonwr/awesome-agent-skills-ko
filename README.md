@@ -6,7 +6,73 @@
 
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
 
+## 프로젝트 소개 / Project overview
+
+이 저장소는 **한국어 기반 빌더를 위한 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
+
+- 무엇을 하나요? 검증 가능한 스킬/템플릿을 모으고, 한국어 기본 문서 흐름과 영어 미러까지 함께 제공합니다.
+- 왜 필요한가요? "좋아 보이는 링크 모음"이 아니라, 바로 실행·검증·기여할 수 있는 출발점을 만들기 위해서입니다.
+
+English mirror:
+A curated collection of agent skills and runnable templates for Korean-speaking builders, with Korean-first docs and practical English mirrors.
+
+## 대상 사용자 / Who this is for
+
+- 한국어로 스킬/프롬프트/자동화 자산을 빠르게 탐색하고 싶은 개발자
+- 공개 저장소에 재현 가능한 예시와 검증 명령까지 함께 남기고 싶은 기여자
+- 특정 런타임에 잠기지 않는 휴대 가능한 스킬 구조를 찾는 팀
+
+English mirror:
+- Builders who want to discover skills, prompts, and automation assets in Korean first.
+- Contributors who care about reproducible examples, validation commands, and review evidence.
+- Teams looking for runtime-portable skill patterns instead of vendor-locked snippets.
+
+## 제공 가치 / What you get
+
+1. **큐레이션된 스킬 관점** — 무작정 많이 모으기보다 실무 적용성과 유지보수성을 먼저 봅니다.
+2. **실행 가능한 템플릿** — quickstart, 검증 스크립트, PR 증빙 예시까지 연결된 형태로 제공합니다.
+3. **병기/운영 가드레일** — 한국어 기본 문서와 영어 미러, 재현 증빙, 반복 작업 방지 흐름을 같이 관리합니다.
+
+English mirror:
+1. **Curated skill patterns** that optimize for practical reuse, not raw link volume.
+2. **Runnable starter templates** connected to quickstart docs, validation scripts, and PR evidence examples.
+3. **Governance rails** for Korean-first docs, English mirrors, reproducible evidence, and anti-repeat workflows.
+
+## 대표 카테고리와 예시 / Featured categories and examples
+
+- **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **리뷰 증빙 템플릿** — `examples/pr-evidence-mini-walkthrough.md`
+- **큐레이션/운영 기준** — `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
+
+English mirror:
+- **Onboarding and contribution guides** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Review evidence templates** — `examples/pr-evidence-mini-walkthrough.md`
+- **Curation and governance standards** — `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
+
+## Quick start
+
+한국어 문서를 기본으로 유지하면서 병기 품질까지 함께 검증하려면 아래 명령을 사용하세요.
+English mirror: Run the command below to validate both baseline docs and bilingual quality markers.
+
+```bash
+git clone https://github.com/sonwr/awesome-agent-skills-ko.git
+cd awesome-agent-skills-ko
+python3 templates/scripts/validate_template.py
+```
+
+### 빠른 시작 후 바로 볼 문서 / What to open right after quick start
+
+1. `examples/quickstart.md` — 첫 복붙 명령과 다음 읽기 순서
+2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — 최소 증빙/병기 규칙
+3. `examples/pr-evidence-mini-walkthrough.md` — PR 코멘트 예시
+
+English mirror:
+1. `examples/quickstart.md` — first copy-paste command and next reading step
+2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — minimum evidence and bilingual rules
+3. `examples/pr-evidence-mini-walkthrough.md` — PR comment example
+
 ## 상단 핵심 콜아웃 / Top contributor callouts
+
 
 - **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
 - **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
@@ -129,28 +195,17 @@ awesome-agent-skills-ko/
 
 ---
 
-## Quick start
-
-한국어 문서를 기본으로 유지하면서 병기 품질까지 함께 검증하려면 아래 명령을 사용하세요.
-English mirror: Run the command below to validate both baseline docs and bilingual quality markers.
-
 ## 처음 기여할 때 읽는 순서 / First-time contributor reading order
 
-1. `README.md`의 상단 핵심 콜아웃과 빠른 기여 체크를 먼저 읽습니다. *(예상 1분 / Estimated 1 min)*
+1. `README.md`의 프로젝트 소개/빠른 시작/상단 콜아웃을 먼저 훑습니다. *(예상 1분 / Estimated 1 min)*
 2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`에서 최소 증빙과 병기 규칙을 확인합니다. *(예상 2분 / Estimated 2 min)*
 3. `examples/pr-evidence-mini-walkthrough.md`로 실제 PR 코멘트 증빙 형식을 복붙 가능한 수준으로 확인합니다. *(예상 2분 / Estimated 2 min)*
 
 English mirror:
 
-1. Read the top callouts and the quick contribution check in `README.md` first. *(Estimated 1 min / 예상 1분)*
+1. Scan the project overview, quick start, and top contributor callouts in `README.md` first. *(Estimated 1 min / 예상 1분)*
 2. Open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` for the minimum evidence and bilingual rules. *(Estimated 2 min / 예상 2분)*
 3. Use `examples/pr-evidence-mini-walkthrough.md` to copy a real PR evidence format before opening a review. *(Estimated 2 min / 예상 2분)*
-
-```bash
-git clone https://github.com/sonwr/awesome-agent-skills-ko.git
-cd awesome-agent-skills-ko
-python3 templates/scripts/validate_template.py
-```
 
 ### 빠른 기여 체크 / Quick contribution check
 

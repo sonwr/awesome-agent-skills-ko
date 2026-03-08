@@ -25,6 +25,10 @@ REQUIRED_FILES = [
 BILINGUAL_SECTION_MARKERS = {
     "README.md": [
         "English mirror:",
+        "## 프로젝트 소개 / Project overview",
+        "## 대상 사용자 / Who this is for",
+        "## 제공 가치 / What you get",
+        "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 상단 핵심 콜아웃 / Top contributor callouts",
         "최소 증빙 3종 필수",
         "Document blockers with the next-run priority",
@@ -79,6 +83,15 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         return []
     text = readme_path.read_text(encoding="utf-8")
     errors: list[str] = []
+    for required_heading in [
+        "## 프로젝트 소개 / Project overview",
+        "## 대상 사용자 / Who this is for",
+        "## 제공 가치 / What you get",
+        "## 대표 카테고리와 예시 / Featured categories and examples",
+        "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
+    ]:
+        if required_heading not in text:
+            errors.append(f"README.md: missing landing-page heading {required_heading}")
     if "python3 templates/scripts/validate_template.py" not in text:
         errors.append(
             "README.md: quick start must include `python3 templates/scripts/validate_template.py` for reproducible validation"
