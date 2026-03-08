@@ -132,13 +132,13 @@ English mirror: The operations-heavy navigation blocks (`Core start buttons`, `R
 - **프로젝트를 먼저 이해 / Understand the project** → `프로젝트 소개 / Project overview` → `대표 카테고리와 예시 / Featured categories and examples` → `카테고리 바로가기 / Category jump links`
 - **지금 바로 검증 / Validate now** → `python3 templates/scripts/validate_template.py`
 - **첫 PR 준비 / Prepare the first PR** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md` → `역할별 30초 선택 카드 / 30-second role chooser cards`
-- **운영 가이드 열기 / Open governance guides** → `docs/README_FAST_PATHS.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
+- **운영 가이드 열기 / Open governance guides** → `docs/README_FAST_PATHS.md` → `docs/README_LANDING_QUICKSTART_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
 
 English mirror:
 - **Understand the project** → `Project overview` → `Featured categories and examples` → `Category jump links`
 - **Validate now** → `python3 templates/scripts/validate_template.py`
 - **Prepare the first PR** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md` → `30-second role chooser cards`
-- **Open governance guides** → `docs/README_FAST_PATHS.md` → `Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
+- **Open governance guides** → `docs/README_FAST_PATHS.md` → `docs/README_LANDING_QUICKSTART_MAP.md` → `Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
 
 ## 역할별 첫 클릭 묶음 / Role-based first-click bundles
 

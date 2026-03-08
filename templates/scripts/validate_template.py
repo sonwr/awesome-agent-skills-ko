@@ -473,6 +473,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
         "examples/pr-evidence-mini-walkthrough.md",
         "docs/README_FAST_PATHS.md",
+        "docs/README_LANDING_QUICKSTART_MAP.md",
         "docs/CURATION_POLICY.md",
     ]:
         if required_button not in core_start_buttons_section:

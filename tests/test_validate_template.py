@@ -2602,6 +2602,23 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
 
             self.assertTrue(any("core start buttons must keep bilingual project/validate/contribute/governance entry points" in error for error in errors))
 
+    def test_core_start_buttons_require_landing_quickstart_map_link(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_LANDING_QUICKSTART_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
+                "역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
+            ).replace(
+                "docs/README_LANDING_QUICKSTART_MAP.md` → `Role-based 1-click next docs`",
+                "Role-based 1-click next docs`",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("core start buttons must keep bilingual project/validate/contribute/governance entry points" in error for error in errors))
+
 
     def test_required_landing_map_doc_mentions_maintenance_loop(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
