@@ -231,6 +231,28 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: category jump links must expose onboarding/evidence/governance entry points in Korean/English near the landing section"
         )
+    quickstart_followup_section = re.search(
+        r"(?ms)^###\s*빠른 시작 후 바로 볼 문서 / What to open right after quick start\s*$\n(?P<body>.*?)(?=^##\s|^###\s|\Z)",
+        text,
+    )
+    if quickstart_followup_section is None:
+        errors.append(
+            "README.md: missing quick-start follow-up section that maps the first command to the next three docs"
+        )
+    else:
+        quickstart_followup_body = quickstart_followup_section.group("body")
+        required_followup_markers = [
+            "examples/quickstart.md",
+            "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+            "examples/pr-evidence-mini-walkthrough.md",
+            "English mirror:",
+        ]
+        missing_followup_markers = [marker for marker in required_followup_markers if marker not in quickstart_followup_body]
+        if missing_followup_markers:
+            errors.append(
+                "README.md: quick-start follow-up section must keep the next-doc trio and English mirror -> "
+                + ", ".join(missing_followup_markers)
+            )
     quick_chooser_section = _extract_section(text, "10초 시작 선택 / 10-second start chooser")
     required_quick_chooser_markers = [
         "python3 templates/scripts/validate_template.py",

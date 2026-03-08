@@ -443,10 +443,14 @@ python3 templates/scripts/validate_template.py
 2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — 최소 증빙/병기 규칙
 3. `examples/pr-evidence-mini-walkthrough.md` — PR 코멘트 예시
 
+이 세 문서는 quick start 직후의 기본 후속 동선이며, 검증 스크립트가 빠짐없이 유지되는지 함께 확인합니다.
+
 English mirror:
 1. `examples/quickstart.md` — first copy-paste command and next reading step
 2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — minimum evidence and bilingual rules
 3. `examples/pr-evidence-mini-walkthrough.md` — PR comment example
+
+These three docs are the default follow-up path after quick start, and the validator checks that the trio stays intact.
 
 ## 더 읽기 / Learn more
 

@@ -94,6 +94,21 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("1-minute quick start" in error for error in errors))
 
+    def test_readme_requires_quickstart_followup_doc_trio(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8")
+            sample = sample.replace("2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — 최소 증빙/병기 규칙\n", "")
+            sample = sample.replace("3. `examples/pr-evidence-mini-walkthrough.md` — PR 코멘트 예시\n", "")
+            sample = sample.replace("2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — minimum evidence and bilingual rules\n", "")
+            sample = sample.replace("3. `examples/pr-evidence-mini-walkthrough.md` — PR comment example\n", "")
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("next-doc trio" in error for error in errors))
+
     def test_readme_requires_bilingual_first_command_by_role_section(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
