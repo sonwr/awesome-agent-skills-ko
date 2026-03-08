@@ -38,7 +38,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
-        "## 핵심 시작 버튼 / Core start buttons",
+        "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
@@ -191,7 +191,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
-        "## 핵심 시작 버튼 / Core start buttons",
+        "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
@@ -227,6 +227,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "## 역할별 한 줄 진입점 / Role-based one-line entry points" not in text or "**탐색형 / Explorer**" not in text or "**기여형 / Contributor**" not in text or "**운영형 / Operator**" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based one-line entry points for explorer/contributor/operator paths"
+        )
+    if "## 역할별 첫 클릭 묶음 / Role-based first-click bundles" not in text or "도착 문서" not in text or "landing doc" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual role-based first-click bundles so each visitor can see first click, second click, and landing doc near the top"
         )
     if "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs" not in text or "docs/README_FAST_PATHS.md" not in text:
         errors.append(

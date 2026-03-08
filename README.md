@@ -81,6 +81,17 @@ English mirror:
 - **Prepare the first PR** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md` → `30-second role chooser cards`
 - **Open governance guides** → `docs/README_FAST_PATHS.md` → `Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
 
+## 역할별 첫 클릭 묶음 / Role-based first-click bundles
+
+- **탐색형 / Explorer** — 첫 클릭: `프로젝트 소개 / Project overview` → 두 번째 클릭: `대표 카테고리와 예시 / Featured categories and examples` → 도착 문서: `examples/quickstart.md`
+- **기여형 / Contributor** — 첫 클릭: `python3 templates/scripts/validate_template.py` → 두 번째 클릭: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → 도착 문서: `examples/pr-evidence-mini-walkthrough.md`
+- **운영형 / Operator** — 첫 클릭: `docs/README_FAST_PATHS.md` → 두 번째 클릭: `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → 도착 문서: `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Explorer** — first click: `Project overview` → second click: `Featured categories and examples` → landing doc: `examples/quickstart.md`
+- **Contributor** — first click: `python3 templates/scripts/validate_template.py` → second click: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → landing doc: `examples/pr-evidence-mini-walkthrough.md`
+- **Operator** — first click: `docs/README_FAST_PATHS.md` → second click: `Role-based 1-click next docs` → landing doc: `docs/CURATION_POLICY.md`
+
 ## 1분 빠른 시작 / 1-minute quick start
 
 ```bash

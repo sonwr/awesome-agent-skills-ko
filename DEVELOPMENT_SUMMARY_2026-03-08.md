@@ -445,3 +445,26 @@
 
 ### 다음 실행 우선순위
 - 핵심 시작 버튼을 카테고리 바로가기/역할 카드와 더 강하게 연결해, README 첫 화면에서 역할별 첫 클릭 수를 한 번 더 줄이기.
+
+## 실행 @ 19:45 UTC (cron)
+
+### 계획
+- README 상단 소개 우선 구조를 유지하면서 역할별 첫 클릭 경로를 더 압축해 노출한다.
+- validator/test도 같은 상단 번들 구조를 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md` 상단에 **역할별 첫 클릭 묶음 / Role-based first-click bundles** 섹션 추가.
+  - Explorer / Contributor / Operator별로 첫 클릭, 두 번째 클릭, 도착 문서를 한/영으로 압축 노출했다.
+- `templates/scripts/validate_template.py`를 업데이트해 새 상단 번들 섹션과 `도착 문서 / landing doc` 마커를 검증하도록 강화했다.
+- `tests/test_validate_template.py`에 상단 번들 누락 시 실패하는 회귀 케이스를 보강했다.
+
+### 검증
+- `python3 -m unittest discover -s tests -q`
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS**
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- 역할별 첫 클릭 묶음과 `docs/README_FAST_PATHS.md`를 더 직접적으로 연결해, README 첫 화면에서 역할별 다음 문서 점프를 한 단계 더 줄이기.
