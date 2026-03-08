@@ -85,8 +85,10 @@ English mirror:
 - **지금 필요한 게 무엇인가요?** 탐색이면 `프로젝트 소개 / Project overview`, 실행이면 `python3 templates/scripts/validate_template.py`, 첫 PR이면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 바로 갑니다.
 - **빠른 시작 문서는 어디인가요?** 공통 다음 문서는 `examples/quickstart.md`입니다.
 - **운영/정책 문서는 어디로 가나요?** 첫 화면 아래의 `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내립니다.
+- **어떤 길을 먼저 고르나요?** `10초 시작 선택 / 10-second start chooser`에서 탐색/실행/기여/운영 중 하나를 바로 고릅니다.
 
 English mirror:
+- **Which route should I pick first?** Use the `10-second start chooser` to jump straight into explore / execute / contribute / audit.
 - **What do you need right now?** For discovery open `Project overview`, for execution run `python3 templates/scripts/validate_template.py`, and for the first PR jump to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
 - **Where is the common quick-start doc?** The shared next document is `examples/quickstart.md`.
 - **Where do governance docs live?** Keep them below the landing area in `docs/README_FAST_PATHS.md` and `docs/CURATION_POLICY.md`.

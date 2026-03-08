@@ -24,6 +24,21 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first 12 lines" in error for error in errors))
 
+    def test_readme_requires_ten_second_start_chooser_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "## 프로젝트 소개 / Project overview\n"
+                + "\n".join([f"line {idx}" for idx in range(1, 112)])
+                + "\n## 10초 시작 선택 / 10-second start chooser\n"
+                + "python3 templates/scripts/validate_template.py\n",
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("10-second start chooser" in error for error in errors))
+
     def test_readme_requires_first_validation_command_within_first_160_lines(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
