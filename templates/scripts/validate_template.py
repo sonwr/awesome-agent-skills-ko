@@ -380,6 +380,18 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: Top contributor callouts must stay below the 30-second fit check so the landing page introduces project value before contribution guardrails"
         )
 
+    quick_start_idx = text.find("## 빠른 시작 / Quick start")
+    learn_more_idx = text.find("## 더 읽기 / Learn more")
+    if quick_start_idx != -1 and learn_more_idx != -1 and learn_more_idx < quick_start_idx:
+        errors.append(
+            "README.md: Learn more must stay below the Quick start section so project intro/value/examples appear before long-form governance links"
+        )
+    first_time_idx = text.find("## 처음 기여할 때 읽는 순서 / First-time contributor reading order")
+    if quick_start_idx != -1 and first_time_idx != -1 and first_time_idx < quick_start_idx:
+        errors.append(
+            "README.md: First-time contributor reading order must stay below the Quick start section so contributor onboarding does not displace the intro-first landing block"
+        )
+
     quick_start_idx = text.find("## Quick start")
     repo_structure_idx = text.find("## Repository structure")
     if quick_start_idx != -1 and repo_structure_idx != -1 and repo_structure_idx < quick_start_idx:
