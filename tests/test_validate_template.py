@@ -1848,6 +1848,84 @@ if __name__ == "__main__":
 
             self.assertTrue(any("bilingual `## 빠른 시작 / Quick start`" in error for error in errors))
 
+    def test_readme_requires_10_second_start_chooser_near_landing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "## 프로젝트 소개 / Project overview",
+                        "## 프로젝트 한눈에 보기 / Project at a glance",
+                        "## 이 저장소를 읽는 법 / How to read this repo",
+                        "## 프로젝트 스냅샷 / Project snapshot",
+                        "대표 시작점",
+                        "Landing-page rule",
+                        "## 프로젝트 시작 맵 / Project start map",
+                        "## 핵심 시작 버튼 / Core start buttons",
+                        "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
+                        "## 대상 사용자 / Who this is for",
+                        "## 제공 가치 / What you get",
+                        "## 대표 시작 예시 / Featured starter examples",
+                        "검증부터 시작 / Start with validation",
+                        "기여 준비 / Prepare a contribution",
+                        "운영 점검 / Audit the landing flow",
+                        "examples/quickstart.md",
+                        "examples/pr-evidence-mini-walkthrough.md",
+                        "docs/README_FAST_PATHS.md",
+                        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+                        "## 빠른 시작 / Quick start",
+                        "## 한눈에 보는 3단계 시작 / 3-step start path",
+                        "프로젝트 이해",
+                        "Understand the project",
+                        "첫 검증 실행",
+                        "Run the first validation",
+                        "첫 PR 준비",
+                        "Prepare the first PR",
+                        "## 첫 방문자 체크 / First-visit chooser",
+                        "## 30초 적합성 체크 / 30-second fit check",
+                        "## 카테고리 바로가기 / Category jump links",
+                        "Jump to onboarding",
+                        "Jump to evidence examples",
+                        "Jump to governance docs",
+                        "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+                        "**탐색형 / Explorer**",
+                        "**기여형 / Contributor**",
+                        "**운영형 / Operator**",
+                        "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
+                        "도착 문서",
+                        "landing doc",
+                        "빠른 경로 앵커",
+                        "fast-path anchor",
+                        "docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path",
+                        "docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path",
+                        "docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path",
+                        "## 역할별 바로 점프 / Role-based instant jumps",
+                        "## 역할별 바로 열 문서 / Role-based first-open docs",
+                        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "docs/CURATION_POLICY.md",
+                        "docs/PROJECT_OVERVIEW.md",
+                        "docs/README_INFORMATION_ARCHITECTURE.md",
+                        "## 대표 카테고리와 예시 / Featured categories and examples",
+                        "## 대표 활용 시나리오 / Featured use cases",
+                        "## 추천 시작 경로 / Recommended starting paths",
+                        "Explorer path",
+                        "Contributor path",
+                        "Operator path",
+                        "python3 templates/scripts/validate_template.py",
+                        "### 빠른 선택 카드 / Quick chooser cards",
+                        "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
+                        "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
+                        "## Quick start",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("10-second start chooser" in error for error in errors))
+
+
     def test_role_chooser_cards_are_required_near_landing_section(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

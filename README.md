@@ -80,6 +80,17 @@ English mirror:
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
 - **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
 
+## 10초 시작 선택 / 10-second start chooser
+
+- **지금 필요한 게 무엇인가요?** 탐색이면 `프로젝트 소개 / Project overview`, 실행이면 `python3 templates/scripts/validate_template.py`, 첫 PR이면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 바로 갑니다.
+- **빠른 시작 문서는 어디인가요?** 공통 다음 문서는 `examples/quickstart.md`입니다.
+- **운영/정책 문서는 어디로 가나요?** 첫 화면 아래의 `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내립니다.
+
+English mirror:
+- **What do you need right now?** For discovery open `Project overview`, for execution run `python3 templates/scripts/validate_template.py`, and for the first PR jump to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
+- **Where is the common quick-start doc?** The shared next document is `examples/quickstart.md`.
+- **Where do governance docs live?** Keep them below the landing area in `docs/README_FAST_PATHS.md` and `docs/CURATION_POLICY.md`.
+
 ## 프로젝트 시작 맵 / Project start map
 
 README 첫 화면에서 바로 고를 수 있는 4가지 시작 경로입니다. 소개를 먼저 이해할지, 바로 검증할지, 바로 기여할지, 운영 구조를 감사할지 빠르게 갈라집니다.

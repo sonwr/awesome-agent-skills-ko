@@ -37,9 +37,8 @@ BILINGUAL_SECTION_MARKERS = {
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 첫 화면 30초 요약 / 30-second landing summary",
         "## 이 저장소를 읽는 법 / How to read this repo",
-        "## 이 저장소를 읽는 법 / How to read this repo",
-        "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
+        "## 10초 시작 선택 / 10-second start chooser",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
@@ -57,10 +56,6 @@ BILINGUAL_SECTION_MARKERS = {
         "## 이 저장소가 덜 맞는 경우 / Not-for scenarios",
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
-        "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs",
-        "## 역할별 바로 열 문서 / Role-based first-open docs",
-        "## 카테고리 바로가기 / Category jump links",
-        "## 역할별 한 줄 진입점 / Role-based one-line entry points",
         "## 역할별 30초 선택 카드 / 30-second role chooser cards",
         "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs",
         "## 역할별 바로 열 문서 / Role-based first-open docs",
@@ -72,10 +67,8 @@ BILINGUAL_SECTION_MARKERS = {
         "## 추천 시작 경로 / Recommended starting paths",
         "### 빠른 선택 카드 / Quick chooser cards",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
-        "### 빠른 선택 카드 / Quick chooser cards",
         "탐색형 / Explorer path",
         "기여형 / Contributor path",
-        "운영형 / Operator path",
         "운영형 / Operator path",
         "## 더 읽기 / Learn more",
         "## 상단 핵심 콜아웃 / Top contributor callouts",
@@ -196,8 +189,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 이 저장소를 읽는 법 / How to read this repo",
-        "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
+        "## 10초 시작 선택 / 10-second start chooser",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
@@ -224,6 +217,22 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: category jump links must expose onboarding/evidence/governance entry points in Korean/English near the landing section"
         )
+    quick_chooser_section = _extract_section(text, "10초 시작 선택 / 10-second start chooser")
+    required_quick_chooser_markers = [
+        "python3 templates/scripts/validate_template.py",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "examples/quickstart.md",
+        "docs/README_FAST_PATHS.md",
+        "docs/CURATION_POLICY.md",
+        "English mirror:",
+    ]
+    missing_quick_chooser_markers = [marker for marker in required_quick_chooser_markers if marker not in quick_chooser_section]
+    if missing_quick_chooser_markers:
+        errors.append(
+            "README.md: 10-second start chooser must keep intro-first jump links for execution/contribution/governance -> "
+            + ", ".join(missing_quick_chooser_markers)
+        )
+
     recommended_paths_section = _extract_section(text, "추천 시작 경로 / Recommended starting paths")
     if "Explorer path" not in recommended_paths_section or "Contributor path" not in recommended_paths_section or "Operator path" not in recommended_paths_section:
         errors.append(
@@ -522,8 +531,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 이 저장소를 읽는 법 / How to read this repo",
-        "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
+        "## 10초 시작 선택 / 10-second start chooser",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
         "## 대상 사용자 / Who this is for",
