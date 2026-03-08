@@ -38,3 +38,15 @@ English mirror:
 English mirror:
 - The README sections `Recommended starting paths`, `30-second role chooser cards`, and `Role-based first-open docs` should keep the same Explorer / Contributor / Operator order as this guide.
 - Keep the README landing area intro-first, then hand detailed navigation off to this file.
+
+
+## 1-click handoff pairs / 한 번에 여는 다음 문서
+
+- **Explorer** → `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
+- **Contributor** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **Operator** → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Explorer** → `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
+- **Contributor** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **Operator** → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`

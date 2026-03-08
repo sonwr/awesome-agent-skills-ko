@@ -202,6 +202,17 @@ English mirror:
 - **Contributor** — use `python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md → examples/pr-evidence-mini-walkthrough.md` to finish the first validation plus PR evidence prep fast.
 - **Operator** — use `docs/README_FAST_PATHS.md → docs/README_INFORMATION_ARCHITECTURE.md → docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
 
+## 역할별 1클릭 다음 문서 / Role-based 1-click next docs
+
+- **탐색형 / Explorer** — `docs/README_FAST_PATHS.md`의 Explorer 경로와 동일하게 `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`로 이동합니다.
+- **기여형 / Contributor** — `docs/README_FAST_PATHS.md`의 Contributor 경로와 동일하게 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`로 이동합니다.
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md`의 Operator 경로와 동일하게 `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`로 이동합니다.
+
+English mirror:
+- **Explorer** — follow the same handoff as `docs/README_FAST_PATHS.md`: `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`.
+- **Contributor** — follow the same handoff as `docs/README_FAST_PATHS.md`: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`.
+- **Operator** — follow the same handoff as `docs/README_FAST_PATHS.md`: `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/CURATION_POLICY.md`.
+
 ## 역할별 바로 열 문서 / Role-based first-open docs
 
 - **탐색형 / Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`

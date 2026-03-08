@@ -45,10 +45,12 @@ BILINGUAL_SECTION_MARKERS = {
         "## 30초 적합성 체크 / 30-second fit check",
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+        "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs",
         "## 역할별 바로 열 문서 / Role-based first-open docs",
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
         "## 역할별 30초 선택 카드 / 30-second role chooser cards",
+        "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs",
         "## 역할별 바로 열 문서 / Role-based first-open docs",
         "탐색형 / Explorer",
         "기여형 / Contributor",
@@ -127,6 +129,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 기여형 60초 경로 / Contributor 60-second path",
         "## 운영형 60초 경로 / Operator 60-second path",
         "## README 역할 카드와의 연결 / How this maps to README role cards",
+        "## 1-click handoff pairs / 한 번에 여는 다음 문서",
         "English mirror:",
     ],
     "docs/README_TOP_CALLOUTS.md": [
@@ -216,6 +219,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "## 역할별 한 줄 진입점 / Role-based one-line entry points" not in text or "**탐색형 / Explorer**" not in text or "**기여형 / Contributor**" not in text or "**운영형 / Operator**" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based one-line entry points for explorer/contributor/operator paths"
+        )
+    if "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs" not in text or "docs/README_FAST_PATHS.md" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual role-based 1-click next docs linked back to docs/README_FAST_PATHS.md so intro-first handoff stays explicit"
         )
     if "## 역할별 바로 열 문서 / Role-based first-open docs" not in text or "docs/README_FAST_PATHS.md" not in text:
         errors.append(
@@ -381,6 +388,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
         "## 역할별 30초 선택 카드 / 30-second role chooser cards",
+        "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs",
         "## 역할별 바로 열 문서 / Role-based first-open docs",
         "## 빠른 시작 / Quick start",
     ]
