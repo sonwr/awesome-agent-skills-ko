@@ -100,12 +100,14 @@ English mirror:
 - 무엇부터 보면 되나요? **프로젝트 소개 → 대상 사용자 → 제공 가치 → 빠른 시작 명령** 순서로 1분 안에 핵심을 파악할 수 있습니다.
 - 첫 실행 명령은 무엇인가요? `python3 templates/scripts/validate_template.py`
 - 다음 온보딩 문서는 어디인가요? `examples/quickstart.md`
+- 60초 경로 선택 문서는 어디인가요? `docs/README_FAST_PATHS.md`
 - 첫 PR 전에 무엇을 보나요? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 
 English mirror:
 - Where should I start? Read **project overview → audience → value → quick start command** to understand the repo in under a minute.
 - What is the first command to run? `python3 templates/scripts/validate_template.py`
 - What is the next onboarding doc to open? `examples/quickstart.md`
+- Where is the 60-second path chooser? `docs/README_FAST_PATHS.md`
 - What should I open before a first PR? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 
 ## 한눈에 보는 3단계 시작 / 3-step start path
@@ -113,11 +115,13 @@ English mirror:
 1. **프로젝트 이해** — 프로젝트 소개, 대상 사용자, 제공 가치를 먼저 읽습니다.
 2. **첫 검증 실행** — `python3 templates/scripts/validate_template.py`를 실행합니다.
 3. **첫 PR 준비** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`를 엽니다.
+4. **빠른 경로 선택** — 역할별 압축 이동은 `docs/README_FAST_PATHS.md`를 엽니다.
 
 English mirror:
 1. **Understand the project** — read the overview, audience, and value sections first.
 2. **Run the first validation** — execute `python3 templates/scripts/validate_template.py`.
 3. **Prepare the first PR** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md`.
+4. **Choose a fast path** — open `docs/README_FAST_PATHS.md` for the compressed role-based path chooser.
 
 ## 첫 방문자 체크 / First-visit chooser
 
@@ -208,6 +212,7 @@ English mirror: Keep the landing view focused on overview/value/quick start, and
 
 - 프로젝트 진입 경로 / Project entry paths: `docs/PROJECT_ENTRY_PATHS.md`
 - README 사용자 여정 / README user journeys: `docs/README_USER_JOURNEYS.md`
+- README 빠른 진입 경로 / README fast paths: `docs/README_FAST_PATHS.md`
 - README 첫 화면 체크 / README first-screen checklist: `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
 - 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`

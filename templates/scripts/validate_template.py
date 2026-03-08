@@ -23,6 +23,7 @@ REQUIRED_FILES = [
     "docs/README_INFORMATION_ARCHITECTURE.md",
     "docs/README_FIRST_SCREEN_CHECKLIST.md",
     "docs/README_USER_JOURNEYS.md",
+    "docs/README_FAST_PATHS.md",
     "examples/pr-evidence-mini-walkthrough.md",
     "examples/quickstart.md",
 ]
@@ -106,6 +107,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 탐색형 방문자 / Explorer journey",
         "## 기여형 방문자 / Contributor journey",
         "## 운영형 방문자 / Operator journey",
+        "English mirror:",
+    ],
+    "docs/README_FAST_PATHS.md": [
+        "README 빠른 진입 경로 / README fast paths",
+        "## 탐색형 60초 경로 / Explorer 60-second path",
+        "## 기여형 60초 경로 / Contributor 60-second path",
+        "## 운영형 60초 경로 / Operator 60-second path",
         "English mirror:",
     ],
     "docs/README_TOP_CALLOUTS.md": [
@@ -259,6 +267,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_USER_JOURNEYS.md" not in text:
         errors.append(
             "README.md: learn-more or journey sections must link to docs/README_USER_JOURNEYS.md so intro-first audience flows stay documented"
+        )
+    if "docs/README_FAST_PATHS.md" not in text:
+        errors.append(
+            "README.md: learn-more or quick-start sections must link to docs/README_FAST_PATHS.md so first-time visitors can choose an intro-first 60-second path"
         )
     if "### 빠른 기여 체크 / Quick contribution check" not in text:
         errors.append(
