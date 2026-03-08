@@ -468,3 +468,23 @@
 
 ### 다음 실행 우선순위
 - 역할별 첫 클릭 묶음과 `docs/README_FAST_PATHS.md`를 더 직접적으로 연결해, README 첫 화면에서 역할별 다음 문서 점프를 한 단계 더 줄이기.
+
+## 실행 @ 20:59 UTC (cron)
+
+### 계획
+- README 첫 화면의 역할별 첫 클릭 묶음이 `docs/README_FAST_PATHS.md` 역할 앵커로 즉시 이어지도록 handoff를 더 짧게 만든다.
+- validator도 같은 fast-path anchor 구조를 실제로 강제한다.
+
+### 변경 사항
+- `README.md`의 **역할별 첫 클릭 묶음 / Role-based first-click bundles**에 Explorer / Contributor / Operator별 `docs/README_FAST_PATHS.md` 역할 앵커를 직접 노출했다.
+- `templates/scripts/validate_template.py`를 업데이트해 각 역할 묶음에 한·영 fast-path anchor 마커가 없으면 실패하도록 검증을 강화했다.
+
+### 검증
+- `python3 -m unittest discover -s tests -q`
+- `python3 templates/scripts/validate_template.py`
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- README 첫 화면의 역할 카드/핵심 버튼/첫 클릭 묶음 사이 중복 라벨을 더 줄여 정보 밀도는 유지하고 스캔 속도를 높이기.

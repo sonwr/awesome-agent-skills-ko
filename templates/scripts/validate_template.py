@@ -235,6 +235,20 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: landing section must include bilingual role-based first-click bundles so each visitor can see first click, second click, and landing doc near the top"
         )
+    role_first_click_bundle_section = _extract_section(text, "역할별 첫 클릭 묶음 / Role-based first-click bundles")
+    required_role_anchor_markers = [
+        "docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path",
+        "docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path",
+        "docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path",
+        "빠른 경로 앵커",
+        "fast-path anchor",
+    ]
+    missing_role_anchor_markers = [marker for marker in required_role_anchor_markers if marker not in role_first_click_bundle_section]
+    if missing_role_anchor_markers:
+        errors.append(
+            "README.md: role-based first-click bundles must include bilingual fast-path anchors back into docs/README_FAST_PATHS.md -> "
+            + ", ".join(missing_role_anchor_markers)
+        )
     if "## 역할별 바로 점프 / Role-based instant jumps" not in text or "docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based instant jumps that deep-link explorer/contributor/operator visitors into docs/README_FAST_PATHS.md"

@@ -87,14 +87,14 @@ English mirror:
 
 ## 역할별 첫 클릭 묶음 / Role-based first-click bundles
 
-- **탐색형 / Explorer** — 첫 클릭: `프로젝트 소개 / Project overview` → 두 번째 클릭: `대표 카테고리와 예시 / Featured categories and examples` → 도착 문서: `examples/quickstart.md`
-- **기여형 / Contributor** — 첫 클릭: `python3 templates/scripts/validate_template.py` → 두 번째 클릭: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → 도착 문서: `examples/pr-evidence-mini-walkthrough.md`
-- **운영형 / Operator** — 첫 클릭: `docs/README_FAST_PATHS.md` → 두 번째 클릭: `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → 도착 문서: `docs/CURATION_POLICY.md`
+- **탐색형 / Explorer** — 첫 클릭: `프로젝트 소개 / Project overview` → 두 번째 클릭: `대표 카테고리와 예시 / Featured categories and examples` → 도착 문서: `examples/quickstart.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **기여형 / Contributor** — 첫 클릭: `python3 templates/scripts/validate_template.py` → 두 번째 클릭: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → 도착 문서: `examples/pr-evidence-mini-walkthrough.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **운영형 / Operator** — 첫 클릭: `docs/README_FAST_PATHS.md` → 두 번째 클릭: `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → 도착 문서: `docs/CURATION_POLICY.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
 
 English mirror:
-- **Explorer** — first click: `Project overview` → second click: `Featured categories and examples` → landing doc: `examples/quickstart.md`
-- **Contributor** — first click: `python3 templates/scripts/validate_template.py` → second click: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → landing doc: `examples/pr-evidence-mini-walkthrough.md`
-- **Operator** — first click: `docs/README_FAST_PATHS.md` → second click: `Role-based 1-click next docs` → landing doc: `docs/CURATION_POLICY.md`
+- **Explorer** — first click: `Project overview` → second click: `Featured categories and examples` → landing doc: `examples/quickstart.md` → fast-path anchor: `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **Contributor** — first click: `python3 templates/scripts/validate_template.py` → second click: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → landing doc: `examples/pr-evidence-mini-walkthrough.md` → fast-path anchor: `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **Operator** — first click: `docs/README_FAST_PATHS.md` → second click: `Role-based 1-click next docs` → landing doc: `docs/CURATION_POLICY.md` → fast-path anchor: `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
 
 ## 역할별 바로 점프 / Role-based instant jumps
 
