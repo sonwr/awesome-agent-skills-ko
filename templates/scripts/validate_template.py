@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
     "docs/README_TOP_CALLOUTS.md",
     "docs/PROJECT_OVERVIEW.md",
+    "docs/PROJECT_ENTRY_PATHS.md",
     "docs/PROJECT_DIRECTION.md",
     "docs/README_INFORMATION_ARCHITECTURE.md",
     "examples/pr-evidence-mini-walkthrough.md",
@@ -55,6 +56,13 @@ BILINGUAL_SECTION_MARKERS = {
         "English mirror:",
         "README 상단 랜딩 구조",
         "README landing order",
+    ],
+    "docs/PROJECT_ENTRY_PATHS.md": [
+        "프로젝트 진입 경로 / Project entry paths",
+        "## 30초 탐색 경로 / 30-second exploration path",
+        "## 5분 기여 경로 / 5-minute contribution path",
+        "## 운영 문서 경로 / Governance follow-up path",
+        "English mirror:",
     ],
     "docs/README_INFORMATION_ARCHITECTURE.md": [
         "README 정보 구조 가이드 / README information architecture guide",
@@ -139,6 +147,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/PROJECT_OVERVIEW.md" not in text or "docs/PROJECT_DIRECTION.md" not in text:
         errors.append(
             "README.md: learn-more section must link to docs/PROJECT_OVERVIEW.md and docs/PROJECT_DIRECTION.md"
+        )
+    if "docs/PROJECT_ENTRY_PATHS.md" not in text:
+        errors.append(
+            "README.md: learn-more section must link to docs/PROJECT_ENTRY_PATHS.md for next-step navigation"
         )
     if "### 빠른 기여 체크 / Quick contribution check" not in text:
         errors.append(
@@ -227,6 +239,7 @@ def _check_readme_top_callout_sync(root: Path) -> list[str]:
         "5-minute contribution flow",
         "docs/README_TOP_CALLOUTS.md",
     "docs/PROJECT_OVERVIEW.md",
+    "docs/PROJECT_ENTRY_PATHS.md",
     "docs/PROJECT_DIRECTION.md",
     "docs/README_INFORMATION_ARCHITECTURE.md",
     ]

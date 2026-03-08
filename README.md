@@ -154,6 +154,7 @@ English mirror:
 랜딩 화면에서는 소개/가치/빠른 시작을 먼저 보여주고, 운영 철학과 장기 방향은 별도 문서로 분리합니다.
 English mirror: Keep the landing view focused on overview/value/quick start, and move governance philosophy plus long-term direction into dedicated docs.
 
+- 프로젝트 진입 경로 / Project entry paths: `docs/PROJECT_ENTRY_PATHS.md`
 - 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
 - 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
 - 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
@@ -237,6 +238,7 @@ A contribution is acceptable when:
 - **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
 - **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.
 - **README 정보 구조 기준 유지** — 랜딩 우선순위 기준은 `docs/README_INFORMATION_ARCHITECTURE.md`에서 관리하고, 소개형 첫 화면이 흐려지지 않도록 검증 스크립트로 확인합니다.
+- **다음 문서 이동 경로 고정** — README 다음 이동 기준은 `docs/PROJECT_ENTRY_PATHS.md`에서 관리해 탐색/기여/운영 흐름을 빠르게 고를 수 있게 합니다.
 
 English mirror:
 
