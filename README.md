@@ -20,11 +20,13 @@ A curated collection of agent skills and runnable templates for Korean-speaking 
 
 - **한 줄 설명**: 한국어 기본 문서 흐름으로 스킬을 찾고, 검증 명령까지 바로 실행할 수 있는 큐레이션 저장소입니다.
 - **대표 시작점**: `python3 templates/scripts/validate_template.py`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **추천 대상**: 한국어 기본 문서 흐름으로 빠르게 탐색·검증·기여까지 연결하고 싶은 개인/팀
 - **첫 화면 원칙**: README 상단은 소개/가치/빠른 시작을 먼저 보여주고, 운영 규칙은 아래 문서로 내립니다.
 
 English mirror:
 - **One-line summary**: a curated repo where Korean-first builders can discover skills and immediately run validation commands.
 - **Best first stops**: `python3 templates/scripts/validate_template.py`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Best for**: individuals and teams who want Korean-first discovery, validation, and contribution flows in one place.
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
 
 ## 대상 사용자 / Who this is for
