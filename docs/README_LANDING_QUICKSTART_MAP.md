@@ -14,15 +14,12 @@ A compact map for keeping the README landing flow focused on **intro → value �
 5. **추천 시작 경로** — 탐색형/기여형/운영형 카드로 첫 방문자의 다음 클릭을 압축합니다.
 
 English mirror:
-5. **Recommended starting paths** — compress the next click for explorer/contributor/operator visitors into one landing block.
-5. **운영/기여 규칙은 아래로** — CONTRIBUTING, 정책, 체크리스트는 뒤쪽 문서로 넘깁니다.
-
-English mirror:
 1. **Project overview** — explain what the repo does and why it exists.
 2. **Audience + value** — show who benefits and what problem gets solved quickly.
 3. **Featured categories/use cases** — prove the value with concrete examples.
 4. **Quick start** — keep the first validation command and next document within the landing area.
-5. **Governance later** — move contribution/policy details lower or into dedicated docs.
+5. **Recommended starting paths** — compress the next click for explorer/contributor/operator visitors into one landing block.
+6. **Governance later** — move contribution/policy details lower or into dedicated docs.
 
 ## README 상단 체크 질문 / README top-check questions
 
@@ -44,3 +41,13 @@ English mirror:
 - English mirror: When editing the README top, keep **overview -> audience -> value -> featured examples/quick start** visible before governance detail.
 - English mirror: After every structural edit, run `python3 templates/scripts/validate_template.py` and then re-read `docs/README_FIRST_SCREEN_CHECKLIST.md` for a human check.
 - English mirror: Keep the project start map in `Explore first -> Validate now -> Contribute now -> Audit the structure` order so the first screen stays predictable.
+
+
+## 상단 재설계 체크리스트 / Landing redesign checklist
+
+- 한국어: 상단 1스크린에서 **프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 예시 → 빠른 시작**이 끊기지 않는지 본다.
+- 한국어: CONTRIBUTING/정책/운영 체크리스트 링크는 상단 핵심 가치 설명 뒤쪽으로 밀어낸다.
+- 한국어: 탐색형/기여형/운영형 사용자가 각각 다음 클릭 문서를 한 번에 찾을 수 있게 둔다.
+- English mirror: Keep **overview -> audience -> value -> featured examples -> quick start** readable within the first screen.
+- English mirror: Push contribution/policy/ops guardrails below the intro/value area or into dedicated docs.
+- English mirror: Ensure explorer/contributor/operator visitors can each find the next document in one click.
