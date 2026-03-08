@@ -43,8 +43,10 @@ BILINGUAL_SECTION_MARKERS = {
         "## 30초 적합성 체크 / 30-second fit check",
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+        "## 역할별 바로 열 문서 / Role-based first-open docs",
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+        "## 역할별 바로 열 문서 / Role-based first-open docs",
         "탐색형 / Explorer",
         "기여형 / Contributor",
         "운영형 / Operator",
@@ -192,6 +194,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "## 역할별 한 줄 진입점 / Role-based one-line entry points" not in text or "**탐색형 / Explorer**" not in text or "**기여형 / Contributor**" not in text or "**운영형 / Operator**" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based one-line entry points for explorer/contributor/operator paths"
+        )
+    if "## 역할별 바로 열 문서 / Role-based first-open docs" not in text or "docs/README_FAST_PATHS.md" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual role-based first-open docs so visitors can jump into explorer/contributor/operator paths in one click"
         )
     if "대표 시작점" not in text or "Landing-page rule" not in text:
         errors.append(

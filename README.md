@@ -73,6 +73,17 @@ English mirror:
 - **Contributor** — best when you want the first validation command plus PR evidence docs immediately.
 - **Operator** — best when you want to audit information architecture, curation policy, and governance docs first.
 
+## 역할별 바로 열 문서 / Role-based first-open docs
+
+- **탐색형 / Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
+- **기여형 / Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
+- **Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+
 ## 대표 카테고리와 예시 / Featured categories and examples
 
 - **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
