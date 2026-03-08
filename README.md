@@ -216,6 +216,27 @@ English mirror:
 - What do you get immediately? The README landing flow surfaces project value, quick start, and key follow-up docs without hunting.
 - What is it not? It is not just a link dump or a runtime-locked prompt bundle.
 
+## 이 저장소가 특히 맞는 경우 / Best-fit scenarios
+
+- **한국어 기본 문서 흐름이 중요한 팀** — 영어 미러까지 함께 관리해야 할 때
+- **README 첫 화면에서 바로 실행/기여 경로가 보여야 하는 저장소** — 소개형 랜딩 구조를 유지하고 싶을 때
+- **큐레이션 + 검증 + PR 증빙을 한 흐름으로 묶고 싶은 팀** — 문서만이 아니라 재현 명령까지 같이 남기고 싶을 때
+
+English mirror:
+- **Teams that need Korean-first docs with English mirrors**
+- **Repos that should expose validation/contribution routes from the first README screen**
+- **Teams that want curation + validation + PR evidence in one flow**
+
+## 이 저장소가 덜 맞는 경우 / Not-for scenarios
+
+- **단순 링크 모음만 원할 때** — 이 저장소는 구조/검증/운영 가드까지 함께 다룹니다.
+- **특정 런타임 전용 프롬프트 보관소만 원할 때** — 휴대 가능한 문서 흐름과 템플릿을 더 중시합니다.
+- **운영 문서를 README 최상단에 길게 두고 싶을 때** — 이 저장소는 소개/가치/빠른 시작 우선 구조를 유지합니다.
+
+English mirror:
+- **When you only want a plain link archive**
+- **When you only need runtime-specific prompt storage**
+- **When you prefer heavy governance content above the project intro**
 
 ---
 

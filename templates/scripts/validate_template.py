@@ -46,6 +46,8 @@ BILINGUAL_SECTION_MARKERS = {
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
+        "## 이 저장소가 특히 맞는 경우 / Best-fit scenarios",
+        "## 이 저장소가 덜 맞는 경우 / Not-for scenarios",
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
         "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs",
@@ -332,6 +334,14 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: 3-step start path must include a Korean/English first-PR prep step near the landing section"
         )
+    if "이 저장소가 특히 맞는 경우 / Best-fit scenarios" not in text or "Teams that need Korean-first docs with English mirrors" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual best-fit scenarios so visitors can self-qualify before diving into governance details"
+        )
+    if "이 저장소가 덜 맞는 경우 / Not-for scenarios" not in text or "plain link archive" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual not-for scenarios so the README clarifies scope before long-form contribution guidance"
+        )
     if "탐색이 먼저인가요?" not in text or "Just exploring first?" not in text:
         errors.append(
             "README.md: first-visit chooser must include a Korean/English exploration decision prompt near the landing section"
@@ -426,6 +436,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
+        "## 이 저장소가 특히 맞는 경우 / Best-fit scenarios",
+        "## 이 저장소가 덜 맞는 경우 / Not-for scenarios",
         "## 카테고리 바로가기 / Category jump links",
         "## 역할별 한 줄 진입점 / Role-based one-line entry points",
         "## 역할별 30초 선택 카드 / 30-second role chooser cards",
@@ -443,7 +455,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
-                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> 3-step-start -> first-visit-chooser -> 30-second-fit-check -> category-jump-links -> role-based entry sections -> quick start"
+                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> 3-step-start -> first-visit-chooser -> 30-second-fit-check -> best-fit/not-for scenarios -> category-jump-links -> role-based entry sections -> quick start"
             )
 
     top_callout_idx = text.find("## 상단 핵심 콜아웃 / Top contributor callouts")
