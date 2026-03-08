@@ -49,6 +49,17 @@ English mirror:
 2. **Runnable starter templates** connected to quickstart docs, validation scripts, and PR evidence examples.
 3. **Governance rails** for Korean-first docs, English mirrors, reproducible evidence, and anti-repeat workflows.
 
+## 카테고리 바로가기 / Category jump links
+
+- **온보딩으로 바로 이동 / Jump to onboarding** → `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **증빙 예시로 바로 이동 / Jump to evidence examples** → `examples/pr-evidence-mini-walkthrough.md`
+- **운영 기준으로 바로 이동 / Jump to governance docs** → `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Jump to onboarding** → `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Jump to evidence examples** → `examples/pr-evidence-mini-walkthrough.md`
+- **Jump to governance docs** → `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
+
 ## 대표 카테고리와 예시 / Featured categories and examples
 
 - **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`

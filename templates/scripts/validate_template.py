@@ -37,6 +37,8 @@ BILINGUAL_SECTION_MARKERS = {
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
+        "## 카테고리 바로가기 / Category jump links",
+        "## 카테고리 바로가기 / Category jump links",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 대표 활용 시나리오 / Featured use cases",
         "## 추천 시작 경로 / Recommended starting paths",
@@ -144,6 +146,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     ]:
         if required_heading not in text:
             errors.append(f"README.md: missing landing-page heading {required_heading}")
+    if "Jump to onboarding" not in text or "Jump to evidence examples" not in text or "Jump to governance docs" not in text:
+        errors.append(
+            "README.md: category jump links must expose onboarding/evidence/governance entry points in Korean/English near the landing section"
+        )
     if "대표 시작점" not in text or "Landing-page rule" not in text:
         errors.append(
             "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"

@@ -375,3 +375,26 @@
 
 ### 다음 실행 우선순위
 - README 상단 대표 카테고리 블록을 카드형/선택형 구조로 더 다듬고, 예시 링크 밀도를 높여 첫 방문자 스캔 시간을 더 줄이기.
+
+## 실행 @ 13:30 UTC (cron)
+
+### 계획
+- README 상단 소개 우선 구조를 유지한 채 대표 카테고리의 첫 클릭 수를 더 줄인다.
+- validator가 새 상단 진입 블록을 실제로 강제하도록 맞춘다.
+
+### 변경 사항
+- `README.md` 상단 랜딩 구간에 **카테고리 바로가기 / Category jump links** 섹션 추가.
+  - 온보딩 / 증빙 예시 / 운영 기준으로 바로 이동하는 한·영 링크 묶음을 노출했다.
+- `templates/scripts/validate_template.py` 강화:
+  - 새 카테고리 바로가기 섹션 헤더를 필수 마커에 추가.
+  - onboarding / evidence / governance 진입점 3종이 README 상단에 없으면 실패하도록 검증 규칙을 추가했다.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- 카테고리 바로가기와 추천 시작 경로 카드를 더 압축해서, README 상단에서 역할별(탐색/기여/운영) 진입점이 한 번에 보이도록 정리.
