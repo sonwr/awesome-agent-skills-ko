@@ -11,13 +11,15 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 이 저장소는 **한국어 기반 빌더를 위한 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
 
 - 무엇을 하나요? 검증 가능한 스킬/템플릿을 모으고, 한국어 기본 문서 흐름과 영어 미러까지 함께 제공합니다.
-- 왜 필요한가요? "좋아 보이는 링크 모음"이 아니라, 바로 실행·검증·기여할 수 있는 출발점을 만들기 위해서입니다.
+- 왜 필요한가요? "좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.
+- 첫 화면 원칙은 무엇인가요? 소개 → 대상 사용자 → 제공 가치 → 대표 예시/빠른 시작을 먼저 보여주고, 운영 규칙과 장기 문서는 아래로 내립니다.
 
 English mirror:
 A curated collection of agent skills and runnable templates for Korean-speaking builders, with Korean-first docs and practical English mirrors.
 
 - What does it do? It curates validation-ready skills/templates and keeps Korean-first docs plus practical English mirrors together.
-- Why does it matter? It helps teams start from runnable, reviewable building blocks instead of a vague link dump.
+- Why does it matter? It gives teams an intro-first landing page that leads directly to runnable, reviewable building blocks instead of a vague link dump.
+- What is the landing rule? Put overview -> audience -> value -> examples/quick start first, and move governance details lower.
 
 ## 프로젝트 한눈에 보기 / Project at a glance
 
@@ -37,6 +39,7 @@ English mirror:
 - **첫 실행 명령**: `python3 templates/scripts/validate_template.py`
 - **다음 온보딩 문서**: `examples/quickstart.md`
 - **추천 대상**: 한국어 기본 문서 흐름으로 빠르게 탐색·검증·기여까지 연결하고 싶은 개인/팀
+- **대표 가치 흐름**: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리 → 빠른 시작 순서로 읽으면 첫 화면에서 방향이 잡힙니다.
 - **첫 화면 원칙**: README 상단은 소개/가치/빠른 시작을 먼저 보여주고, 운영 규칙은 아래 문서로 내립니다.
 - **상단 구조 가드**: 검증 스크립트가 `더 읽기`/`처음 기여할 때 읽는 순서`가 `빠른 시작` 위로 올라오지 않도록 막습니다.
 - **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`
@@ -45,6 +48,7 @@ English mirror:
 - **One-line summary**: a curated repo where Korean-first builders can discover skills and immediately run validation commands.
 - **Best first stops**: `python3 templates/scripts/validate_template.py`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
 - **Best for**: individuals and teams who want Korean-first discovery, validation, and contribution flows in one place.
+- **Value flow on the first screen**: overview -> audience -> value -> featured categories -> quick start.
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
 - **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
 

@@ -5,6 +5,20 @@ English mirror: The README first screen should behave like a project-introductio
 
 ## 상단에 먼저 보여줄 것 / What should appear first
 
+- 프로젝트 소개
+- 대상 사용자
+- 제공 가치
+- 대표 카테고리/예시
+- 빠른 시작 명령
+
+English mirror:
+- Project overview
+- Audience
+- Value proposition
+- Featured categories/examples
+- Quick start command
+
+
 1. 프로젝트 소개 / Project overview
    - `무엇을 하나요? / What does it do?`
    - `왜 필요한가요? / Why does it matter?`
