@@ -20,3 +20,9 @@ English mirror:
 English mirror:
 
 - First 5-minute contribution flow: README top callouts → bilingual checklist → PR evidence walkthrough.
+
+- README 상단 콜아웃은 `docs/README_TOP_CALLOUTS.md` 문안을 기준으로 동기화합니다.
+
+English mirror:
+
+- Keep README top callouts synchronized with `docs/README_TOP_CALLOUTS.md` as the source copy.

@@ -159,6 +159,59 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     return errors
 
 
+
+def _extract_top_level_bullets(text: str) -> list[str]:
+    return [
+        line.strip()
+        for line in text.splitlines()
+        if re.fullmatch(r"- .+", line.strip())
+    ]
+
+
+def _normalize_sync_text(value: str) -> str:
+    normalized = value.lower()
+    normalized = normalized.replace("**", "")
+    normalized = normalized.replace("`", "")
+    normalized = re.sub(r"\s+", " ", normalized)
+    return normalized.strip()
+
+
+def _check_readme_top_callout_sync(root: Path) -> list[str]:
+    readme_path = root / "README.md"
+    callouts_path = root / "docs" / "README_TOP_CALLOUTS.md"
+    if not readme_path.exists() or not callouts_path.exists():
+        return []
+
+    readme_text = readme_path.read_text(encoding="utf-8")
+    callout_text = callouts_path.read_text(encoding="utf-8")
+    errors: list[str] = []
+
+    if "## 상단 핵심 콜아웃 / Top contributor callouts" not in readme_text:
+        return ["README.md: missing top contributor callouts section for sync validation"]
+
+    readme_section = _extract_section(readme_text, "상단 핵심 콜아웃 / Top contributor callouts")
+    required_markers = [
+        "한국어 기본 + 영어",
+        "재현 명령 / 종료코드 / 핵심 출력",
+        "다음 실행",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "5-minute contribution flow",
+        "docs/README_TOP_CALLOUTS.md",
+    ]
+    missing_markers = [marker for marker in required_markers if marker not in readme_section]
+    if missing_markers:
+        errors.append(
+            "README.md: top contributor callouts must retain source-callout coverage markers -> "
+            + ", ".join(missing_markers)
+        )
+
+    if "README 상단 콜아웃" not in callout_text or "README top callouts" not in callout_text:
+        errors.append(
+            "docs/README_TOP_CALLOUTS.md: source callout doc must describe README top-callout synchronization in Korean and English"
+        )
+
+    return errors
+
 def _check_bilingual_markers(root: Path) -> list[str]:
     errors: list[str] = []
     for rel_path, markers in BILINGUAL_SECTION_MARKERS.items():
@@ -267,8 +320,9 @@ def main() -> int:
     bilingual_errors = _check_bilingual_markers(root)
     quickstart_errors = _check_quickstart_validation_command(root)
     contributing_errors = _check_contributing_structure(root)
+    readme_callout_sync_errors = _check_readme_top_callout_sync(root)
 
-    if missing_files or bilingual_errors or quickstart_errors or contributing_errors:
+    if missing_files or bilingual_errors or quickstart_errors or contributing_errors or readme_callout_sync_errors:
         if missing_files:
             print("필수 파일 누락 / Missing required files:")
             for item in missing_files:
@@ -284,6 +338,10 @@ def main() -> int:
         if contributing_errors:
             print("기여 가이드 구조 검증 실패 / Contributing guide structure check failed:")
             for item in contributing_errors:
+                print(f"- {item}")
+        if readme_callout_sync_errors:
+            print("README 상단 콜아웃 동기화 실패 / README top callout sync failed:")
+            for item in readme_callout_sync_errors:
                 print(f"- {item}")
         return 1
 

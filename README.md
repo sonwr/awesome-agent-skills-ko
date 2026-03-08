@@ -283,6 +283,7 @@ A contribution is acceptable when:
 - **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
 - **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md)에서 관리합니다.
 - **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
+- **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
 
 English mirror:
 
