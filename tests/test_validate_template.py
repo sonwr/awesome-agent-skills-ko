@@ -2348,3 +2348,27 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("core start buttons must keep bilingual project/validate/contribute/governance entry points" in error for error in errors))
+
+
+    def test_required_landing_map_doc_mentions_maintenance_loop(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            docs = root / "docs"
+            docs.mkdir(parents=True, exist_ok=True)
+            (docs / "README_LANDING_QUICKSTART_MAP.md").write_text(
+                "\n".join(
+                    [
+                        "# README 랜딩 빠른 시작 맵 / README landing quick-start map",
+                        "## 첫 화면 유지 루프 / First-screen maintenance loop",
+                        "python3 templates/scripts/validate_template.py",
+                        "docs/README_FIRST_SCREEN_CHECKLIST.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            content = (docs / "README_LANDING_QUICKSTART_MAP.md").read_text(encoding="utf-8")
+
+            self.assertIn("First-screen maintenance loop", content)
+            self.assertIn("python3 templates/scripts/validate_template.py", content)
+            self.assertIn("docs/README_FIRST_SCREEN_CHECKLIST.md", content)

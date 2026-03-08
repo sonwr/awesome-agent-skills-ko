@@ -43,6 +43,10 @@ English mirror:
 - **첫 화면 원칙**: README 상단은 소개/가치/빠른 시작을 먼저 보여주고, 운영 규칙은 아래 문서로 내립니다.
 - **상단 구조 가드**: 검증 스크립트가 `더 읽기`/`처음 기여할 때 읽는 순서`가 `빠른 시작` 위로 올라오지 않도록 막습니다.
 - **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`
+- **상단 유지 루프**: README 상단 수정 후 `python3 templates/scripts/validate_template.py` 실행 → `docs/README_FIRST_SCREEN_CHECKLIST.md` 재검토
+
+English mirror:
+- **Landing maintenance loop**: after editing the README top, run `python3 templates/scripts/validate_template.py` and re-check `docs/README_FIRST_SCREEN_CHECKLIST.md`.
 
 English mirror:
 - **One-line summary**: a curated repo where Korean-first builders can discover skills and immediately run validation commands.

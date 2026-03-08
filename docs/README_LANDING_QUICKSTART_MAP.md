@@ -36,3 +36,10 @@ English mirror:
 - Is the first command visible without deep scrolling?
 - Can explorers, contributors, and operators all find their next doc quickly?
 - Do governance details stay below the intro/value area?
+
+## 첫 화면 유지 루프 / First-screen maintenance loop
+
+- 한국어: README 상단을 고칠 때는 **프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 시작 예시/빠른 시작** 순서가 먼저 보이는지 확인합니다.
+- 한국어: 구조를 바꾼 뒤에는 `python3 templates/scripts/validate_template.py`를 실행하고, `docs/README_FIRST_SCREEN_CHECKLIST.md`로 사람이 다시 읽어봅니다.
+- English mirror: When editing the README top, keep **overview -> audience -> value -> featured examples/quick start** visible before governance detail.
+- English mirror: After every structural edit, run `python3 templates/scripts/validate_template.py` and then re-read `docs/README_FIRST_SCREEN_CHECKLIST.md` for a human check.
