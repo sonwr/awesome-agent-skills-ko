@@ -71,24 +71,28 @@ English mirror:
 2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — minimum evidence and bilingual rules
 3. `examples/pr-evidence-mini-walkthrough.md` — PR comment example
 
-## 상단 핵심 콜아웃 / Top contributor callouts
+## 추천 시작 경로 / Recommended starting paths
 
-
-- **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
-- **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
-- **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
-- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md)에서 관리합니다.
-- **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
+### 1) 탐색부터 시작 / Start by exploring
+- 먼저 볼 것: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리
+- 추천 대상: "무엇이 들어 있는지" 먼저 알고 싶은 사용자/팀
+- 다음 이동: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
 
 English mirror:
+- Open the project overview, audience, value, and featured categories first.
+- Best for users or teams deciding whether this collection fits their workflow.
+- Next stop: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
 
-- **Keep Korean-first docs with English mirrors** so new contributors can review both local clarity and global portability.
-- **Always record three evidence items**: reproduction command, exit code, and key output.
-- **Document blockers with the next-run priority** instead of leaving failures context-free.
-- **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
-- **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
+### 2) 바로 기여 시작 / Start contributing immediately
+- 먼저 할 것: quick start 검증 명령 실행
+- 추천 대상: 첫 PR을 빨리 열고 싶은 기여자
+- 다음 이동: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
----
+English mirror:
+- Run the quick start validation command first.
+- Best for contributors who want to open a first PR quickly.
+- Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+
 
 ## Why this project exists
 
@@ -224,6 +228,25 @@ A contribution is acceptable when:
 3. expected output is documented,
 4. risks/limitations are written,
 5. review checklist passes.
+
+---
+
+## 상단 핵심 콜아웃 / Top contributor callouts
+
+
+- **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
+- **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
+- **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
+- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md)에서 관리합니다.
+- **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
+
+English mirror:
+
+- **Keep Korean-first docs with English mirrors** so new contributors can review both local clarity and global portability.
+- **Always record three evidence items**: reproduction command, exit code, and key output.
+- **Document blockers with the next-run priority** instead of leaving failures context-free.
+- **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
+- **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
 
 ---
 

@@ -285,3 +285,25 @@
 
 ### 다음 실행 우선순위
 - `examples/quickstart.md`에서 `examples/pr-evidence-mini-walkthrough.md`로 바로 점프하는 1분짜리 PR 증빙 복붙 링크/섹션을 추가해 첫 기여 종료 경로를 더 짧게 만들기.
+
+
+## 실행 @ 10:20 UTC (cron)
+
+### 계획
+- README 상단을 프로젝트 소개/가치/사용자/빠른 시작 중심으로 더 선명하게 만들고, 기여 운영 가이드는 뒤로 내린다.
+- 검증 스크립트도 같은 랜딩 구조를 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md` 상단에 **추천 시작 경로 / Recommended starting paths** 섹션을 추가해 탐색용 경로와 즉시 기여 경로를 분리했다.
+- 기여자 중심의 **상단 핵심 콜아웃 / Top contributor callouts** 섹션을 하단의 체크리스트 근처로 이동해, README 첫 화면이 프로젝트 소개/가치/카테고리/빠른 시작에 더 집중되도록 재배치했다.
+- `templates/scripts/validate_template.py`를 업데이트해 새 랜딩 섹션 존재를 자동 검증한다.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- README 상단의 추천 시작 경로를 실제 카테고리 예시 카드/표현으로 더 압축해, 첫 방문자가 30초 안에 진입 경로를 고르게 만들기.

@@ -29,6 +29,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 대표 카테고리와 예시 / Featured categories and examples",
+        "## 추천 시작 경로 / Recommended starting paths",
         "## 상단 핵심 콜아웃 / Top contributor callouts",
         "최소 증빙 3종 필수",
         "Document blockers with the next-run priority",
@@ -88,6 +89,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 대표 카테고리와 예시 / Featured categories and examples",
+        "## 추천 시작 경로 / Recommended starting paths",
         "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
     ]:
         if required_heading not in text:
