@@ -5,6 +5,8 @@ English mirror: Keep the README first screen as a project-introduction landing p
 
 ## 상단 우선순위 / Top-of-page priorities
 
+- `추천 시작 경로 / Recommended starting paths`와 운영형 탐색 카드는 quick start 아래로 내려 랜딩 첫 화면의 소개 밀도를 우선 유지합니다.
+
 1. 프로젝트 소개 / Project overview
 2. 프로젝트 스냅샷 / Project snapshot
 3. 대상 사용자 / Audience

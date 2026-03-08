@@ -148,6 +148,19 @@ English mirror:
 2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — minimum evidence and bilingual rules
 3. `examples/pr-evidence-mini-walkthrough.md` — PR comment example
 
+## 더 읽기 / Learn more
+
+랜딩 화면에서는 소개/가치/빠른 시작을 먼저 보여주고, 운영 철학과 장기 방향은 별도 문서로 분리합니다.
+English mirror: Keep the landing view focused on overview/value/quick start, and move governance philosophy plus long-term direction into dedicated docs.
+
+- 프로젝트 진입 경로 / Project entry paths: `docs/PROJECT_ENTRY_PATHS.md`
+- 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
+- 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
+- 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
+- README 정보 구조 가이드 / README information architecture guide: `docs/README_INFORMATION_ARCHITECTURE.md`
+
+---
+
 ## 추천 시작 경로 / Recommended starting paths
 
 ### 빠른 선택 카드 / Quick chooser cards
@@ -203,18 +216,6 @@ English mirror:
 - Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
 
-## 더 읽기 / Learn more
-
-랜딩 화면에서는 소개/가치/빠른 시작을 먼저 보여주고, 운영 철학과 장기 방향은 별도 문서로 분리합니다.
-English mirror: Keep the landing view focused on overview/value/quick start, and move governance philosophy plus long-term direction into dedicated docs.
-
-- 프로젝트 진입 경로 / Project entry paths: `docs/PROJECT_ENTRY_PATHS.md`
-- 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
-- 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
-- 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
-- README 정보 구조 가이드 / README information architecture guide: `docs/README_INFORMATION_ARCHITECTURE.md`
-
----
 
 ## Repository structure
 
