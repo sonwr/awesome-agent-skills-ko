@@ -330,3 +330,23 @@
 
 ### 다음 실행 우선순위
 - 빠른 선택 카드 아래에 실제 대표 카테고리별 바로가기(예: onboarding / evidence / governance)를 더 짧은 링크 묶음으로 추가해 첫 클릭 수를 줄이기.
+
+## 실행 @ 10:40 UTC (cron)
+
+### 계획
+- README 상단 소개 구조를 유지하면서 신규 기여자의 첫 5분 동선을 더 전면에 노출한다.
+- validator가 시간 박스 기반 온보딩 흐름까지 실제로 강제하도록 맞춘다.
+
+### 변경 사항
+- `README.md` quick start 상단에 **처음 5분 기여 흐름 / First 5-minute contribution flow** 섹션 추가.
+- `templates/scripts/validate_template.py`에 해당 시간 박스 흐름(한/영 step marker) 검증 규칙 추가.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- CONTRIBUTING/quickstart/examples 간 링크 중복을 줄이면서 README 상단 카드형 진입점을 더 압축.

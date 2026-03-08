@@ -51,6 +51,17 @@ English mirror:
 
 ## Quick start
 
+### 처음 5분 기여 흐름 / First 5-minute contribution flow
+
+- 1분: README 상단의 프로젝트 소개/대상 사용자/제공 가치를 훑습니다.
+- 2분: 아래 quick start 검증 명령을 실행합니다.
+- 2분: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 PR 증빙 형식을 확인합니다.
+
+English mirror:
+- Minute 1: scan the README overview, audience, and value sections.
+- Minute 2-3: run the quick start validation command below.
+- Minute 4-5: open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the PR evidence format.
+
 한국어 문서를 기본으로 유지하면서 병기 품질까지 함께 검증하려면 아래 명령을 사용하세요.
 English mirror: Run the command below to validate both baseline docs and bilingual quality markers.
 

@@ -30,6 +30,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 제공 가치 / What you get",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
+        "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
         "### 빠른 선택 카드 / Quick chooser cards",
         "탐색형 / Explorer path",
         "기여형 / Contributor path",
@@ -93,10 +94,15 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 제공 가치 / What you get",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
+        "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
         "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
     ]:
         if required_heading not in text:
             errors.append(f"README.md: missing landing-page heading {required_heading}")
+    if "Minute 4-5" not in text or "2분" not in text:
+        errors.append(
+            "README.md: first 5-minute contribution flow must include time-boxed Korean/English steps"
+        )
     if "python3 templates/scripts/validate_template.py" not in text:
         errors.append(
             "README.md: quick start must include `python3 templates/scripts/validate_template.py` for reproducible validation"
