@@ -37,6 +37,8 @@ BILINGUAL_SECTION_MARKERS = {
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
+        "## 핵심 시작 버튼 / Core start buttons",
+        "## 핵심 시작 버튼 / Core start buttons",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
@@ -186,6 +188,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
+        "## 핵심 시작 버튼 / Core start buttons",
+        "## 핵심 시작 버튼 / Core start buttons",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
@@ -275,6 +279,23 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: project snapshot must include the first validation command and quickstart doc link so intro-first visitors can act without scrolling"
         )
     project_start_map_section = _extract_section(text, "프로젝트 시작 맵 / Project start map")
+    core_start_buttons_section = _extract_section(text, "핵심 시작 버튼 / Core start buttons")
+    for required_button in [
+        "Understand the project",
+        "Validate now",
+        "Prepare the first PR",
+        "Open governance guides",
+        "python3 templates/scripts/validate_template.py",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "examples/pr-evidence-mini-walkthrough.md",
+        "docs/README_FAST_PATHS.md",
+        "docs/CURATION_POLICY.md",
+    ]:
+        if required_button not in core_start_buttons_section:
+            errors.append(
+                "README.md: core start buttons must keep bilingual project/validate/contribute/governance entry points near the intro-first landing area"
+            )
+            break
     required_start_map_markers = [
         "탐색 먼저 / Explore first",
         "바로 검증 / Validate now",
@@ -393,6 +414,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 프로젝트 시작 맵 / Project start map",
+        "## 핵심 시작 버튼 / Core start buttons",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 대표 카테고리와 예시 / Featured categories and examples",

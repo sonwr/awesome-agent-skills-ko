@@ -3,6 +3,9 @@
 README 상단을 소개형 랜딩으로 유지하면서도, 첫 방문자가 60초 안에 다음 문서를 고를 수 있게 돕는 압축 가이드입니다.
 English mirror: This companion guide keeps the README intro-first while giving first-time visitors a 60-second path chooser.
 
+README의 `핵심 시작 버튼 / Core start buttons` 섹션은 이 문서의 Explorer / Contributor / Operator 흐름을 더 짧게 요약한 버전입니다.
+English mirror: The README `Core start buttons` section is the compressed first-screen version of the Explorer / Contributor / Operator paths documented here.
+
 ## 탐색형 60초 경로 / Explorer 60-second path
 
 - README의 프로젝트 소개 → 대상 사용자 → 제공 가치만 먼저 읽습니다.

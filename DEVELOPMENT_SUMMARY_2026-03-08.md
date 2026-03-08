@@ -421,3 +421,27 @@
 
 ### 다음 실행 우선순위
 - 역할별 30초 선택 카드와 `docs/README_FAST_PATHS.md`를 더 강하게 연결해, README 상단만 읽고도 바로 다음 문서로 점프하게 만들기.
+
+## 실행 @ 19:10 UTC (cron)
+
+### 계획
+- README 상단 소개 우선 구조를 유지하면서도 첫 행동 버튼을 더 압축해 노출한다.
+- validator/test도 같은 상단 버튼 구조를 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md` 상단에 **핵심 시작 버튼 / Core start buttons** 섹션 추가.
+  - 프로젝트 이해 / 즉시 검증 / 첫 PR 준비 / 운영 가이드 열기 경로를 한·영으로 압축 노출했다.
+- `docs/README_FAST_PATHS.md`에 새 상단 버튼 섹션이 Explorer / Contributor / Operator 경로의 압축판임을 명시했다.
+- `templates/scripts/validate_template.py`를 업데이트해 새 상단 버튼 섹션과 필수 링크 묶음을 검증하도록 강화했다.
+- `tests/test_validate_template.py`에 상단 버튼 필수 링크 누락 시 실패하는 회귀 테스트를 추가했다.
+
+### 검증
+- `python3 -m unittest discover -s tests -q`
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS**
+
+### 막힘/리스크
+- 처음에는 새 섹션을 `프로젝트 시작 맵` 내부에 끼워 넣으면서 기존 handoff bullet 검증이 깨졌다. 상단 버튼 섹션을 시작 맵 뒤로 재배치해 intro-first 흐름과 기존 검증을 모두 유지했다.
+
+### 다음 실행 우선순위
+- 핵심 시작 버튼을 카테고리 바로가기/역할 카드와 더 강하게 연결해, README 첫 화면에서 역할별 첫 클릭 수를 한 번 더 줄이기.

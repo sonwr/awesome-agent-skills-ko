@@ -68,6 +68,19 @@ English mirror:
 - **Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md -> examples/pr-evidence-mini-walkthrough.md`
 - **Audit the structure** — `docs/README_FAST_PATHS.md -> docs/README_FIRST_SCREEN_CHECKLIST.md -> docs/CURATION_POLICY.md`
 
+## 핵심 시작 버튼 / Core start buttons
+
+- **프로젝트를 먼저 이해 / Understand the project** → `프로젝트 소개 / Project overview` → `대표 카테고리와 예시 / Featured categories and examples`
+- **지금 바로 검증 / Validate now** → `python3 templates/scripts/validate_template.py`
+- **첫 PR 준비 / Prepare the first PR** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **운영 가이드 열기 / Open governance guides** → `docs/README_FAST_PATHS.md` → `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Understand the project** → `Project overview` → `Featured categories and examples`
+- **Validate now** → `python3 templates/scripts/validate_template.py`
+- **Prepare the first PR** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **Open governance guides** → `docs/README_FAST_PATHS.md` → `docs/CURATION_POLICY.md`
+
 ## 1분 빠른 시작 / 1-minute quick start
 
 ```bash

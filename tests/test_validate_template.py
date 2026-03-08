@@ -1987,3 +1987,78 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("project start map must keep bilingual explore/validate/contribute/audit handoff bullets" in error for error in errors))
+
+
+    def test_core_start_buttons_require_project_validate_contribute_governance_links(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "## 프로젝트 소개 / Project overview",
+                        "English mirror:",
+                        "## 프로젝트 한눈에 보기 / Project at a glance",
+                        "## 프로젝트 스냅샷 / Project snapshot",
+                        "대표 시작점",
+                        "Landing-page rule",
+                        "python3 templates/scripts/validate_template.py",
+                        "examples/quickstart.md",
+                        "## 프로젝트 시작 맵 / Project start map",
+                        "- 탐색 먼저 / Explore first",
+                        "- 바로 검증 / Validate now",
+                        "- 바로 기여 / Contribute now",
+                        "- 운영 점검 / Audit the structure",
+                        "## 핵심 시작 버튼 / Core start buttons",
+                        "- Validate now",
+                        "- Prepare the first PR",
+                        "## 대상 사용자 / Who this is for",
+                        "## 제공 가치 / What you get",
+                        "## 대표 카테고리와 예시 / Featured categories and examples",
+                        "## 대표 활용 시나리오 / Featured use cases",
+                        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+                        "## 한눈에 보는 3단계 시작 / 3-step start path",
+                        "프로젝트 이해",
+                        "Understand the project",
+                        "첫 검증 실행",
+                        "Run the first validation",
+                        "## 첫 방문자 체크 / First-visit chooser",
+                        "## 30초 적합성 체크 / 30-second fit check",
+                        "## 카테고리 바로가기 / Category jump links",
+                        "Jump to onboarding",
+                        "Jump to evidence examples",
+                        "Jump to governance docs",
+                        "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+                        "**탐색형 / Explorer**",
+                        "**기여형 / Contributor**",
+                        "**운영형 / Operator**",
+                        "## 역할별 30초 선택 카드 / 30-second role chooser cards",
+                        "python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs",
+                        "docs/README_FAST_PATHS.md",
+                        "## 역할별 바로 열 문서 / Role-based first-open docs",
+                        "examples/quickstart.md",
+                        "docs/PROJECT_OVERVIEW.md",
+                        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "examples/pr-evidence-mini-walkthrough.md",
+                        "docs/README_FAST_PATHS.md",
+                        "docs/README_FIRST_SCREEN_CHECKLIST.md",
+                        "docs/README_FIRST_SCREEN_SCRIPT.md",
+                        "docs/README_INFORMATION_ARCHITECTURE.md",
+                        "docs/CURATION_POLICY.md",
+                        "## 추천 시작 경로 / Recommended starting paths",
+                        "### 빠른 선택 카드 / Quick chooser cards",
+                        "Explorer path",
+                        "Contributor path",
+                        "Operator path",
+                        "docs/CURATION_POLICY.md",
+                        "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
+                        "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
+                        "## 빠른 시작 / Quick start",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("core start buttons must keep bilingual project/validate/contribute/governance entry points" in error for error in errors))
