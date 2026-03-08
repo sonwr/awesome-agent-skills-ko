@@ -86,11 +86,13 @@ English mirror:
 
 - 무엇부터 보면 되나요? **프로젝트 소개 → 대상 사용자 → 제공 가치 → 빠른 시작 명령** 순서로 1분 안에 핵심을 파악할 수 있습니다.
 - 첫 실행 명령은 무엇인가요? `python3 templates/scripts/validate_template.py`
+- 다음 온보딩 문서는 어디인가요? `examples/quickstart.md`
 - 첫 PR 전에 무엇을 보나요? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 
 English mirror:
 - Where should I start? Read **project overview → audience → value → quick start command** to understand the repo in under a minute.
 - What is the first command to run? `python3 templates/scripts/validate_template.py`
+- What is the next onboarding doc to open? `examples/quickstart.md`
 - What should I open before a first PR? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 
 ## 한눈에 보는 3단계 시작 / 3-step start path

@@ -190,6 +190,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: quick start must include `python3 templates/scripts/validate_template.py` for reproducible validation"
         )
+    if "examples/quickstart.md" not in text:
+        errors.append(
+            "README.md: landing and quick-start sections must point to examples/quickstart.md as the follow-up onboarding path"
+        )
     if "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md" not in text:
         errors.append(
             "README.md: quick start/contribution section must link to docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md"
