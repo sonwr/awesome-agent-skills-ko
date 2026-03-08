@@ -49,6 +49,17 @@ English mirror:
 - What is the first command to run? `python3 templates/scripts/validate_template.py`
 - What should I open before a first PR? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 
+## 30초 적합성 체크 / 30-second fit check
+
+- 이런 팀에 맞나요? **한국어 기본 문서 + 영어 미러 + 재현 가능한 검증 명령**이 필요한 팀에 맞습니다.
+- 무엇이 바로 나오나요? README 상단 구조만 읽어도 프로젝트 가치, 빠른 시작, 대표 문서를 바로 찾을 수 있습니다.
+- 무엇이 아닌가요? 단순 링크 아카이브나 런타임 종속 프롬프트 묶음이 아닙니다.
+
+English mirror:
+- Is this for your team? Yes, if you need **Korean-first docs + English mirrors + reproducible validation commands**.
+- What do you get immediately? The README landing flow surfaces project value, quick start, and key follow-up docs without hunting.
+- What is it not? It is not just a link dump or a runtime-locked prompt bundle.
+
 ## 대표 카테고리와 예시 / Featured categories and examples
 
 - **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`

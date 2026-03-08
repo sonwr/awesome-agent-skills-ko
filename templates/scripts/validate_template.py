@@ -29,6 +29,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -104,6 +105,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -141,6 +143,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## Quick start",
     ]
@@ -154,7 +157,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
-                "README.md: landing-page sections must stay in order overview -> audience -> value -> quick-start-at-a-glance -> featured categories -> quick start"
+                "README.md: landing-page sections must stay in order overview -> audience -> value -> quick-start-at-a-glance -> 30-second-fit-check -> featured categories -> quick start"
             )
     return errors
 
