@@ -54,6 +54,9 @@ English mirror:
 
 ## 프로젝트 시작 맵 / Project start map
 
+README 첫 화면에서 바로 고를 수 있는 4가지 시작 경로입니다. 소개를 먼저 이해할지, 바로 검증할지, 바로 기여할지, 운영 구조를 감사할지 빠르게 갈라집니다.
+English mirror: Four first-screen routes you can choose immediately: understand the intro, validate now, contribute now, or audit the operating structure.
+
 - **탐색 먼저 / Explore first** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md`
 - **바로 검증 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **바로 기여 / Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`

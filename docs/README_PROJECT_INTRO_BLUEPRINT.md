@@ -26,10 +26,15 @@ English mirror:
    - `누구를 위한 저장소인가요? / Who is this for?`
    - `무엇이 바로 되나요? / What can I do immediately?`
    - `어디서 시작하나요? / Where do I start?`
-3. 대상 사용자 / Who this is for
-4. 제공 가치 / What you get
-5. 대표 카테고리와 예시 / Featured categories and examples
-6. 빠른 시작 / Quick start
+3. 프로젝트 시작 맵 / Project start map
+   - `탐색 먼저 / Explore first`
+   - `바로 검증 / Validate now`
+   - `바로 기여 / Contribute now`
+   - `운영 점검 / Audit the structure`
+4. 대상 사용자 / Who this is for
+5. 제공 가치 / What you get
+6. 대표 카테고리와 예시 / Featured categories and examples
+7. 빠른 시작 / Quick start
 
 ## 뒤로 미룰 것 / What should move lower
 
