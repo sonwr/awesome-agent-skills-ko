@@ -60,6 +60,17 @@ English mirror:
 - What is the first command to run? `python3 templates/scripts/validate_template.py`
 - What should I open before a first PR? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 
+## 첫 방문자 체크 / First-visit chooser
+
+- **탐색이 먼저인가요?** 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md` 순서로 보세요.
+- **바로 기여할 건가요?** `python3 templates/scripts/validate_template.py` 실행 후 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`를 여세요.
+- **운영 기준을 점검하나요?** `docs/PROJECT_ENTRY_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md` 순서가 가장 빠릅니다.
+
+English mirror:
+- **Just exploring first?** Read the overview, featured categories, then `examples/quickstart.md`.
+- **Ready to contribute now?** Run `python3 templates/scripts/validate_template.py` and open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
+- **Auditing governance rails?** Start with `docs/PROJECT_ENTRY_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`.
+
 ## 30초 적합성 체크 / 30-second fit check
 
 - 이런 팀에 맞나요? **한국어 기본 문서 + 영어 미러 + 재현 가능한 검증 명령**이 필요한 팀에 맞습니다.
