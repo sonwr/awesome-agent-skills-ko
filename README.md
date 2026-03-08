@@ -139,6 +139,16 @@ English mirror:
 - Start by running the quick start validation command.
 - Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
+**운영형 / Operator path**
+- 목적: 큐레이션 기준, 정보 구조, 운영 문서를 빠르게 점검
+- 시작: `docs/PROJECT_ENTRY_PATHS.md`와 `docs/README_INFORMATION_ARCHITECTURE.md` 열기
+- 다음 이동: `docs/CURATION_POLICY.md` → `docs/PROJECT_DIRECTION.md`
+
+English mirror:
+- Goal: audit curation rules, information architecture, and governance docs quickly.
+- Start with `docs/PROJECT_ENTRY_PATHS.md` and `docs/README_INFORMATION_ARCHITECTURE.md`.
+- Next stop: `docs/CURATION_POLICY.md` → `docs/PROJECT_DIRECTION.md`
+
 ### 1) 탐색부터 시작 / Start by exploring
 - 먼저 볼 것: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리
 - 추천 대상: "무엇이 들어 있는지" 먼저 알고 싶은 사용자/팀

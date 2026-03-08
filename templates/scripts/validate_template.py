@@ -37,10 +37,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
+        "### 빠른 선택 카드 / Quick chooser cards",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
         "### 빠른 선택 카드 / Quick chooser cards",
         "탐색형 / Explorer path",
         "기여형 / Contributor path",
+        "운영형 / Operator path",
+        "운영형 / Operator path",
         "## 더 읽기 / Learn more",
         "## 상단 핵심 콜아웃 / Top contributor callouts",
         "최소 증빙 3종 필수",
@@ -129,11 +132,16 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 추천 시작 경로 / Recommended starting paths",
+        "### 빠른 선택 카드 / Quick chooser cards",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
         "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
     ]:
         if required_heading not in text:
             errors.append(f"README.md: missing landing-page heading {required_heading}")
+    if "대표 시작점" not in text or "Landing-page rule" not in text:
+        errors.append(
+            "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"
+        )
     if "Minute 4-5" not in text or "2분" not in text:
         errors.append(
             "README.md: first 5-minute contribution flow must include time-boxed Korean/English steps"

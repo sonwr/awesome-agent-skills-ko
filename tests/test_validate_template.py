@@ -120,6 +120,88 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("overview -> snapshot -> audience" in error for error in errors))
 
+    def test_project_snapshot_requires_entry_points_and_landing_rule_markers(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "## 프로젝트 소개 / Project overview",
+                        "## 프로젝트 스냅샷 / Project snapshot",
+                        "## 대상 사용자 / Who this is for",
+                        "## 제공 가치 / What you get",
+                        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+                        "## 30초 적합성 체크 / 30-second fit check",
+                        "## 대표 카테고리와 예시 / Featured categories and examples",
+                        "## 추천 시작 경로 / Recommended starting paths",
+                        "### 빠른 선택 카드 / Quick chooser cards",
+                        "탐색형 / Explorer path",
+                        "기여형 / Contributor path",
+                        "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
+                        "2분",
+                        "Minute 4-5",
+                        "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
+                        "### 빠른 기여 체크 / Quick contribution check",
+                        "## 처음 기여할 때 읽는 순서 / First-time contributor reading order",
+                        "Estimated 1 min",
+                        "Estimated 2 min",
+                        "python3 templates/scripts/validate_template.py",
+                        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "docs/PROJECT_OVERVIEW.md",
+                        "docs/PROJECT_DIRECTION.md",
+                        "docs/PROJECT_ENTRY_PATHS.md",
+                        "## Quick start",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("project snapshot" in error for error in errors))
+
+    def test_readme_requires_operator_path_marker_for_intro_first_navigation(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "## 프로젝트 소개 / Project overview",
+                        "## 프로젝트 스냅샷 / Project snapshot",
+                        "대표 시작점",
+                        "Landing-page rule",
+                        "## 대상 사용자 / Who this is for",
+                        "## 제공 가치 / What you get",
+                        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+                        "## 30초 적합성 체크 / 30-second fit check",
+                        "## 대표 카테고리와 예시 / Featured categories and examples",
+                        "## 추천 시작 경로 / Recommended starting paths",
+                        "### 빠른 선택 카드 / Quick chooser cards",
+                        "탐색형 / Explorer path",
+                        "기여형 / Contributor path",
+                        "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
+                        "2분",
+                        "Minute 4-5",
+                        "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start",
+                        "### 빠른 기여 체크 / Quick contribution check",
+                        "## 처음 기여할 때 읽는 순서 / First-time contributor reading order",
+                        "Estimated 1 min",
+                        "Estimated 2 min",
+                        "python3 templates/scripts/validate_template.py",
+                        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "docs/PROJECT_OVERVIEW.md",
+                        "docs/PROJECT_DIRECTION.md",
+                        "docs/PROJECT_ENTRY_PATHS.md",
+                        "## Quick start",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_bilingual_markers(root)
+
+            self.assertTrue(any("운영형 / Operator path" in error for error in errors))
+
     def test_top_callout_sync_check_reports_missing_markers(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
