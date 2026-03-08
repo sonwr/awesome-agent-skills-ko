@@ -199,6 +199,22 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: landing section must include bilingual role-based first-open docs so visitors can jump into explorer/contributor/operator paths in one click"
         )
+    role_first_open_section = _extract_section(text, "역할별 바로 열 문서 / Role-based first-open docs")
+    required_role_docs = [
+        "examples/quickstart.md",
+        "docs/PROJECT_OVERVIEW.md",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "examples/pr-evidence-mini-walkthrough.md",
+        "docs/README_FAST_PATHS.md",
+        "docs/README_INFORMATION_ARCHITECTURE.md",
+        "docs/CURATION_POLICY.md",
+    ]
+    missing_role_docs = [doc for doc in required_role_docs if doc not in role_first_open_section]
+    if missing_role_docs:
+        errors.append(
+            "README.md: role-based first-open docs must keep explorer/contributor/operator handoff links together -> "
+            + ", ".join(missing_role_docs)
+        )
     if "대표 시작점" not in text or "Landing-page rule" not in text:
         errors.append(
             "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"
