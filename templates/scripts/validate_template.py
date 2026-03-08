@@ -41,6 +41,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
+        "## 대표 시작 예시 / Featured starter examples",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 빠른 시작 / Quick start",
         "## 한눈에 보는 3단계 시작 / 3-step start path",
@@ -194,6 +195,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
+        "## 대표 시작 예시 / Featured starter examples",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
@@ -284,6 +286,23 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: project snapshot must include the first validation command and quickstart doc link so intro-first visitors can act without scrolling"
         )
+    featured_starter_examples_section = _extract_section(text, "대표 시작 예시 / Featured starter examples")
+    for required_example_marker in [
+        "검증부터 시작",
+        "기여 준비",
+        "운영 점검",
+        "Start with validation",
+        "Prepare a contribution",
+        "Audit the landing flow",
+        "examples/quickstart.md",
+        "examples/pr-evidence-mini-walkthrough.md",
+        "docs/README_FAST_PATHS.md",
+    ]:
+        if required_example_marker not in featured_starter_examples_section:
+            errors.append(
+                "README.md: featured starter examples must expose bilingual validate/contribute/audit examples plus next docs near the intro-first landing area"
+            )
+            break
     project_start_map_section = _extract_section(text, "프로젝트 시작 맵 / Project start map")
     core_start_buttons_section = _extract_section(text, "핵심 시작 버튼 / Core start buttons")
     for required_button in [
@@ -434,6 +453,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 핵심 시작 버튼 / Core start buttons",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
+        "## 대표 시작 예시 / Featured starter examples",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 대표 활용 시나리오 / Featured use cases",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",

@@ -131,6 +131,17 @@ English mirror:
 2. **Runnable starter templates** connected to quickstart docs, validation scripts, and PR evidence examples.
 3. **Governance rails** for Korean-first docs, English mirrors, reproducible evidence, and anti-repeat workflows.
 
+## 대표 시작 예시 / Featured starter examples
+
+- **검증부터 시작 / Start with validation** — `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 바로 이동합니다.
+- **기여 준비 / Prepare a contribution** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 PR 최소 증빙 형식을 바로 복사합니다.
+- **운영 점검 / Audit the landing flow** — `docs/README_FAST_PATHS.md`와 `docs/README_FIRST_SCREEN_CHECKLIST.md`를 열어 README 소개 우선 구조가 유지되는지 확인합니다.
+
+English mirror:
+- **Start with validation** — run `python3 templates/scripts/validate_template.py`, then jump straight to `examples/quickstart.md`.
+- **Prepare a contribution** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum PR evidence format.
+- **Audit the landing flow** — open `docs/README_FAST_PATHS.md` and `docs/README_FIRST_SCREEN_CHECKLIST.md` to verify that the README stays intro-first.
+
 ## 대표 카테고리와 예시 / Featured categories and examples
 
 - **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
