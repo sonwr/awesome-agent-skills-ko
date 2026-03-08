@@ -12,7 +12,8 @@ English mirror: Keep the README first screen as a project-introduction landing p
 3. 대상 사용자 / Audience
 4. 제공 가치 / Value proposition
 5. 대표 카테고리와 예시 / Featured categories and examples
-6. 빠른 시작 / Quick start
+6. 대표 활용 시나리오 / Featured use cases
+7. 빠른 시작 / Quick start
 
 English mirror:
 1. Project overview
@@ -20,7 +21,8 @@ English mirror:
 3. Audience
 4. Value proposition
 5. Featured categories and examples
-6. Quick start
+6. Featured use cases
+7. Quick start
 
 ## 뒤로 보내는 내용 / What belongs lower in the page
 

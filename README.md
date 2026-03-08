@@ -49,6 +49,28 @@ English mirror:
 2. **Runnable starter templates** connected to quickstart docs, validation scripts, and PR evidence examples.
 3. **Governance rails** for Korean-first docs, English mirrors, reproducible evidence, and anti-repeat workflows.
 
+## 대표 카테고리와 예시 / Featured categories and examples
+
+- **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **리뷰 증빙 템플릿** — `examples/pr-evidence-mini-walkthrough.md`
+- **큐레이션/운영 기준** — `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
+
+English mirror:
+- **Onboarding and contribution guides** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Review evidence templates** — `examples/pr-evidence-mini-walkthrough.md`
+- **Curation and governance standards** — `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
+
+## 대표 활용 시나리오 / Featured use cases
+
+- **새 저장소 온보딩** — README 상단만 읽고 `examples/quickstart.md`까지 이동해 첫 검증 명령을 바로 실행합니다.
+- **첫 PR 준비** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 최소 증빙 형식을 복붙합니다.
+- **운영 기준 점검** — `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md` 순서로 정보구조와 큐레이션 기준을 검토합니다.
+
+English mirror:
+- **New repo onboarding** — read the README landing sections, jump to `examples/quickstart.md`, and run the first validation command immediately.
+- **First PR prep** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum evidence format.
+- **Governance audit** — review `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, and `docs/CURATION_POLICY.md` in order.
+
 ## 빠른 시작 한눈에 보기 / Quick start at a glance
 
 - 무엇부터 보면 되나요? **프로젝트 소개 → 대상 사용자 → 제공 가치 → 빠른 시작 명령** 순서로 1분 안에 핵심을 파악할 수 있습니다.
@@ -92,28 +114,6 @@ English mirror:
 - Is this for your team? Yes, if you need **Korean-first docs + English mirrors + reproducible validation commands**.
 - What do you get immediately? The README landing flow surfaces project value, quick start, and key follow-up docs without hunting.
 - What is it not? It is not just a link dump or a runtime-locked prompt bundle.
-
-## 대표 카테고리와 예시 / Featured categories and examples
-
-- **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- **리뷰 증빙 템플릿** — `examples/pr-evidence-mini-walkthrough.md`
-- **큐레이션/운영 기준** — `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
-
-English mirror:
-- **Onboarding and contribution guides** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- **Review evidence templates** — `examples/pr-evidence-mini-walkthrough.md`
-- **Curation and governance standards** — `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
-
-## 대표 활용 시나리오 / Featured use cases
-
-- **새 저장소 온보딩** — README 상단만 읽고 `examples/quickstart.md`까지 이동해 첫 검증 명령을 바로 실행합니다.
-- **첫 PR 준비** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 최소 증빙 형식을 복붙합니다.
-- **운영 기준 점검** — `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md` 순서로 정보구조와 큐레이션 기준을 검토합니다.
-
-English mirror:
-- **New repo onboarding** — read the README landing sections, jump to `examples/quickstart.md`, and run the first validation command immediately.
-- **First PR prep** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum evidence format.
-- **Governance audit** — review `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, and `docs/CURATION_POLICY.md` in order.
 
 ## Quick start
 
