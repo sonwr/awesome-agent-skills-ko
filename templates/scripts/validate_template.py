@@ -235,6 +235,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: landing section must include bilingual role-based first-click bundles so each visitor can see first click, second click, and landing doc near the top"
         )
+    if "## 역할별 바로 점프 / Role-based instant jumps" not in text or "docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual role-based instant jumps that deep-link explorer/contributor/operator visitors into docs/README_FAST_PATHS.md"
+        )
     if "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs" not in text or "docs/README_FAST_PATHS.md" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based 1-click next docs linked back to docs/README_FAST_PATHS.md so intro-first handoff stays explicit"

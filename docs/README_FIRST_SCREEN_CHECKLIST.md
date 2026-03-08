@@ -20,3 +20,6 @@ English mirror: Use this checklist to keep the README opening focused on project
 - [ ] Contribution rules, governance philosophy, and roadmap details stay lower in the README or move into `CONTRIBUTING.md` / `docs/`.
 - [ ] A first-time visitor can immediately choose an explorer, contributor, or operator path.
 - [ ] The Korean-first copy and English mirror communicate the same landing message.
+
+- 역할별 바로 점프 / Role-based instant jumps 섹션이 README 상단에 있고 `docs/README_FAST_PATHS.md`의 역할별 앵커로 직접 연결되는지 확인한다.
+- Confirm the README top keeps a `역할별 바로 점프 / Role-based instant jumps` section that deep-links to the role anchors in `docs/README_FAST_PATHS.md`.
