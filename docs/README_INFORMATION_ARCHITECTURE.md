@@ -30,6 +30,10 @@ English mirror:
 - 운영 정책 / Governance policy
 - 장기 로드맵 / Long-term roadmap
 - 세부 체크리스트 / Detailed checklists
+- 운영형 탐색 네비게이션 묶음 (`핵심 시작 버튼`, `역할별 첫 클릭 묶음`, `역할별 바로 점프`) / operations-heavy navigation bundles (`Core start buttons`, `Role-based first-click bundles`, `Role-based instant jumps`)
+
+운영형 링크 묶음은 필요하지만, 소개형 랜딩을 덮지 않도록 `대표 활용 시나리오`와 `빠른 시작` 이후에 둡니다.
+English mirror: Keep the operations-heavy link bundles available, but place them after `Featured use cases` and `Quick start` so they do not crowd out the intro-first landing flow.
 
 English mirror:
 - Detailed contribution rules

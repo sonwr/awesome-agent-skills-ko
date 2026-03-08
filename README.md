@@ -120,6 +120,9 @@ English mirror:
 - **Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md -> examples/pr-evidence-mini-walkthrough.md`
 - **Audit the structure** — `docs/README_FAST_PATHS.md -> docs/README_FIRST_SCREEN_CHECKLIST.md -> docs/CURATION_POLICY.md`
 
+운영/감사 중심의 상세 네비게이션(`핵심 시작 버튼`, `역할별 첫 클릭 묶음`, `역할별 바로 점프`)은 소개·대상 사용자·제공 가치·대표 예시·빠른 시작을 본 뒤에 보도록 아래로 내렸습니다.
+English mirror: The operations-heavy navigation blocks (`Core start buttons`, `Role-based first-click bundles`, `Role-based instant jumps`) intentionally stay below the intro/audience/value/examples/quick-start sections so the README first screen remains project-first.
+
 ## 핵심 시작 버튼 / Core start buttons
 
 - **프로젝트를 먼저 이해 / Understand the project** → `프로젝트 소개 / Project overview` → `대표 카테고리와 예시 / Featured categories and examples` → `카테고리 바로가기 / Category jump links`
