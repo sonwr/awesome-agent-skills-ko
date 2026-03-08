@@ -16,6 +16,9 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 English mirror:
 A curated collection of agent skills and runnable templates for Korean-speaking builders, with Korean-first docs and practical English mirrors.
 
+- What does it do? It curates validation-ready skills/templates and keeps Korean-first docs plus practical English mirrors together.
+- Why does it matter? It helps teams start from runnable, reviewable building blocks instead of a vague link dump.
+
 ## 프로젝트 한눈에 보기 / Project at a glance
 
 - **누구를 위한 저장소인가요?** 한국어 기본 흐름으로 스킬을 탐색·검증·기여하려는 빌더/팀을 위한 저장소입니다.

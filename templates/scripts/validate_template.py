@@ -241,6 +241,15 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: project snapshot must include the first validation command and quickstart doc link so intro-first visitors can act without scrolling"
         )
+    project_overview_section = _extract_section(text, "프로젝트 소개 / Project overview")
+    if "무엇을 하나요?" not in project_overview_section or "왜 필요한가요?" not in project_overview_section:
+        errors.append(
+            "README.md: project overview must explain both what the project does and why it matters in Korean near the top"
+        )
+    if "What does it do?" not in project_overview_section or "Why does it matter?" not in project_overview_section:
+        errors.append(
+            "README.md: project overview must include English mirror prompts for what the project does and why it matters near the top"
+        )
     if "프로젝트 이해" not in text or "Understand the project" not in text:
         errors.append(
             "README.md: 3-step start path must include a Korean/English project-understanding step near the landing section"
