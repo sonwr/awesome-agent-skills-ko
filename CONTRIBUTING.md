@@ -43,6 +43,17 @@ Include all of the following in every PR:
 - [ ] 특정 런타임 종속성이 숨겨져 있지 않다 / No hidden vendor lock-in assumptions
 - [ ] README 상단 소개 흐름을 해치지 않는다 / Does not degrade the README landing flow
 
+## README 상단 수정 원칙 / Rules for editing the README top
+
+- README 상단은 프로젝트 소개, 대상 사용자, 제공 가치, 대표 예시/빠른 시작을 먼저 보여줍니다.
+- 기여 규칙, 운영 체크리스트, 장기 정책 문단은 가능하면 `CONTRIBUTING.md` 또는 `docs/`로 내립니다.
+- 상단에 새 블록을 추가할 때는 "첫 방문자가 1분 안에 가치와 시작 경로를 찾는가?"를 먼저 확인합니다.
+
+English mirror:
+- Keep the README top focused on project intro, audience, value, featured examples, and quick start.
+- Move contribution rules, operator checklists, and long-form governance details into `CONTRIBUTING.md` or `docs/` when possible.
+- Before adding a new top block, check whether a first-time visitor can still find value and the starting path within one minute.
+
 ## 첫 기여 전에 볼 문서 / Read these before the first PR
 
 - `README.md` — 프로젝트 소개와 빠른 시작 흐름

@@ -52,6 +52,23 @@ English mirror:
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
 - **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
 
+## 1분 빠른 시작 / 1-minute quick start
+
+```bash
+python3 templates/scripts/validate_template.py
+```
+
+- 바로 다음 문서 / Next doc: `examples/quickstart.md`
+- 첫 PR 준비 / First PR prep: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`
+- 전체 기여 규칙 / Full contributing guide: `CONTRIBUTING.md`
+
+English mirror:
+- Run the validation command first, then open `examples/quickstart.md`.
+- For the first PR, continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
+- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md`.
+- Full contribution policy lives in `CONTRIBUTING.md`.
+
 ## 대상 사용자 / Who this is for
 
 - 한국어로 스킬/프롬프트/자동화 자산을 빠르게 탐색하고 싶은 개발자
