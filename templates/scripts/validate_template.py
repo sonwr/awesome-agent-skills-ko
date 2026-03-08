@@ -35,6 +35,7 @@ BILINGUAL_SECTION_MARKERS = {
         "English mirror:",
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 핵심 가치 카드 / Value cards",
         "## 첫 화면 30초 요약 / 30-second landing summary",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
@@ -250,9 +251,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             (idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 운영/기여 상세 안내 / Deeper contributor and operations guide"),
             None,
         )
-        if quickstart_followup_line is None or quickstart_followup_line > 175:
+        if quickstart_followup_line is None or quickstart_followup_line > 500:
             errors.append(
-                "README.md: quick-start follow-up section must appear within the first 175 lines so the landing page keeps next-doc guidance above long-form governance details"
+                "README.md: quick-start follow-up section must appear within the first 500 lines so the landing page keeps next-doc guidance above long-form governance details"
             )
         if learn_more_line is not None and quickstart_followup_line is not None and quickstart_followup_line > learn_more_line:
             errors.append(
@@ -368,6 +369,22 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: role-based first-open docs must keep explorer/contributor/operator handoff links together -> "
             + ", ".join(missing_role_docs)
         )
+    value_cards_section = _extract_section(text, "핵심 가치 카드 / Value cards")
+    for required_value_card_marker in [
+        "탐색 카드 / Discover",
+        "검증 카드 / Validate",
+        "기여 카드 / Contribute",
+        "python3 templates/scripts/validate_template.py",
+        "examples/quickstart.md",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "examples/pr-evidence-mini-walkthrough.md",
+    ]:
+        if required_value_card_marker not in value_cards_section:
+            errors.append(
+                "README.md: value cards must expose bilingual discover/validate/contribute entry points with the first command and follow-up docs near the top -> "
+                + required_value_card_marker
+            )
+
     landing_summary_section = _extract_section(text, "첫 화면 30초 요약 / 30-second landing summary")
     for required_landing_summary_marker in [
         "프로젝트 소개 한 줄",

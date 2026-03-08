@@ -53,6 +53,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first 160 lines" in error for error in errors))
 
+    def test_readme_requires_value_cards_section_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 핵심 가치 카드 / Value cards\n\n- **탐색 카드 / Discover** — 프로젝트 소개, 대표 카테고리, 빠른 시작까지 한 화면에서 연결해 \"무엇을 왜 써야 하는지\"를 먼저 이해하게 합니다.\n- **검증 카드 / Validate** — 첫 명령(`python3 templates/scripts/validate_template.py`)과 다음 문서(`examples/quickstart.md`)를 바로 보여줘 실행 진입 비용을 낮춥니다.\n- **기여 카드 / Contribute** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 함께 노출해 첫 PR 증빙 형식을 즉시 복사하게 합니다.\n\nEnglish mirror:\n- **Discover** — connect the project overview, featured categories, and quick start on the first screen so visitors understand what this repo is for before reading governance details.\n- **Validate** — surface the first command (`python3 templates/scripts/validate_template.py`) plus the next document (`examples/quickstart.md`) immediately to reduce execution friction.\n- **Contribute** — keep `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` together so first-time contributors can copy a PR evidence format without hunting.\n\n",
+                "",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("value cards" in error for error in errors))
+
     def test_readme_requires_30_second_landing_summary_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

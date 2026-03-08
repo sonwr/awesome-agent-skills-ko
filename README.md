@@ -32,6 +32,17 @@ English mirror:
 - **What can I do immediately?** Find the first validation command and next doc directly from the README landing area.
 - **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
 
+## 핵심 가치 카드 / Value cards
+
+- **탐색 카드 / Discover** — 프로젝트 소개, 대표 카테고리, 빠른 시작까지 한 화면에서 연결해 "무엇을 왜 써야 하는지"를 먼저 이해하게 합니다.
+- **검증 카드 / Validate** — 첫 명령(`python3 templates/scripts/validate_template.py`)과 다음 문서(`examples/quickstart.md`)를 바로 보여줘 실행 진입 비용을 낮춥니다.
+- **기여 카드 / Contribute** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 함께 노출해 첫 PR 증빙 형식을 즉시 복사하게 합니다.
+
+English mirror:
+- **Discover** — connect the project overview, featured categories, and quick start on the first screen so visitors understand what this repo is for before reading governance details.
+- **Validate** — surface the first command (`python3 templates/scripts/validate_template.py`) plus the next document (`examples/quickstart.md`) immediately to reduce execution friction.
+- **Contribute** — keep `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` together so first-time contributors can copy a PR evidence format without hunting.
+
 ## 첫 화면 30초 요약 / 30-second landing summary
 
 - **프로젝트 소개 한 줄 / Project intro** — 한국어 기본 큐레이션 저장소이며, 첫 화면에서 바로 검증 명령과 다음 문서를 찾게 만드는 구조를 지향합니다.

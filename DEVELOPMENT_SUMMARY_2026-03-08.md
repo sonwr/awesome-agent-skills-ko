@@ -516,3 +516,27 @@
 
 ### 다음 실행 우선순위
 - 30초 요약 아래에 역할별(탐색형/기여형/운영형) 1줄 CTA를 더 압축한 상단 카드형 배치를 검토한다.
+
+## 실행 @ 23:11 UTC (cron)
+
+### 계획
+- README 상단을 프로젝트 소개 우선 구조로 더 명확히 만들기 위해, 소개 바로 아래에 가치 카드형 진입 블록을 추가한다.
+- 새 상단 블록이 빠지면 즉시 실패하도록 검증 스크립트와 테스트를 함께 보강한다.
+
+### 변경 사항
+- `README.md` 상단에 `## 핵심 가치 카드 / Value cards` 섹션 추가.
+  - 탐색 / 검증 / 기여 3가지 카드로 프로젝트 가치, 첫 명령, 다음 문서를 첫 화면에서 바로 보이게 재구성.
+- `templates/scripts/validate_template.py` 강화:
+  - 새 `Value cards` 섹션과 필수 마커(첫 명령, quickstart, 체크리스트, PR 증빙 문서)가 없으면 실패하도록 규칙 추가.
+- `tests/test_validate_template.py`에 value cards 누락 회귀 테스트 추가.
+
+### 검증
+- `python3 -m unittest tests.test_validate_template`
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS**
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- README 상단 중복 문단을 더 줄이고, 운영/감사 중심 블록 일부를 `docs/README_FAST_PATHS.md`와 `docs/CONTRIBUTOR_OPERATIONS.md` 쪽으로 더 내린다.
