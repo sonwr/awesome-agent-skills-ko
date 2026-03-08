@@ -92,6 +92,19 @@ English mirror:
 - **First PR prep** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum evidence format.
 - **Governance audit** — review `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, and `docs/CURATION_POLICY.md` in order.
 
+## 추천 시작 경로 / Recommended starting paths
+
+### 빠른 선택 카드 / Quick chooser cards
+
+- **탐색형 / Explorer path** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md` 순서로 이 저장소의 가치와 예시를 가장 빠르게 파악합니다.
+- **기여형 / Contributor path** — `python3 templates/scripts/validate_template.py` 실행 후 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`로 바로 이어집니다.
+- **운영형 / Operator path** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md` 순서로 랜딩 구조와 운영 기준을 점검합니다.
+
+English mirror:
+- **Explorer path** — follow `project overview -> featured categories -> examples/quickstart.md` to understand the repo's value and examples fast.
+- **Contributor path** — run `python3 templates/scripts/validate_template.py`, then continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md`.
+- **Operator path** — review `docs/README_FAST_PATHS.md` -> `docs/README_INFORMATION_ARCHITECTURE.md` -> `docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
+
 ## 빠른 시작 한눈에 보기 / Quick start at a glance
 
 - 무엇부터 보면 되나요? **프로젝트 소개 → 대상 사용자 → 제공 가치 → 빠른 시작 명령** 순서로 1분 안에 핵심을 파악할 수 있습니다.

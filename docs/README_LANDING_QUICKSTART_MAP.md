@@ -11,6 +11,10 @@ A compact map for keeping the README landing flow focused on **intro → value �
 2. **대상 사용자 + 제공 가치** — 누가 어떤 문제를 얼마나 빨리 해결할 수 있는지 보여줍니다.
 3. **대표 카테고리/활용 시나리오** — 실제로 무엇을 얻는지 예시로 증명합니다.
 4. **빠른 시작** — 첫 검증 명령과 다음 문서를 한 화면 안에서 찾게 합니다.
+5. **추천 시작 경로** — 탐색형/기여형/운영형 카드로 첫 방문자의 다음 클릭을 압축합니다.
+
+English mirror:
+5. **Recommended starting paths** — compress the next click for explorer/contributor/operator visitors into one landing block.
 5. **운영/기여 규칙은 아래로** — CONTRIBUTING, 정책, 체크리스트는 뒤쪽 문서로 넘깁니다.
 
 English mirror:

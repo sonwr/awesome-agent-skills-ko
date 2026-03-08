@@ -202,6 +202,16 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: category jump links must expose onboarding/evidence/governance entry points in Korean/English near the landing section"
         )
+    recommended_paths_section = _extract_section(text, "추천 시작 경로 / Recommended starting paths")
+    if "Explorer path" not in recommended_paths_section or "Contributor path" not in recommended_paths_section or "Operator path" not in recommended_paths_section:
+        errors.append(
+            "README.md: recommended starting paths must expose bilingual explorer/contributor/operator path cards near the landing block"
+        )
+    if "python3 templates/scripts/validate_template.py" not in recommended_paths_section or "docs/CURATION_POLICY.md" not in recommended_paths_section:
+        errors.append(
+            "README.md: recommended starting paths must include the first validation command and the governance follow-up path for contributor/operator visitors"
+        )
+
     if "## 역할별 한 줄 진입점 / Role-based one-line entry points" not in text or "**탐색형 / Explorer**" not in text or "**기여형 / Contributor**" not in text or "**운영형 / Operator**" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based one-line entry points for explorer/contributor/operator paths"
