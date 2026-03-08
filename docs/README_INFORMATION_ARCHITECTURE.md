@@ -6,17 +6,19 @@ English mirror: Keep the README first screen as a project-introduction landing p
 ## 상단 우선순위 / Top-of-page priorities
 
 1. 프로젝트 소개 / Project overview
-2. 대상 사용자 / Audience
-3. 제공 가치 / Value proposition
-4. 대표 카테고리와 예시 / Featured categories and examples
-5. 빠른 시작 / Quick start
+2. 프로젝트 스냅샷 / Project snapshot
+3. 대상 사용자 / Audience
+4. 제공 가치 / Value proposition
+5. 대표 카테고리와 예시 / Featured categories and examples
+6. 빠른 시작 / Quick start
 
 English mirror:
 1. Project overview
-2. Audience
-3. Value proposition
-4. Featured categories and examples
-5. Quick start
+2. Project snapshot
+3. Audience
+4. Value proposition
+5. Featured categories and examples
+6. Quick start
 
 ## 뒤로 보내는 내용 / What belongs lower in the page
 

@@ -30,6 +30,7 @@ BILINGUAL_SECTION_MARKERS = {
     "README.md": [
         "English mirror:",
         "## 프로젝트 소개 / Project overview",
+        "## 프로젝트 스냅샷 / Project snapshot",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
@@ -121,6 +122,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     errors: list[str] = []
     for required_heading in [
         "## 프로젝트 소개 / Project overview",
+        "## 프로젝트 스냅샷 / Project snapshot",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
@@ -167,6 +169,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
 
     ordered_sections = [
         "## 프로젝트 소개 / Project overview",
+        "## 프로젝트 스냅샷 / Project snapshot",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
@@ -184,7 +187,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
-                "README.md: landing-page sections must stay in order overview -> audience -> value -> quick-start-at-a-glance -> 30-second-fit-check -> featured categories -> quick start"
+                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> quick-start-at-a-glance -> 30-second-fit-check -> featured categories -> quick start"
             )
 
     quick_start_idx = text.find("## Quick start")
