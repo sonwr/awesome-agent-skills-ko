@@ -34,6 +34,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
@@ -131,6 +132,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",
@@ -145,6 +147,18 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "대표 시작점" not in text or "Landing-page rule" not in text:
         errors.append(
             "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"
+        )
+    if "프로젝트 이해" not in text or "Understand the project" not in text:
+        errors.append(
+            "README.md: 3-step start path must include a Korean/English project-understanding step near the landing section"
+        )
+    if "첫 검증 실행" not in text or "Run the first validation" not in text:
+        errors.append(
+            "README.md: 3-step start path must include a Korean/English first-validation step near the landing section"
+        )
+    if "첫 PR 준비" not in text or "Prepare the first PR" not in text:
+        errors.append(
+            "README.md: 3-step start path must include a Korean/English first-PR prep step near the landing section"
         )
     if "탐색이 먼저인가요?" not in text or "Just exploring first?" not in text:
         errors.append(
@@ -201,6 +215,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+        "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
         "## 대표 카테고리와 예시 / Featured categories and examples",

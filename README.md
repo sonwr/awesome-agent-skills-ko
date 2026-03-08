@@ -60,6 +60,17 @@ English mirror:
 - What is the first command to run? `python3 templates/scripts/validate_template.py`
 - What should I open before a first PR? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 
+## 한눈에 보는 3단계 시작 / 3-step start path
+
+1. **프로젝트 이해** — 프로젝트 소개, 대상 사용자, 제공 가치를 먼저 읽습니다.
+2. **첫 검증 실행** — `python3 templates/scripts/validate_template.py`를 실행합니다.
+3. **첫 PR 준비** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`를 엽니다.
+
+English mirror:
+1. **Understand the project** — read the overview, audience, and value sections first.
+2. **Run the first validation** — execute `python3 templates/scripts/validate_template.py`.
+3. **Prepare the first PR** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md`.
+
 ## 첫 방문자 체크 / First-visit chooser
 
 - **탐색이 먼저인가요?** 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md` 순서로 보세요.
