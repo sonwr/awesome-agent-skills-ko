@@ -42,6 +42,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
+        "## 1분 빠른 시작 / 1-minute quick start",
         "## 역할별 첫 명령 / First command by role",
         "## 역할별 첫 성과 / First wins by role",
         "## 대상 사용자 / Who this is for",
@@ -194,6 +195,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
+        "## 1분 빠른 시작 / 1-minute quick start",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 대표 시작 예시 / Featured starter examples",
@@ -268,6 +270,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "## 역할별 바로 점프 / Role-based instant jumps" not in text or "docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based instant jumps that deep-link explorer/contributor/operator visitors into docs/README_FAST_PATHS.md"
+        )
+    if "## 1분 빠른 시작 / 1-minute quick start" not in text or "CONTRIBUTING.md" not in text:
+        errors.append(
+            "README.md: landing section must include a bilingual 1-minute quick start block with validation, next-doc, and contributing-guide handoff cues"
         )
     if "## 역할별 첫 명령 / First command by role" not in text or "first command" not in text or "docs/README_FIRST_SCREEN_CHECKLIST.md" not in text:
         errors.append(

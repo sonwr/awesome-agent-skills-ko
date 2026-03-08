@@ -52,6 +52,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("role-based instant jumps" in error for error in errors))
 
+    def test_readme_requires_bilingual_one_minute_quick_start_section(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 1분 빠른 시작 / 1-minute quick start\n\n```bash\npython3 templates/scripts/validate_template.py\n```\n\n- 바로 다음 문서 / Next doc: `examples/quickstart.md`\n- 첫 PR 준비 / First PR prep: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`\n- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`\n- 전체 기여 규칙 / Full contributing guide: `CONTRIBUTING.md`\n\nEnglish mirror:\n- Run the validation command first, then open `examples/quickstart.md`.\n- For the first PR, continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.\n- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md`.\n- Full contribution policy lives in `CONTRIBUTING.md`.\n\n",
+                "",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("1-minute quick start" in error for error in errors))
+
     def test_readme_requires_bilingual_first_command_by_role_section(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
