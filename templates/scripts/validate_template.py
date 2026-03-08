@@ -186,6 +186,18 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         return []
     text = readme_path.read_text(encoding="utf-8")
     errors: list[str] = []
+    lines = text.splitlines()
+    overview_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 프로젝트 소개 / Project overview"), None)
+    quickstart_command_line = next((idx for idx, line in enumerate(lines, start=1) if "python3 templates/scripts/validate_template.py" in line), None)
+    if overview_line is None or overview_line > 12:
+        errors.append(
+            "README.md: project overview heading must appear within the first 12 lines so the README stays project-intro-first"
+        )
+    if quickstart_command_line is None or quickstart_command_line > 160:
+        errors.append(
+            "README.md: first validation command must appear within the first 160 lines so visitors can act from the landing screen without deep scrolling"
+        )
+
     for required_heading in [
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
