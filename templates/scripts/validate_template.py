@@ -41,6 +41,16 @@ BILINGUAL_SECTION_MARKERS = {
         "처음 5분 기여 흐름",
         "first 5-minute contribution flow",
     ],
+    "CONTRIBUTING.md": [
+        "# 기여 가이드 / Contributing",
+        "## 기여 원칙 / Principles",
+        "## PR 필수 항목 / Pull request requirements",
+        "## 리뷰 체크리스트 / Review checklist",
+        "## 첫 기여 전에 볼 문서 / Read these before the first PR",
+        "English mirror:",
+        "README 상단 랜딩 구조",
+        "README landing order",
+    ],
     "docs/README_TOP_CALLOUTS.md": [
         "README 상단 콜아웃 문안 / README top callout copy",
         "English mirror:",
@@ -215,14 +225,50 @@ def _check_bilingual_markers(root: Path) -> list[str]:
     return errors
 
 
+def _check_contributing_structure(root: Path) -> list[str]:
+    path = root / "CONTRIBUTING.md"
+    if not path.exists():
+        return []
+    text = path.read_text(encoding="utf-8")
+    errors: list[str] = []
+    required_markers = [
+        "README.md",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "examples/pr-evidence-mini-walkthrough.md",
+    ]
+    for marker in required_markers:
+        if marker not in text:
+            errors.append(f"CONTRIBUTING.md: missing contributor handoff link {marker}")
+
+    ordered_sections = [
+        "## 기여 원칙 / Principles",
+        "## PR 필수 항목 / Pull request requirements",
+        "## 리뷰 체크리스트 / Review checklist",
+        "## 첫 기여 전에 볼 문서 / Read these before the first PR",
+    ]
+    positions = []
+    for heading in ordered_sections:
+        idx = text.find(heading)
+        if idx == -1:
+            continue
+        positions.append(idx)
+    if len(positions) == len(ordered_sections) and positions != sorted(positions):
+        errors.append(
+            "CONTRIBUTING.md: section order must stay principles -> PR requirements -> review checklist -> first PR reading list"
+        )
+
+    return errors
+
+
 def main() -> int:
     root = Path(__file__).resolve().parents[2]
 
     missing_files = _check_required_files(root)
     bilingual_errors = _check_bilingual_markers(root)
     quickstart_errors = _check_quickstart_validation_command(root)
+    contributing_errors = _check_contributing_structure(root)
 
-    if missing_files or bilingual_errors or quickstart_errors:
+    if missing_files or bilingual_errors or quickstart_errors or contributing_errors:
         if missing_files:
             print("필수 파일 누락 / Missing required files:")
             for item in missing_files:
@@ -234,6 +280,10 @@ def main() -> int:
         if quickstart_errors:
             print("퀵스타트 재현성 검증 실패 / Quickstart reproducibility check failed:")
             for item in quickstart_errors:
+                print(f"- {item}")
+        if contributing_errors:
+            print("기여 가이드 구조 검증 실패 / Contributing guide structure check failed:")
+            for item in contributing_errors:
                 print(f"- {item}")
         return 1
 
