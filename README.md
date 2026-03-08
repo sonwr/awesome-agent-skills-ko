@@ -110,12 +110,12 @@ English mirror:
 
 - **탐색이 먼저인가요?** 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md` 순서로 보세요.
 - **바로 기여할 건가요?** `python3 templates/scripts/validate_template.py` 실행 후 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`를 여세요.
-- **운영 기준을 점검하나요?** `docs/PROJECT_ENTRY_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md` 순서가 가장 빠릅니다.
+- **운영 기준을 점검하나요?** `docs/PROJECT_ENTRY_PATHS.md` → `docs/README_USER_JOURNEYS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md` 순서가 가장 빠릅니다.
 
 English mirror:
 - **Just exploring first?** Read the overview, featured categories, then `examples/quickstart.md`.
 - **Ready to contribute now?** Run `python3 templates/scripts/validate_template.py` and open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
-- **Auditing governance rails?** Start with `docs/PROJECT_ENTRY_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`.
+- **Auditing governance rails?** Start with `docs/PROJECT_ENTRY_PATHS.md` → `docs/README_USER_JOURNEYS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`.
 
 ## 30초 적합성 체크 / 30-second fit check
 
@@ -167,6 +167,7 @@ English mirror:
 English mirror: Keep the landing view focused on overview/value/quick start, and move governance philosophy plus long-term direction into dedicated docs.
 
 - 프로젝트 진입 경로 / Project entry paths: `docs/PROJECT_ENTRY_PATHS.md`
+- README 사용자 여정 / README user journeys: `docs/README_USER_JOURNEYS.md`
 - README 첫 화면 체크 / README first-screen checklist: `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - 프로젝트가 왜 필요한지 / Why this project exists: `docs/PROJECT_OVERVIEW.md`
 - 장기 운영 방향 / Long-term project direction: `docs/PROJECT_DIRECTION.md`
@@ -201,12 +202,12 @@ English mirror:
 
 **운영형 / Operator path**
 - 목적: 큐레이션 기준, 정보 구조, 운영 문서를 빠르게 점검
-- 시작: `docs/PROJECT_ENTRY_PATHS.md`와 `docs/README_INFORMATION_ARCHITECTURE.md` 열기
+- 시작: `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_USER_JOURNEYS.md`, `docs/README_INFORMATION_ARCHITECTURE.md` 열기
 - 다음 이동: `docs/CURATION_POLICY.md` → `docs/PROJECT_DIRECTION.md`
 
 English mirror:
 - Goal: audit curation rules, information architecture, and governance docs quickly.
-- Start with `docs/PROJECT_ENTRY_PATHS.md` and `docs/README_INFORMATION_ARCHITECTURE.md`.
+- Start with `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_USER_JOURNEYS.md`, and `docs/README_INFORMATION_ARCHITECTURE.md`.
 - Next stop: `docs/CURATION_POLICY.md` → `docs/PROJECT_DIRECTION.md`
 
 ### 1) 탐색부터 시작 / Start by exploring

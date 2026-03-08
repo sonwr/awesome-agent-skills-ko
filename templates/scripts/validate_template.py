@@ -22,6 +22,7 @@ REQUIRED_FILES = [
     "docs/PROJECT_DIRECTION.md",
     "docs/README_INFORMATION_ARCHITECTURE.md",
     "docs/README_FIRST_SCREEN_CHECKLIST.md",
+    "docs/README_USER_JOURNEYS.md",
     "examples/pr-evidence-mini-walkthrough.md",
     "examples/quickstart.md",
 ]
@@ -87,6 +88,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "프로젝트 소개 → 대상 사용자 → 제공 가치",
         "overview -> audience -> value",
+    ],
+    "docs/README_USER_JOURNEYS.md": [
+        "README 사용자 여정 / README user journeys",
+        "## 탐색형 방문자 / Explorer journey",
+        "## 기여형 방문자 / Contributor journey",
+        "## 운영형 방문자 / Operator journey",
+        "English mirror:",
     ],
     "docs/README_TOP_CALLOUTS.md": [
         "README 상단 콜아웃 문안 / README top callout copy",
@@ -213,6 +221,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/PROJECT_ENTRY_PATHS.md" not in text:
         errors.append(
             "README.md: learn-more section must link to docs/PROJECT_ENTRY_PATHS.md for next-step navigation"
+        )
+    if "docs/README_USER_JOURNEYS.md" not in text:
+        errors.append(
+            "README.md: learn-more or journey sections must link to docs/README_USER_JOURNEYS.md so intro-first audience flows stay documented"
         )
     if "### 빠른 기여 체크 / Quick contribution check" not in text:
         errors.append(
