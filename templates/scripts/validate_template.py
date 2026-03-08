@@ -237,6 +237,15 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: project snapshot must surface representative entry points and the landing-page rule in Korean/English"
         )
     project_snapshot_section = _extract_section(text, "프로젝트 스냅샷 / Project snapshot")
+    project_glance_section = _extract_section(text, "프로젝트 한눈에 보기 / Project at a glance")
+    if "누구를 위한 저장소인가요?" not in project_glance_section or "무엇이 바로 되나요?" not in project_glance_section or "어디서 시작하나요?" not in project_glance_section:
+        errors.append(
+            "README.md: project at a glance must answer audience/immediate action/where-to-start prompts in Korean near the top"
+        )
+    if "Who is this for?" not in project_glance_section or "What can I do immediately?" not in project_glance_section or "Where do I start?" not in project_glance_section:
+        errors.append(
+            "README.md: project at a glance must keep English mirror prompts for audience/immediate action/where-to-start near the top"
+        )
     if "python3 templates/scripts/validate_template.py" not in project_snapshot_section or "examples/quickstart.md" not in project_snapshot_section:
         errors.append(
             "README.md: project snapshot must include the first validation command and quickstart doc link so intro-first visitors can act without scrolling"

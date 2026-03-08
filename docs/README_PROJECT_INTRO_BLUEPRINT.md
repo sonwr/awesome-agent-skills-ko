@@ -8,10 +8,14 @@ English mirror: The README first screen should behave like a project-introductio
 1. 프로젝트 소개 / Project overview
    - `무엇을 하나요? / What does it do?`
    - `왜 필요한가요? / Why does it matter?`
-2. 대상 사용자 / Who this is for
-3. 제공 가치 / What you get
-4. 대표 카테고리와 예시 / Featured categories and examples
-5. 빠른 시작 / Quick start
+2. 프로젝트 한눈에 보기 / Project at a glance
+   - `누구를 위한 저장소인가요? / Who is this for?`
+   - `무엇이 바로 되나요? / What can I do immediately?`
+   - `어디서 시작하나요? / Where do I start?`
+3. 대상 사용자 / Who this is for
+4. 제공 가치 / What you get
+5. 대표 카테고리와 예시 / Featured categories and examples
+6. 빠른 시작 / Quick start
 
 ## 뒤로 미룰 것 / What should move lower
 
