@@ -333,59 +333,20 @@ English mirror: Keep the landing view focused on overview/value/quick start, and
 
 ---
 
-## 추천 시작 경로 / Recommended starting paths
+## 운영/기여 상세 안내 / Deeper contributor and operations guide
 
-### 빠른 선택 카드 / Quick chooser cards
-
-**탐색형 / Explorer path**
-- 목적: 프로젝트 가치와 카테고리를 30초 안에 파악
-- 시작: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리
-- 다음 이동: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
+README 상단은 프로젝트 소개, 대상 사용자, 제공 가치, 대표 예시/카테고리, 빠른 시작에 집중합니다.
+중복되는 운영/기여 상세 흐름은 `docs/CONTRIBUTOR_OPERATIONS.md`로 이동했습니다.
 
 English mirror:
-- Goal: understand the project value and category map within 30 seconds.
-- Start with the project overview → audience → value → featured categories.
-- Next stop: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
+The README landing area stays focused on project intro, audience, value, featured examples/categories, and quick start. Repeated contributor/operations detail now lives in `docs/CONTRIBUTOR_OPERATIONS.md`.
 
-**기여형 / Contributor path**
-- 목적: 첫 검증 명령부터 실행하고 빠르게 PR 준비
-- 시작: quick start 검증 명령 실행
-- 다음 이동: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- 기여 상세 흐름 / Contributor detail flow: `docs/CONTRIBUTOR_OPERATIONS.md`
+- 병기 체크리스트 / Bilingual checklist: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- PR 증빙 예시 / PR evidence example: `examples/pr-evidence-mini-walkthrough.md`
+- 운영 감사 경로 / Operations audit path: `docs/README_FAST_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
 
-English mirror:
-- Goal: run the first validation command immediately and prepare a PR fast.
-- Start by running the quick start validation command.
-- Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-
-**운영형 / Operator path**
-- 목적: 큐레이션 기준, 정보 구조, 운영 문서를 빠르게 점검
-- 시작: `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_USER_JOURNEYS.md`, `docs/README_INFORMATION_ARCHITECTURE.md` 열기
-- 다음 이동: `docs/CURATION_POLICY.md` → `docs/PROJECT_DIRECTION.md`
-
-English mirror:
-- Goal: audit curation rules, information architecture, and governance docs quickly.
-- Start with `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_USER_JOURNEYS.md`, and `docs/README_INFORMATION_ARCHITECTURE.md`.
-- Next stop: `docs/CURATION_POLICY.md` → `docs/PROJECT_DIRECTION.md`
-
-### 1) 탐색부터 시작 / Start by exploring
-- 먼저 볼 것: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리
-- 추천 대상: "무엇이 들어 있는지" 먼저 알고 싶은 사용자/팀
-- 다음 이동: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
-
-English mirror:
-- Open the project overview, audience, value, and featured categories first.
-- Best for users or teams deciding whether this collection fits their workflow.
-- Next stop: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
-
-### 2) 바로 기여 시작 / Start contributing immediately
-- 먼저 할 것: quick start 검증 명령 실행
-- 추천 대상: 첫 PR을 빨리 열고 싶은 기여자
-- 다음 이동: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-
-English mirror:
-- Run the quick start validation command first.
-- Best for contributors who want to open a first PR quickly.
-- Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+---
 
 ## Repository structure
 
