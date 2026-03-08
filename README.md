@@ -161,6 +161,11 @@ English mirror:
 - For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md`.
 - Full contribution policy lives in `CONTRIBUTING.md`.
 
+- quick-start 후속 3종 / quick-start follow-up trio: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+
+English mirror:
+- quick-start follow-up trio: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+
 ## 역할별 첫 명령 / First command by role
 
 - **탐색형 / Explorer** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `examples/quickstart.md`

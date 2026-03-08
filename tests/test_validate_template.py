@@ -109,6 +109,35 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("next-doc trio" in error for error in errors))
 
+    def test_readme_requires_quickstart_followup_section_before_learn_more(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8")
+            followup = """### 빠른 시작 후 바로 볼 문서 / What to open right after quick start
+
+1. `examples/quickstart.md` — 첫 복붙 명령과 다음 읽기 순서
+2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — 최소 증빙/병기 규칙
+3. `examples/pr-evidence-mini-walkthrough.md` — PR 코멘트 예시
+
+이 세 문서는 quick start 직후의 기본 후속 동선이며, 검증 스크립트가 빠짐없이 유지되는지 함께 확인합니다.
+
+English mirror:
+1. `examples/quickstart.md` — first copy-paste command and next reading step
+2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` — minimum evidence and bilingual rules
+3. `examples/pr-evidence-mini-walkthrough.md` — PR comment example
+
+These three docs are the default follow-up path after quick start, and the validator checks that the trio stays intact.
+
+"""
+            sample = sample.replace(followup, "")
+            sample = sample.replace("## 더 읽기 / Learn more\n", "## 더 읽기 / Learn more\n\n" + followup)
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("before Learn more" in error for error in errors))
+
     def test_readme_requires_bilingual_first_command_by_role_section(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

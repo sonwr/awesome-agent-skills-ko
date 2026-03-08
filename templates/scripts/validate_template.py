@@ -241,6 +241,27 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
     else:
         quickstart_followup_body = quickstart_followup_section.group("body")
+        quickstart_followup_line = next(
+            (idx for idx, line in enumerate(lines, start=1) if line.strip() == "### 빠른 시작 후 바로 볼 문서 / What to open right after quick start"),
+            None,
+        )
+        learn_more_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 더 읽기 / Learn more"), None)
+        deeper_ops_line = next(
+            (idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 운영/기여 상세 안내 / Deeper contributor and operations guide"),
+            None,
+        )
+        if quickstart_followup_line is None or quickstart_followup_line > 175:
+            errors.append(
+                "README.md: quick-start follow-up section must appear within the first 175 lines so the landing page keeps next-doc guidance above long-form governance details"
+            )
+        if learn_more_line is not None and quickstart_followup_line is not None and quickstart_followup_line > learn_more_line:
+            errors.append(
+                "README.md: quick-start follow-up section must appear before Learn more so next-doc guidance stays above supporting references"
+            )
+        if deeper_ops_line is not None and quickstart_followup_line is not None and quickstart_followup_line > deeper_ops_line:
+            errors.append(
+                "README.md: quick-start follow-up section must appear before the deeper contributor/operations guide so intro-first flow stays intact"
+            )
         required_followup_markers = [
             "examples/quickstart.md",
             "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
