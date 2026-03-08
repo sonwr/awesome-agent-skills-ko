@@ -317,16 +317,17 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
-        "탐색형 / Explorer",
-        "기여형 / Contributor",
-        "운영형 / Operator",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 대표 활용 시나리오 / Featured use cases",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
-        "## Quick start",
+        "## 카테고리 바로가기 / Category jump links",
+        "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+        "## 역할별 30초 선택 카드 / 30-second role chooser cards",
+        "## 역할별 바로 열 문서 / Role-based first-open docs",
+        "## 빠른 시작 / Quick start",
     ]
     positions = []
     for heading in ordered_sections:
@@ -338,7 +339,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
-                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> first-visit-chooser -> 30-second-fit-check -> quick start"
+                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> 3-step-start -> first-visit-chooser -> 30-second-fit-check -> category-jump-links -> role-based entry sections -> quick start"
             )
 
     top_callout_idx = text.find("## 상단 핵심 콜아웃 / Top contributor callouts")

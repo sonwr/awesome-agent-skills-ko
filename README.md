@@ -51,52 +51,6 @@ English mirror:
 2. **Runnable starter templates** connected to quickstart docs, validation scripts, and PR evidence examples.
 3. **Governance rails** for Korean-first docs, English mirrors, reproducible evidence, and anti-repeat workflows.
 
-## 카테고리 바로가기 / Category jump links
-
-- **온보딩으로 바로 이동 / Jump to onboarding** → `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- **증빙 예시로 바로 이동 / Jump to evidence examples** → `examples/pr-evidence-mini-walkthrough.md`
-- **운영 기준으로 바로 이동 / Jump to governance docs** → `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
-
-English mirror:
-- **Jump to onboarding** → `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- **Jump to evidence examples** → `examples/pr-evidence-mini-walkthrough.md`
-- **Jump to governance docs** → `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
-
-## 역할별 한 줄 진입점 / Role-based one-line entry points
-
-- **탐색형 / Explorer** — 프로젝트 소개와 대표 카테고리만 먼저 보고 싶은 사람에게 맞는 진입점입니다.
-- **기여형 / Contributor** — 첫 검증 명령과 PR 증빙 문서까지 바로 이어서 열고 싶은 사람에게 맞는 진입점입니다.
-- **운영형 / Operator** — 정보구조·큐레이션 기준·운영 문서를 빠르게 감사하려는 사람에게 맞는 진입점입니다.
-
-English mirror:
-- **Explorer** — best when you want the overview and category map before reading governance details.
-- **Contributor** — best when you want the first validation command plus PR evidence docs immediately.
-- **Operator** — best when you want to audit information architecture, curation policy, and governance docs first.
-
-## 역할별 30초 선택 카드 / 30-second role chooser cards
-
-- **탐색형 / Explorer** — `프로젝트 소개 → 대표 카테고리 → examples/quickstart.md` 순서로 30초 안에 가치와 예시를 파악합니다.
-- **기여형 / Contributor** — `python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md → examples/pr-evidence-mini-walkthrough.md` 순서로 첫 검증과 PR 증빙 준비를 끝냅니다.
-- **운영형 / Operator** — `docs/README_FAST_PATHS.md → docs/README_INFORMATION_ARCHITECTURE.md → docs/CURATION_POLICY.md` 순서로 랜딩 구조와 운영 기준을 점검합니다.
-
-English mirror:
-- **Explorer** — use `project overview → featured categories → examples/quickstart.md` to understand value and sample paths within 30 seconds.
-- **Contributor** — use `python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md → examples/pr-evidence-mini-walkthrough.md` to finish the first validation plus PR evidence prep fast.
-- **Operator** — use `docs/README_FAST_PATHS.md → docs/README_INFORMATION_ARCHITECTURE.md → docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
-
-## 역할별 바로 열 문서 / Role-based first-open docs
-
-- **탐색형 / Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
-- **기여형 / Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **운영형 / Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
-  - 목적 / Goal: 소개형 랜딩 구조가 유지되는지 빠르게 감사합니다.
-
-English mirror:
-- **Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
-- **Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
-  - Goal: audit whether the intro-first landing structure stays intact.
-
 ## 대표 카테고리와 예시 / Featured categories and examples
 
 - **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
@@ -172,6 +126,52 @@ English mirror:
 
 ---
 
+## 카테고리 바로가기 / Category jump links
+
+- **온보딩으로 바로 이동 / Jump to onboarding** → `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **증빙 예시로 바로 이동 / Jump to evidence examples** → `examples/pr-evidence-mini-walkthrough.md`
+- **운영 기준으로 바로 이동 / Jump to governance docs** → `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Jump to onboarding** → `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Jump to evidence examples** → `examples/pr-evidence-mini-walkthrough.md`
+- **Jump to governance docs** → `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
+
+## 역할별 한 줄 진입점 / Role-based one-line entry points
+
+- **탐색형 / Explorer** — 프로젝트 소개와 대표 카테고리만 먼저 보고 싶은 사람에게 맞는 진입점입니다.
+- **기여형 / Contributor** — 첫 검증 명령과 PR 증빙 문서까지 바로 이어서 열고 싶은 사람에게 맞는 진입점입니다.
+- **운영형 / Operator** — 정보구조·큐레이션 기준·운영 문서를 빠르게 감사하려는 사람에게 맞는 진입점입니다.
+
+English mirror:
+- **Explorer** — best when you want the overview and category map before reading governance details.
+- **Contributor** — best when you want the first validation command plus PR evidence docs immediately.
+- **Operator** — best when you want to audit information architecture, curation policy, and governance docs first.
+
+## 역할별 30초 선택 카드 / 30-second role chooser cards
+
+- **탐색형 / Explorer** — `프로젝트 소개 → 대표 카테고리 → examples/quickstart.md` 순서로 30초 안에 가치와 예시를 파악합니다.
+- **기여형 / Contributor** — `python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md → examples/pr-evidence-mini-walkthrough.md` 순서로 첫 검증과 PR 증빙 준비를 끝냅니다.
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md → docs/README_INFORMATION_ARCHITECTURE.md → docs/CURATION_POLICY.md` 순서로 랜딩 구조와 운영 기준을 점검합니다.
+
+English mirror:
+- **Explorer** — use `project overview → featured categories → examples/quickstart.md` to understand value and sample paths within 30 seconds.
+- **Contributor** — use `python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md → examples/pr-evidence-mini-walkthrough.md` to finish the first validation plus PR evidence prep fast.
+- **Operator** — use `docs/README_FAST_PATHS.md → docs/README_INFORMATION_ARCHITECTURE.md → docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
+
+## 역할별 바로 열 문서 / Role-based first-open docs
+
+- **탐색형 / Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
+- **기여형 / Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+  - 목적 / Goal: 소개형 랜딩 구조가 유지되는지 빠르게 감사합니다.
+
+English mirror:
+- **Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
+- **Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+  - Goal: audit whether the intro-first landing structure stays intact.
+
 ## 상단 핵심 콜아웃 / Top contributor callouts
 
 
@@ -193,8 +193,6 @@ English mirror:
 - **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
 - **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
 - **Keep philosophy and long-term direction in dedicated docs**: use `docs/PROJECT_OVERVIEW.md` and `docs/PROJECT_DIRECTION.md` so the landing page stays focused.
-
-
 
 ## 빠른 시작 / Quick start
 
@@ -299,8 +297,6 @@ English mirror:
 - Run the quick start validation command first.
 - Best for contributors who want to open a first PR quickly.
 - Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-
-
 
 ## Repository structure
 
