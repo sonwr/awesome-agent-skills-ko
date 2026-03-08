@@ -41,3 +41,8 @@ English mirror:
 
 README에는 `## 실무용 기여 체크리스트 / Practical contribution checklist` 또는 `## Roadmap summary`가 `## Quick start`보다 먼저 오면 안 됩니다.
 English mirror: `## Practical contribution checklist` and `## Roadmap summary` must not appear before `## Quick start` in README.
+
+## 역할별 압축 진입점 / Compressed role entry points
+
+- README 상단에는 탐색형 / 기여형 / 운영형 사용자가 한 줄 설명만 읽고도 다음 문서를 고를 수 있는 압축 진입점을 둡니다.
+- English mirror: Keep one-line explorer / contributor / operator entry points near the README top so newcomers can choose a path in seconds.

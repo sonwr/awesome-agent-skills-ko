@@ -60,6 +60,17 @@ English mirror:
 - **Jump to evidence examples** → `examples/pr-evidence-mini-walkthrough.md`
 - **Jump to governance docs** → `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md`
 
+## 역할별 한 줄 진입점 / Role-based one-line entry points
+
+- **탐색형 / Explorer** — 프로젝트 소개와 대표 카테고리만 먼저 보고 싶은 사람에게 맞는 진입점입니다.
+- **기여형 / Contributor** — 첫 검증 명령과 PR 증빙 문서까지 바로 이어서 열고 싶은 사람에게 맞는 진입점입니다.
+- **운영형 / Operator** — 정보구조·큐레이션 기준·운영 문서를 빠르게 감사하려는 사람에게 맞는 진입점입니다.
+
+English mirror:
+- **Explorer** — best when you want the overview and category map before reading governance details.
+- **Contributor** — best when you want the first validation command plus PR evidence docs immediately.
+- **Operator** — best when you want to audit information architecture, curation policy, and governance docs first.
+
 ## 대표 카테고리와 예시 / Featured categories and examples
 
 - **온보딩/기여 가이드** — `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
