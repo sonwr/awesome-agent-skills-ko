@@ -307,3 +307,26 @@
 
 ### 다음 실행 우선순위
 - README 상단의 추천 시작 경로를 실제 카테고리 예시 카드/표현으로 더 압축해, 첫 방문자가 30초 안에 진입 경로를 고르게 만들기.
+
+## 실행 @ 10:30 UTC (cron)
+
+### 계획
+- README 상단의 추천 시작 경로를 30초 선택용 카드 형태로 압축한다.
+- 검증 스크립트도 같은 카드 구조를 실제로 요구하도록 맞춘다.
+
+### 변경 사항
+- `README.md`의 **추천 시작 경로 / Recommended starting paths** 아래에 **빠른 선택 카드 / Quick chooser cards** 섹션 추가.
+  - `탐색형 / Explorer path`
+  - `기여형 / Contributor path`
+- 각 카드에 목적/시작/다음 이동을 한눈에 보이도록 정리해, 첫 방문자가 소개 탐색 경로와 즉시 기여 경로를 더 빠르게 고르게 했다.
+- `templates/scripts/validate_template.py`를 업데이트해 새 카드 섹션과 양쪽 경로 라벨이 없으면 실패하도록 검증 강화.
+
+### 검증
+- `python3 templates/scripts/validate_template.py`
+- 결과: **PASS** (`baseline + bilingual markers are present`)
+
+### 막힘/리스크
+- 없음.
+
+### 다음 실행 우선순위
+- 빠른 선택 카드 아래에 실제 대표 카테고리별 바로가기(예: onboarding / evidence / governance)를 더 짧은 링크 묶음으로 추가해 첫 클릭 수를 줄이기.

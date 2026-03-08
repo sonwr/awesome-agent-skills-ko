@@ -73,6 +73,28 @@ English mirror:
 
 ## 추천 시작 경로 / Recommended starting paths
 
+### 빠른 선택 카드 / Quick chooser cards
+
+**탐색형 / Explorer path**
+- 목적: 프로젝트 가치와 카테고리를 30초 안에 파악
+- 시작: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리
+- 다음 이동: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
+
+English mirror:
+- Goal: understand the project value and category map within 30 seconds.
+- Start with the project overview → audience → value → featured categories.
+- Next stop: `examples/quickstart.md` → `docs/CURATION_POLICY.md`
+
+**기여형 / Contributor path**
+- 목적: 첫 검증 명령부터 실행하고 빠르게 PR 준비
+- 시작: quick start 검증 명령 실행
+- 다음 이동: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+
+English mirror:
+- Goal: run the first validation command immediately and prepare a PR fast.
+- Start by running the quick start validation command.
+- Next stop: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+
 ### 1) 탐색부터 시작 / Start by exploring
 - 먼저 볼 것: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리
 - 추천 대상: "무엇이 들어 있는지" 먼저 알고 싶은 사용자/팀
