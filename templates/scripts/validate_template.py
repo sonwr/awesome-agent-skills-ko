@@ -80,6 +80,12 @@ BILINGUAL_SECTION_MARKERS = {
         "## 운영 문서 경로 / Governance follow-up path",
         "English mirror:",
     ],
+    "docs/README_PROJECT_INTRO_BLUEPRINT.md": [
+        "README 소개형 상단 설계 청사진 / README intro-first blueprint",
+        "## 상단에 먼저 보여줄 것 / What should appear first",
+        "## 뒤로 미룰 것 / What should move lower",
+        "## English mirror",
+    ],
     "docs/README_INFORMATION_ARCHITECTURE.md": [
         "README 정보 구조 가이드 / README information architecture guide",
         "## 상단 우선순위 / Top-of-page priorities",
@@ -234,6 +240,17 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: learn-more section must link to docs/PROJECT_ENTRY_PATHS.md for next-step navigation"
         )
+    intro_blueprint_idx = text.find("docs/README_PROJECT_INTRO_BLUEPRINT.md")
+    learn_more_idx = text.find("## 더 읽기 / Learn more")
+    if intro_blueprint_idx == -1:
+        errors.append(
+            "README.md: learn-more section must link to docs/README_PROJECT_INTRO_BLUEPRINT.md so intro-first README copy stays reusable"
+        )
+    elif learn_more_idx != -1 and intro_blueprint_idx < learn_more_idx:
+        errors.append(
+            "README.md: docs/README_PROJECT_INTRO_BLUEPRINT.md should stay in the Learn more section, not in the landing-first block"
+        )
+
     if "docs/README_USER_JOURNEYS.md" not in text:
         errors.append(
             "README.md: learn-more or journey sections must link to docs/README_USER_JOURNEYS.md so intro-first audience flows stay documented"
