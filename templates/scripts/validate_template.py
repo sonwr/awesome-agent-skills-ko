@@ -43,6 +43,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
+        "## 역할별 첫 명령 / First command by role",
         "## 역할별 첫 성과 / First wins by role",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
@@ -258,6 +259,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "## 역할별 바로 점프 / Role-based instant jumps" not in text or "docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based instant jumps that deep-link explorer/contributor/operator visitors into docs/README_FAST_PATHS.md"
+        )
+    if "## 역할별 첫 명령 / First command by role" not in text or "first command" not in text or "docs/README_FIRST_SCREEN_CHECKLIST.md" not in text:
+        errors.append(
+            "README.md: landing section must include bilingual role-based first command by role cues so explorer/contributor/operator visitors can see one command plus the next doc immediately"
         )
     if "## 역할별 1클릭 다음 문서 / Role-based 1-click next docs" not in text or "docs/README_FAST_PATHS.md" not in text:
         errors.append(

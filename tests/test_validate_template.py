@@ -52,6 +52,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("role-based instant jumps" in error for error in errors))
 
+    def test_readme_requires_bilingual_first_command_by_role_section(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 역할별 첫 명령 / First command by role\n\n- **탐색형 / Explorer** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `examples/quickstart.md`\n- **기여형 / Contributor** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`\n- **운영형 / Operator** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/README_FIRST_SCREEN_CHECKLIST.md`\n\nEnglish mirror:\n- **Explorer** — first command: `python3 templates/scripts/validate_template.py` → next doc: `examples/quickstart.md`\n- **Contributor** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`\n- **Operator** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/README_FIRST_SCREEN_CHECKLIST.md`\n\n",
+                "",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first command by role" in error for error in errors))
+
     def test_readme_requires_bilingual_first_wins_by_role_section(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -2333,6 +2347,9 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
                         "## 역할별 첫 클릭 묶음 / Role-based first-click bundles",
                         "도착 문서",
                         "landing doc",
+                        "## 역할별 첫 명령 / First command by role",
+                        "first command",
+                        "docs/README_FIRST_SCREEN_CHECKLIST.md",
                         "## 대상 사용자 / Who this is for",
                         "## 제공 가치 / What you get",
                         "## 대표 시작 예시 / Featured starter examples",

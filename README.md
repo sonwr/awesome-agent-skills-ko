@@ -150,6 +150,17 @@ English mirror:
 - For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md`.
 - Full contribution policy lives in `CONTRIBUTING.md`.
 
+## 역할별 첫 명령 / First command by role
+
+- **탐색형 / Explorer** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `examples/quickstart.md`
+- **기여형 / Contributor** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **운영형 / Operator** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/README_FIRST_SCREEN_CHECKLIST.md`
+
+English mirror:
+- **Explorer** — first command: `python3 templates/scripts/validate_template.py` → next doc: `examples/quickstart.md`
+- **Contributor** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Operator** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/README_FIRST_SCREEN_CHECKLIST.md`
+
 ## 역할별 첫 성과 / First wins by role
 
 - **탐색형 / Explorer** — 60초 안에 프로젝트 가치와 대표 문서를 파악하고 `examples/quickstart.md`까지 도착합니다.
