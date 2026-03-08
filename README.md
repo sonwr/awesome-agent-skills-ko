@@ -96,6 +96,19 @@ English mirror:
 - **Contributor** — first click: `python3 templates/scripts/validate_template.py` → second click: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → landing doc: `examples/pr-evidence-mini-walkthrough.md`
 - **Operator** — first click: `docs/README_FAST_PATHS.md` → second click: `Role-based 1-click next docs` → landing doc: `docs/CURATION_POLICY.md`
 
+## 역할별 바로 점프 / Role-based instant jumps
+
+- **탐색형 / Explorer** — `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **기여형 / Contributor** — `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
+- **한 줄 요약 / One-line rule** — README 상단에서 역할을 고른 뒤에는 `docs/README_FAST_PATHS.md`의 같은 역할 섹션으로 바로 이어지게 합니다.
+
+English mirror:
+- **Explorer** — `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **Contributor** — `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **Operator** — `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
+- **One-line rule** — once a visitor picks a role on the README first screen, hand them straight to the matching section in `docs/README_FAST_PATHS.md`.
+
 ## 1분 빠른 시작 / 1-minute quick start
 
 ```bash

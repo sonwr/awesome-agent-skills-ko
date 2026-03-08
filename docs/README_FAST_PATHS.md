@@ -37,10 +37,12 @@ English mirror:
 
 - README의 `추천 시작 경로`, `역할별 30초 선택 카드`, `역할별 바로 열 문서`는 이 문서의 Explorer / Contributor / Operator 순서를 그대로 따라야 합니다.
 - README 상단 카드는 소개형 랜딩을 유지하고, 자세한 이동 경로는 이 문서에서 이어 받습니다.
+- README의 `역할별 바로 점프 / Role-based instant jumps`는 이 문서의 세 역할 섹션 앵커로 직접 연결되어야 합니다.
 
 English mirror:
 - The README sections `Recommended starting paths`, `30-second role chooser cards`, and `Role-based first-open docs` should keep the same Explorer / Contributor / Operator order as this guide.
 - Keep the README landing area intro-first, then hand detailed navigation off to this file.
+- The README `Role-based instant jumps` block should point directly at the three role sections in this document.
 
 
 ## 1-click handoff pairs / 한 번에 여는 다음 문서
