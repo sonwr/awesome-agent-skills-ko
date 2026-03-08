@@ -963,6 +963,82 @@ class ValidateTemplateTests(unittest.TestCase):
 
 
 
+    def test_role_based_first_open_docs_require_first_screen_checklist_for_operator_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "## 프로젝트 소개 / Project overview",
+                        "## 프로젝트 스냅샷 / Project snapshot",
+                        "대표 시작점",
+                        "Landing-page rule",
+                        "## 대상 사용자 / Who this is for",
+                        "## 제공 가치 / What you get",
+                        "## 대표 카테고리와 예시 / Featured categories and examples",
+                        "## 대표 활용 시나리오 / Featured use cases",
+                        "새 저장소 온보딩",
+                        "New repo onboarding",
+                        "첫 PR 준비",
+                        "First PR prep",
+                        "## 빠른 시작 한눈에 보기 / Quick start at a glance",
+                        "## 한눈에 보는 3단계 시작 / 3-step start path",
+                        "프로젝트 이해",
+                        "Understand the project",
+                        "첫 검증 실행",
+                        "Run the first validation",
+                        "첫 PR 준비",
+                        "Prepare the first PR",
+                        "## 첫 방문자 체크 / First-visit chooser",
+                        "탐색이 먼저인가요?",
+                        "Just exploring first?",
+                        "바로 기여할 건가요?",
+                        "Ready to contribute now?",
+                        "운영 기준을 점검하나요?",
+                        "Auditing governance rails?",
+                        "## 30초 적합성 체크 / 30-second fit check",
+                        "## 카테고리 바로가기 / Category jump links",
+                        "Jump to onboarding",
+                        "Jump to evidence examples",
+                        "Jump to governance docs",
+                        "## 역할별 한 줄 진입점 / Role-based one-line entry points",
+                        "**탐색형 / Explorer**",
+                        "**기여형 / Contributor**",
+                        "**운영형 / Operator**",
+                        "## 역할별 30초 선택 카드 / 30-second role chooser cards",
+                        "python3 templates/scripts/validate_template.py → docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "## 역할별 바로 열 문서 / Role-based first-open docs",
+                        "examples/quickstart.md",
+                        "docs/PROJECT_OVERVIEW.md",
+                        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "examples/pr-evidence-mini-walkthrough.md",
+                        "docs/README_FAST_PATHS.md",
+                        "docs/README_INFORMATION_ARCHITECTURE.md",
+                        "docs/CURATION_POLICY.md",
+                        "## 빠른 시작 / Quick start",
+                        "python3 templates/scripts/validate_template.py",
+                        "examples/quickstart.md",
+                        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                        "### 빠른 기여 체크 / Quick contribution check",
+                        "## 처음 기여할 때 읽는 순서 / First-time contributor reading order",
+                        "Estimated 1 min",
+                        "Estimated 2 min",
+                        "## 더 읽기 / Learn more",
+                        "docs/PROJECT_OVERVIEW.md",
+                        "docs/PROJECT_DIRECTION.md",
+                        "docs/PROJECT_ENTRY_PATHS.md",
+                        "docs/README_PROJECT_INTRO_BLUEPRINT.md",
+                        "docs/README_USER_JOURNEYS.md",
+                        "docs/README_FAST_PATHS.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("README_FIRST_SCREEN_CHECKLIST.md" in error for error in errors))
+
     def test_quickstart_at_a_glance_must_precede_role_cards(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

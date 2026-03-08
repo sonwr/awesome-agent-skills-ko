@@ -211,6 +211,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
         "examples/pr-evidence-mini-walkthrough.md",
         "docs/README_FAST_PATHS.md",
+        "docs/README_FIRST_SCREEN_CHECKLIST.md",
         "docs/README_INFORMATION_ARCHITECTURE.md",
         "docs/CURATION_POLICY.md",
     ]

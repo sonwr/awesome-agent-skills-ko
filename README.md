@@ -165,13 +165,13 @@ English mirror:
 
 - **탐색형 / Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
 - **기여형 / Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **운영형 / Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
   - 목적 / Goal: 소개형 랜딩 구조가 유지되는지 빠르게 감사합니다.
 
 English mirror:
 - **Explorer** — `examples/quickstart.md` → `docs/PROJECT_OVERVIEW.md`
 - **Contributor** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
+- **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
   - Goal: audit whether the intro-first landing structure stays intact.
 
 ## 상단 핵심 콜아웃 / Top contributor callouts
