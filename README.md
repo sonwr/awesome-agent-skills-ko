@@ -38,12 +38,14 @@ English mirror:
 - **다음 온보딩 문서**: `examples/quickstart.md`
 - **추천 대상**: 한국어 기본 문서 흐름으로 빠르게 탐색·검증·기여까지 연결하고 싶은 개인/팀
 - **첫 화면 원칙**: README 상단은 소개/가치/빠른 시작을 먼저 보여주고, 운영 규칙은 아래 문서로 내립니다.
+- **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`
 
 English mirror:
 - **One-line summary**: a curated repo where Korean-first builders can discover skills and immediately run validation commands.
 - **Best first stops**: `python3 templates/scripts/validate_template.py`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
 - **Best for**: individuals and teams who want Korean-first discovery, validation, and contribution flows in one place.
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
+- **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
 
 ## 대상 사용자 / Who this is for
 
@@ -95,7 +97,7 @@ English mirror:
 - 첫 실행 명령은 무엇인가요? `python3 templates/scripts/validate_template.py`
 - 다음 온보딩 문서는 어디인가요? `examples/quickstart.md`
 - 60초 경로 선택 문서는 어디인가요? `docs/README_FAST_PATHS.md`
-- 첫 화면 카피 원칙 요약은 어디인가요? `docs/README_FIRST_SCREEN_SCRIPT.md`
+- 첫 화면 카피 원칙 요약은 어디인가요? `docs/README_FIRST_SCREEN_SCRIPT.md`, `docs/README_LANDING_QUICKSTART_MAP.md`
 - 첫 PR 전에 무엇을 보나요? `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`
 - 역할별 바로 시작하려면?
   - 탐색형: `examples/quickstart.md`
