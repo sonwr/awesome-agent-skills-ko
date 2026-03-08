@@ -1054,6 +1054,8 @@ class ValidateTemplateTests(unittest.TestCase):
                         "English mirror: intro",
                         "## 프로젝트 소개 / Project overview",
                         "body",
+                        "## 프로젝트 한눈에 보기 / Project at a glance",
+                        "body",
                         "## 프로젝트 스냅샷 / Project snapshot",
                         "대표 시작점",
                         "Landing-page rule",

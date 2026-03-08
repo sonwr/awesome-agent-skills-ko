@@ -16,6 +16,17 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 English mirror:
 A curated collection of agent skills and runnable templates for Korean-speaking builders, with Korean-first docs and practical English mirrors.
 
+## 프로젝트 한눈에 보기 / Project at a glance
+
+- **누구를 위한 저장소인가요?** 한국어 기본 흐름으로 스킬을 탐색·검증·기여하려는 빌더/팀을 위한 저장소입니다.
+- **무엇이 바로 되나요?** README 상단만 읽어도 첫 검증 명령과 다음 문서를 바로 찾을 수 있습니다.
+- **어디서 시작하나요?** `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 이동하면 됩니다.
+
+English mirror:
+- **Who is this for?** Builders and teams who want Korean-first skill discovery, validation, and contribution flows.
+- **What can I do immediately?** Find the first validation command and next doc directly from the README landing area.
+- **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
+
 ## 프로젝트 스냅샷 / Project snapshot
 
 - **한 줄 설명**: 한국어 기본 문서 흐름으로 스킬을 찾고, 검증 명령까지 바로 실행할 수 있는 큐레이션 저장소입니다.

@@ -33,6 +33,7 @@ BILINGUAL_SECTION_MARKERS = {
     "README.md": [
         "English mirror:",
         "## 프로젝트 소개 / Project overview",
+        "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
@@ -169,6 +170,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     errors: list[str] = []
     for required_heading in [
         "## 프로젝트 소개 / Project overview",
+        "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
@@ -320,6 +322,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
 
     ordered_sections = [
         "## 프로젝트 소개 / Project overview",
+        "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
