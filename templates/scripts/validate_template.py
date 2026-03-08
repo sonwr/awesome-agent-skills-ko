@@ -188,6 +188,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             )
 
     quick_start_idx = text.find("## Quick start")
+    repo_structure_idx = text.find("## Repository structure")
+    if quick_start_idx != -1 and repo_structure_idx != -1 and repo_structure_idx < quick_start_idx:
+        errors.append(
+            "README.md: Repository structure must stay below the Quick start section so the landing page remains intro-first"
+        )
     for lower_heading in [
         "## 실무용 기여 체크리스트 / Practical contribution checklist",
         "## Roadmap summary",
