@@ -34,3 +34,15 @@ English mirror:
 - Read project philosophy in `docs/PROJECT_OVERVIEW.md` and long-term direction in `docs/PROJECT_DIRECTION.md`.
 
 - README information architecture source: `docs/README_INFORMATION_ARCHITECTURE.md` keeps the intro-first landing priorities explicit.
+
+
+## Sync target / 동기화 대상
+
+- README 상단 `## 상단 핵심 콜아웃 / Top contributor callouts` 섹션은 이 문서를 source of truth로 유지합니다.
+- English mirror: Keep the README `Top contributor callouts` section synced from this document as the source of truth.
+
+### Core callout copy
+
+- 최소 증빙 3종 필수
+- Document blockers with the next-run priority
+- README top callouts stay intro-first and contribution-ready
