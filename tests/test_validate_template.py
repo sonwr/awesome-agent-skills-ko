@@ -10,11 +10,11 @@ from templates.scripts import validate_template
 class ValidateTemplateTests(unittest.TestCase):
 
 
-    def test_readme_requires_project_overview_heading_within_first_twelve_lines(self) -> None:
+    def test_readme_requires_project_overview_heading_within_first_twenty_eight_lines(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             (root / "README.md").write_text(
-                "\n".join([f"line {idx}" for idx in range(1, 14)])
+                "\n".join([f"line {idx}" for idx in range(1, 30)])
                 + "\n## 프로젝트 소개 / Project overview\n"
                 + "python3 templates/scripts/validate_template.py\n",
                 encoding="utf-8",
@@ -22,7 +22,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("first 12 lines" in error for error in errors))
+            self.assertTrue(any("first 28 lines" in error for error in errors))
 
     def test_readme_requires_bilingual_not_just_a_link_dump_value_prop_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -2624,10 +2624,10 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                "docs/README_LANDING_QUICKSTART_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
+                "docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
                 "역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
             ).replace(
-                "docs/README_LANDING_QUICKSTART_MAP.md` → `Role-based 1-click next docs`",
+                "docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `Role-based 1-click next docs`",
                 "Role-based 1-click next docs`",
             )
             (root / "README.md").write_text(sample, encoding="utf-8")

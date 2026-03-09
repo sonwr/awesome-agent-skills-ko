@@ -17,6 +17,7 @@ REQUIRED_FILES = [
     "docs/TEMPLATE_STANDARD.md",
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
     "docs/README_TOP_CALLOUTS.md",
+    "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/PROJECT_OVERVIEW.md",
     "docs/PROJECT_ENTRY_PATHS.md",
     "docs/PROJECT_DIRECTION.md",
@@ -142,6 +143,13 @@ BILINGUAL_SECTION_MARKERS = {
     "docs/README_TOP_CALLOUTS.md": [
         "README 상단 콜아웃 문안 / README top callout copy",
         "English mirror:",
+    ],
+    "docs/README_AUDIENCE_VALUE_MAP.md": [
+        "README 대상 사용자-가치 맵 / README audience-value map",
+        "## 한국어 기준 / Korean-first map",
+        "## English mirror",
+        "탐색형 방문자",
+        "Contributors",
     ],
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md": [
         "## 한국어 체크리스트 (Primary)",
@@ -501,6 +509,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "examples/pr-evidence-mini-walkthrough.md",
         "docs/README_FAST_PATHS.md",
         "docs/README_LANDING_QUICKSTART_MAP.md",
+        "docs/README_AUDIENCE_VALUE_MAP.md",
         "docs/CURATION_POLICY.md",
     ]:
         if required_button not in core_start_buttons_section:
@@ -573,6 +582,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: first 5-minute contribution flow must include time-boxed Korean/English steps"
         )
+    if "docs/README_AUDIENCE_VALUE_MAP.md" not in text:
+        errors.append(
+            "README.md: landing or learn-more sections must link to docs/README_AUDIENCE_VALUE_MAP.md so audience/value-first messaging stays reusable"
+        )
+
     if "docs/README_FIRST_SCREEN_SCRIPT.md" not in text:
         errors.append(
             "README.md: landing or learn-more sections must link to docs/README_FIRST_SCREEN_SCRIPT.md so intro-first copy guidance stays discoverable"
@@ -747,6 +761,7 @@ def _check_readme_top_callout_sync(root: Path) -> list[str]:
         "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
         "5-minute contribution flow",
         "docs/README_TOP_CALLOUTS.md",
+    "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/PROJECT_OVERVIEW.md",
     "docs/PROJECT_ENTRY_PATHS.md",
     "docs/PROJECT_DIRECTION.md",

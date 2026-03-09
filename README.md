@@ -96,6 +96,7 @@ English mirror:
 - **첫 화면 원칙**: README 상단은 소개/가치/빠른 시작을 먼저 보여주고, 운영 규칙은 아래 문서로 내립니다.
 - **상단 구조 가드**: 검증 스크립트가 `더 읽기`/`처음 기여할 때 읽는 순서`가 `빠른 시작` 위로 올라오지 않도록 막습니다.
 - **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`
+- **대상 사용자-가치 맵**: `docs/README_AUDIENCE_VALUE_MAP.md`
 - **상단 유지 루프**: README 상단 수정 후 `python3 templates/scripts/validate_template.py` 실행 → `docs/README_FIRST_SCREEN_CHECKLIST.md` 재검토
 
 English mirror:
@@ -114,6 +115,7 @@ English mirror:
 - **지금 필요한 게 무엇인가요?** 탐색이면 `프로젝트 소개 / Project overview`, 실행이면 `python3 templates/scripts/validate_template.py`, 첫 PR이면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 바로 갑니다.
 - **빠른 시작 문서는 어디인가요?** 공통 다음 문서는 `examples/quickstart.md`입니다.
 - **운영/정책 문서는 어디로 가나요?** 첫 화면 아래의 `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내립니다.
+- **대상 사용자별 우선 가치는 어디서 보나요?** `docs/README_AUDIENCE_VALUE_MAP.md`에서 탐색형/기여형/운영형별 상단 메시지 우선순위를 바로 확인합니다.
 - **어떤 길을 먼저 고르나요?** `10초 시작 선택 / 10-second start chooser`에서 탐색/실행/기여/운영 중 하나를 바로 고릅니다.
 
 English mirror:
@@ -146,7 +148,7 @@ English mirror: The operations-heavy navigation blocks (`Core start buttons`, `R
 - **프로젝트를 먼저 이해 / Understand the project** → `프로젝트 소개 / Project overview` → `대표 카테고리와 예시 / Featured categories and examples` → `카테고리 바로가기 / Category jump links`
 - **지금 바로 검증 / Validate now** → `python3 templates/scripts/validate_template.py`
 - **첫 PR 준비 / Prepare the first PR** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md` → `역할별 30초 선택 카드 / 30-second role chooser cards`
-- **운영 가이드 열기 / Open governance guides** → `docs/README_FAST_PATHS.md` → `docs/README_LANDING_QUICKSTART_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
+- **운영 가이드 열기 / Open governance guides** → `docs/README_FAST_PATHS.md` → `docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
 
 English mirror:
 - **Understand the project** → `Project overview` → `Featured categories and examples` → `Category jump links`
@@ -249,6 +251,7 @@ English mirror:
 - **검증부터 시작 / Start with validation** — `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 바로 이동합니다.
 - **기여 준비 / Prepare a contribution** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 PR 최소 증빙 형식을 바로 복사합니다.
 - **운영 점검 / Audit the landing flow** — `docs/README_FAST_PATHS.md`와 `docs/README_FIRST_SCREEN_CHECKLIST.md`를 열어 README 소개 우선 구조가 유지되는지 확인합니다.
+- **독자-가치 정렬 확인 / Check audience-value fit** — `docs/README_AUDIENCE_VALUE_MAP.md`를 열어 첫 화면 메시지가 탐색형/기여형/운영형 방문자에게 맞게 배치됐는지 빠르게 점검합니다.
 
 English mirror:
 - **Start with validation** — run `python3 templates/scripts/validate_template.py`, then jump straight to `examples/quickstart.md`.
@@ -438,7 +441,7 @@ English mirror:
 - **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
 - **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
 - **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
-- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md)에서 관리합니다.
+- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md), 독자-가치 우선순위는 [docs/README_AUDIENCE_VALUE_MAP.md](docs/README_AUDIENCE_VALUE_MAP.md)에서 관리합니다.
 - **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
 - **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
 - **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.

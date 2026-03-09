@@ -6,14 +6,14 @@ English mirror: These four callouts are the minimum rules new contributors shoul
 - 한국어 기본 + 영어 미러를 함께 유지합니다.
 - 재현 명령 / 종료코드 / 핵심 출력을 반드시 남깁니다.
 - 실패 원인과 다음 실행 우선순위를 같이 적습니다.
-- 상세 기준은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`를 따릅니다.
+- 상세 기준은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`를 따르고, 독자-가치 우선순위는 `docs/README_AUDIENCE_VALUE_MAP.md`에서 확인합니다.
 
 English mirror:
 
 - Keep Korean-first docs with an English mirror.
 - Always record command / exit code / key output evidence.
 - Document blockers together with the next-run priority.
-- Use `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` for the full review standard.
+- Use `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` for the full review standard, and `docs/README_AUDIENCE_VALUE_MAP.md` for audience/value-first landing priorities.
 
 - 처음 5분 기여 흐름: README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽습니다.
 
