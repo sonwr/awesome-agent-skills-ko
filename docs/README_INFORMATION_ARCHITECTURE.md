@@ -14,6 +14,7 @@ English mirror: Keep the README first screen as a project-introduction landing p
 5. 대표 카테고리와 예시 / Featured categories and examples
 6. 대표 활용 시나리오 / Featured use cases
 7. 빠른 시작 / Quick start
+8. 운영 문서 핸드오프 / Governance handoff
 
 English mirror:
 1. Project overview
@@ -23,6 +24,7 @@ English mirror:
 5. Featured categories and examples
 6. Featured use cases
 7. Quick start
+8. Governance handoff
 
 ## 뒤로 보내는 내용 / What belongs lower in the page
 

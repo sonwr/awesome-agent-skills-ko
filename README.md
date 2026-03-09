@@ -74,6 +74,19 @@ English mirror:
 2. **Runnable starter templates** connected to quickstart docs, validation scripts, and PR evidence examples.
 3. **Governance rails** for Korean-first docs, English mirrors, reproducible evidence, and anti-repeat workflows.
 
+## 대표 카테고리와 예시 / Featured categories and examples
+
+- **온보딩 / Onboarding** — `examples/quickstart.md`, `docs/README_PROJECT_FAST_INTRO.md`, `docs/README_PROJECT_FIRST_LOOK.md`
+- **기여 증빙 / Contribution evidence** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_TOP_CALLOUTS.md`
+- **정보구조 / Information architecture** — `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_PROJECT_LANDING_BLUEPRINT.md`
+- **운영/큐레이션 / Governance and curation** — `docs/CURATION_POLICY.md`, `docs/README_FAST_PATHS.md`, `docs/PROJECT_ENTRY_PATHS.md`
+
+English mirror:
+- **Onboarding** — first-run docs and intro-first landing guides.
+- **Contribution evidence** — bilingual contribution rules, PR evidence walkthroughs, and top-callout proof points.
+- **Information architecture** — README landing structure, first-screen checklist, and blueprint docs.
+- **Governance and curation** — policy, operating paths, and project-entry guidance.
+
 ## 대표 활용 시나리오 / Featured use cases
 
 - **새 저장소 온보딩** — 프로젝트 소개와 첫 화면 핵심 3줄만 읽고 `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` 순서로 첫 검증까지 바로 이어갑니다.
