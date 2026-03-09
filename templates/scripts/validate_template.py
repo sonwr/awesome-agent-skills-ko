@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
     "docs/README_TOP_CALLOUTS.md",
     "docs/README_AUDIENCE_VALUE_MAP.md",
+    "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
     "docs/PROJECT_OVERVIEW.md",
@@ -172,6 +173,15 @@ BILINGUAL_SECTION_MARKERS = {
         "One-line rule",
         "Contributors",
         "Operators",
+    ],
+    "docs/README_LANDING_QUICKSTART_MAP.md": [
+        "README 랜딩 빠른 시작 맵 / README landing quick-start map",
+        "## 첫 화면 우선순위 / First-screen priorities",
+        "## README 상단 체크 질문 / README top-check questions",
+        "## 첫 화면 유지 루프 / First-screen maintenance loop",
+        "python3 templates/scripts/validate_template.py",
+        "docs/README_FIRST_SCREEN_CHECKLIST.md",
+        "English mirror:",
     ],
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md": [
         "## 한국어 체크리스트 (Primary)",

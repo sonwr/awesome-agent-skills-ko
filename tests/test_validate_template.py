@@ -2758,6 +2758,21 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
             self.assertIn("python3 templates/scripts/validate_template.py", content)
             self.assertIn("docs/README_FIRST_SCREEN_CHECKLIST.md", content)
 
+    def test_required_files_include_landing_quickstart_map_doc(self) -> None:
+        self.assertIn("docs/README_LANDING_QUICKSTART_MAP.md", validate_template.REQUIRED_FILES)
+        self.assertEqual(
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_LANDING_QUICKSTART_MAP.md"],
+            [
+                "README 랜딩 빠른 시작 맵 / README landing quick-start map",
+                "## 첫 화면 우선순위 / First-screen priorities",
+                "## README 상단 체크 질문 / README top-check questions",
+                "## 첫 화면 유지 루프 / First-screen maintenance loop",
+                "python3 templates/scripts/validate_template.py",
+                "docs/README_FIRST_SCREEN_CHECKLIST.md",
+                "English mirror:",
+            ],
+        )
+
 
 class ReadmeProjectStartMapOrderTests(unittest.TestCase):
 
