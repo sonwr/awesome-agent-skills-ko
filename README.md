@@ -11,6 +11,17 @@
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders. Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 
+## 첫 화면 핵심 3줄 / First-screen in 3 lines
+
+- **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
+- **누가 먼저 보면 좋은가? / Who should start here?** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
+- **지금 바로 무엇을 하면 되나? / What should I do now?** `python3 templates/scripts/validate_template.py` 실행 → `examples/quickstart.md` 열기 → 첫 PR이면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 이동합니다.
+
+English mirror:
+- **What is this project?** A curated repo that helps Korean-speaking builders find validation-ready agent skills and runnable templates quickly.
+- **Who should start here?** Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
+- **What should I do now?** Run `python3 templates/scripts/validate_template.py`, open `examples/quickstart.md`, and jump to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` for the first PR.
+
 ## 바로 시작 요약 / Start-here summary
 
 - **프로젝트 소개 / Project intro** — 한국어 기본 큐레이션 저장소이며, README 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.

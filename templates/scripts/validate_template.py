@@ -279,13 +279,13 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     overview_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 프로젝트 소개 / Project overview"), None)
     quickstart_command_line = next((idx for idx, line in enumerate(lines, start=1) if "python3 templates/scripts/validate_template.py" in line), None)
     start_here_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 바로 시작 요약 / Start-here summary"), None)
-    if start_here_line is None or start_here_line > 14:
+    if start_here_line is None or start_here_line > 28:
         errors.append(
-            "README.md: start-here summary heading must appear within the first 14 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
+            "README.md: start-here summary heading must appear within the first 28 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
         )
-    if overview_line is None or overview_line > 28:
+    if overview_line is None or overview_line > 40:
         errors.append(
-            "README.md: project overview heading must appear within the first 28 lines so the README stays project-intro-first even after the compact start-here summary"
+            "README.md: project overview heading must appear within the first 40 lines so the README stays project-intro-first even after the compact landing summary blocks"
         )
     top_intro_window = "\n".join(lines[:80])
     top_project_pitch_window = "\n".join(lines[:20])
@@ -336,6 +336,24 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
+        )
+    three_line_heading = "## 첫 화면 핵심 3줄 / First-screen in 3 lines"
+    three_line_section_heading = "첫 화면 핵심 3줄 / First-screen in 3 lines"
+    three_line_line = next((idx for idx, line in enumerate(lines, start=1) if three_line_heading in line), None)
+    if three_line_line is None or three_line_line > 32:
+        errors.append(
+            "README.md: first-screen in 3 lines section must appear within the first 32 lines so the landing area explains project intro, audience fit, and quick action before deeper navigation"
+        )
+    three_line_section = _extract_section(text, three_line_section_heading)
+    if (
+        "What is this project?" not in three_line_section
+        or "Who should start here?" not in three_line_section
+        or "What should I do now?" not in three_line_section
+        or "python3 templates/scripts/validate_template.py" not in three_line_section
+        or "examples/quickstart.md" not in three_line_section
+    ):
+        errors.append(
+            "README.md: first-screen in 3 lines section must summarize project intro, target audience, and immediate quick-start action in Korean/English with the validation command and next doc"
         )
     if intro_60s_line is None or intro_60s_line > 120:
         errors.append(
