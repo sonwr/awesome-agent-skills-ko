@@ -26,6 +26,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_ONE_SCREEN_START.md",
     "docs/README_PROJECT_START_HERE.md",
     "docs/README_PROJECT_QUICKSTART_BUNDLE.md",
+    "docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_FIRST_SCREEN_MAP.md",
     "docs/README_FIRST_SCREEN_JUMP_LIST.md",
@@ -256,6 +257,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "First command",
         "First PR evidence",
+    ],
+    "docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md": [
+        "README 프로젝트 빠른 시작 체크포인트 / README project quickstart checkpoints",
+        "## 한국어 기준 / Korean-first checkpoints",
+        "## English mirror",
+        "## 유지 규칙 / Maintenance rule",
+        "python3 templates/scripts/validate_template.py",
+        "examples/quickstart.md",
     ],
     "docs/README_PROJECT_FIRST_LOOK.md": [
         "README 프로젝트 첫인상 가이드 / README project first-look guide",

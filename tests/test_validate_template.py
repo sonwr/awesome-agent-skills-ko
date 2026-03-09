@@ -60,6 +60,13 @@ class ValidateTemplateTests(unittest.TestCase):
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_START_HERE.md"],
         )
 
+    def test_required_files_include_project_quickstart_checkpoints_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 빠른 시작 체크포인트 / README project quickstart checkpoints",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md"],
+        )
+
     def test_required_files_include_project_quickstart_bundle_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_QUICKSTART_BUNDLE.md", validate_template.REQUIRED_FILES)
         self.assertIn(
