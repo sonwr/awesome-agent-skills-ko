@@ -85,6 +85,17 @@ English mirror:
 - **Step 2** — use the `Project start map` to pick the right route: explore, validate, contribute, or audit.
 - **Step 3** — run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
 
+## 처음 방문 FAQ / First-time visitor FAQ
+
+- **이 저장소는 링크 모음인가요? / Is this just a link list?** 아니요. README 첫 화면에서 프로젝트 소개, 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로까지 바로 찾게 만드는 한국어 기본 큐레이션 저장소입니다.
+- **처음에 뭘 해야 하나요? / What should I do first?** `python3 templates/scripts/validate_template.py`를 실행한 뒤 `examples/quickstart.md`로 이어가면 됩니다.
+- **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `CONTRIBUTING.md`로 이어집니다.
+
+English mirror:
+- **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
+- **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
+- **Where are the contribution rules?** Continue below the landing area into `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `CONTRIBUTING.md`.
+
 ## 프로젝트 스냅샷 / Project snapshot
 
 - **한 줄 설명**: 한국어 기본 문서 흐름으로 스킬을 찾고, 검증 명령까지 바로 실행할 수 있는 큐레이션 저장소입니다.

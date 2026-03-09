@@ -41,6 +41,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 첫 화면 30초 요약 / 30-second landing summary",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
+        "## 처음 방문 FAQ / First-time visitor FAQ",
         "## 10초 시작 선택 / 10-second start chooser",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
@@ -247,6 +248,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
+        "## 처음 방문 FAQ / First-time visitor FAQ",
         "## 10초 시작 선택 / 10-second start chooser",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
@@ -482,6 +484,27 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: how-to-read section must explain the 3-step intro -> route choice -> first validation flow in Korean/English near the top"
         )
+    faq_section = _extract_section(text, "처음 방문 FAQ / First-time visitor FAQ")
+    faq_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 처음 방문 FAQ / First-time visitor FAQ"), None)
+    if faq_line is None or faq_line > 170:
+        errors.append(
+            "README.md: first-time visitor FAQ must appear within the first 170 lines so newcomers can confirm scope, first action, and contribution handoff before deeper ops sections"
+        )
+    for required_faq_marker in [
+        "Is this just a link list?",
+        "What should I do first?",
+        "Where are the contribution rules?",
+        "python3 templates/scripts/validate_template.py",
+        "examples/quickstart.md",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "CONTRIBUTING.md",
+    ]:
+        if required_faq_marker not in faq_section:
+            errors.append(
+                "README.md: first-time visitor FAQ must answer scope/first-action/contribution-rule questions in Korean/English -> "
+                + required_faq_marker
+            )
+            break
     if "python3 templates/scripts/validate_template.py" not in project_snapshot_section or "examples/quickstart.md" not in project_snapshot_section:
         errors.append(
             "README.md: project snapshot must include the first validation command and quickstart doc link so intro-first visitors can act without scrolling"
@@ -676,6 +699,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
+        "## 처음 방문 FAQ / First-time visitor FAQ",
         "## 10초 시작 선택 / 10-second start chooser",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
@@ -707,7 +731,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
-                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> 3-step-start -> first-visit-chooser -> 30-second-fit-check -> best-fit/not-for scenarios -> category-jump-links -> role-based entry sections -> quick start"
+                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> 3-step-start -> first-visit-chooser -> 30-second-fit-check -> best-fit/not-for scenarios -> category-jump-links -> role-based entry sections -> quick start (with the first-time visitor FAQ preserved between overview and snapshot)"
             )
 
     top_callout_idx = text.find("## 상단 핵심 콜아웃 / Top contributor callouts")

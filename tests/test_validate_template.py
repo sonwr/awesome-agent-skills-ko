@@ -140,6 +140,19 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("role-based instant jumps" in error for error in errors))
 
+    def test_readme_requires_first_time_visitor_faq_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8")
+            sample = sample.replace("## 처음 방문 FAQ / First-time visitor FAQ", "## 방문자 FAQ / Visitor FAQ")
+            sample = sample.replace("Is this just a link list?", "Is this just a list?")
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first-time visitor FAQ" in error for error in errors))
+
     def test_readme_requires_bilingual_one_minute_quick_start_section(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
