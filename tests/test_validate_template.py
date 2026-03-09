@@ -2276,6 +2276,16 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 errors,
             )
 
+    def test_check_quickstart_validation_command_requires_first_action_matrix_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_FIRST_ACTION_MATRIX.md", "docs/MISSING_FIRST_ACTION_MATRIX.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("docs/README_FIRST_ACTION_MATRIX.md" in error for error in errors))
+
     def test_check_quickstart_validation_command_requires_first_visit_pack_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

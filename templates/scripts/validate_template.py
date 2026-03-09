@@ -27,6 +27,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_POSITIONING.md",
     "docs/README_PROJECT_STARTER_PACK.md",
     "docs/README_PROJECT_QUICKSTART_PERSONAS.md",
+    "docs/README_FIRST_ACTION_MATRIX.md",
     "docs/README_FIRST_VISIT_PACK.md",
     "docs/README_FIRST_VISITOR_PROMISES.md",
     "docs/README_FIRST_VISITOR_ROUTES.md",
@@ -857,6 +858,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_PROJECT_QUICKSTART_PERSONAS.md" not in "\n".join(lines[:100]):
         errors.append(
             "README.md: the first 100 lines must link docs/README_PROJECT_QUICKSTART_PERSONAS.md so role-based first sentence/command/doc handoff stays visible in the intro-first landing block"
+        )
+    if "docs/README_FIRST_ACTION_MATRIX.md" not in "\n".join(lines[:120]):
+        errors.append(
+            "README.md: the first 120 lines must link docs/README_FIRST_ACTION_MATRIX.md so explorer/contributor/operator first action -> next doc -> expected result stays attached to the landing block"
         )
     if "docs/README_FIRST_VISIT_PACK.md" not in "\n".join(lines[:100]):
         errors.append(
