@@ -85,17 +85,6 @@ English mirror:
 - **Step 2** — use the `Project start map` to pick the right route: explore, validate, contribute, or audit.
 - **Step 3** — run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
 
-## 처음 방문 FAQ / First-time visitor FAQ
-
-- **이 저장소는 링크 모음인가요? / Is this just a link list?** 아니요. README 첫 화면에서 프로젝트 소개, 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로까지 바로 찾게 만드는 한국어 기본 큐레이션 저장소입니다.
-- **처음에 뭘 해야 하나요? / What should I do first?** `python3 templates/scripts/validate_template.py`를 실행한 뒤 `examples/quickstart.md`로 이어가면 됩니다.
-- **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `CONTRIBUTING.md`로 이어집니다.
-
-English mirror:
-- **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
-- **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
-- **Where are the contribution rules?** Continue below the landing area into `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `CONTRIBUTING.md`.
-
 ## 프로젝트 스냅샷 / Project snapshot
 
 - **한 줄 설명**: 한국어 기본 문서 흐름으로 스킬을 찾고, 검증 명령까지 바로 실행할 수 있는 큐레이션 저장소입니다.
@@ -120,6 +109,17 @@ English mirror:
 - **Value flow on the first screen**: overview -> audience -> value -> featured categories -> quick start.
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
 - **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
+
+## 처음 방문 FAQ / First-time visitor FAQ
+
+- **이 저장소는 링크 모음인가요? / Is this just a link list?** 아니요. README 첫 화면에서 프로젝트 소개, 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로까지 바로 찾게 만드는 한국어 기본 큐레이션 저장소입니다.
+- **처음에 뭘 해야 하나요? / What should I do first?** `python3 templates/scripts/validate_template.py`를 실행한 뒤 `examples/quickstart.md`로 이어가면 됩니다.
+- **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `CONTRIBUTING.md`로 이어집니다.
+
+English mirror:
+- **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
+- **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
+- **Where are the contribution rules?** Continue below the landing area into `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `CONTRIBUTING.md`.
 
 ## 10초 시작 선택 / 10-second start chooser
 
@@ -166,74 +166,6 @@ English mirror:
 - **Validate now** → `python3 templates/scripts/validate_template.py`
 - **Prepare the first PR** → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md` → `30-second role chooser cards`
 - **Open governance guides** → `docs/README_FAST_PATHS.md` → `docs/README_LANDING_QUICKSTART_MAP.md` → `Role-based 1-click next docs` → `docs/CURATION_POLICY.md`
-
-## 역할별 첫 클릭 묶음 / Role-based first-click bundles
-
-- **탐색형 / Explorer** — 첫 클릭: `프로젝트 소개 / Project overview` → 두 번째 클릭: `대표 카테고리와 예시 / Featured categories and examples` → 도착 문서: `examples/quickstart.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
-- **기여형 / Contributor** — 첫 클릭: `python3 templates/scripts/validate_template.py` → 두 번째 클릭: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → 도착 문서: `examples/pr-evidence-mini-walkthrough.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
-- **운영형 / Operator** — 첫 클릭: `docs/README_FAST_PATHS.md` → 두 번째 클릭: `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → 도착 문서: `docs/CURATION_POLICY.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
-
-English mirror:
-- **Explorer** — first click: `Project overview` → second click: `Featured categories and examples` → landing doc: `examples/quickstart.md` → fast-path anchor: `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
-- **Contributor** — first click: `python3 templates/scripts/validate_template.py` → second click: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → landing doc: `examples/pr-evidence-mini-walkthrough.md` → fast-path anchor: `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
-- **Operator** — first click: `docs/README_FAST_PATHS.md` → second click: `Role-based 1-click next docs` → landing doc: `docs/CURATION_POLICY.md` → fast-path anchor: `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
-
-## 역할별 바로 점프 / Role-based instant jumps
-
-- **탐색형 / Explorer** — `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
-- **기여형 / Contributor** — `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
-- **운영형 / Operator** — `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
-- **한 줄 요약 / One-line rule** — README 상단에서 역할을 고른 뒤에는 `docs/README_FAST_PATHS.md`의 같은 역할 섹션으로 바로 이어지게 합니다.
-
-English mirror:
-- **Explorer** — `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
-- **Contributor** — `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
-- **Operator** — `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
-- **One-line rule** — once a visitor picks a role on the README first screen, hand them straight to the matching section in `docs/README_FAST_PATHS.md`.
-
-## 1분 빠른 시작 / 1-minute quick start
-
-```bash
-python3 templates/scripts/validate_template.py
-```
-
-- 바로 다음 문서 / Next doc: `examples/quickstart.md`
-- 첫 PR 준비 / First PR prep: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`
-- 전체 기여 규칙 / Full contributing guide: `CONTRIBUTING.md`
-
-English mirror:
-- Run the validation command first, then open `examples/quickstart.md`.
-- For the first PR, continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
-- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md` and `docs/README_FIRST_SCREEN_WIREFRAME.md`.
-- Full contribution policy lives in `CONTRIBUTING.md`.
-
-- quick-start 후속 3종 / quick-start follow-up trio: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-
-English mirror:
-- quick-start follow-up trio: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-
-## 역할별 첫 명령 / First command by role
-
-- **탐색형 / Explorer** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `examples/quickstart.md`
-- **기여형 / Contributor** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- **운영형 / Operator** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/README_FIRST_SCREEN_CHECKLIST.md`
-
-English mirror:
-- **Explorer** — first command: `python3 templates/scripts/validate_template.py` → next doc: `examples/quickstart.md`
-- **Contributor** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- **Operator** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/README_FIRST_SCREEN_CHECKLIST.md`
-
-## 역할별 첫 성과 / First wins by role
-
-- **탐색형 / Explorer** — 60초 안에 프로젝트 가치와 대표 문서를 파악하고 `examples/quickstart.md`까지 도착합니다.
-- **기여형 / Contributor** — 첫 검증 명령과 PR 최소 증빙 문서를 바로 찾아 첫 변경 준비를 끝냅니다.
-- **운영형 / Operator** — README 상단 구조 감사 경로를 따라 소개 우선 IA가 유지되는지 바로 확인합니다.
-
-English mirror:
-- **Explorer** — understand the repo value and land on `examples/quickstart.md` within the first minute.
-- **Contributor** — find the first validation command and minimum PR evidence docs immediately.
-- **Operator** — follow the README audit route to confirm the intro-first IA still holds.
 
 ## 대상 사용자 / Who this is for
 
@@ -290,21 +222,6 @@ English mirror:
 - **New repo onboarding** — read the README landing sections, jump to `examples/quickstart.md`, and run the first validation command immediately.
 - **First PR prep** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum evidence format.
 - **Governance audit** — review `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, and `docs/CURATION_POLICY.md` in order.
-
-## 추천 시작 경로 / Recommended starting paths
-
-### 빠른 선택 카드 / Quick chooser cards
-
-- **탐색형 / Explorer path** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md` 순서로 이 저장소의 가치와 예시를 가장 빠르게 파악합니다.
-- **기여형 / Contributor path** — `python3 templates/scripts/validate_template.py` 실행 후 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`로 바로 이어집니다.
-- **운영형 / Operator path** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md` 순서로 랜딩 구조와 운영 기준을 점검합니다.
-- **60-second role guide / 역할별 60초 압축 가이드** — 세 경로 모두 `docs/README_FAST_PATHS.md`에 같은 순서로 정리되어 있어 README 상단에서 바로 다음 문서로 점프할 수 있습니다.
-
-English mirror:
-- **Explorer path** — follow `project overview -> featured categories -> examples/quickstart.md` to understand the repo's value and examples fast.
-- **Contributor path** — run `python3 templates/scripts/validate_template.py`, then continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md`.
-- **Operator path** — review `docs/README_FAST_PATHS.md` -> `docs/README_INFORMATION_ARCHITECTURE.md` -> `docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
-- **60-second role guide / 역할별 60초 압축 가이드** — all three paths are mirrored in `docs/README_FAST_PATHS.md` so the README landing area can hand visitors to the next document in one click.
 
 ## 빠른 시작 한눈에 보기 / Quick start at a glance
 
@@ -446,27 +363,73 @@ English mirror:
 - **Operator** — `docs/README_FAST_PATHS.md` → `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FIRST_SCREEN_SCRIPT.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md`
   - Goal: audit whether the intro-first landing structure stays intact.
 
-## 상단 핵심 콜아웃 / Top contributor callouts
+## 역할별 첫 클릭 묶음 / Role-based first-click bundles
 
-
-- **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
-- **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
-- **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
-- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md), 독자-가치 우선순위는 [docs/README_AUDIENCE_VALUE_MAP.md](docs/README_AUDIENCE_VALUE_MAP.md)에서 관리합니다.
-- **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
-- **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
-- **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.
-- **README 정보 구조 기준 유지** — 랜딩 우선순위 기준은 `docs/README_INFORMATION_ARCHITECTURE.md`에서 관리하고, 소개형 첫 화면이 흐려지지 않도록 검증 스크립트로 확인합니다.
-- **다음 문서 이동 경로 고정** — README 다음 이동 기준은 `docs/PROJECT_ENTRY_PATHS.md`에서 관리해 탐색/기여/운영 흐름을 빠르게 고를 수 있게 합니다.
+- **탐색형 / Explorer** — 첫 클릭: `프로젝트 소개 / Project overview` → 두 번째 클릭: `대표 카테고리와 예시 / Featured categories and examples` → 도착 문서: `examples/quickstart.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **기여형 / Contributor** — 첫 클릭: `python3 templates/scripts/validate_template.py` → 두 번째 클릭: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → 도착 문서: `examples/pr-evidence-mini-walkthrough.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **운영형 / Operator** — 첫 클릭: `docs/README_FAST_PATHS.md` → 두 번째 클릭: `역할별 1클릭 다음 문서 / Role-based 1-click next docs` → 도착 문서: `docs/CURATION_POLICY.md` → 빠른 경로 앵커: `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
 
 English mirror:
+- **Explorer** — first click: `Project overview` → second click: `Featured categories and examples` → landing doc: `examples/quickstart.md` → fast-path anchor: `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **Contributor** — first click: `python3 templates/scripts/validate_template.py` → second click: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → landing doc: `examples/pr-evidence-mini-walkthrough.md` → fast-path anchor: `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **Operator** — first click: `docs/README_FAST_PATHS.md` → second click: `Role-based 1-click next docs` → landing doc: `docs/CURATION_POLICY.md` → fast-path anchor: `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
 
-- **Keep Korean-first docs with English mirrors** so new contributors can review both local clarity and global portability.
-- **Always record three evidence items**: reproduction command, exit code, and key output.
-- **Document blockers with the next-run priority** instead of leaving failures context-free.
-- **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
-- **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
-- **Keep philosophy and long-term direction in dedicated docs**: use `docs/PROJECT_OVERVIEW.md` and `docs/PROJECT_DIRECTION.md` so the landing page stays focused.
+## 역할별 바로 점프 / Role-based instant jumps
+
+- **탐색형 / Explorer** — `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **기여형 / Contributor** — `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **운영형 / Operator** — `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
+- **한 줄 요약 / One-line rule** — README 상단에서 역할을 고른 뒤에는 `docs/README_FAST_PATHS.md`의 같은 역할 섹션으로 바로 이어지게 합니다.
+
+English mirror:
+- **Explorer** — `docs/README_FAST_PATHS.md#탐색형-60초-경로--explorer-60-second-path`
+- **Contributor** — `docs/README_FAST_PATHS.md#기여형-60초-경로--contributor-60-second-path`
+- **Operator** — `docs/README_FAST_PATHS.md#운영형-60초-경로--operator-60-second-path`
+- **One-line rule** — once a visitor picks a role on the README first screen, hand them straight to the matching section in `docs/README_FAST_PATHS.md`.
+
+## 1분 빠른 시작 / 1-minute quick start
+
+```bash
+python3 templates/scripts/validate_template.py
+```
+
+- 바로 다음 문서 / Next doc: `examples/quickstart.md`
+- 첫 PR 준비 / First PR prep: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`
+- 전체 기여 규칙 / Full contributing guide: `CONTRIBUTING.md`
+
+English mirror:
+- Run the validation command first, then open `examples/quickstart.md`.
+- For the first PR, continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
+- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md` and `docs/README_FIRST_SCREEN_WIREFRAME.md`.
+- Full contribution policy lives in `CONTRIBUTING.md`.
+
+- quick-start 후속 3종 / quick-start follow-up trio: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+
+English mirror:
+- quick-start follow-up trio: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+
+## 역할별 첫 명령 / First command by role
+
+- **탐색형 / Explorer** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `examples/quickstart.md`
+- **기여형 / Contributor** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **운영형 / Operator** — 첫 명령: `python3 templates/scripts/validate_template.py` → 다음 문서: `docs/README_FIRST_SCREEN_CHECKLIST.md`
+
+English mirror:
+- **Explorer** — first command: `python3 templates/scripts/validate_template.py` → next doc: `examples/quickstart.md`
+- **Contributor** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Operator** — first command: `python3 templates/scripts/validate_template.py` → next doc: `docs/README_FIRST_SCREEN_CHECKLIST.md`
+
+## 역할별 첫 성과 / First wins by role
+
+- **탐색형 / Explorer** — 60초 안에 프로젝트 가치와 대표 문서를 파악하고 `examples/quickstart.md`까지 도착합니다.
+- **기여형 / Contributor** — 첫 검증 명령과 PR 최소 증빙 문서를 바로 찾아 첫 변경 준비를 끝냅니다.
+- **운영형 / Operator** — README 상단 구조 감사 경로를 따라 소개 우선 IA가 유지되는지 바로 확인합니다.
+
+English mirror:
+- **Explorer** — understand the repo value and land on `examples/quickstart.md` within the first minute.
+- **Contributor** — find the first validation command and minimum PR evidence docs immediately.
+- **Operator** — follow the README audit route to confirm the intro-first IA still holds.
 
 ## 빠른 시작 / Quick start
 
@@ -504,6 +467,43 @@ English mirror:
 3. `examples/pr-evidence-mini-walkthrough.md` — PR comment example
 
 These three docs are the default follow-up path after quick start, and the validator checks that the trio stays intact.
+
+## 추천 시작 경로 / Recommended starting paths
+
+### 빠른 선택 카드 / Quick chooser cards
+
+- **탐색형 / Explorer path** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md` 순서로 이 저장소의 가치와 예시를 가장 빠르게 파악합니다.
+- **기여형 / Contributor path** — `python3 templates/scripts/validate_template.py` 실행 후 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`로 바로 이어집니다.
+- **운영형 / Operator path** — `docs/README_FAST_PATHS.md` → `docs/README_INFORMATION_ARCHITECTURE.md` → `docs/CURATION_POLICY.md` 순서로 랜딩 구조와 운영 기준을 점검합니다.
+- **60-second role guide / 역할별 60초 압축 가이드** — 세 경로 모두 `docs/README_FAST_PATHS.md`에 같은 순서로 정리되어 있어 README 상단에서 바로 다음 문서로 점프할 수 있습니다.
+
+English mirror:
+- **Explorer path** — follow `project overview -> featured categories -> examples/quickstart.md` to understand the repo's value and examples fast.
+- **Contributor path** — run `python3 templates/scripts/validate_template.py`, then continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md`.
+- **Operator path** — review `docs/README_FAST_PATHS.md` -> `docs/README_INFORMATION_ARCHITECTURE.md` -> `docs/CURATION_POLICY.md` to audit the landing structure and governance rails.
+- **60-second role guide / 역할별 60초 압축 가이드** — all three paths are mirrored in `docs/README_FAST_PATHS.md` so the README landing area can hand visitors to the next document in one click.
+
+## 상단 핵심 콜아웃 / Top contributor callouts
+
+
+- **한국어 기본 + 영어 병기 유지** — 문서 기본 언어는 한국어로 두고, 가능한 범위에서 같은 의미의 영어 미러를 함께 제공합니다.
+- **최소 증빙 3종 필수** — 재현 명령 / 종료코드 / 핵심 출력을 PR 설명이나 문서에 남깁니다.
+- **막힘까지 문서화** — 실패 원인만 적지 말고, 다음 실행에서 가장 먼저 할 일을 한 줄로 남깁니다.
+- **상세 기준 링크** — 전체 리뷰 기준은 [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md), 상단 문안 원본은 [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md), 독자-가치 우선순위는 [docs/README_AUDIENCE_VALUE_MAP.md](docs/README_AUDIENCE_VALUE_MAP.md)에서 관리합니다.
+- **처음 5분 기여 흐름** — README 상단 → 병기 체크리스트 → PR 증빙 워크스루 순서로 읽으면 첫 기여 온보딩을 5분 안에 끝낼 수 있습니다. 바로 실행 예시는 `examples/quickstart.md`로 이어집니다.
+- **상단 콜아웃 소스 동기화** — README 상단 핵심 콜아웃은 `docs/README_TOP_CALLOUTS.md`와 같은 메시지를 유지하며, 검증 스크립트로 드리프트를 바로 잡습니다.
+- **철학/장기 방향 분리** — 프로젝트 철학은 `docs/PROJECT_OVERVIEW.md`, 장기 방향은 `docs/PROJECT_DIRECTION.md`에서 읽고, README 첫 화면은 소개/가치/빠른 시작에 집중합니다.
+- **README 정보 구조 기준 유지** — 랜딩 우선순위 기준은 `docs/README_INFORMATION_ARCHITECTURE.md`에서 관리하고, 소개형 첫 화면이 흐려지지 않도록 검증 스크립트로 확인합니다.
+- **다음 문서 이동 경로 고정** — README 다음 이동 기준은 `docs/PROJECT_ENTRY_PATHS.md`에서 관리해 탐색/기여/운영 흐름을 빠르게 고를 수 있게 합니다.
+
+English mirror:
+
+- **Keep Korean-first docs with English mirrors** so new contributors can review both local clarity and global portability.
+- **Always record three evidence items**: reproduction command, exit code, and key output.
+- **Document blockers with the next-run priority** instead of leaving failures context-free.
+- **Use the full checklist** in [docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md](docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md); source callout copy lives in [docs/README_TOP_CALLOUTS.md](docs/README_TOP_CALLOUTS.md).
+- **Use the first 5-minute contribution flow**: README top callouts → bilingual checklist → PR evidence walkthrough.
+- **Keep philosophy and long-term direction in dedicated docs**: use `docs/PROJECT_OVERVIEW.md` and `docs/PROJECT_DIRECTION.md` so the landing page stays focused.
 
 ## 더 읽기 / Learn more
 
