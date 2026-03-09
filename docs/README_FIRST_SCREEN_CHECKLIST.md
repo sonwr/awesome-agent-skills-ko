@@ -27,3 +27,9 @@ English mirror: Use this checklist to keep the README opening focused on project
 
 - 역할별 바로 점프 / Role-based instant jumps 섹션이 README 상단에 있고 `docs/README_FAST_PATHS.md`의 역할별 앵커로 직접 연결되는지 확인한다.
 - Confirm the README top keeps a `역할별 바로 점프 / Role-based instant jumps` section that deep-links to the role anchors in `docs/README_FAST_PATHS.md`.
+
+- 상단 순서 고정 / Keep the top order fixed: `overview -> audience -> value -> featured categories -> quick start`
+- 첫 140줄 안에서 위 순서를 지켜 소개 우선 흐름이 운영/기여 문서보다 먼저 보이게 합니다.
+
+English mirror:
+- Keep `overview -> audience -> value -> featured categories -> quick start` visible in order within the first 140 lines so the README stays intro-first before governance-heavy sections.

@@ -70,6 +70,28 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first 160 lines" in error for error in errors))
 
+    def test_readme_requires_intro_first_top_order_within_first_140_lines(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "## 바로 시작 요약 / Start-here summary",
+                        "- 프로젝트 소개 / Project intro",
+                        "- 대표 가치 / Immediate value",
+                        "- 대상 사용자 / Who it helps",
+                        "- 대표 카테고리 / Featured categories",
+                        "- 빠른 시작 / Quick start",
+                        "python3 templates/scripts/validate_template.py",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first 140 lines must keep overview -> audience -> value -> featured categories -> quick start in order" in error for error in errors))
+
     def test_readme_requires_value_cards_section_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

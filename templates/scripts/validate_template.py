@@ -249,6 +249,26 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: first validation command must appear within the first 160 lines so visitors can act from the landing screen without deep scrolling"
         )
 
+    top_order_window = "\n".join(lines[:140])
+    start_here_anchor = top_order_window.find("## 바로 시작 요약 / Start-here summary")
+    ordered_intro_window = top_order_window[start_here_anchor:] if start_here_anchor >= 0 else top_order_window
+    top_order_markers = [
+        "프로젝트 소개 / Project intro",
+        "대상 사용자 / Who it helps",
+        "대표 가치 / Immediate value",
+        "대표 카테고리 / Featured categories",
+        "빠른 시작 / Quick start",
+    ]
+    top_order_positions = [ordered_intro_window.find(marker) for marker in top_order_markers]
+    if any(position < 0 for position in top_order_positions):
+        errors.append(
+            "README.md: the first 140 lines must keep overview -> audience -> value -> featured categories -> quick start markers visible so the landing page stays project-intro-first"
+        )
+    elif top_order_positions != sorted(top_order_positions):
+        errors.append(
+            "README.md: the first 140 lines must keep overview -> audience -> value -> featured categories -> quick start in order so intro-first readers do not hit governance detours first"
+        )
+
     for required_heading in [
         "## 바로 시작 요약 / Start-here summary",
         "## 프로젝트 소개 / Project overview",
