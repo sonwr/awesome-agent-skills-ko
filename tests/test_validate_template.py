@@ -78,19 +78,9 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                """## 첫 1분에 얻는 결과 / What you get in the first minute
-
-- **1분 뒤 알게 되는 것 / What you know after 1 minute** — 이 저장소가 누구를 위한지, 왜 필요한지, 어디서 시작해야 하는지 바로 파악합니다.
-- **1분 뒤 실행한 것 / What you have run after 1 minute** — `python3 templates/scripts/validate_template.py`를 실행할 준비가 되거나 이미 실행했고, 다음 문서로 `examples/quickstart.md`를 열 수 있습니다.
-- **1분 뒤 이어갈 경로 / What you open next after 1 minute** — 탐색형은 `프로젝트 소개 / Project overview`, 기여형은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, 운영형은 `docs/README_FAST_PATHS.md`로 자연스럽게 갈라집니다.
-
-English mirror:
-- **What you know after 1 minute** — who this repo is for, why it exists, and where to start.
-- **What you have run after 1 minute** — you are ready to run or have already run `python3 templates/scripts/validate_template.py`, and you know the next doc is `examples/quickstart.md`.
-- **What you open next after 1 minute** — explorers go to `Project overview`, contributors to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, and operators to `docs/README_FAST_PATHS.md`.
-
-""",
+                "## 첫 1분에 얻는 결과 / What you get in the first minute\n",
                 "",
+                1,
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
 
@@ -283,6 +273,20 @@ English mirror:
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("featured-use-cases doc link" in error for error in errors))
+
+    def test_readme_requires_first_click_guide_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_FIRST_CLICK_GUIDE.md",
+                "docs/README_FIRST_CLICK_GUIDE_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first-click guide doc link" in error for error in errors))
 
     def test_readme_requires_first_visitor_promises_doc_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

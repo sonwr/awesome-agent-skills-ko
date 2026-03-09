@@ -418,6 +418,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     first_visitor_routes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_ROUTES.md" in line), None)
     first_screen_decision_tree_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_SCREEN_DECISION_TREE.md" in line), None)
     first_screen_quick_proof_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_SCREEN_QUICK_PROOF.md" in line), None)
+    first_click_guide_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_CLICK_GUIDE.md" in line), None)
     project_value_quickcheck_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_QUICKCHECK.md" in line), None)
     project_value_ladder_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_LADDER.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
@@ -498,6 +499,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if first_screen_quick_proof_line is None or first_screen_quick_proof_line > 120:
         errors.append(
             "README.md: first-screen quick-proof doc link must appear within the first 120 lines so contributors can justify the intro-first landing contract without dropping into governance-heavy docs first"
+        )
+    if first_click_guide_line is None or first_click_guide_line > 120:
+        errors.append(
+            "README.md: first-click guide doc link must appear within the first 120 lines so visitors can choose the right explore/validate/contribute/audit entry without dropping into governance-heavy sections first"
         )
     if project_value_quickcheck_line is None or project_value_quickcheck_line > 120:
         errors.append(

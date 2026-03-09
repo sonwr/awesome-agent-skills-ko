@@ -25,7 +25,7 @@ The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a 
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 English mirror: Project intro, who it helps, immediate value, featured categories, featured examples, and quick start stay visible from the first screen.
-- **빠른 경로 묶음 / Fast-path bundle** — `docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_FIRST_SCREEN_QUICK_PROOF.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`, `docs/README_FEATURED_USE_CASES.md`, `docs/README_PROJECT_INTRO_PATHS.md`
+- **빠른 경로 묶음 / Fast-path bundle** — `docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_CLICK_GUIDE.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_FIRST_SCREEN_QUICK_PROOF.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`, `docs/README_FEATURED_USE_CASES.md`, `docs/README_PROJECT_INTRO_PATHS.md`
 - **저장소 가치 한 줄 / Repo value in one line** — 좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.
 English mirror: this repo is not just a link dump.
 It exists to make execution, validation, and contribution paths visible from the first README screen instead of a vague link dump.
@@ -56,7 +56,7 @@ A curated collection of agent skills and runnable templates for Korean-speaking 
 
 - **1분 뒤 알게 되는 것 / What you know after 1 minute** — 이 저장소가 누구를 위한지, 왜 필요한지, 어디서 시작해야 하는지 바로 파악합니다.
 - **1분 뒤 실행한 것 / What you have run after 1 minute** — `python3 templates/scripts/validate_template.py`를 실행할 준비가 되거나 이미 실행했고, 다음 문서로 `examples/quickstart.md`를 열 수 있습니다.
-- **1분 뒤 이어갈 경로 / What you open next after 1 minute** — 탐색형은 `프로젝트 소개 / Project overview`, 기여형은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, 운영형은 `docs/README_FAST_PATHS.md`로 자연스럽게 갈라집니다.
+- **1분 뒤 이어갈 경로 / What you open next after 1 minute** — 탐색형은 `프로젝트 소개 / Project overview`, 기여형은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, 운영형은 `docs/README_FAST_PATHS.md`, `docs/README_FIRST_CLICK_GUIDE.md`로 자연스럽게 갈라집니다.
 
 English mirror:
 - **What you know after 1 minute** — who this repo is for, why it exists, and where to start.
@@ -67,7 +67,7 @@ English mirror:
 
 - **이 저장소는 링크 모음인가요? / Is this just a link list?** 아니요. README 첫 화면에서 프로젝트 소개, 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로까지 바로 찾게 만드는 한국어 기본 큐레이션 저장소입니다.
 - **처음에 뭘 해야 하나요? / What should I do first?** `python3 templates/scripts/validate_template.py`를 실행한 뒤 `examples/quickstart.md`로 이어가면 됩니다.
-- **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `CONTRIBUTING.md`로 이어집니다.
+- **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `docs/README_FIRST_CLICK_GUIDE.md`, `CONTRIBUTING.md`로 이어집니다.
 English mirror:
 - **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
 - **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
