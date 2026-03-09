@@ -149,7 +149,11 @@ BILINGUAL_SECTION_MARKERS = {
         "## 한국어 기준 / Korean-first map",
         "## English mirror",
         "탐색형 방문자",
+        "기여형 방문자",
+        "운영형 방문자",
+        "One-line rule",
         "Contributors",
+        "Operators",
     ],
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md": [
         "## 한국어 체크리스트 (Primary)",

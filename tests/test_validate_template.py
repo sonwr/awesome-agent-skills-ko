@@ -2690,3 +2690,44 @@ class ReadmeProjectStartMapOrderTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("project start map must keep explore -> validate -> contribute -> audit order" in error for error in errors))
+
+
+class AudienceValueMapValidationTests(unittest.TestCase):
+
+    def test_audience_value_map_requires_operator_and_one_line_rule_markers(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            docs = root / "docs"
+            docs.mkdir()
+            (root / "README.md").write_text("## 프로젝트 소개 / Project overview\npython3 templates/scripts/validate_template.py\n", encoding="utf-8")
+            (root / "CONTRIBUTING.md").write_text("# 기여 가이드 / Contributing\nEnglish mirror:\n", encoding="utf-8")
+            for rel in [
+                "ROADMAP.md",
+                "CURATION_POLICY.md",
+                "TEMPLATE_STANDARD.md",
+                "BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                "README_TOP_CALLOUTS.md",
+                "PROJECT_OVERVIEW.md",
+                "PROJECT_ENTRY_PATHS.md",
+                "PROJECT_DIRECTION.md",
+                "README_INFORMATION_ARCHITECTURE.md",
+                "README_FIRST_SCREEN_CHECKLIST.md",
+                "README_FIRST_SCREEN_SCRIPT.md",
+                "README_USER_JOURNEYS.md",
+                "README_FAST_PATHS.md",
+            ]:
+                (docs / rel).write_text("placeholder\nEnglish mirror:\n", encoding="utf-8")
+            examples = root / "examples"
+            examples.mkdir()
+            (examples / "pr-evidence-mini-walkthrough.md").write_text("## 목적 (한국어)\n## Purpose (English)\n", encoding="utf-8")
+            (examples / "quickstart.md").write_text("English mirror:\n## Copyable first command\n", encoding="utf-8")
+            (docs / "README_AUDIENCE_VALUE_MAP.md").write_text(
+                "# README 대상 사용자-가치 맵 / README audience-value map\n\n## 한국어 기준 / Korean-first map\n- 탐색형 방문자\n- 기여형 방문자\n\n## English mirror\n- Contributors\n",
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_bilingual_markers(root)
+
+            self.assertTrue(any("docs/README_AUDIENCE_VALUE_MAP.md" in error and "운영형 방문자" in error for error in errors))
+            self.assertTrue(any("docs/README_AUDIENCE_VALUE_MAP.md" in error and "One-line rule" in error for error in errors))
+
