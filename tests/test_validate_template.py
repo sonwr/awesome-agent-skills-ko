@@ -145,7 +145,7 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                "## 1분 빠른 시작 / 1-minute quick start\n\n```bash\npython3 templates/scripts/validate_template.py\n```\n\n- 바로 다음 문서 / Next doc: `examples/quickstart.md`\n- 첫 PR 준비 / First PR prep: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`\n- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`\n- 전체 기여 규칙 / Full contributing guide: `CONTRIBUTING.md`\n\nEnglish mirror:\n- Run the validation command first, then open `examples/quickstart.md`.\n- For the first PR, continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.\n- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md`.\n- Full contribution policy lives in `CONTRIBUTING.md`.\n\n",
+                "## 1분 빠른 시작 / 1-minute quick start\n\n```bash\npython3 templates/scripts/validate_template.py\n```\n\n- 바로 다음 문서 / Next doc: `examples/quickstart.md`\n- 첫 PR 준비 / First PR prep: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`\n- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`\n- 전체 기여 규칙 / Full contributing guide: `CONTRIBUTING.md`\n\nEnglish mirror:\n- Run the validation command first, then open `examples/quickstart.md`.\n- For the first PR, continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.\n- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md` and `docs/README_FIRST_SCREEN_WIREFRAME.md`.\n- Full contribution policy lives in `CONTRIBUTING.md`.\n\n",
                 "",
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
@@ -2730,4 +2730,45 @@ class AudienceValueMapValidationTests(unittest.TestCase):
 
             self.assertTrue(any("docs/README_AUDIENCE_VALUE_MAP.md" in error and "운영형 방문자" in error for error in errors))
             self.assertTrue(any("docs/README_AUDIENCE_VALUE_MAP.md" in error and "One-line rule" in error for error in errors))
+
+
+class FirstScreenWireframeValidationTests(unittest.TestCase):
+
+    def test_wireframe_doc_requires_first_screen_structure_markers(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            docs = root / "docs"
+            docs.mkdir()
+            (root / "README.md").write_text("## 프로젝트 소개 / Project overview\npython3 templates/scripts/validate_template.py\n", encoding="utf-8")
+            (root / "CONTRIBUTING.md").write_text("# 기여 가이드 / Contributing\nEnglish mirror:\n", encoding="utf-8")
+            for rel in [
+                "ROADMAP.md",
+                "CURATION_POLICY.md",
+                "TEMPLATE_STANDARD.md",
+                "BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                "README_TOP_CALLOUTS.md",
+                "README_AUDIENCE_VALUE_MAP.md",
+                "PROJECT_OVERVIEW.md",
+                "PROJECT_ENTRY_PATHS.md",
+                "PROJECT_DIRECTION.md",
+                "README_INFORMATION_ARCHITECTURE.md",
+                "README_FIRST_SCREEN_CHECKLIST.md",
+                "README_FIRST_SCREEN_SCRIPT.md",
+                "README_USER_JOURNEYS.md",
+                "README_FAST_PATHS.md",
+            ]:
+                (docs / rel).write_text("placeholder\nEnglish mirror:\n", encoding="utf-8")
+            (docs / "README_FIRST_SCREEN_WIREFRAME.md").write_text(
+                "# README 첫 화면 와이어프레임 / README first-screen wireframe\n\n## 상단 1스크린 구조 / First-screen structure\n",
+                encoding="utf-8",
+            )
+            examples = root / "examples"
+            examples.mkdir()
+            (examples / "pr-evidence-mini-walkthrough.md").write_text("## 목적 (한국어)\n## Purpose (English)\n", encoding="utf-8")
+            (examples / "quickstart.md").write_text("English mirror:\n## Copyable first command\n", encoding="utf-8")
+
+            errors = validate_template._check_bilingual_markers(root)
+
+            self.assertTrue(any("docs/README_FIRST_SCREEN_WIREFRAME.md" in error and "What moves lower" in error for error in errors))
+            self.assertTrue(any("docs/README_FIRST_SCREEN_WIREFRAME.md" in error and "Maintenance prompts" in error for error in errors))
 

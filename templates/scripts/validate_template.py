@@ -24,6 +24,7 @@ REQUIRED_FILES = [
     "docs/README_INFORMATION_ARCHITECTURE.md",
     "docs/README_FIRST_SCREEN_CHECKLIST.md",
     "docs/README_FIRST_SCREEN_SCRIPT.md",
+    "docs/README_FIRST_SCREEN_WIREFRAME.md",
     "docs/README_USER_JOURNEYS.md",
     "docs/README_FAST_PATHS.md",
     "examples/pr-evidence-mini-walkthrough.md",
@@ -123,6 +124,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 첫 화면 60초 스크립트 / 60-second first-screen script",
         "## README 상단에서 바로 보여줄 문장 유형 / Sentence types to keep near the top",
         "## 뒤로 내려도 되는 내용 / What can move lower",
+    ],
+    "docs/README_FIRST_SCREEN_WIREFRAME.md": [
+        "README 첫 화면 와이어프레임 / README first-screen wireframe",
+        "## 상단 1스크린 구조 / First-screen structure",
+        "## 아래로 미루는 내용 / What moves lower",
+        "## 유지 점검 질문 / Maintenance prompts",
+        "English mirror:",
     ],
     "docs/README_USER_JOURNEYS.md": [
         "README 사용자 여정 / README user journeys",

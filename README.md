@@ -95,7 +95,7 @@ English mirror:
 - **대표 가치 흐름**: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리 → 빠른 시작 순서로 읽으면 첫 화면에서 방향이 잡힙니다.
 - **첫 화면 원칙**: README 상단은 소개/가치/빠른 시작을 먼저 보여주고, 운영 규칙은 아래 문서로 내립니다.
 - **상단 구조 가드**: 검증 스크립트가 `더 읽기`/`처음 기여할 때 읽는 순서`가 `빠른 시작` 위로 올라오지 않도록 막습니다.
-- **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`
+- **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`
 - **대상 사용자-가치 맵**: `docs/README_AUDIENCE_VALUE_MAP.md`
 - **상단 유지 루프**: README 상단 수정 후 `python3 templates/scripts/validate_template.py` 실행 → `docs/README_FIRST_SCREEN_CHECKLIST.md` 재검토
 
@@ -188,13 +188,13 @@ python3 templates/scripts/validate_template.py
 
 - 바로 다음 문서 / Next doc: `examples/quickstart.md`
 - 첫 PR 준비 / First PR prep: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`
+- 소개형 랜딩 점검 / Intro-first landing audit: `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`
 - 전체 기여 규칙 / Full contributing guide: `CONTRIBUTING.md`
 
 English mirror:
 - Run the validation command first, then open `examples/quickstart.md`.
 - For the first PR, continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
-- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md`.
+- For landing-page audits, open `docs/README_FIRST_SCREEN_CHECKLIST.md` and `docs/README_FIRST_SCREEN_WIREFRAME.md`.
 - Full contribution policy lives in `CONTRIBUTING.md`.
 
 - quick-start 후속 3종 / quick-start follow-up trio: `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
