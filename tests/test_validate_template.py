@@ -252,6 +252,21 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first 140 lines must keep overview -> audience -> value -> featured categories -> quick start in order" in error for error in errors))
 
+    def test_readme_requires_featured_use_cases_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 대표 활용 시나리오 / Featured use cases",
+                "## 대표 활용 시나리오 상세 / Featured use case details",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("featured use cases" in error for error in errors))
+
     def test_readme_requires_value_cards_section_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

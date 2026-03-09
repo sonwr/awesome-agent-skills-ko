@@ -356,6 +356,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
         )
+    featured_use_cases_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 대표 활용 시나리오 / Featured use cases"), None)
+    if featured_use_cases_line is None or featured_use_cases_line > 110:
+        errors.append(
+            "README.md: featured use cases must appear within the first 110 lines so intro-first visitors see representative onboarding / contribution / governance scenarios before deeper navigation"
+        )
     three_line_heading = "## 첫 화면 핵심 3줄 / First-screen in 3 lines"
     three_line_section_heading = "첫 화면 핵심 3줄 / First-screen in 3 lines"
     three_line_line = next((idx for idx, line in enumerate(lines, start=1) if three_line_heading in line), None)
