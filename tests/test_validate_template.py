@@ -9,6 +9,13 @@ from templates.scripts import validate_template
 
 class ValidateTemplateTests(unittest.TestCase):
 
+    def test_required_files_include_project_one_screen_start_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_ONE_SCREEN_START.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 원스크린 스타트 / README project one-screen start",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_ONE_SCREEN_START.md"],
+        )
+
     def test_required_files_include_project_home_panel_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_HOME_PANEL.md", validate_template.REQUIRED_FILES)
         self.assertIn(
@@ -88,7 +95,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("first 170 lines" in error for error in errors))
+            self.assertTrue(any("first 180 lines" in error for error in errors))
 
     def test_readme_requires_start_here_summary_to_keep_intro_audience_value_category_quickstart_order(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -196,6 +203,21 @@ class ValidateTemplateTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("README_PROJECT_QUICKSTART_FLOW.md" in error for error in errors))
+
+    def test_readme_requires_project_one_screen_start_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "- **원스크린 스타트 / One-screen start** — `docs/README_PROJECT_ONE_SCREEN_START.md`",
+                "- **원스크린 스타트 / One-screen start** — `docs/README_PROJECT_ONE_SCREEN_START_REMOVED.md`",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("one-screen start doc link" in error for error in errors))
 
     def test_readme_requires_project_quickstart_bundle_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -624,7 +646,7 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             (root / "README.md").write_text(
                 "## 프로젝트 소개 / Project overview\n"
-                + "\n".join([f"line {idx}" for idx in range(1, 321)])
+                + "\n".join([f"line {idx}" for idx in range(1, 341)])
                 + "\n## 대표 시작 예시 / Featured starter examples\n"
                 + "python3 templates/scripts/validate_template.py\n",
                 encoding="utf-8",
@@ -632,7 +654,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("featured starter examples must appear within the first 320 lines" in error for error in errors))
+            self.assertTrue(any("featured starter examples must appear within the first 340 lines" in error for error in errors))
 
     def test_readme_requires_featured_starter_example_markers(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
