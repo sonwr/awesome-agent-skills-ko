@@ -140,6 +140,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 운영형 방문자 / Operator journey",
         "English mirror:",
     ],
+    "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md": [
+        "README 소개 우선 유지 루프 / README intro-first maintenance loop",
+        "## 1) 소개 먼저 확인 / Confirm the intro first",
+        "## 2) 경로를 끊지 않기 / Preserve the handoff path",
+        "## 3) 수정 후 검증 / Validate after edits",
+        "English mirror:",
+    ],
     "docs/README_FAST_PATHS.md": [
         "README 빠른 진입 경로 / README fast paths",
         "## 탐색형 60초 경로 / Explorer 60-second path",

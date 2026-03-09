@@ -193,7 +193,7 @@ English mirror:
 
 - **검증부터 시작 / Start with validation** — `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 바로 이동합니다.
 - **기여 준비 / Prepare a contribution** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 PR 최소 증빙 형식을 바로 복사합니다.
-- **운영 점검 / Audit the landing flow** — `docs/README_FAST_PATHS.md`와 `docs/README_FIRST_SCREEN_CHECKLIST.md`를 열어 README 소개 우선 구조가 유지되는지 확인합니다.
+- **운영 점검 / Audit the landing flow** — `docs/README_FAST_PATHS.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`를 열어 README 소개 우선 구조가 유지되는지 확인합니다.
 - **독자-가치 정렬 확인 / Check audience-value fit** — `docs/README_AUDIENCE_VALUE_MAP.md`를 열어 첫 화면 메시지가 탐색형/기여형/운영형 방문자에게 맞게 배치됐는지 빠르게 점검합니다.
 
 English mirror:

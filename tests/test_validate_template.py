@@ -1930,6 +1930,21 @@ if __name__ == "__main__":
 
 
 
+    def test_required_files_include_intro_first_maintenance_loop_docs(self) -> None:
+        self.assertIn("docs/README_PROJECT_INTRO_BLUEPRINT.md", validate_template.REQUIRED_FILES)
+        self.assertIn("docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md", validate_template.REQUIRED_FILES)
+        self.assertEqual(
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md"],
+            [
+                "README 소개 우선 유지 루프 / README intro-first maintenance loop",
+                "## 1) 소개 먼저 확인 / Confirm the intro first",
+                "## 2) 경로를 끊지 않기 / Preserve the handoff path",
+                "## 3) 수정 후 검증 / Validate after edits",
+                "English mirror:",
+            ],
+        )
+
+
     def test_readme_requires_bilingual_quick_start_heading(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
