@@ -10,6 +10,23 @@ from templates.scripts import validate_template
 class ValidateTemplateTests(unittest.TestCase):
 
 
+    def test_readme_requires_bilingual_project_pitch_within_first_twenty_lines(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음",
+                "스킬 링크 모음",
+            ).replace(
+                "A curated, practical collection of agent skills and runnable templates",
+                "A Korean-first link list",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first 20 lines must keep the bilingual project pitch" in error for error in errors))
+
     def test_readme_requires_project_overview_heading_within_first_twenty_eight_lines(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

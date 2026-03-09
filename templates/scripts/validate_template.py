@@ -228,6 +228,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: project overview heading must appear within the first 28 lines so the README stays project-intro-first even after the compact start-here summary"
         )
     top_intro_window = "\n".join(lines[:80])
+    top_project_pitch_window = "\n".join(lines[:20])
+    if "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음" not in top_project_pitch_window or "curated, practical collection of agent skills and runnable templates" not in top_project_pitch_window:
+        errors.append(
+            "README.md: the first 20 lines must keep the bilingual project pitch (agent-skill curation + runnable templates) so the landing area opens with project value before governance"
+        )
     if "좋아 보이는 링크 모음" not in top_intro_window or "not just a link dump" not in top_intro_window:
         errors.append(
             "README.md: the first 80 lines must keep the bilingual 'not just a link dump' value proposition so visitors see the repo is project-intro-first, not governance-first"
