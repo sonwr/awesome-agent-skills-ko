@@ -36,6 +36,7 @@ REQUIRED_FILES = [
     "docs/README_FIRST_VISITOR_ROUTES.md",
     "docs/README_FIRST_SCREEN_DECISION_TREE.md",
     "docs/README_ROLE_STARTERS.md",
+    "docs/README_WHO_STARTS_WHERE.md",
     "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
     "docs/PROJECT_OVERVIEW.md",
     "docs/PROJECT_ENTRY_PATHS.md",
@@ -190,6 +191,14 @@ BILINGUAL_SECTION_MARKERS = {
     "docs/README_ROLE_STARTERS.md": [
         "README 역할별 시작 지도 / README role-based starters",
         "## 한국어 기준 / Korean-first map",
+        "### 탐색형 / Explorer",
+        "### 기여형 / Contributor",
+        "### 운영형 / Operator",
+        "## English mirror",
+    ],
+    "docs/README_WHO_STARTS_WHERE.md": [
+        "README 누가 어디서 시작하나 / README who starts where",
+        "## 한국어 기준 / Korean-first routing",
         "### 탐색형 / Explorer",
         "### 기여형 / Contributor",
         "### 운영형 / Operator",
@@ -413,6 +422,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
+        )
+    who_starts_where_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_WHO_STARTS_WHERE.md" in line), None)
+    if who_starts_where_line is None or who_starts_where_line > 95:
+        errors.append(
+            "README.md: who-starts-where routing doc link must appear within the first 95 lines so first-time visitors can see role -> first doc -> first action handoff without dropping into governance-heavy sections"
         )
     featured_use_cases_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 대표 활용 시나리오 / Featured use cases"), None)
     if featured_use_cases_line is None or featured_use_cases_line > 115:

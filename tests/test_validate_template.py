@@ -146,6 +146,21 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("role-based start map link" in error for error in errors))
 
+    def test_readme_requires_who_starts_where_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_WHO_STARTS_WHERE.md",
+                "docs/README_WHO_STARTS_WHERE_REMOVED.md",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("who-starts-where routing doc link" in error for error in errors))
+
     def test_readme_requires_intro_value_quickstart_one_pager_link(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
