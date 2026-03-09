@@ -22,6 +22,7 @@ REQUIRED_FILES = [
     "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_PROJECT_POSITIONING.md",
+    "docs/README_FIRST_VISITOR_PROMISES.md",
     "docs/README_ROLE_STARTERS.md",
     "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
     "docs/PROJECT_OVERVIEW.md",
@@ -110,6 +111,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 상단에 먼저 보여줄 것 / What should appear first",
         "## 뒤로 미룰 것 / What should move lower",
         "## English mirror",
+    ],
+    "docs/README_FIRST_VISITOR_PROMISES.md": [
+        "README 첫 방문 약속 / README first-visitor promises",
+        "## 한국어 기준 / Korean-first promises",
+        "## English mirror",
+        "무엇을 찾는 저장소인가?",
+        "What kind of repo is this?",
     ],
     "docs/README_PROJECT_POSITIONING.md": [
         "README 프로젝트 포지셔닝 / README project positioning",
