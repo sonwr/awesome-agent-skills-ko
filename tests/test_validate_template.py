@@ -63,11 +63,8 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                "- **역할별 시작 지도 / Role-based start map** — `docs/README_ROLE_STARTERS.md`\n",
-                "",
-            ).replace(
-                "- **Role-based start map** — `docs/README_ROLE_STARTERS.md`\n",
-                "",
+                "docs/README_ROLE_STARTERS.md",
+                "docs/README_ROLE_STARTERS_REMOVED.md",
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
 
@@ -80,11 +77,8 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                "- **상단 설계 압축본 / Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`\n",
-                "",
-            ).replace(
-                "- **Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`\n",
-                "",
+                "docs/README_PROJECT_VALUE_QUICKSTART.md",
+                "docs/README_PROJECT_VALUE_QUICKSTART_REMOVED.md",
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
 

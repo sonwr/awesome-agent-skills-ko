@@ -5,7 +5,8 @@
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 스킬을 탐색·검증·기여하려는 개인/팀
-- **바로 얻는 가치 / Immediate value** — 첫 화면에서 프로젝트 소개, 대표 카테고리, 첫 검증 명령, 다음 문서를 곧바로 찾을 수 있음
+- **바로 얻는 가치 / Immediate value** — 첫 화면에서 프로젝트 소개, 대상 사용자, 대표 카테고리, 첫 검증 명령, 다음 문서를 곧바로 찾을 수 있음
+- **대표 시작 예시 / Featured examples** — 검증 시작 `examples/quickstart.md`, 첫 PR 증빙 `examples/pr-evidence-mini-walkthrough.md`, 랜딩 점검 `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders. Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
@@ -15,19 +16,13 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **프로젝트 소개 / Project intro** — 한국어 기본 큐레이션 저장소이며, README 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
-- **대표 카테고리 / Featured categories** — 온보딩, PR 증빙, 큐레이션/운영 기준 문서를 우선 노출합니다.
-- **역할별 시작 지도 / Role-based start map** — `docs/README_ROLE_STARTERS.md`
-- **상단 설계 압축본 / Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`
+- **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
+- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`
+- **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+- **다음 열 문서 / Open next** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
-English mirror:
-- **Project intro** — a Korean-first curation repo that keeps project value and execution paths visible from the first README screen.
-- **Who it helps** — individuals and teams who want fast Korean-first discovery, validation, and contribution flows.
-- **Immediate value** — surface the first validation command, next doc, and first-PR evidence path together.
-- **Featured categories** — onboarding, PR evidence, and curation/governance docs come first.
-- **Role-based start map** — `docs/README_ROLE_STARTERS.md`
-- **Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`
-- **Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
 
 ## 프로젝트 소개 / Project overview
 
@@ -144,6 +139,9 @@ English mirror:
 
 README 첫 화면에서 바로 고를 수 있는 4가지 시작 경로입니다. 소개를 먼저 이해할지, 바로 검증할지, 바로 기여할지, 운영 구조를 감사할지 빠르게 갈라집니다.
 English mirror: Four first-screen routes you can choose immediately: understand the intro, validate now, contribute now, or audit the operating structure.
+
+- **역할별 시작 지도 / Role-based start map** — `docs/README_ROLE_STARTERS.md`
+- **상단 설계 압축본 / Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`
 
 - **탐색 먼저 / Explore first** — 프로젝트 소개 → 대표 카테고리 → `examples/quickstart.md`
 - **바로 검증 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
