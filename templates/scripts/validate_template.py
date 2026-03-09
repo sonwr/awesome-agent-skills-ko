@@ -36,6 +36,7 @@ REQUIRED_FILES = [
     "docs/README_FIRST_VISIT_PACK.md",
     "docs/README_FIRST_VISITOR_PROMISES.md",
     "docs/README_FIRST_VISITOR_ROUTES.md",
+    "docs/README_RECOMMENDED_STARTING_PATHS.md",
     "docs/README_FIRST_SCREEN_DECISION_TREE.md",
     "docs/README_ROLE_STARTERS.md",
     "docs/README_WHO_STARTS_WHERE.md",
@@ -93,6 +94,7 @@ BILINGUAL_SECTION_MARKERS = {
         "운영형 / Operator",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 대표 활용 시나리오 / Featured use cases",
+        "## 추천 시작 경로 / Recommended starting paths",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 빠른 선택 카드 / Quick chooser cards",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -435,6 +437,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     first_visitor_routes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_ROUTES.md" in line), None)
     first_screen_decision_tree_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_SCREEN_DECISION_TREE.md" in line), None)
     first_screen_quick_proof_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_SCREEN_QUICK_PROOF.md" in line), None)
+    recommended_paths_doc_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_RECOMMENDED_STARTING_PATHS.md" in line), None)
     first_click_guide_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_CLICK_GUIDE.md" in line), None)
     project_value_quickcheck_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_QUICKCHECK.md" in line), None)
     project_value_ladder_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_LADDER.md" in line), None)
@@ -451,6 +454,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if featured_use_cases_line is None or featured_use_cases_line > 115:
         errors.append(
             "README.md: featured use cases must appear within the first 115 lines so intro-first visitors see representative onboarding / contribution / governance scenarios before deeper navigation"
+        )
+    recommended_paths_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 추천 시작 경로 / Recommended starting paths"), None)
+    if recommended_paths_line is None or recommended_paths_line > 135:
+        errors.append(
+            "README.md: recommended starting paths must appear within the first 135 lines so explorer/contributor/operator visitors can choose a lane before governance-heavy sections"
         )
     three_line_heading = "## 첫 화면 핵심 3줄 / First-screen in 3 lines"
     three_line_section_heading = "첫 화면 핵심 3줄 / First-screen in 3 lines"
@@ -521,6 +529,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: first-click guide doc link must appear within the first 120 lines so visitors can choose the right explore/validate/contribute/audit entry without dropping into governance-heavy sections first"
         )
+    if recommended_paths_doc_line is None or recommended_paths_doc_line > 135:
+        errors.append(
+            "README.md: recommended starting paths doc link must appear within the first 135 lines so the 3-lane explorer/contributor/operator handoff stays documented near the landing block"
+        )
     if project_value_quickcheck_line is None or project_value_quickcheck_line > 120:
         errors.append(
             "README.md: project value quick-check doc link must appear within the first 120 lines so the intro/audience/value/examples/quick-start landing contract stays reusable near the top"
@@ -576,6 +588,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "운영형 / Operator",
         "## 대표 카테고리와 예시 / Featured categories and examples",
         "## 대표 활용 시나리오 / Featured use cases",
+        "## 추천 시작 경로 / Recommended starting paths",
         "## 추천 시작 경로 / Recommended starting paths",
         "### 빠른 선택 카드 / Quick chooser cards",
         "### 처음 5분 기여 흐름 / First 5-minute contribution flow",
@@ -1112,6 +1125,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 대상 사용자 / Who this is for",
         "## 제공 가치 / What you get",
         "## 대표 활용 시나리오 / Featured use cases",
+        "## 추천 시작 경로 / Recommended starting paths",
         "## 빠른 시작 / Quick start",
         "## 처음 방문 FAQ / First-time visitor FAQ",
         "## 프로젝트 한눈에 보기 / Project at a glance",

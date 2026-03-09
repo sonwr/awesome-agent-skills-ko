@@ -73,6 +73,21 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("intro -> audience -> immediate value -> featured categories -> quick start order inside the Start-here summary block" in error for error in errors))
 
+    def test_readme_requires_recommended_starting_paths_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 추천 시작 경로 / Recommended starting paths\n",
+                "",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("recommended starting paths" in error for error in errors))
+
     def test_readme_requires_first_minute_outcome_section_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

@@ -7,6 +7,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **바로 얻는 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 프로젝트 소개·대표 카테고리·첫 검증 명령·다음 문서를 첫 화면에서 바로 찾게 함
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **대표 활용 시나리오 설계 / Featured use-case map** — `docs/README_FEATURED_USE_CASES.md`
+- **추천 시작 경로 기준 / Recommended starting-path source** — `docs/README_RECOMMENDED_STARTING_PATHS.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 이동
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
@@ -84,6 +85,18 @@ English mirror:
 - **New repo onboarding** — read the project overview plus the first-screen 3-line summary, then go straight through `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` for the first validation run.
 - **First PR prep** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum evidence format, then use `docs/README_PROJECT_OVERVIEW_FAQ.md` to preserve the landing-page context.
 - **Governance audit** — review `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, and `docs/CURATION_POLICY.md` in order.
+
+
+## 추천 시작 경로 / Recommended starting paths
+
+- **탐색형 / Explorer path** — `프로젝트 소개 / Project overview` → `프로젝트 한눈에 보기 / Project at a glance` → `docs/README_PROJECT_OVERVIEW_FAQ.md`
+- **기여형 / Contributor path** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **운영형 / Operator path** — `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FAST_PATHS.md` → `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Explorer path** — open `Project overview`, continue to `Project at a glance`, then use `docs/README_PROJECT_OVERVIEW_FAQ.md` for the landing-context FAQ.
+- **Contributor path** — run `python3 templates/scripts/validate_template.py`, open `examples/quickstart.md`, then copy the first PR evidence rules from `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
+- **Operator path** — audit `docs/README_FIRST_SCREEN_CHECKLIST.md`, continue with `docs/README_FAST_PATHS.md`, then confirm the curation guardrails in `docs/CURATION_POLICY.md`.
 
 ## 빠른 시작 / Quick start
 ### 처음 5분 기여 흐름 / First 5-minute contribution flow
