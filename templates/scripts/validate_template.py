@@ -21,6 +21,7 @@ REQUIRED_FILES = [
     "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_PROJECT_POSITIONING.md",
+    "docs/README_ROLE_STARTERS.md",
     "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
     "docs/PROJECT_OVERVIEW.md",
     "docs/PROJECT_ENTRY_PATHS.md",
@@ -115,6 +116,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## 첫 화면에서 먼저 약속할 가치 / Value promises to show first",
         "## 먼저 보이고 뒤로 내릴 것 / What stays first vs lower",
         "English mirror:",
+    ],
+    "docs/README_ROLE_STARTERS.md": [
+        "README 역할별 시작 지도 / README role-based starters",
+        "## 한국어 기준 / Korean-first map",
+        "### 탐색형 / Explorer",
+        "### 기여형 / Contributor",
+        "### 운영형 / Operator",
+        "## English mirror",
     ],
     "docs/README_INFORMATION_ARCHITECTURE.md": [
         "README 정보 구조 가이드 / README information architecture guide",
@@ -277,6 +286,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if quickstart_command_line is None or quickstart_command_line > 160:
         errors.append(
             "README.md: first validation command must appear within the first 160 lines so visitors can act from the landing screen without deep scrolling"
+        )
+    role_starter_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_ROLE_STARTERS.md" in line), None)
+    if role_starter_line is None or role_starter_line > 90:
+        errors.append(
+            "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
         )
 
     top_order_window = "\n".join(lines[:140])

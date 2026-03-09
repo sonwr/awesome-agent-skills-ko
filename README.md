@@ -16,6 +16,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
 - **대표 카테고리 / Featured categories** — 온보딩, PR 증빙, 큐레이션/운영 기준 문서를 우선 노출합니다.
+- **역할별 시작 지도 / Role-based start map** — `docs/README_ROLE_STARTERS.md`
 - **상단 설계 압축본 / Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 
@@ -24,6 +25,7 @@ English mirror:
 - **Who it helps** — individuals and teams who want fast Korean-first discovery, validation, and contribution flows.
 - **Immediate value** — surface the first validation command, next doc, and first-PR evidence path together.
 - **Featured categories** — onboarding, PR evidence, and curation/governance docs come first.
+- **Role-based start map** — `docs/README_ROLE_STARTERS.md`
 - **Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`
 - **Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 
