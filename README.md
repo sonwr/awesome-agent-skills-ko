@@ -40,6 +40,15 @@ A curated collection of agent skills and runnable templates for Korean-speaking 
 - Why does it matter? It gives teams an intro-first landing page that leads directly to runnable, reviewable building blocks — not just a link dump.
 - What is the landing rule? Put overview -> audience -> value -> examples/quick start first, and move governance details lower.
 
+## 첫 방문 15초 선택 / 15-second first-visit chooser
+
+- **탐색부터 / Explore first** — 프로젝트 소개와 대상 사용자를 빠르게 파악하려면 `프로젝트 소개 / Project overview` → `프로젝트 한눈에 보기 / Project at a glance`
+- **바로 실행 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+- **바로 기여 / Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **운영 구조 점검 / Audit the landing flow** — `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FAST_PATHS.md`
+
+English mirror: Need a fast route? Explore the intro first, run validation immediately, jump into contribution evidence, or audit the landing structure with the README checklist.
+
 ## 프로젝트 한눈에 보기 / Project at a glance
 
 - **누구를 위한 저장소인가요?** 한국어 기본 흐름으로 스킬을 탐색·검증·기여하려는 빌더/팀을 위한 저장소입니다.
