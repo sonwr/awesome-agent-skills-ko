@@ -2585,3 +2585,22 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 "README.md: the first 120 lines must link docs/README_FIRST_SCREEN_MAP.md so the intro -> audience -> value -> examples -> quick-start order stays visible during landing rewrites",
                 errors,
             )
+
+    def test_validate_template_requires_fast_intro_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            for rel_path in validate_template.REQUIRED_FILES:
+                path = root / rel_path
+                path.parent.mkdir(parents=True, exist_ok=True)
+                source = Path(__file__).resolve().parents[1] / rel_path
+                path.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+
+            readme = (root / "README.md").read_text(encoding="utf-8").replace("docs/README_PROJECT_FAST_INTRO.md", "docs/MISSING_PROJECT_FAST_INTRO.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 90 lines must link docs/README_PROJECT_FAST_INTRO.md so the compact project intro source-of-truth stays attached to the intro-first landing block",
+                errors,
+            )
