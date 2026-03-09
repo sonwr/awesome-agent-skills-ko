@@ -22,6 +22,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_VALUE_LADDER.md",
     "docs/README_PROJECT_FAST_INTRO.md",
     "docs/README_PROJECT_LANDING_BLUEPRINT.md",
+    "docs/README_PROJECT_HOME_PANEL.md",
     "docs/README_PROJECT_START_HERE.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_FIRST_SCREEN_MAP.md",
@@ -192,6 +193,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "What does this repo do?",
         "What can I run right now?",
+    ],
+    "docs/README_PROJECT_HOME_PANEL.md": [
+        "README 프로젝트 홈 패널 / README project home panel",
+        "## 한국어 기준 / Korean-first panel",
+        "## 운영 문서 핸드오프 / Governance handoff",
+        "## English mirror",
+        "project intro",
+        "featured categories",
     ],
     "docs/README_PROJECT_START_HERE.md": [
         "README 프로젝트 스타트히어 카드 / README project start-here card",

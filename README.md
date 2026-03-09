@@ -3,21 +3,25 @@
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
 
-- **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 스킬을 탐색·검증·기여하려는 개인/팀
-- **바로 얻는 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 프로젝트 소개·대표 카테고리·첫 검증 명령·다음 문서를 첫 화면에서 바로 찾게 함
-- **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
+## 첫 화면 랜딩 패널 / First-screen landing panel
+- **프로젝트 소개 / Project intro** — README 첫 화면에서 프로젝트 의미와 시작 동선을 먼저 보여주는 한국어 기본 큐레이션 저장소
+- **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀
+- **제공 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 대표 카테고리·첫 검증 명령·다음 문서를 첫 화면에서 바로 찾게 함
+- **대표 카테고리 / Featured categories** — 온보딩, PR 증빙, 큐레이션/운영 기준
+- **대표 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
+- **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+- **랜딩 패널 기준 문서 / Landing panel source** — `docs/README_PROJECT_HOME_PANEL.md`, `docs/README_PROJECT_FAST_INTRO.md`, `docs/README_PROJECT_LANDING_BLUEPRINT.md`
 - **대표 활용 시나리오 설계 / Featured use-case map** — `docs/README_FEATURED_USE_CASES.md`
 - **추천 시작 경로 기준 / Recommended starting-path source** — `docs/README_RECOMMENDED_STARTING_PATHS.md`
 - **대상별 빠른 레시피 / Audience quick recipes** — `docs/README_AUDIENCE_QUICK_RECIPES.md`
-- **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
-- **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 이동
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
-- **프로젝트 빠른 소개 기준 / Fast intro source** — `docs/README_PROJECT_FAST_INTRO.md`, `docs/README_PROJECT_LANDING_BLUEPRINT.md`
 - **스타트히어 카드 / Start-here card** — `docs/README_PROJECT_START_HERE.md`
 - **첫 화면 빠른 증명 / First-screen quick proof** — `docs/README_FIRST_SCREEN_QUICK_PROOF.md`
 - **첫 화면 프로젝트 개요 / First-screen project overview** — `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`
+- **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
-The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md` and a compact start-here card in `docs/README_PROJECT_START_HERE.md`.
+The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`, a compact start-here card in `docs/README_PROJECT_START_HERE.md`, and the one-screen landing panel source in `docs/README_PROJECT_HOME_PANEL.md`.
+Contributor operations live separately in `docs/CONTRIBUTOR_OPERATIONS.md` so the landing block can stay project-first.
 ## 바로 시작 요약 / Start-here summary
 - **프로젝트 소개 / Project intro** — 한국어 기본 큐레이션 저장소이며, README 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.

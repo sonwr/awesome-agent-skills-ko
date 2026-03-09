@@ -9,6 +9,13 @@ from templates.scripts import validate_template
 
 class ValidateTemplateTests(unittest.TestCase):
 
+    def test_required_files_include_project_home_panel_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_HOME_PANEL.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 홈 패널 / README project home panel",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_HOME_PANEL.md"],
+        )
+
     def test_required_files_include_project_start_here_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_START_HERE.md", validate_template.REQUIRED_FILES)
         self.assertIn(
