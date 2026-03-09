@@ -987,6 +987,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 140 lines must link docs/README_PROJECT_POSITIONING.md so the landing block keeps an explicit project-value positioning handoff before governance-heavy sections"
         )
+    if "docs/README_PROJECT_INTRO_PATHS.md" not in "\n".join(lines[:140]):
+        errors.append(
+            "README.md: the first 140 lines must link docs/README_PROJECT_INTRO_PATHS.md so project overview -> validate -> first PR -> governance intro paths stay reusable near the landing block"
+        )
     if "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md" not in "\n".join(lines[:140]):
         errors.append(
             "README.md: the first 140 lines must link docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md so intro-first maintenance guidance stays attached to the landing block"
