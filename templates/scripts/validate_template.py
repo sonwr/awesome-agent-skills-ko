@@ -829,6 +829,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 160 lines must link docs/README_FEATURED_EXAMPLE_PATHS.md so featured example paths stay attached to the intro-first landing block"
         )
+    if "docs/README_PROJECT_STARTER_PACK.md" not in "\n".join(lines[:80]):
+        errors.append(
+            "README.md: the first 80 lines must link docs/README_PROJECT_STARTER_PACK.md so the project-intro starter pack stays visible in the landing block"
+        )
     if "docs/README_PROJECT_POSITIONING.md" not in "\n".join(lines[:140]):
         errors.append(
             "README.md: the first 140 lines must link docs/README_PROJECT_POSITIONING.md so the landing block keeps an explicit project-value positioning handoff before governance-heavy sections"

@@ -2235,6 +2235,19 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 errors,
             )
 
+    def test_check_quickstart_validation_command_requires_project_starter_pack_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_PROJECT_STARTER_PACK.md", "docs/MISSING_PROJECT_STARTER_PACK.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 80 lines must link docs/README_PROJECT_STARTER_PACK.md so the project-intro starter pack stays visible in the landing block",
+                errors,
+            )
+
     def test_validate_template_requires_project_starter_pack_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
