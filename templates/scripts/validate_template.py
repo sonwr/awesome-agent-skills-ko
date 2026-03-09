@@ -308,6 +308,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
     role_starter_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_ROLE_STARTERS.md" in line), None)
     intro_60s_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_INTRO_60S.md" in line), None)
+    audience_quick_recipes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_AUDIENCE_QUICK_RECIPES.md" in line), None)
+    first_visitor_promises_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_PROMISES.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
@@ -315,6 +317,14 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if intro_60s_line is None or intro_60s_line > 120:
         errors.append(
             "README.md: intro-in-60-seconds doc link must appear within the first 120 lines so first-time visitors can verify the project-intro reading order before deep governance sections"
+        )
+    if audience_quick_recipes_line is None or audience_quick_recipes_line > 120:
+        errors.append(
+            "README.md: audience quick-recipes doc link must appear within the first 120 lines so role-specific first actions stay visible before governance-heavy sections"
+        )
+    if first_visitor_promises_line is None or first_visitor_promises_line > 120:
+        errors.append(
+            "README.md: first-visitor promises doc link must appear within the first 120 lines so the README keeps explicit newcomer value promises near the landing block"
         )
 
     top_order_window = "\n".join(lines[:140])
