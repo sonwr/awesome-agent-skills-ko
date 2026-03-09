@@ -190,9 +190,14 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     lines = text.splitlines()
     overview_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 프로젝트 소개 / Project overview"), None)
     quickstart_command_line = next((idx for idx, line in enumerate(lines, start=1) if "python3 templates/scripts/validate_template.py" in line), None)
-    if overview_line is None or overview_line > 12:
+    start_here_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 바로 시작 요약 / Start-here summary"), None)
+    if start_here_line is None or start_here_line > 14:
         errors.append(
-            "README.md: project overview heading must appear within the first 12 lines so the README stays project-intro-first"
+            "README.md: start-here summary heading must appear within the first 14 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
+        )
+    if overview_line is None or overview_line > 28:
+        errors.append(
+            "README.md: project overview heading must appear within the first 28 lines so the README stays project-intro-first even after the compact start-here summary"
         )
     top_intro_window = "\n".join(lines[:80])
     if "좋아 보이는 링크 모음" not in top_intro_window or "not just a link dump" not in top_intro_window:
@@ -205,6 +210,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
 
     for required_heading in [
+        "## 바로 시작 요약 / Start-here summary",
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 이 저장소를 읽는 법 / How to read this repo",
@@ -388,6 +394,22 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             errors.append(
                 "README.md: value cards must expose bilingual discover/validate/contribute entry points with the first command and follow-up docs near the top -> "
                 + required_value_card_marker
+            )
+
+    start_here_section = _extract_section(text, "바로 시작 요약 / Start-here summary")
+    for required_start_here_marker in [
+        "프로젝트 소개 / Project intro",
+        "대상 사용자 / Who it helps",
+        "대표 가치 / Immediate value",
+        "대표 카테고리 / Featured categories",
+        "빠른 시작 / Quick start",
+        "examples/quickstart.md",
+        "English mirror:",
+    ]:
+        if required_start_here_marker not in start_here_section:
+            errors.append(
+                "README.md: start-here summary must expose intro/audience/value/categories/quick-start markers in Korean/English near the top -> "
+                + required_start_here_marker
             )
 
     landing_summary_section = _extract_section(text, "첫 화면 30초 요약 / 30-second landing summary")

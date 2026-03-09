@@ -8,6 +8,22 @@
 - **바로 얻는 가치 / Immediate value** — 첫 화면에서 프로젝트 소개, 대표 카테고리, 첫 검증 명령, 다음 문서를 곧바로 찾을 수 있음
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
+
+## 바로 시작 요약 / Start-here summary
+
+- **프로젝트 소개 / Project intro** — 한국어 기본 큐레이션 저장소이며, README 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.
+- **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
+- **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
+- **대표 카테고리 / Featured categories** — 온보딩, PR 증빙, 큐레이션/운영 기준 문서를 우선 노출합니다.
+- **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+
+English mirror:
+- **Project intro** — a Korean-first curation repo that keeps project value and execution paths visible from the first README screen.
+- **Who it helps** — individuals and teams who want fast Korean-first discovery, validation, and contribution flows.
+- **Immediate value** — surface the first validation command, next doc, and first-PR evidence path together.
+- **Featured categories** — onboarding, PR evidence, and curation/governance docs come first.
+- **Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+
 ## 프로젝트 소개 / Project overview
 
 이 저장소는 **한국어 기반 빌더를 위한 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
