@@ -2192,3 +2192,29 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 "README.md: the first 140 lines must link docs/README_PROJECT_OVERVIEW_FAQ.md so first-time visitors can resolve intro/audience/quick-start questions without scrolling into governance sections",
                 errors,
             )
+
+    def test_check_quickstart_validation_command_requires_project_positioning_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_PROJECT_POSITIONING.md", "docs/MISSING_PROJECT_POSITIONING.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 140 lines must link docs/README_PROJECT_POSITIONING.md so the landing block keeps an explicit project-value positioning handoff before governance-heavy sections",
+                errors,
+            )
+
+    def test_check_quickstart_validation_command_requires_intro_first_maintenance_loop_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md", "docs/MISSING_README_INTRO_FIRST_MAINTENANCE_LOOP.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 140 lines must link docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md so intro-first maintenance guidance stays attached to the landing block",
+                errors,
+            )
