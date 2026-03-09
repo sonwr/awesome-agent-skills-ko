@@ -15,6 +15,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **대표 활용 시나리오 설계 / Featured use-case map** — `docs/README_FEATURED_USE_CASES.md`
 - **추천 시작 경로 기준 / Recommended starting-path source** — `docs/README_RECOMMENDED_STARTING_PATHS.md`
 - **프로젝트 시작 맵 / Project start map** — `docs/README_PROJECT_START_MAP.md`
+- **첫 화면 결정 트리 / First-screen decision tree** — `docs/README_FIRST_SCREEN_DECISION_TREE.md`
 - **대상별 빠른 레시피 / Audience quick recipes** — `docs/README_AUDIENCE_QUICK_RECIPES.md`
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
 - **프로젝트 가치 스타터 / Project value starters** — `docs/README_PROJECT_VALUE_STARTERS.md`
@@ -33,9 +34,10 @@ Contributor operations live separately in `docs/CONTRIBUTOR_OPERATIONS.md` so th
 - **대상 사용자 빠르게 확인 / Check the target audience quickly** — `## 대상 사용자 / Who this is for`
 - **대표 가치 바로 확인 / See the immediate value** — `## 제공 가치 / What you get`
 - **대표 예시와 카테고리 / Featured examples and categories** — featured categories section + featured-use-cases section
+- **빠른 선택 기준 / Pick a route fast** — `docs/README_FIRST_SCREEN_DECISION_TREE.md`
 - **지금 실행 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **기여 규칙은 아래로 / Governance lives lower** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `CONTRIBUTING.md`, `docs/CURATION_POLICY.md`
-English mirror: Use this jump list to preserve the README first-screen order — intro, audience, value, featured examples/categories, quick start, then governance handoff.
+English mirror: Use this jump list to preserve the README first-screen order — intro, audience, value, featured examples/categories, decision tree, quick start, then governance handoff.
 
 ## 첫 화면 핵심 3줄 / First-screen in 3 lines
 - **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.

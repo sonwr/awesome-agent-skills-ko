@@ -199,6 +199,21 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("governance-handoff cue" in error for error in errors))
 
+    def test_readme_requires_first_screen_decision_tree_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_FIRST_SCREEN_DECISION_TREE.md",
+                "docs/README_FIRST_SCREEN_DECISION_TREE_REMOVED.md",
+                2,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first-screen decision tree doc link" in error for error in errors))
+
     def test_readme_requires_first_action_matrix_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

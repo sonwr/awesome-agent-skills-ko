@@ -615,6 +615,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: first-visitor routes doc link must appear within the first 220 lines so newcomers can choose explore/validate/contribute/audit paths before deep governance-heavy sections"
         )
+    if first_screen_decision_tree_line is None or first_screen_decision_tree_line > 105:
+        errors.append(
+            "README.md: first-screen decision tree doc link must appear within the first 105 lines so newcomers can pick explore/validate/contribute/audit routes near the intro-first landing block"
+        )
     if first_screen_quick_proof_line is None or first_screen_quick_proof_line > 120:
         errors.append(
             "README.md: first-screen quick-proof doc link must appear within the first 120 lines so contributors can justify the intro-first landing contract without dropping into governance-heavy docs first"
