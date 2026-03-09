@@ -478,6 +478,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: intro-in-60-seconds doc link must appear within the first 120 lines so first-time visitors can verify the project-intro reading order before deep governance sections"
         )
+    featured_use_cases_doc_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FEATURED_USE_CASES.md" in line), None)
+    if featured_use_cases_doc_line is None or featured_use_cases_doc_line > 120:
+        errors.append(
+            "README.md: featured-use-cases doc link must appear within the first 120 lines so intro-first visitors can jump from the landing pitch to representative onboarding / contribution / governance scenarios"
+        )
     if audience_quick_recipes_line is None or audience_quick_recipes_line > 120:
         errors.append(
             "README.md: audience quick-recipes doc link must appear within the first 120 lines so role-specific first actions stay visible before governance-heavy sections"

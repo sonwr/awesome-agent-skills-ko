@@ -256,6 +256,20 @@ English mirror:
 
             self.assertTrue(any("audience quick-recipes doc link" in error for error in errors))
 
+    def test_readme_requires_featured_use_cases_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_FEATURED_USE_CASES.md",
+                "docs/README_FEATURED_USE_CASES_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("featured-use-cases doc link" in error for error in errors))
+
     def test_readme_requires_first_visitor_promises_doc_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

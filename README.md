@@ -9,6 +9,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 스킬을 탐색·검증·기여하려는 개인/팀
 - **바로 얻는 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 프로젝트 소개·대표 카테고리·첫 검증 명령·다음 문서를 첫 화면에서 바로 찾게 함
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
+- **대표 활용 시나리오 설계 / Featured use-case map** — `docs/README_FEATURED_USE_CASES.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 이동
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
@@ -24,11 +25,10 @@ The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a 
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 English mirror: Project intro, who it helps, immediate value, featured categories, featured examples, and quick start stay visible from the first screen.
-- **빠른 경로 묶음 / Fast-path bundle** — `docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_FIRST_SCREEN_QUICK_PROOF.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`
+- **빠른 경로 묶음 / Fast-path bundle** — `docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_FIRST_SCREEN_QUICK_PROOF.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`, `docs/README_FEATURED_USE_CASES.md`
 - **저장소 가치 한 줄 / Repo value in one line** — 좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.
 English mirror: this repo is not just a link dump.
 It exists to make execution, validation, and contribution paths visible from the first README screen instead of a vague link dump.
-
 ## 첫 화면 핵심 3줄 / First-screen in 3 lines
 - **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
 - **누가 먼저 보면 좋은가? / Who should start here?** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
@@ -116,6 +116,7 @@ English mirror:
 - **새 저장소 온보딩** — 프로젝트 소개와 첫 화면 핵심 3줄만 읽고 `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` 순서로 첫 검증까지 바로 이어갑니다.
 - **첫 PR 준비** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 최소 증빙 형식을 복붙하고, `docs/README_PROJECT_OVERVIEW_FAQ.md`로 상단 소개 문맥을 확인합니다.
 - **운영 기준 점검** — `docs/PROJECT_ENTRY_PATHS.md`, `docs/README_INFORMATION_ARCHITECTURE.md`, `docs/CURATION_POLICY.md` 순서로 정보구조와 큐레이션 기준을 검토합니다.
+- **시나리오 설계 기준** — 상단 대표 시나리오를 유지/확장할 때는 `docs/README_FEATURED_USE_CASES.md`를 기준 문서로 사용합니다.
 
 English mirror:
 - **New repo onboarding** — read the project overview plus the first-screen 3-line summary, then go straight through `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` for the first validation run.
