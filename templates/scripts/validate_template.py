@@ -22,6 +22,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_VALUE_LADDER.md",
     "docs/README_PROJECT_FAST_INTRO.md",
     "docs/README_PROJECT_LANDING_BLUEPRINT.md",
+    "docs/README_PROJECT_START_HERE.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_FIRST_SCREEN_MAP.md",
     "docs/README_PROJECT_OVERVIEW_FAQ.md",
@@ -191,6 +192,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "What does this repo do?",
         "What can I run right now?",
+    ],
+    "docs/README_PROJECT_START_HERE.md": [
+        "README 프로젝트 스타트히어 카드 / README project start-here card",
+        "## 한국어 기준 / Korean-first card",
+        "## 운영 문서 핸드오프 / Governance handoff",
+        "## English mirror",
+        "Project intro",
+        "Quick start",
     ],
     "docs/README_PROJECT_FIRST_LOOK.md": [
         "README 프로젝트 첫인상 가이드 / README project first-look guide",
@@ -510,9 +519,14 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: intro-in-60-seconds doc link must appear within the first 120 lines so first-time visitors can verify the project-intro reading order before deep governance sections"
         )
     featured_use_cases_doc_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FEATURED_USE_CASES.md" in line), None)
+    project_start_here_doc_line = next((idx for idx, line in enumerate(lines, start=1) if "스타트히어 카드 / Start-here card" in line and "docs/README_PROJECT_START_HERE.md" in line), None)
     if featured_use_cases_doc_line is None or featured_use_cases_doc_line > 120:
         errors.append(
             "README.md: featured-use-cases doc link must appear within the first 120 lines so intro-first visitors can jump from the landing pitch to representative onboarding / contribution / governance scenarios"
+        )
+    if project_start_here_doc_line is None or project_start_here_doc_line > 120:
+        errors.append(
+            "README.md: start-here card doc link must appear within the first 120 lines so first-screen visitors can jump from the intro block to the compact landing summary without scrolling into governance-heavy sections"
         )
     if audience_quick_recipes_line is None or audience_quick_recipes_line > 120:
         errors.append(

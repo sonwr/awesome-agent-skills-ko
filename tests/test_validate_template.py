@@ -9,6 +9,12 @@ from templates.scripts import validate_template
 
 class ValidateTemplateTests(unittest.TestCase):
 
+    def test_required_files_include_project_start_here_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_START_HERE.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 스타트히어 카드 / README project start-here card",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_START_HERE.md"],
+        )
 
     def test_readme_rejects_replacement_characters_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -16,8 +22,7 @@ class ValidateTemplateTests(unittest.TestCase):
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
                 "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음",
-                "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모�",
-                1,
+                "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모�"
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
 
@@ -290,6 +295,21 @@ class ValidateTemplateTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("audience quick-recipes doc link" in error for error in errors))
+
+    def test_readme_requires_project_start_here_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_START_HERE.md",
+                "docs/README_PROJECT_START_HERE_REMOVED.md",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("start-here card doc link" in error for error in errors))
 
     def test_readme_requires_featured_use_cases_doc_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
