@@ -2263,6 +2263,19 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 errors,
             )
 
+    def test_check_quickstart_validation_command_requires_persona_quickstart_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_PROJECT_QUICKSTART_PERSONAS.md", "docs/MISSING_PROJECT_QUICKSTART_PERSONAS.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 100 lines must link docs/README_PROJECT_QUICKSTART_PERSONAS.md so role-based first sentence/command/doc handoff stays visible in the intro-first landing block",
+                errors,
+            )
+
     def test_check_quickstart_validation_command_requires_first_visit_pack_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -2288,6 +2301,20 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 "README.md: the first 80 lines must link docs/README_PROJECT_OVERVIEW_FAQ.md so first-time visitors can resolve intro/audience/quick-start questions without scrolling into governance sections",
                 errors,
             )
+
+    def test_validate_template_requires_project_quickstart_personas_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            for rel_path in validate_template.REQUIRED_FILES:
+                if rel_path == "docs/README_PROJECT_QUICKSTART_PERSONAS.md":
+                    continue
+                path = root / rel_path
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("placeholder\n", encoding="utf-8")
+
+            errors = validate_template._check_required_files(root)
+
+            self.assertIn("docs/README_PROJECT_QUICKSTART_PERSONAS.md", errors)
 
     def test_validate_template_requires_project_starter_pack_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

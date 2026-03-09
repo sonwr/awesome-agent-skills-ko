@@ -26,6 +26,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_PROJECT_POSITIONING.md",
     "docs/README_PROJECT_STARTER_PACK.md",
+    "docs/README_PROJECT_QUICKSTART_PERSONAS.md",
     "docs/README_FIRST_VISIT_PACK.md",
     "docs/README_FIRST_VISITOR_PROMISES.md",
     "docs/README_FIRST_VISITOR_ROUTES.md",
@@ -156,6 +157,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## 유지 규칙 / Maintenance rule",
         "Project intro",
         "Quick start",
+    ],
+    "docs/README_PROJECT_QUICKSTART_PERSONAS.md": [
+        "README 소개형 페르소나 퀵스타트 / README intro-first persona quickstart",
+        "## 한국어 기준 / Korean-first guide",
+        "## English mirror",
+        "### 탐색형 / Explorer",
+        "### Contributor",
+        "## 유지 규칙 / Maintenance rule",
     ],
     "docs/README_ROLE_STARTERS.md": [
         "README 역할별 시작 지도 / README role-based starters",
@@ -844,6 +853,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_PROJECT_STARTER_PACK.md" not in "\n".join(lines[:80]):
         errors.append(
             "README.md: the first 80 lines must link docs/README_PROJECT_STARTER_PACK.md so the project-intro starter pack stays visible in the landing block"
+        )
+    if "docs/README_PROJECT_QUICKSTART_PERSONAS.md" not in "\n".join(lines[:100]):
+        errors.append(
+            "README.md: the first 100 lines must link docs/README_PROJECT_QUICKSTART_PERSONAS.md so role-based first sentence/command/doc handoff stays visible in the intro-first landing block"
         )
     if "docs/README_FIRST_VISIT_PACK.md" not in "\n".join(lines[:100]):
         errors.append(
