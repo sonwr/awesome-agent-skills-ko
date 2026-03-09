@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -2750,3 +2751,33 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
             errors = validate_template._check_required_files(root)
 
             self.assertIn("docs/README_PROJECT_LANDING_BLUEPRINT.md", errors)
+
+    def test_required_files_include_project_value_starters_doc(self) -> None:
+        self.assertIn(
+            "docs/README_PROJECT_VALUE_STARTERS.md",
+            validate_template.REQUIRED_FILES,
+        )
+        self.assertIn(
+            "README 프로젝트 가치 스타터 / README project value starters",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_VALUE_STARTERS.md"],
+        )
+
+    def test_check_quickstart_validation_command_requires_project_value_starters_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            shutil.copytree(Path(__file__).resolve().parents[1] / "docs", root / "docs")
+            shutil.copytree(Path(__file__).resolve().parents[1] / "examples", root / "examples")
+            shutil.copytree(Path(__file__).resolve().parents[1] / "templates", root / "templates")
+            shutil.copy2(Path(__file__).resolve().parents[1] / "CONTRIBUTING.md", root / "CONTRIBUTING.md")
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_VALUE_STARTERS.md",
+                "docs/MISSING_PROJECT_VALUE_STARTERS.md",
+            )
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any(
+                "docs/README_PROJECT_VALUE_STARTERS.md" in error and "compact project-value-to-quickstart handoff" in error
+                for error in errors
+            ))
