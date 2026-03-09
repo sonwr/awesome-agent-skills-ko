@@ -4,6 +4,8 @@
 
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 
+English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
+
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 스킬을 탐색·검증·기여하려는 개인/팀
 - **바로 얻는 가치 / Immediate value** — 첫 화면에서 프로젝트 소개, 대상 사용자, 대표 카테고리, 첫 검증 명령, 다음 문서를 곧바로 찾을 수 있음
 - **대표 시작 예시 / Featured examples** — 검증 시작 `examples/quickstart.md`, 첫 PR 증빙 `examples/pr-evidence-mini-walkthrough.md`, 랜딩 점검 `docs/README_FIRST_SCREEN_CHECKLIST.md`
@@ -12,17 +14,17 @@
 - **프로젝트 가치 사다리 / Project value ladder** — `docs/README_PROJECT_VALUE_LADDER.md`
 - **프로젝트 첫인상 가이드 / Project first-look guide** — `docs/README_PROJECT_FIRST_LOOK.md`
 - **프로젝트 소개→빠른 시작 흐름 / Project intro -> quick-start flow** — `docs/README_PROJECT_QUICKSTART_FLOW.md`
+- **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
 - **첫 행동 매트릭스 / First action matrix** — `docs/README_FIRST_ACTION_MATRIX.md`
 - **첫 방문 스타터 팩 / First-visit starter pack** — `docs/README_FIRST_VISIT_PACK.md`
 - **첫 방문 FAQ + 결정 트리 / First-visit FAQ + decision tree** — `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_FIRST_SCREEN_DECISION_TREE.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
-English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders. Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
+English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 ## 첫 화면 핵심 3줄 / First-screen in 3 lines
 - **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
 - **누가 먼저 보면 좋은가? / Who should start here?** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **지금 바로 무엇을 하면 되나? / What should I do now?** `python3 templates/scripts/validate_template.py` 실행 → `examples/quickstart.md` 열기 → 첫 PR이면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 이동합니다.
-
 English mirror:
 - **What is this project?** A curated repo that helps Korean-speaking builders find validation-ready agent skills and runnable templates quickly.
 - **Who should start here?** Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
@@ -109,7 +111,6 @@ English mirror:
 - **Best fit** — individuals and teams who want Korean-first discovery, validation, and contribution paths in one place.
 - **Not for** — readers who only want governance-first docs or a plain link list without runnable examples.
 - **First click** — explorers start with `Project overview`, contributors with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, and operators with `docs/README_FAST_PATHS.md`.
-
 ## 대표 활용 시나리오 / Featured use cases
 
 - **새 저장소 온보딩** — 프로젝트 소개와 첫 화면 핵심 3줄만 읽고 `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` 순서로 첫 검증까지 바로 이어갑니다.

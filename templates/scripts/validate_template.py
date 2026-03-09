@@ -921,6 +921,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 100 lines must link docs/README_PROJECT_QUICKSTART_FLOW.md so project overview -> audience -> value -> featured examples -> quick-start flow stays visible during README landing rewrites"
         )
+    if "docs/README_PROJECT_ENTRY_PROMISE.md" not in "\n".join(lines[:90]):
+        errors.append(
+            "README.md: the first 90 lines must link docs/README_PROJECT_ENTRY_PROMISE.md so the landing block keeps an explicit project-intro promise before governance-heavy sections"
+        )
     if "docs/README_FIRST_ACTION_MATRIX.md" not in "\n".join(lines[:120]):
         errors.append(
             "README.md: the first 120 lines must link docs/README_FIRST_ACTION_MATRIX.md so explorer/contributor/operator first action -> next doc -> expected result stays attached to the landing block"
