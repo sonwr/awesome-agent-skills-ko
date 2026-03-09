@@ -21,6 +21,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_VALUE_QUICKCHECK.md",
     "docs/README_PROJECT_VALUE_LADDER.md",
     "docs/README_PROJECT_FAST_INTRO.md",
+    "docs/README_PROJECT_LANDING_BLUEPRINT.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_FIRST_SCREEN_MAP.md",
     "docs/README_PROJECT_OVERVIEW_FAQ.md",
@@ -180,6 +181,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 유지 규칙 / Maintenance rule",
         "What is this repo?",
         "What is the first action?",
+    ],
+    "docs/README_PROJECT_LANDING_BLUEPRINT.md": [
+        "README 프로젝트 랜딩 청사진 / README project landing blueprint",
+        "## 한국어 기준 / Korean-first blueprint",
+        "## English mirror",
+        "What does this repo do?",
+        "What can I run right now?",
     ],
     "docs/README_PROJECT_FIRST_LOOK.md": [
         "README 프로젝트 첫인상 가이드 / README project first-look guide",
@@ -1000,6 +1008,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_PROJECT_FAST_INTRO.md" not in "\n".join(lines[:90]):
         errors.append(
             "README.md: the first 90 lines must link docs/README_PROJECT_FAST_INTRO.md so the compact project intro source-of-truth stays attached to the intro-first landing block"
+        )
+    if "docs/README_PROJECT_LANDING_BLUEPRINT.md" not in "\n".join(lines[:110]):
+        errors.append(
+            "README.md: the first 110 lines must link docs/README_PROJECT_LANDING_BLUEPRINT.md so the intro-first landing blueprint stays attached to the project-intro block"
         )
     if "docs/README_PROJECT_POSITIONING.md" not in "\n".join(lines[:140]):
         errors.append(

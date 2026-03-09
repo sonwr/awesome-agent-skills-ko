@@ -2604,3 +2604,31 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 "README.md: the first 90 lines must link docs/README_PROJECT_FAST_INTRO.md so the compact project intro source-of-truth stays attached to the intro-first landing block",
                 errors,
             )
+
+
+    def test_check_quickstart_validation_command_requires_project_landing_blueprint_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_PROJECT_LANDING_BLUEPRINT.md", "docs/MISSING_PROJECT_LANDING_BLUEPRINT.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 110 lines must link docs/README_PROJECT_LANDING_BLUEPRINT.md so the intro-first landing blueprint stays attached to the project-intro block",
+                errors,
+            )
+
+    def test_validate_template_requires_project_landing_blueprint_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            for rel_path in validate_template.REQUIRED_FILES:
+                if rel_path == "docs/README_PROJECT_LANDING_BLUEPRINT.md":
+                    continue
+                path = root / rel_path
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("placeholder\n", encoding="utf-8")
+
+            errors = validate_template._check_required_files(root)
+
+            self.assertIn("docs/README_PROJECT_LANDING_BLUEPRINT.md", errors)
