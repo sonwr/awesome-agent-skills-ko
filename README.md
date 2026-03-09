@@ -12,7 +12,6 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **빠른 시작 체크포인트 / Quickstart checkpoints** — `docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md`
 - **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
-- **빠른 시작 체크포인트 / Quickstart checkpoints** — `docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md`
 - **랜딩 패널 기준 문서 / Landing panel source** — `docs/README_PROJECT_HOME_PANEL.md`, `docs/README_PROJECT_FAST_INTRO.md`, `docs/README_PROJECT_LANDING_BLUEPRINT.md`
 - **대표 활용 시나리오 설계 / Featured use-case map** — `docs/README_FEATURED_USE_CASES.md`
 - **추천 시작 경로 기준 / Recommended starting-path source** — `docs/README_RECOMMENDED_STARTING_PATHS.md`
@@ -62,7 +61,7 @@ English mirror:
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 English mirror: Project intro, who it helps, immediate value, featured categories, featured examples, and quick start stay visible from the first screen.
 The compact intro source-of-truth lives in `docs/README_PROJECT_FAST_INTRO.md`, with the landing-order blueprint in `docs/README_PROJECT_LANDING_BLUEPRINT.md` and the compact value-to-quickstart handoff in `docs/README_PROJECT_VALUE_STARTERS.md`, so landing rewrites keep the repo purpose, audience, first action, and fast-path bundle (`docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_CLICK_GUIDE.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_FIRST_SCREEN_QUICK_PROOF.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`, `docs/README_FEATURED_USE_CASES.md`, `docs/README_PROJECT_INTRO_PATHS.md`) visible.
-- **저장소 가치 한 줄 / Repo value in one line** — 좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.
+- **저장소 가치 한 줄 / Repo value in one line** — "좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.
 English mirror: this repo is not just a link dump.
 It exists to make execution, validation, and contribution paths visible from the first README screen instead of a vague link dump.
 ## 프로젝트 소개 / Project overview
