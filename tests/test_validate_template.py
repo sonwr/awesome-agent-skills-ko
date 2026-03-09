@@ -2235,6 +2235,55 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 errors,
             )
 
+    def test_validate_template_requires_project_starter_pack_file(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            docs = root / "docs"
+            examples = root / "examples"
+            templates_scripts = root / "templates" / "scripts"
+            docs.mkdir(parents=True, exist_ok=True)
+            examples.mkdir(parents=True, exist_ok=True)
+            templates_scripts.mkdir(parents=True, exist_ok=True)
+
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+            for required in [
+                "CONTRIBUTING.md",
+                "docs/ROADMAP.md",
+                "docs/CURATION_POLICY.md",
+                "docs/TEMPLATE_STANDARD.md",
+                "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+                "docs/README_TOP_CALLOUTS.md",
+                "docs/README_AUDIENCE_VALUE_MAP.md",
+                "docs/README_PROJECT_VALUE_QUICKCHECK.md",
+                "docs/README_PROJECT_INTRO_60S.md",
+                "docs/README_PROJECT_OVERVIEW_FAQ.md",
+                "docs/README_VALUE_PROOF_POINTS.md",
+                "docs/README_LANDING_QUICKSTART_MAP.md",
+                "docs/README_PROJECT_INTRO_BLUEPRINT.md",
+                "docs/README_PROJECT_POSITIONING.md",
+                "docs/README_FIRST_VISITOR_PROMISES.md",
+                "docs/README_FIRST_VISITOR_ROUTES.md",
+                "docs/README_ROLE_STARTERS.md",
+                "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
+                "docs/PROJECT_OVERVIEW.md",
+                "docs/PROJECT_ENTRY_PATHS.md",
+                "docs/PROJECT_DIRECTION.md",
+                "docs/README_INFORMATION_ARCHITECTURE.md",
+                "docs/README_FIRST_SCREEN_CHECKLIST.md",
+                "docs/README_FIRST_SCREEN_SCRIPT.md",
+                "docs/README_FIRST_SCREEN_WIREFRAME.md",
+                "docs/README_USER_JOURNEYS.md",
+                "docs/README_FAST_PATHS.md",
+                "examples/pr-evidence-mini-walkthrough.md",
+                "examples/quickstart.md",
+            ]:
+                (root / required).write_text("ok", encoding="utf-8")
+
+            errors = validate_template._check_required_files(root)
+
+            self.assertIn("docs/README_PROJECT_STARTER_PACK.md", errors)
+
     def test_check_quickstart_validation_command_requires_intro_first_maintenance_loop_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

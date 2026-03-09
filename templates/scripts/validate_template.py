@@ -25,6 +25,7 @@ REQUIRED_FILES = [
     "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_PROJECT_POSITIONING.md",
+    "docs/README_PROJECT_STARTER_PACK.md",
     "docs/README_FIRST_VISITOR_PROMISES.md",
     "docs/README_FIRST_VISITOR_ROUTES.md",
     "docs/README_ROLE_STARTERS.md",
@@ -140,6 +141,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## 첫 화면에서 먼저 약속할 가치 / Value promises to show first",
         "## 먼저 보이고 뒤로 내릴 것 / What stays first vs lower",
         "English mirror:",
+    ],
+    "docs/README_PROJECT_STARTER_PACK.md": [
+        "README 프로젝트 스타터 팩 / README project starter pack",
+        "## 한국어 기준 / Korean-first pack",
+        "## English mirror",
+        "## 유지 규칙 / Maintenance rule",
+        "Project intro",
+        "Quick start",
     ],
     "docs/README_ROLE_STARTERS.md": [
         "README 역할별 시작 지도 / README role-based starters",
