@@ -62,6 +62,17 @@ English mirror:
 
 English mirror: Need a fast route? Explore the intro first, run validation immediately, jump into contribution evidence, or audit the landing structure with the README checklist.
 
+## 프로젝트 첫 화면 약속 / First-screen promises
+
+- **소개 우선 / Intro first** — 상단에서는 프로젝트 설명·대상 사용자·대표 가치·빠른 시작을 먼저 보여주고, 운영 규칙은 아래로 내립니다.
+- **실행 우선 / Action first** — 첫 명령과 다음 문서를 같은 화면에 배치해 처음 방문자도 바로 검증을 시작할 수 있게 합니다.
+- **기여 우선 / Contribution handoff** — 첫 PR 증빙 문서와 체크리스트를 초반에 연결해 기여 진입 비용을 낮춥니다.
+
+English mirror:
+- **Intro first** — the top of the README leads with project meaning, audience, value, and quick start before governance detail.
+- **Action first** — the first command and next document stay on the same screen so newcomers can validate immediately.
+- **Contribution handoff** — the first PR evidence example and checklist stay near the landing block so contribution setup is easy to copy.
+
 ## 프로젝트 한눈에 보기 / Project at a glance
 
 - **누구를 위한 저장소인가요?** 한국어 기본 흐름으로 스킬을 탐색·검증·기여하려는 빌더/팀을 위한 저장소입니다.

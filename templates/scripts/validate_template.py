@@ -277,6 +277,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
     top_intro_window = "\n".join(lines[:80])
     top_project_pitch_window = "\n".join(lines[:20])
+    first_visit_15s_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 첫 방문 15초 선택 / 15-second first-visit chooser"), None)
     if "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음" not in top_project_pitch_window or "curated, practical collection of agent skills and runnable templates" not in top_project_pitch_window:
         errors.append(
             "README.md: the first 20 lines must keep the bilingual project pitch (agent-skill curation + runnable templates) so the landing area opens with project value before governance"
@@ -284,6 +285,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "좋아 보이는 링크 모음" not in top_intro_window or "not just a link dump" not in top_intro_window:
         errors.append(
             "README.md: the first 80 lines must keep the bilingual 'not just a link dump' value proposition so visitors see the repo is project-intro-first, not governance-first"
+        )
+    if first_visit_15s_line is None or first_visit_15s_line > 70:
+        errors.append(
+            "README.md: the 15-second first-visit chooser must appear within the first 70 lines so explore/validate/contribute/audit routes stay visible in the intro-first landing block"
         )
     governance_handoff_window = "\n".join(lines[:40])
     if "운영 문서 위치 / Where governance lives" not in governance_handoff_window or "Governance details live below the landing block" not in governance_handoff_window:

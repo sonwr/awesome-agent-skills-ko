@@ -41,6 +41,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first 28 lines" in error for error in errors))
 
+    def test_readme_requires_15_second_first_visit_chooser_within_first_seventy_lines(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "\n".join([f"line {idx}" for idx in range(1, 72)])
+                + "\n## 첫 방문 15초 선택 / 15-second first-visit chooser\n"
+                + "python3 templates/scripts/validate_template.py\n",
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("15-second first-visit chooser" in error for error in errors))
+
     def test_readme_requires_governance_handoff_cue_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
