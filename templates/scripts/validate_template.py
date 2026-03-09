@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
     "docs/README_TOP_CALLOUTS.md",
     "docs/README_AUDIENCE_VALUE_MAP.md",
+    "docs/README_PROJECT_VALUE_QUICKCHECK.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_PROJECT_OVERVIEW_FAQ.md",
     "docs/README_VALUE_PROOF_POINTS.md",
@@ -334,6 +335,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     audience_quick_recipes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_AUDIENCE_QUICK_RECIPES.md" in line), None)
     first_visitor_promises_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_PROMISES.md" in line), None)
     first_visitor_routes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_ROUTES.md" in line), None)
+    project_value_quickcheck_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_QUICKCHECK.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
@@ -371,6 +373,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if first_visitor_routes_line is None or first_visitor_routes_line > 120:
         errors.append(
             "README.md: first-visitor routes doc link must appear within the first 120 lines so newcomers can choose explore/validate/contribute/audit paths without dropping into governance-heavy sections first"
+        )
+    if project_value_quickcheck_line is None or project_value_quickcheck_line > 120:
+        errors.append(
+            "README.md: project value quick-check doc link must appear within the first 120 lines so the intro/audience/value/examples/quick-start landing contract stays reusable near the top"
         )
 
     top_order_window = "\n".join(lines[:140])
