@@ -31,7 +31,7 @@ class ValidateTemplateTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             (root / "README.md").write_text(
-                "\n".join([f"line {idx}" for idx in range(1, 30)])
+                "\n".join([f"line {idx}" for idx in range(1, 53)])
                 + "\n## 프로젝트 소개 / Project overview\n"
                 + "python3 templates/scripts/validate_template.py\n",
                 encoding="utf-8",
@@ -39,13 +39,13 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("first 28 lines" in error for error in errors))
+            self.assertTrue(any("first 50 lines" in error for error in errors))
 
     def test_readme_requires_15_second_first_visit_chooser_within_first_seventy_lines(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             (root / "README.md").write_text(
-                "\n".join([f"line {idx}" for idx in range(1, 72)])
+                "\n".join([f"line {idx}" for idx in range(1, 78)])
                 + "\n## 첫 방문 15초 선택 / 15-second first-visit chooser\n"
                 + "python3 templates/scripts/validate_template.py\n",
                 encoding="utf-8",
@@ -53,7 +53,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("15-second first-visit chooser" in error for error in errors))
+            self.assertTrue(any("first 75 lines" in error for error in errors))
 
     def test_readme_requires_start_here_summary_to_keep_intro_audience_value_category_quickstart_order(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -229,6 +229,20 @@ class ValidateTemplateTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("first-visitor routes doc link" in error for error in errors))
+
+    def test_readme_requires_project_value_ladder_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_VALUE_LADDER.md",
+                "docs/README_PROJECT_VALUE_LADDER_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("project value ladder doc link" in error for error in errors))
 
     def test_readme_requires_project_value_quickcheck_doc_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

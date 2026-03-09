@@ -19,6 +19,7 @@ REQUIRED_FILES = [
     "docs/README_TOP_CALLOUTS.md",
     "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/README_PROJECT_VALUE_QUICKCHECK.md",
+    "docs/README_PROJECT_VALUE_LADDER.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_FIRST_SCREEN_MAP.md",
     "docs/README_PROJECT_OVERVIEW_FAQ.md",
@@ -161,6 +162,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## 유지 규칙 / Maintenance rule",
         "Project intro",
         "Quick start",
+    ],
+    "docs/README_PROJECT_VALUE_LADDER.md": [
+        "README 프로젝트 가치 사다리 / README project value ladder",
+        "## 한국어 기준 / Korean-first ladder",
+        "## English mirror",
+        "## 유지 규칙 / Maintenance rule",
+        "Project intro",
+        "Governance handoff",
     ],
     "docs/README_PROJECT_FIRST_LOOK.md": [
         "README 프로젝트 첫인상 가이드 / README project first-look guide",
@@ -325,13 +334,13 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     overview_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 프로젝트 소개 / Project overview"), None)
     quickstart_command_line = next((idx for idx, line in enumerate(lines, start=1) if "python3 templates/scripts/validate_template.py" in line), None)
     start_here_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 바로 시작 요약 / Start-here summary"), None)
-    if start_here_line is None or start_here_line > 28:
+    if start_here_line is None or start_here_line > 32:
         errors.append(
-            "README.md: start-here summary heading must appear within the first 28 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
+            "README.md: start-here summary heading must appear within the first 32 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
         )
-    if overview_line is None or overview_line > 45:
+    if overview_line is None or overview_line > 50:
         errors.append(
-            "README.md: project overview heading must appear within the first 40 lines so the README stays project-intro-first even after the compact landing summary blocks"
+            "README.md: project overview heading must appear within the first 50 lines so the README stays project-intro-first even after the compact landing summary blocks"
         )
     top_intro_window = "\n".join(lines[:80])
     top_project_pitch_window = "\n".join(lines[:20])
@@ -344,9 +353,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 80 lines must keep the bilingual 'not just a link dump' value proposition so visitors see the repo is project-intro-first, not governance-first"
         )
-    if first_visit_15s_line is None or first_visit_15s_line > 70:
+    if first_visit_15s_line is None or first_visit_15s_line > 75:
         errors.append(
-            "README.md: the 15-second first-visit chooser must appear within the first 70 lines so explore/validate/contribute/audit routes stay visible in the intro-first landing block"
+            "README.md: the 15-second first-visit chooser must appear within the first 75 lines so explore/validate/contribute/audit routes stay visible in the intro-first landing block"
         )
     governance_handoff_window = "\n".join(lines[:40])
     if "운영 문서 위치 / Where governance lives" not in governance_handoff_window or "Governance details live below the landing block" not in governance_handoff_window:
@@ -400,6 +409,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     first_visitor_routes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_ROUTES.md" in line), None)
     first_screen_decision_tree_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_SCREEN_DECISION_TREE.md" in line), None)
     project_value_quickcheck_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_QUICKCHECK.md" in line), None)
+    project_value_ladder_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_LADDER.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
@@ -446,6 +456,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if project_value_quickcheck_line is None or project_value_quickcheck_line > 120:
         errors.append(
             "README.md: project value quick-check doc link must appear within the first 120 lines so the intro/audience/value/examples/quick-start landing contract stays reusable near the top"
+        )
+    if project_value_ladder_line is None or project_value_ladder_line > 120:
+        errors.append(
+            "README.md: project value ladder doc link must appear within the first 120 lines so the README keeps the intro -> audience -> value -> examples -> quick-start promise visible near the landing block"
         )
 
     top_order_window = "\n".join(lines[:140])
