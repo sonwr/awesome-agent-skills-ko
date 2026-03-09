@@ -2650,6 +2650,22 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 errors,
             )
 
+    def test_validate_template_requires_audience_quick_recipes_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            for rel_path in validate_template.REQUIRED_FILES:
+                path = root / rel_path
+                path.parent.mkdir(parents=True, exist_ok=True)
+                source = Path(__file__).resolve().parents[1] / rel_path
+                path.write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+
+            readme = (root / "README.md").read_text(encoding="utf-8").replace("docs/README_AUDIENCE_QUICK_RECIPES.md", "docs/MISSING_AUDIENCE_QUICK_RECIPES.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("audience quick-recipes doc link" in error for error in errors))
+
     def test_validate_template_requires_project_landing_blueprint_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

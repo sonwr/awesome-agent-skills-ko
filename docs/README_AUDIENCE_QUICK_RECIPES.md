@@ -36,3 +36,14 @@ English mirror: Short recipes for keeping the README intro-first while still giv
 - Read first: `Project start map` -> `Core start buttons`
 - First action: `docs/README_FIRST_SCREEN_CHECKLIST.md` -> `docs/README_AUDIENCE_VALUE_MAP.md`
 - Check: "Does the README still preserve overview -> audience -> value -> examples -> quick start order?"
+
+## 프로젝트 소개 3줄에 맞춘 빠른 레시피 / Quick recipes aligned to the intro-first landing
+
+- **탐색형 / Explorer** — `README` 상단 3줄 → `docs/README_PROJECT_FAST_INTRO.md` → `examples/quickstart.md`
+- **기여형 / Contributor** — `python3 templates/scripts/validate_template.py` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
+- **운영형 / Operator** — `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FAST_PATHS.md` → `docs/CURATION_POLICY.md`
+
+English mirror:
+- **Explorer** — use the README top 3-line intro, then open `docs/README_PROJECT_FAST_INTRO.md` and `examples/quickstart.md`.
+- **Contributor** — run `python3 templates/scripts/validate_template.py`, then continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md`.
+- **Operator** — audit `docs/README_FIRST_SCREEN_CHECKLIST.md`, then continue with `docs/README_FAST_PATHS.md` and `docs/CURATION_POLICY.md`.
