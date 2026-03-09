@@ -53,6 +53,13 @@ class ValidateTemplateTests(unittest.TestCase):
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_HOME_PANEL.md"],
         )
 
+    def test_required_files_include_project_first_screen_overview_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 첫 화면 개요 / README first-screen project overview",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md"],
+        )
+
     def test_required_files_include_project_start_here_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_START_HERE.md", validate_template.REQUIRED_FILES)
         self.assertIn(
@@ -487,6 +494,20 @@ class ValidateTemplateTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("first-visitor promises doc link" in error for error in errors))
+
+    def test_readme_requires_project_first_screen_overview_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md",
+                "docs/README_PROJECT_FIRST_SCREEN_OVERVIEW_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("project first-screen overview doc link" in error for error in errors))
 
     def test_readme_requires_first_visitor_routes_doc_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
