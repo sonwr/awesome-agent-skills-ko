@@ -267,6 +267,22 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first action matrix link" in error for error in errors))
 
+
+    def test_readme_rejects_replacement_characters_in_three_step_bullet(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "- **3단계 / Step 3**",
+                "- **3단�� / Step 3**",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("replacement characters" in error for error in errors))
+
     def test_readme_requires_project_entry_promise_doc_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

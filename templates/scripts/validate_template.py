@@ -40,6 +40,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_ONE_MINUTE_VALUE.md",
     "docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md",
     "docs/README_PROJECT_FIRST_LOOK.md",
+    "docs/README_PROJECT_INTRO_QUICKSTART_CARD.md",
     "docs/README_PROJECT_VALUE_STARTERS.md",
     "docs/README_PROJECT_INTRO_SCORECARD.md",
     "docs/README_AUDIENCE_QUICK_RECIPES.md",
@@ -275,6 +276,14 @@ BILINGUAL_SECTION_MARKERS = {
         "python3 templates/scripts/validate_template.py",
         "examples/quickstart.md",
     ],
+    "docs/README_PROJECT_INTRO_QUICKSTART_CARD.md": [
+        "README 프로젝트 소개-빠른시작 카드 / README project intro-to-quickstart card",
+        "## 한국어 기준 / Korean-first card",
+        "## English mirror",
+        "## 유지 규칙 / Maintenance rule",
+        "project intro -> audience -> value",
+        "python3 templates/scripts/validate_template.py",
+    ],
     "docs/README_PROJECT_FIRST_LOOK.md": [
         "README 프로젝트 첫인상 가이드 / README project first-look guide",
         "## 한국어 기준 / Korean-first guide",
@@ -470,7 +479,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: project overview heading must appear within the first 50 lines so the README stays project-intro-first even after the compact landing summary blocks"
         )
-    top_intro_window = "\n".join(lines[:80])
+    top_intro_window = "\n".join(lines[:320])
     top_project_pitch_window = "\n".join(lines[:20])
     jump_list_window = "\n".join(lines[:40])
     if "## 첫 화면 바로가기 / First-screen jump list" not in jump_list_window or "Governance lives lower" not in jump_list_window:
@@ -488,7 +497,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
     if "�" in top_intro_window:
         errors.append(
-            "README.md: the first 80 lines must not contain replacement characters (�) so the intro-first landing copy stays readable and trustworthy"
+            "README.md: the first 320 lines must not contain replacement characters (�) so the intro-first landing copy stays readable and trustworthy"
         )
     if first_visit_15s_line is None or first_visit_15s_line > 180:
         errors.append(
