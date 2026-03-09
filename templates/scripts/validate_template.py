@@ -352,6 +352,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     top_summary_markers = [
         "프로젝트 소개 / Project intro",
         "대상 사용자 / Who it helps",
+        "대표 가치 / Immediate value",
         "대표 카테고리 / Featured categories",
         "빠른 시작 / Quick start",
     ]
@@ -360,6 +361,19 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 80 lines must keep the start-here summary markers for intro/audience/featured-categories/quick-start -> "
             + ", ".join(missing_top_summary_markers)
+        )
+    start_here_section = _extract_section(text, "바로 시작 요약 / Start-here summary")
+    summary_order_markers = [
+        "프로젝트 소개 / Project intro",
+        "대상 사용자 / Who it helps",
+        "대표 가치 / Immediate value",
+        "대표 카테고리 / Featured categories",
+        "빠른 시작 / Quick start",
+    ]
+    summary_order_positions = [start_here_section.find(marker) for marker in summary_order_markers]
+    if all(position != -1 for position in summary_order_positions) and summary_order_positions != sorted(summary_order_positions):
+        errors.append(
+            "README.md: the start-here summary must keep intro -> audience -> immediate value -> featured categories -> quick start order inside the Start-here summary block"
         )
     quick_fit_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 빠른 적합성 체크 / Quick fit check"), None)
     if quick_fit_line is None or quick_fit_line > 110:
