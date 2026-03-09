@@ -9,6 +9,7 @@
 - **대표 시작 예시 / Featured examples** — 검증 시작 `examples/quickstart.md`, 첫 PR 증빙 `examples/pr-evidence-mini-walkthrough.md`, 랜딩 점검 `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **대표 예시 경로 지도 / Featured example paths** — `docs/README_FEATURED_EXAMPLE_PATHS.md`
 - **프로젝트 스타터 팩 / Project starter pack** — `docs/README_PROJECT_STARTER_PACK.md`
+- **프로젝트 소개→빠른 시작 흐름 / Project intro -> quick-start flow** — `docs/README_PROJECT_QUICKSTART_FLOW.md`
 - **첫 행동 매트릭스 / First action matrix** — `docs/README_FIRST_ACTION_MATRIX.md`
 - **첫 방문 스타터 팩 / First-visit starter pack** — `docs/README_FIRST_VISIT_PACK.md`
 - **첫 방문 FAQ / First-visit FAQ** — `docs/README_PROJECT_OVERVIEW_FAQ.md`
@@ -16,7 +17,6 @@
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders. Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 ## 첫 화면 핵심 3줄 / First-screen in 3 lines
-
 - **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
 - **누가 먼저 보면 좋은가? / Who should start here?** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **지금 바로 무엇을 하면 되나? / What should I do now?** `python3 templates/scripts/validate_template.py` 실행 → `examples/quickstart.md` 열기 → 첫 PR이면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 이동합니다.
@@ -31,7 +31,7 @@ English mirror:
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
 - **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
-- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`
+- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`
 - **가치 증명 포인트 / Value proof points** — `docs/README_VALUE_PROOF_POINTS.md`
 - **프로젝트 가치 퀵체크 / Project value quick-check** — `docs/README_PROJECT_VALUE_QUICKCHECK.md`
 - **대표 카테고리 맵 / Featured category map** — `docs/README_FEATURED_CATEGORY_MAP.md`
@@ -40,7 +40,7 @@ English mirror:
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **다음 열 문서 / Open next** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
-English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, the project overview FAQ, positioning/maintenance docs, the starter-pack summary, persona quickstart cues, the first-action matrix, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
+English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, the project overview FAQ, positioning/maintenance docs, the starter-pack summary, the intro-to-quick-start flow note, persona quickstart cues, the first-action matrix, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
 ## 프로젝트 소개 / Project overview
 
 이 저장소는 **한국어 기반 빌더를 위한 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
@@ -66,7 +66,6 @@ English mirror:
 - **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
 - **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
 - **Where are the contribution rules?** Continue below the landing area into `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `CONTRIBUTING.md`.
-
 ## 첫 방문 15초 선택 / 15-second first-visit chooser
 
 - **탐색부터 / Explore first** — 프로젝트 소개와 대상 사용자를 빠르게 파악하려면 `프로젝트 소개 / Project overview` → `프로젝트 한눈에 보기 / Project at a glance`
