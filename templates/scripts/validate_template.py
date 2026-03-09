@@ -194,6 +194,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: project overview heading must appear within the first 12 lines so the README stays project-intro-first"
         )
+    top_intro_window = "\n".join(lines[:80])
+    if "좋아 보이는 링크 모음" not in top_intro_window or "not just a link dump" not in top_intro_window:
+        errors.append(
+            "README.md: the first 80 lines must keep the bilingual 'not just a link dump' value proposition so visitors see the repo is project-intro-first, not governance-first"
+        )
     if quickstart_command_line is None or quickstart_command_line > 160:
         errors.append(
             "README.md: first validation command must appear within the first 160 lines so visitors can act from the landing screen without deep scrolling"

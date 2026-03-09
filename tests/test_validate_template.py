@@ -24,6 +24,23 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first 12 lines" in error for error in errors))
 
+    def test_readme_requires_bilingual_not_just_a_link_dump_value_prop_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                '좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.\n',
+                '',
+            ).replace(
+                'instead of a vague link dump.\n',
+                '',
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("not just a link dump" in error for error in errors))
+
     def test_readme_requires_ten_second_start_chooser_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

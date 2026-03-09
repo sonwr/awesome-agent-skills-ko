@@ -7,9 +7,7 @@
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 스킬을 탐색·검증·기여하려는 개인/팀
 - **바로 얻는 가치 / Immediate value** — 첫 화면에서 프로젝트 소개, 대표 카테고리, 첫 검증 명령, 다음 문서를 곧바로 찾을 수 있음
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
-
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
-
 ## 프로젝트 소개 / Project overview
 
 이 저장소는 **한국어 기반 빌더를 위한 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
@@ -22,7 +20,7 @@ English mirror:
 A curated collection of agent skills and runnable templates for Korean-speaking builders, with Korean-first docs and practical English mirrors.
 
 - What does it do? It curates validation-ready skills/templates and keeps Korean-first docs plus practical English mirrors together.
-- Why does it matter? It gives teams an intro-first landing page that leads directly to runnable, reviewable building blocks instead of a vague link dump.
+- Why does it matter? It gives teams an intro-first landing page that leads directly to runnable, reviewable building blocks — not just a link dump.
 - What is the landing rule? Put overview -> audience -> value -> examples/quick start first, and move governance details lower.
 
 ## 프로젝트 한눈에 보기 / Project at a glance
