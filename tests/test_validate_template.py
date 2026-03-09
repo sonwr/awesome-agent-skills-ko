@@ -23,6 +23,13 @@ class ValidateTemplateTests(unittest.TestCase):
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_START_HERE.md"],
         )
 
+    def test_required_files_include_project_quickstart_bundle_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_QUICKSTART_BUNDLE.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 빠른 시작 번들 / README project quickstart bundle",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_QUICKSTART_BUNDLE.md"],
+        )
+
     def test_readme_rejects_replacement_characters_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -189,6 +196,21 @@ class ValidateTemplateTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("README_PROJECT_QUICKSTART_FLOW.md" in error for error in errors))
+
+    def test_readme_requires_project_quickstart_bundle_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_QUICKSTART_BUNDLE.md",
+                "docs/README_PROJECT_QUICKSTART_BUNDLE_REMOVED.md",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("README_PROJECT_QUICKSTART_BUNDLE.md" in error for error in errors))
 
     def test_readme_requires_project_intro_paths_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

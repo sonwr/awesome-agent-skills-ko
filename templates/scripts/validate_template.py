@@ -24,6 +24,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_LANDING_BLUEPRINT.md",
     "docs/README_PROJECT_HOME_PANEL.md",
     "docs/README_PROJECT_START_HERE.md",
+    "docs/README_PROJECT_QUICKSTART_BUNDLE.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_FIRST_SCREEN_MAP.md",
     "docs/README_PROJECT_OVERVIEW_FAQ.md",
@@ -209,6 +210,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "Project intro",
         "Quick start",
+    ],
+    "docs/README_PROJECT_QUICKSTART_BUNDLE.md": [
+        "README 프로젝트 빠른 시작 번들 / README project quickstart bundle",
+        "## 한국어 기준 / Korean-first bundle",
+        "### 첫 검증 묶음 / First validation bundle",
+        "## English mirror",
+        "First command",
+        "First PR evidence",
     ],
     "docs/README_PROJECT_FIRST_LOOK.md": [
         "README 프로젝트 첫인상 가이드 / README project first-look guide",
@@ -1029,6 +1038,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_PROJECT_QUICKSTART_FLOW.md" not in "\n".join(lines[:100]):
         errors.append(
             "README.md: the first 100 lines must link docs/README_PROJECT_QUICKSTART_FLOW.md so project overview -> audience -> value -> featured examples -> quick-start flow stays visible during README landing rewrites"
+        )
+    if "docs/README_PROJECT_QUICKSTART_BUNDLE.md" not in "\n".join(lines[:80]):
+        errors.append(
+            "README.md: the first 80 lines must link docs/README_PROJECT_QUICKSTART_BUNDLE.md so the first command -> next doc -> first PR evidence bundle stays visible near the intro-first landing block"
         )
     if "docs/README_PROJECT_ENTRY_PROMISE.md" not in "\n".join(lines[:90]):
         errors.append(

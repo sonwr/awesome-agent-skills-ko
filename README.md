@@ -10,6 +10,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **대표 카테고리 / Featured categories** — 온보딩, PR 증빙, 큐레이션/운영 기준
 - **대표 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+- **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
 - **랜딩 패널 기준 문서 / Landing panel source** — `docs/README_PROJECT_HOME_PANEL.md`, `docs/README_PROJECT_FAST_INTRO.md`, `docs/README_PROJECT_LANDING_BLUEPRINT.md`
 - **대표 활용 시나리오 설계 / Featured use-case map** — `docs/README_FEATURED_USE_CASES.md`
 - **추천 시작 경로 기준 / Recommended starting-path source** — `docs/README_RECOMMENDED_STARTING_PATHS.md`
