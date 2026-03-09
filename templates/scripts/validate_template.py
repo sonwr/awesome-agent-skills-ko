@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
     "docs/README_TOP_CALLOUTS.md",
     "docs/README_AUDIENCE_VALUE_MAP.md",
+    "docs/README_VALUE_PROOF_POINTS.md",
     "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_PROJECT_POSITIONING.md",
@@ -190,6 +191,15 @@ BILINGUAL_SECTION_MARKERS = {
         "One-line rule",
         "Contributors",
         "Operators",
+    ],
+    "docs/README_VALUE_PROOF_POINTS.md": [
+        "README 가치 증명 포인트 / README value proof points",
+        "## 한국어 기준 / Korean-first proof points",
+        "## English mirror",
+        "One-line project value",
+        "Immediate audience benefit",
+        "Runnable promise",
+        "Governance later",
     ],
     "docs/README_LANDING_QUICKSTART_MAP.md": [
         "README 랜딩 빠른 시작 맵 / README landing quick-start map",
@@ -733,6 +743,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_PROJECT_VALUE_QUICKSTART.md" not in text:
         errors.append(
             "README.md: landing summary must link to docs/README_PROJECT_VALUE_QUICKSTART.md so contributors can keep the intro/audience/value/quick-start one-pager nearby"
+        )
+    if "docs/README_VALUE_PROOF_POINTS.md" not in text:
+        errors.append(
+            "README.md: landing summary must link to docs/README_VALUE_PROOF_POINTS.md so the project value proof points stay reusable near the intro-first block"
         )
     if "## 빠른 시작 / Quick start" not in text:
         errors.append(
