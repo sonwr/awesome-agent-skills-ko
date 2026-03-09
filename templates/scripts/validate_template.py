@@ -237,6 +237,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 80 lines must keep the bilingual 'not just a link dump' value proposition so visitors see the repo is project-intro-first, not governance-first"
         )
+    governance_handoff_window = "\n".join(lines[:40])
+    if "운영 문서 위치 / Where governance lives" not in governance_handoff_window or "Governance details live below the landing block" not in governance_handoff_window:
+        errors.append(
+            "README.md: the first 40 lines must keep a bilingual governance-handoff cue so contribution/operations docs stay explicitly below the intro-first landing block"
+        )
     top_summary_markers = [
         "프로젝트 소개 / Project intro",
         "대상 사용자 / Who it helps",

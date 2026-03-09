@@ -7,7 +7,8 @@
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 스킬을 탐색·검증·기여하려는 개인/팀
 - **바로 얻는 가치 / Immediate value** — 첫 화면에서 프로젝트 소개, 대표 카테고리, 첫 검증 명령, 다음 문서를 곧바로 찾을 수 있음
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
-English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
+- **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
+English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders. Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 
 ## 바로 시작 요약 / Start-here summary
 
