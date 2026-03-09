@@ -24,6 +24,14 @@ class ValidateTemplateTests(unittest.TestCase):
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_FIRST_SCREEN_JUMP_LIST.md"],
         )
 
+
+    def test_required_files_include_project_one_minute_value_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_ONE_MINUTE_VALUE.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 1분 가치 카드 / README project one-minute value card",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_ONE_MINUTE_VALUE.md"],
+        )
+
     def test_required_files_include_project_one_screen_start_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_ONE_SCREEN_START.md", validate_template.REQUIRED_FILES)
         self.assertIn(
@@ -140,10 +148,12 @@ class ValidateTemplateTests(unittest.TestCase):
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
                 """- **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
+- **1분 가치 카드 / One-minute value card** — `docs/README_PROJECT_ONE_MINUTE_VALUE.md`
 - **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
 """,
                 """- **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
+- **1분 가치 카드 / One-minute value card** — `docs/README_PROJECT_ONE_MINUTE_VALUE.md`
 """,
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
@@ -166,6 +176,21 @@ class ValidateTemplateTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("recommended starting paths" in error for error in errors))
+
+
+    def test_readme_requires_project_one_minute_value_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_ONE_MINUTE_VALUE.md",
+                "docs/README_PROJECT_ONE_MINUTE_VALUE_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("one-minute value card doc link" in error for error in errors))
 
     def test_readme_requires_first_minute_outcome_section_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

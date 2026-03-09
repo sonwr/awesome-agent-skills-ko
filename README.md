@@ -24,10 +24,11 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **원스크린 스타트 / One-screen start** — `docs/README_PROJECT_ONE_SCREEN_START.md`
 - **첫 화면 빠른 증명 / First-screen quick proof** — `docs/README_FIRST_SCREEN_QUICK_PROOF.md`
 - **첫 1분 결과 카드 / First-minute outcomes card** — `docs/README_FIRST_MINUTE_OUTCOMES.md`
+- **1분 가치 카드 / One-minute value card** — `docs/README_PROJECT_ONE_MINUTE_VALUE.md`
 - **첫 화면 프로젝트 개요 / First-screen project overview** — `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
-The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`, a compact start-here card in `docs/README_PROJECT_START_HERE.md`, the one-screen landing panel source in `docs/README_PROJECT_HOME_PANEL.md`, and a reusable landing audit in `docs/README_PROJECT_INTRO_SCORECARD.md`.
+The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`, a compact start-here card in `docs/README_PROJECT_START_HERE.md`, the one-screen landing panel source in `docs/README_PROJECT_HOME_PANEL.md`, a one-minute value card in `docs/README_PROJECT_ONE_MINUTE_VALUE.md`, and a reusable landing audit in `docs/README_PROJECT_INTRO_SCORECARD.md`.
 Contributor operations live separately in `docs/CONTRIBUTOR_OPERATIONS.md` so the landing block can stay project-first.
 ## 첫 화면 바로가기 / First-screen jump list
 - **프로젝트 소개 먼저 보기 / Read the project intro first** — `## 프로젝트 소개 / Project overview`
@@ -52,6 +53,7 @@ English mirror:
 - **프로젝트 소개 / Project intro** — 한국어 기본 큐레이션 저장소이며, README 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
+- **1분 가치 카드 / One-minute value card** — `docs/README_PROJECT_ONE_MINUTE_VALUE.md`
 - **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **프로젝트 시작 맵 / Project start map** — `docs/README_PROJECT_START_MAP.md`

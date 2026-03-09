@@ -36,6 +36,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_POSITIONING.md",
     "docs/README_PROJECT_STARTER_PACK.md",
     "docs/README_PROJECT_START_MAP.md",
+    "docs/README_PROJECT_ONE_MINUTE_VALUE.md",
     "docs/README_PROJECT_FIRST_LOOK.md",
     "docs/README_PROJECT_VALUE_STARTERS.md",
     "docs/README_PROJECT_INTRO_SCORECARD.md",
@@ -185,6 +186,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## 유지 규칙 / Maintenance rule",
         "Project intro",
         "Quick start",
+    ],
+    "docs/README_PROJECT_ONE_MINUTE_VALUE.md": [
+        "README 프로젝트 1분 가치 카드 / README project one-minute value card",
+        "## 한국어 기준 / Korean-first card",
+        "## English mirror",
+        "## 유지 규칙 / Maintenance rule",
+        "Project intro",
+        "Governance handoff",
     ],
     "docs/README_PROJECT_START_MAP.md": [
         "README 프로젝트 시작 맵 / README project start map",
@@ -525,6 +534,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     project_value_quickcheck_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_QUICKCHECK.md" in line), None)
     project_value_ladder_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_LADDER.md" in line), None)
     intro_scorecard_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_INTRO_SCORECARD.md" in line), None)
+    one_minute_value_doc_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_ONE_MINUTE_VALUE.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
@@ -646,6 +656,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if intro_scorecard_line is None or intro_scorecard_line > 120:
         errors.append(
             "README.md: intro-first scorecard doc link must appear within the first 120 lines so README redesign work keeps a reusable project-intro-first audit near the landing block"
+        )
+    if one_minute_value_doc_line is None or one_minute_value_doc_line > 120:
+        errors.append(
+            "README.md: one-minute value card doc link must appear within the first 120 lines so the landing block preserves a reusable intro/audience/value/examples/quick-start summary before governance-heavy sections"
         )
 
     top_order_window = "\n".join(lines[:140])
