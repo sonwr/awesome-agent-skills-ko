@@ -311,7 +311,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: start-here summary heading must appear within the first 28 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
         )
-    if overview_line is None or overview_line > 40:
+    if overview_line is None or overview_line > 45:
         errors.append(
             "README.md: project overview heading must appear within the first 40 lines so the README stays project-intro-first even after the compact landing summary blocks"
         )
@@ -334,6 +334,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "운영 문서 위치 / Where governance lives" not in governance_handoff_window or "Governance details live below the landing block" not in governance_handoff_window:
         errors.append(
             "README.md: the first 40 lines must keep a bilingual governance-handoff cue so contribution/operations docs stay explicitly below the intro-first landing block"
+        )
+    first_action_matrix_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_ACTION_MATRIX.md" in line), None)
+    if first_action_matrix_line is None or first_action_matrix_line > 45:
+        errors.append(
+            "README.md: first action matrix link must appear within the first 45 lines so newcomers can pick the best first click without dropping into governance-heavy sections"
         )
     top_summary_markers = [
         "프로젝트 소개 / Project intro",
@@ -367,9 +372,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
         )
     featured_use_cases_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 대표 활용 시나리오 / Featured use cases"), None)
-    if featured_use_cases_line is None or featured_use_cases_line > 110:
+    if featured_use_cases_line is None or featured_use_cases_line > 115:
         errors.append(
-            "README.md: featured use cases must appear within the first 110 lines so intro-first visitors see representative onboarding / contribution / governance scenarios before deeper navigation"
+            "README.md: featured use cases must appear within the first 115 lines so intro-first visitors see representative onboarding / contribution / governance scenarios before deeper navigation"
         )
     three_line_heading = "## 첫 화면 핵심 3줄 / First-screen in 3 lines"
     three_line_section_heading = "첫 화면 핵심 3줄 / First-screen in 3 lines"
@@ -567,9 +572,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: landing section must include a bilingual 1-minute quick start block with validation, next-doc, and contributing-guide handoff cues"
         )
     featured_examples_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 대표 시작 예시 / Featured starter examples"), None)
-    if featured_examples_line is None or featured_examples_line > 260:
+    if featured_examples_line is None or featured_examples_line > 265:
         errors.append(
-            "README.md: featured starter examples must appear within the first 260 lines so intro-first readers see runnable examples before deep governance details"
+            "README.md: featured starter examples must appear within the first 265 lines so intro-first readers see runnable examples before deep governance details"
         )
     featured_examples_section = _extract_section(text, "대표 시작 예시 / Featured starter examples")
     required_featured_example_markers = [
@@ -959,11 +964,12 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
 
     ordered_sections = [
         "## 프로젝트 소개 / Project overview",
+        "## 처음 방문 FAQ / First-time visitor FAQ",
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 빠른 적합성 체크 / Quick fit check",
+        "## 대표 활용 시나리오 / Featured use cases",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
-        "## 처음 방문 FAQ / First-time visitor FAQ",
         "## 10초 시작 선택 / 10-second start chooser",
         "## 프로젝트 시작 맵 / Project start map",
         "## 핵심 시작 버튼 / Core start buttons",
@@ -971,7 +977,6 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 제공 가치 / What you get",
         "## 대표 시작 예시 / Featured starter examples",
         "## 대표 카테고리와 예시 / Featured categories and examples",
-        "## 대표 활용 시나리오 / Featured use cases",
         "## 빠른 시작 한눈에 보기 / Quick start at a glance",
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
@@ -995,7 +1000,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         only_positions = [idx for _, idx in positions]
         if only_positions != sorted(only_positions):
             errors.append(
-                "README.md: landing-page sections must stay in order overview -> snapshot -> audience -> value -> featured categories -> featured use cases -> quick-start-at-a-glance -> 3-step-start -> first-visit-chooser -> 30-second-fit-check -> best-fit/not-for scenarios -> category-jump-links -> role-based entry sections -> quick start (with the first-time visitor FAQ preserved between overview and snapshot)"
+                "README.md: landing-page sections must stay in order overview -> first-time visitor FAQ -> at-a-glance -> fit check -> featured use cases -> how-to-read -> snapshot -> audience -> value -> starter examples -> featured categories -> quick-start-at-a-glance -> 3-step-start -> first-visit-chooser -> 30-second-fit-check -> best-fit/not-for scenarios -> category-jump-links -> role-based entry sections -> quick start"
             )
 
     top_callout_idx = text.find("## 상단 핵심 콜아웃 / Top contributor callouts")

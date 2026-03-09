@@ -9,6 +9,7 @@
 - **대표 시작 예시 / Featured examples** — 검증 시작 `examples/quickstart.md`, 첫 PR 증빙 `examples/pr-evidence-mini-walkthrough.md`, 랜딩 점검 `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **대표 예시 경로 지도 / Featured example paths** — `docs/README_FEATURED_EXAMPLE_PATHS.md`
 - **프로젝트 스타터 팩 / Project starter pack** — `docs/README_PROJECT_STARTER_PACK.md`
+- **첫 행동 매트릭스 / First action matrix** — `docs/README_FIRST_ACTION_MATRIX.md`
 - **첫 방문 스타터 팩 / First-visit starter pack** — `docs/README_FIRST_VISIT_PACK.md`
 - **첫 방문 FAQ / First-visit FAQ** — `docs/README_PROJECT_OVERVIEW_FAQ.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
@@ -54,6 +55,17 @@ A curated collection of agent skills and runnable templates for Korean-speaking 
 - What does it do? It curates validation-ready skills/templates and keeps Korean-first docs plus practical English mirrors together.
 - Why does it matter? It gives teams an intro-first landing page that leads directly to runnable, reviewable building blocks — not just a link dump.
 - What is the landing rule? Put overview -> audience -> value -> examples/quick start first, and move governance details lower.
+
+## 처음 방문 FAQ / First-time visitor FAQ
+
+- **이 저장소는 링크 모음인가요? / Is this just a link list?** 아니요. README 첫 화면에서 프로젝트 소개, 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로까지 바로 찾게 만드는 한국어 기본 큐레이션 저장소입니다.
+- **처음에 뭘 해야 하나요? / What should I do first?** `python3 templates/scripts/validate_template.py`를 실행한 뒤 `examples/quickstart.md`로 이어가면 됩니다.
+- **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `CONTRIBUTING.md`로 이어집니다.
+
+English mirror:
+- **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
+- **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
+- **Where are the contribution rules?** Continue below the landing area into `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `CONTRIBUTING.md`.
 
 ## 첫 방문 15초 선택 / 15-second first-visit chooser
 
@@ -167,17 +179,6 @@ English mirror:
 - **Value flow on the first screen**: overview -> audience -> value -> featured categories -> quick start.
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
 - **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`
-
-## 처음 방문 FAQ / First-time visitor FAQ
-
-- **이 저장소는 링크 모음인가요? / Is this just a link list?** 아니요. README 첫 화면에서 프로젝트 소개, 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로까지 바로 찾게 만드는 한국어 기본 큐레이션 저장소입니다.
-- **처음에 뭘 해야 하나요? / What should I do first?** `python3 templates/scripts/validate_template.py`를 실행한 뒤 `examples/quickstart.md`로 이어가면 됩니다.
-- **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `CONTRIBUTING.md`로 이어집니다.
-
-English mirror:
-- **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
-- **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
-- **Where are the contribution rules?** Continue below the landing area into `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `CONTRIBUTING.md`.
 
 ## 10초 시작 선택 / 10-second start chooser
 
