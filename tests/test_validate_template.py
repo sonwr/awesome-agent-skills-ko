@@ -2150,3 +2150,18 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
             self.assertTrue(any("docs/README_FIRST_SCREEN_WIREFRAME.md" in error and "What moves lower" in error for error in errors))
             self.assertTrue(any("docs/README_FIRST_SCREEN_WIREFRAME.md" in error and "Maintenance prompts" in error for error in errors))
 
+
+
+    def test_readme_requires_featured_category_map_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace(
+                "docs/README_FEATURED_CATEGORY_MAP.md",
+                "docs/MISSING_FEATURED_CATEGORY_MAP.md",
+                1,
+            )
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("docs/README_FEATURED_CATEGORY_MAP.md" in error for error in errors))

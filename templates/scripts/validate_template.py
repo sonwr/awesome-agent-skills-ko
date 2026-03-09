@@ -804,6 +804,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: first 5-minute contribution flow must include time-boxed Korean/English steps"
         )
+    if "docs/README_FEATURED_CATEGORY_MAP.md" not in "\n".join(lines[:140]):
+        errors.append(
+            "README.md: the first 140 lines must link docs/README_FEATURED_CATEGORY_MAP.md so featured categories stay reusable near the intro-first landing block"
+        )
+
     if "docs/README_AUDIENCE_VALUE_MAP.md" not in text:
         errors.append(
             "README.md: landing or learn-more sections must link to docs/README_AUDIENCE_VALUE_MAP.md so audience/value-first messaging stays reusable"

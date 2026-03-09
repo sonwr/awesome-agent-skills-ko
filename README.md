@@ -30,6 +30,7 @@ English mirror:
 - **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
 - **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`
 - **가치 증명 포인트 / Value proof points** — `docs/README_VALUE_PROOF_POINTS.md`
+- **대표 카테고리 맵 / Featured category map** — `docs/README_FEATURED_CATEGORY_MAP.md`
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **다음 열 문서 / Open next** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
