@@ -259,6 +259,7 @@ English mirror:
 ## 대표 시작 예시 / Featured starter examples
 
 - **소개 60초 요약 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
+- **프로젝트 소개 FAQ / Project overview FAQ** — `docs/README_PROJECT_OVERVIEW_FAQ.md`에서 첫 방문자가 자주 묻는 소개/대상 사용자/빠른 시작 질문을 바로 확인합니다.
 - **검증부터 시작 / Start with validation** — `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 바로 이동합니다.
 - **기여 준비 / Prepare a contribution** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 PR 최소 증빙 형식을 바로 복사합니다.
 - **운영 점검 / Audit the landing flow** — `docs/README_FAST_PATHS.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`를 열어 README 소개 우선 구조가 유지되는지 확인합니다.
@@ -266,6 +267,7 @@ English mirror:
 - **프로젝트 소개 우선 유지 / Keep the intro-first landing** — `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_AUDIENCE_VALUE_MAP.md`를 함께 열어 대표 예시가 소개/가치/빠른 시작 뒤에 붙어 있는지 확인합니다.
 
 English mirror:
+- **Project overview FAQ** — open `docs/README_PROJECT_OVERVIEW_FAQ.md` for first-visit answers about the intro, audience, and quick-start path.
 - **Start with validation** — run `python3 templates/scripts/validate_template.py`, then jump straight to `examples/quickstart.md`.
 - **Prepare a contribution** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum PR evidence format.
 - **Audit the landing flow** — open `docs/README_FAST_PATHS.md` and `docs/README_FIRST_SCREEN_CHECKLIST.md` to verify that the README stays intro-first.

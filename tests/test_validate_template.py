@@ -355,8 +355,8 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                "English mirror:\n- **Start with validation**",
-                "English mirror removed:\n- **Start with validation**",
+                "English mirror:\n- **Project overview FAQ**",
+                "English mirror removed:\n- **Project overview FAQ**",
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
 
