@@ -40,6 +40,19 @@ A curated collection of agent skills and runnable templates for Korean-speaking 
 - Why does it matter? It gives teams an intro-first landing page that leads directly to runnable, reviewable building blocks — not just a link dump.
 - What is the landing rule? Put overview -> audience -> value -> examples/quick start first, and move governance details lower.
 
+## 첫 화면 핵심 안내 / Landing essentials
+
+- **이 프로젝트는 무엇인가요? / What is this?** 한국어 기본 에이전트 스킬 큐레이션 저장소로, 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.
+- **누가 바로 쓰나요? / Who should start here?** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
+- **무엇을 먼저 누르나요? / What should I open first?** `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **운영 문서는 어디 있나요? / Where did governance go?** 소개형 랜딩을 지키기 위해 운영 문서는 README 아래쪽과 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내렸습니다.
+
+English mirror:
+- **What is this?** A Korean-first agent-skill curation repo whose landing area leads with project value and runnable entry points.
+- **Who should start here?** Individuals and teams who want faster Korean-first discovery, validation, and contribution flows.
+- **What should I open first?** `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **Where did governance go?** To keep the README intro-first, governance details stay lower in the README plus `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
+
 ## 첫 방문 15초 선택 / 15-second first-visit chooser
 
 - **탐색부터 / Explore first** — 프로젝트 소개와 대상 사용자를 빠르게 파악하려면 `프로젝트 소개 / Project overview` → `프로젝트 한눈에 보기 / Project at a glance`
