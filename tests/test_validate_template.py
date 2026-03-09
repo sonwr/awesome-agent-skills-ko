@@ -1540,6 +1540,21 @@ These three docs are the default follow-up path after quick start, and the valid
 
             self.assertTrue(any("project snapshot" in error for error in errors))
 
+    def test_readme_requires_first_minute_outcomes_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_FIRST_MINUTE_OUTCOMES.md",
+                "docs/README_FIRST_MINUTE_OUTCOMES_MISSING.md",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first-minute outcomes doc link" in error for error in errors))
+
     def test_readme_requires_user_journeys_doc_link_for_intro_first_navigation(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

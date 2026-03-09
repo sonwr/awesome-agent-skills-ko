@@ -503,6 +503,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     first_screen_quick_proof_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_SCREEN_QUICK_PROOF.md" in line), None)
     recommended_paths_doc_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_RECOMMENDED_STARTING_PATHS.md" in line), None)
     first_click_guide_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_CLICK_GUIDE.md" in line), None)
+    first_minute_outcomes_doc_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_MINUTE_OUTCOMES.md" in line), None)
     project_value_quickcheck_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_QUICKCHECK.md" in line), None)
     project_value_ladder_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_LADDER.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
@@ -602,6 +603,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if first_click_guide_line is None or first_click_guide_line > 120:
         errors.append(
             "README.md: first-click guide doc link must appear within the first 120 lines so visitors can choose the right explore/validate/contribute/audit entry without dropping into governance-heavy sections first"
+        )
+    if first_minute_outcomes_doc_line is None or first_minute_outcomes_doc_line > 120:
+        errors.append(
+            "README.md: first-minute outcomes doc link must appear within the first 120 lines so the landing block keeps a reusable proof of immediate value before deeper governance-heavy sections"
         )
     if recommended_paths_doc_line is None or recommended_paths_doc_line > 135:
         errors.append(
