@@ -2179,3 +2179,16 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 "README.md: the first 140 lines must link docs/README_LANDING_QUICKSTART_MAP.md so intro/audience/value/categories/quick-start flow stays reusable near the landing block",
                 errors,
             )
+
+    def test_check_quickstart_validation_command_requires_project_overview_faq_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_PROJECT_OVERVIEW_FAQ.md", "docs/MISSING_PROJECT_OVERVIEW_FAQ.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 140 lines must link docs/README_PROJECT_OVERVIEW_FAQ.md so first-time visitors can resolve intro/audience/quick-start questions without scrolling into governance sections",
+                errors,
+            )

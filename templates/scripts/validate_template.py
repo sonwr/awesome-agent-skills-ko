@@ -19,6 +19,7 @@ REQUIRED_FILES = [
     "docs/README_TOP_CALLOUTS.md",
     "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/README_PROJECT_INTRO_60S.md",
+    "docs/README_PROJECT_OVERVIEW_FAQ.md",
     "docs/README_VALUE_PROOF_POINTS.md",
     "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
@@ -541,7 +542,8 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "examples/pr-evidence-mini-walkthrough.md",
         "docs/README_FIRST_SCREEN_CHECKLIST.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
-    "docs/README_PROJECT_INTRO_60S.md",
+        "docs/README_PROJECT_INTRO_60S.md",
+        "docs/README_PROJECT_OVERVIEW_FAQ.md",
         "English mirror:",
     ]
     missing_featured_example_markers = [marker for marker in required_featured_example_markers if marker not in featured_examples_section]
@@ -821,6 +823,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_PROJECT_VALUE_QUICKSTART.md" not in text:
         errors.append(
             "README.md: landing summary must link to docs/README_PROJECT_VALUE_QUICKSTART.md so contributors can keep the intro/audience/value/quick-start one-pager nearby"
+        )
+    if "docs/README_PROJECT_OVERVIEW_FAQ.md" not in "\n".join(lines[:140]):
+        errors.append(
+            "README.md: the first 140 lines must link docs/README_PROJECT_OVERVIEW_FAQ.md so first-time visitors can resolve intro/audience/quick-start questions without scrolling into governance sections"
         )
     if "docs/README_LANDING_QUICKSTART_MAP.md" not in "\n".join(lines[:140]):
         errors.append(
