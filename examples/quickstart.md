@@ -24,6 +24,11 @@ python3 templates/scripts/validate_template.py
 - 한국어: 바로 복붙 가능한 PR 코멘트 예시는 `examples/pr-evidence-mini-walkthrough.md`에서 확인합니다. quickstart 다음 단계에서 가장 빠른 종료 경로입니다.
 - English mirror: For a copy-paste PR comment example, jump straight to `examples/pr-evidence-mini-walkthrough.md`. It is the fastest finish path after quickstart.
 
+## 첫 1분 README 점검 / First-minute README check
+
+- 한국어: README 상단을 고쳤다면 `docs/README_FIRST_MINUTE_OUTCOMES.md`를 열어 프로젝트 소개, 첫 행동, 다음 문서 handoff가 1분 안에 보이는지 확인합니다.
+- English mirror: If you edited the README landing block, open `docs/README_FIRST_MINUTE_OUTCOMES.md` and confirm that project intro, first action, and next-doc handoff stay visible within 1 minute.
+
 ## Governance jump / 운영 문서 점프
 
 - 한국어: README에서 운영형 경로를 택했다면 `docs/PROJECT_ENTRY_PATHS.md`와 `docs/README_INFORMATION_ARCHITECTURE.md`를 먼저 열어 랜딩 구조와 다음 이동 경로를 확인하세요.
