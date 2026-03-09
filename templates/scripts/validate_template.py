@@ -212,6 +212,18 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 80 lines must keep the bilingual 'not just a link dump' value proposition so visitors see the repo is project-intro-first, not governance-first"
         )
+    top_summary_markers = [
+        "프로젝트 소개 / Project intro",
+        "대상 사용자 / Who it helps",
+        "대표 카테고리 / Featured categories",
+        "빠른 시작 / Quick start",
+    ]
+    missing_top_summary_markers = [marker for marker in top_summary_markers if marker not in top_intro_window]
+    if missing_top_summary_markers:
+        errors.append(
+            "README.md: the first 80 lines must keep the start-here summary markers for intro/audience/featured-categories/quick-start -> "
+            + ", ".join(missing_top_summary_markers)
+        )
     if quickstart_command_line is None or quickstart_command_line > 160:
         errors.append(
             "README.md: first validation command must appear within the first 160 lines so visitors can act from the landing screen without deep scrolling"

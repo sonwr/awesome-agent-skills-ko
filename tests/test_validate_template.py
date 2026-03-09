@@ -84,6 +84,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("value cards" in error for error in errors))
 
+    def test_readme_requires_start_here_summary_markers_for_intro_audience_categories_and_quick_start(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "대표 카테고리 / Featured categories",
+                "대표 분류 / Featured grouping",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("start-here summary markers" in error for error in errors))
+
     def test_readme_requires_30_second_landing_summary_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
