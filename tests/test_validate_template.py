@@ -31,6 +31,13 @@ class ValidateTemplateTests(unittest.TestCase):
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_ONE_SCREEN_START.md"],
         )
 
+    def test_required_files_include_project_start_map_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_START_MAP.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 시작 맵 / README project start map",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_START_MAP.md"],
+        )
+
     def test_required_files_include_project_home_panel_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_HOME_PANEL.md", validate_template.REQUIRED_FILES)
         self.assertIn(

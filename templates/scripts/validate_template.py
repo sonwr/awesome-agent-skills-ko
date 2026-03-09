@@ -35,6 +35,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_PROJECT_POSITIONING.md",
     "docs/README_PROJECT_STARTER_PACK.md",
+    "docs/README_PROJECT_START_MAP.md",
     "docs/README_PROJECT_FIRST_LOOK.md",
     "docs/README_PROJECT_VALUE_STARTERS.md",
     "docs/README_PROJECT_INTRO_SCORECARD.md",
@@ -184,6 +185,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## 유지 규칙 / Maintenance rule",
         "Project intro",
         "Quick start",
+    ],
+    "docs/README_PROJECT_START_MAP.md": [
+        "README 프로젝트 시작 맵 / README project start map",
+        "## 한국어 기준 / Korean-first map",
+        "## English mirror",
+        "## 유지 규칙 / Maintenance rule",
+        "Project intro",
+        "Governance handoff",
     ],
     "docs/README_PROJECT_VALUE_LADDER.md": [
         "README 프로젝트 가치 사다리 / README project value ladder",
