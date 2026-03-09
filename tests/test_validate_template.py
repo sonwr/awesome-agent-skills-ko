@@ -2181,6 +2181,21 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
             self.assertTrue(any("docs/README_FEATURED_CATEGORY_MAP.md" in error for error in errors))
 
 
+    def test_readme_requires_featured_example_paths_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace(
+                "docs/README_FEATURED_EXAMPLE_PATHS.md", "docs/MISSING_FEATURED_EXAMPLE_PATHS.md"
+            )
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 160 lines must link docs/README_FEATURED_EXAMPLE_PATHS.md so featured example paths stay attached to the intro-first landing block",
+                errors,
+            )
+
     def test_check_quickstart_validation_command_requires_landing_quickstart_map_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
