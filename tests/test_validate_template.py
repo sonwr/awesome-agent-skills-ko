@@ -10,6 +10,13 @@ from templates.scripts import validate_template
 
 class ValidateTemplateTests(unittest.TestCase):
 
+    def test_required_files_include_project_intro_scorecard_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_INTRO_SCORECARD.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 소개 스코어카드 / README project intro scorecard",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_INTRO_SCORECARD.md"],
+        )
+
     def test_required_files_include_first_screen_jump_list_doc(self) -> None:
         self.assertIn("docs/README_FIRST_SCREEN_JUMP_LIST.md", validate_template.REQUIRED_FILES)
         self.assertIn(

@@ -17,6 +17,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **대상별 빠른 레시피 / Audience quick recipes** — `docs/README_AUDIENCE_QUICK_RECIPES.md`
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
 - **프로젝트 가치 스타터 / Project value starters** — `docs/README_PROJECT_VALUE_STARTERS.md`
+- **소개 우선 스코어카드 / Intro-first scorecard** — `docs/README_PROJECT_INTRO_SCORECARD.md`
 - **스타트히어 카드 / Start-here card** — `docs/README_PROJECT_START_HERE.md`
 - **원스크린 스타트 / One-screen start** — `docs/README_PROJECT_ONE_SCREEN_START.md`
 - **첫 화면 빠른 증명 / First-screen quick proof** — `docs/README_FIRST_SCREEN_QUICK_PROOF.md`
@@ -24,7 +25,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 화면 프로젝트 개요 / First-screen project overview** — `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
-The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`, a compact start-here card in `docs/README_PROJECT_START_HERE.md`, and the one-screen landing panel source in `docs/README_PROJECT_HOME_PANEL.md`.
+The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`, a compact start-here card in `docs/README_PROJECT_START_HERE.md`, the one-screen landing panel source in `docs/README_PROJECT_HOME_PANEL.md`, and a reusable landing audit in `docs/README_PROJECT_INTRO_SCORECARD.md`.
 Contributor operations live separately in `docs/CONTRIBUTOR_OPERATIONS.md` so the landing block can stay project-first.
 ## 첫 화면 바로가기 / First-screen jump list
 - **프로젝트 소개 먼저 보기 / Read the project intro first** — `## 프로젝트 소개 / Project overview`
