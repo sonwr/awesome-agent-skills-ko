@@ -46,6 +46,7 @@ BILINGUAL_SECTION_MARKERS = {
         "English mirror:",
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 빠른 적합성 체크 / Quick fit check",
         "## 핵심 가치 카드 / Value cards",
         "## 첫 화면 30초 요약 / 30-second landing summary",
         "## 이 저장소를 읽는 법 / How to read this repo",
@@ -66,6 +67,7 @@ BILINGUAL_SECTION_MARKERS = {
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
+        "## 빠른 적합성 체크 / Quick fit check",
         "## 이 저장소가 특히 맞는 경우 / Best-fit scenarios",
         "## 이 저장소가 덜 맞는 경우 / Not-for scenarios",
         "## 카테고리 바로가기 / Category jump links",
@@ -317,6 +319,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: the first 80 lines must keep the start-here summary markers for intro/audience/featured-categories/quick-start -> "
             + ", ".join(missing_top_summary_markers)
         )
+    quick_fit_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 빠른 적합성 체크 / Quick fit check"), None)
+    if quick_fit_line is None or quick_fit_line > 110:
+        errors.append(
+            "README.md: quick fit check must appear within the first 110 lines so best-fit/not-for guidance stays in the intro-first landing block before deeper governance sections"
+        )
     if quickstart_command_line is None or quickstart_command_line > 160:
         errors.append(
             "README.md: first validation command must appear within the first 160 lines so visitors can act from the landing screen without deep scrolling"
@@ -371,6 +378,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 바로 시작 요약 / Start-here summary",
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 빠른 적합성 체크 / Quick fit check",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 처음 방문 FAQ / First-time visitor FAQ",
@@ -386,6 +394,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "## 한눈에 보는 3단계 시작 / 3-step start path",
         "## 첫 방문자 체크 / First-visit chooser",
         "## 30초 적합성 체크 / 30-second fit check",
+        "## 빠른 적합성 체크 / Quick fit check",
         "탐색형 / Explorer",
         "기여형 / Contributor",
         "운영형 / Operator",
@@ -421,9 +430,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             (idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 운영/기여 상세 안내 / Deeper contributor and operations guide"),
             None,
         )
-        if quickstart_followup_line is None or quickstart_followup_line > 500:
+        if quickstart_followup_line is None or quickstart_followup_line > 560:
             errors.append(
-                "README.md: quick-start follow-up section must appear within the first 500 lines so the landing page keeps next-doc guidance above long-form governance details"
+                "README.md: quick-start follow-up section must appear within the first 560 lines so the landing page keeps next-doc guidance above long-form governance details"
             )
         if learn_more_line is not None and quickstart_followup_line is not None and quickstart_followup_line > learn_more_line:
             errors.append(
@@ -853,6 +862,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     ordered_sections = [
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
+        "## 빠른 적합성 체크 / Quick fit check",
         "## 이 저장소를 읽는 법 / How to read this repo",
         "## 프로젝트 스냅샷 / Project snapshot",
         "## 처음 방문 FAQ / First-time visitor FAQ",

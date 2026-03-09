@@ -84,6 +84,17 @@ English mirror:
 - **What can I do immediately?** Find the first validation command and next doc directly from the README landing area.
 - **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
 
+## 빠른 적합성 체크 / Quick fit check
+
+- **이 저장소가 특히 맞는 경우 / Best fit** — 한국어 기본 문서 흐름으로 스킬 탐색부터 검증·기여까지 빠르게 연결하고 싶은 개인/팀
+- **이 저장소가 덜 맞는 경우 / Not for** — 장문의 운영 규칙만 먼저 읽고 싶거나, 실행 예시 없이 링크 목록만 필요한 경우
+- **첫 클릭 추천 / First click** — 탐색형은 `프로젝트 소개 / Project overview`, 기여형은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, 운영형은 `docs/README_FAST_PATHS.md`
+
+English mirror:
+- **Best fit** — individuals and teams who want Korean-first discovery, validation, and contribution paths in one place.
+- **Not for** — readers who only want governance-first docs or a plain link list without runnable examples.
+- **First click** — explorers start with `Project overview`, contributors with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, and operators with `docs/README_FAST_PATHS.md`.
+
 ## 핵심 가치 카드 / Value cards
 
 - **탐색 카드 / Discover** — 프로젝트 소개, 대표 카테고리, 빠른 시작까지 한 화면에서 연결해 "무엇을 왜 써야 하는지"를 먼저 이해하게 합니다.
