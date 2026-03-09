@@ -45,6 +45,17 @@ English mirror:
 - **다음 열 문서 / Open next** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
 English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, the project overview FAQ, positioning/maintenance docs, the starter-pack summary, the intro-to-quick-start flow note, persona quickstart cues, the first-action matrix, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
+## 첫 1분에 얻는 결과 / What you get in the first minute
+
+- **1분 뒤 알게 되는 것 / What you know after 1 minute** — 이 저장소가 누구를 위한지, 왜 필요한지, 어디서 시작해야 하는지 바로 파악합니다.
+- **1분 뒤 실행한 것 / What you have run after 1 minute** — `python3 templates/scripts/validate_template.py`를 실행할 준비가 되거나 이미 실행했고, 다음 문서로 `examples/quickstart.md`를 열 수 있습니다.
+- **1분 뒤 이어갈 경로 / What you open next after 1 minute** — 탐색형은 `프로젝트 소개 / Project overview`, 기여형은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, 운영형은 `docs/README_FAST_PATHS.md`로 자연스럽게 갈라집니다.
+
+English mirror:
+- **What you know after 1 minute** — who this repo is for, why it exists, and where to start.
+- **What you have run after 1 minute** — you are ready to run or have already run `python3 templates/scripts/validate_template.py`, and you know the next doc is `examples/quickstart.md`.
+- **What you open next after 1 minute** — explorers go to `Project overview`, contributors to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, and operators to `docs/README_FAST_PATHS.md`.
+
 ## 프로젝트 소개 / Project overview
 
 이 저장소는 **한국어 기반 빌더를 위한 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.

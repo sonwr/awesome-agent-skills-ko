@@ -451,6 +451,28 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: first-screen in 3 lines section must summarize project intro, target audience, and immediate quick-start action in Korean/English with the validation command and next doc"
         )
+    first_minute_heading = "## 첫 1분에 얻는 결과 / What you get in the first minute"
+    first_minute_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == first_minute_heading), None)
+    if first_minute_line is None or first_minute_line > 90:
+        errors.append(
+            "README.md: first-minute outcome section must appear within the first 90 lines so the landing block states immediate value before governance-heavy navigation"
+        )
+    first_minute_section = _extract_section(text, "첫 1분에 얻는 결과 / What you get in the first minute")
+    required_first_minute_markers = [
+        "What you know after 1 minute",
+        "What you have run after 1 minute",
+        "What you open next after 1 minute",
+        "python3 templates/scripts/validate_template.py",
+        "examples/quickstart.md",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "docs/README_FAST_PATHS.md",
+    ]
+    missing_first_minute_markers = [marker for marker in required_first_minute_markers if marker not in first_minute_section]
+    if missing_first_minute_markers:
+        errors.append(
+            "README.md: first-minute outcome section must keep the intro/value/next-doc handoff markers -> "
+            + ", ".join(missing_first_minute_markers)
+        )
     if intro_60s_line is None or intro_60s_line > 120:
         errors.append(
             "README.md: intro-in-60-seconds doc link must appear within the first 120 lines so first-time visitors can verify the project-intro reading order before deep governance sections"
