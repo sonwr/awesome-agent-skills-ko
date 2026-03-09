@@ -12,7 +12,9 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 이동
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
-English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`; the intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`.
+- **첫 화면 프로젝트 개요 / First-screen project overview** — `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`
+English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
+The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`.
 ## 바로 시작 요약 / Start-here summary
 - **프로젝트 소개 / Project intro** — 한국어 기본 큐레이션 저장소이며, README 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
@@ -22,7 +24,9 @@ English mirror: Governance details live below the landing block in `CONTRIBUTING
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 English mirror: Project intro, who it helps, immediate value, featured categories, featured examples, and quick start stay visible from the first screen.
 - **빠른 경로 묶음 / Fast-path bundle** — `docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`
-- **좋아 보이는 링크 모음이 아니라 / Not just a link dump** — 프로젝트 소개 우선 landing과 실행 가능한 quick start를 함께 제공하는 큐레이션 저장소입니다. English mirror: this repo is not just a link dump; it is an intro-first, runnable landing page for discovery, validation, and contribution.
+- **저장소 가치 한 줄 / Repo value in one line** — 좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.
+English mirror: this repo is not just a link dump.
+It exists to make execution, validation, and contribution paths visible from the first README screen instead of a vague link dump.
 
 ## 첫 화면 핵심 3줄 / First-screen in 3 lines
 - **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
