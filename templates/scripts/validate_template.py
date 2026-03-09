@@ -716,6 +716,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: landing or learn-more sections must link to docs/README_FIRST_SCREEN_SCRIPT.md so intro-first copy guidance stays discoverable"
         )
+    if "docs/README_PROJECT_VALUE_QUICKSTART.md" not in text:
+        errors.append(
+            "README.md: landing summary must link to docs/README_PROJECT_VALUE_QUICKSTART.md so contributors can keep the intro/audience/value/quick-start one-pager nearby"
+        )
     if "## 빠른 시작 / Quick start" not in text:
         errors.append(
             "README.md: README must include a bilingual `## 빠른 시작 / Quick start` section after the landing-first overview block"

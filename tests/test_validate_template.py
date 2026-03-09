@@ -58,6 +58,23 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("governance-handoff cue" in error for error in errors))
 
+    def test_readme_requires_intro_value_quickstart_one_pager_link(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "- **상단 설계 압축본 / Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`\n",
+                "",
+            ).replace(
+                "- **Landing one-pager** — `docs/README_PROJECT_VALUE_QUICKSTART.md`\n",
+                "",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("README_PROJECT_VALUE_QUICKSTART.md" in error for error in errors))
+
     def test_readme_requires_bilingual_not_just_a_link_dump_value_prop_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
