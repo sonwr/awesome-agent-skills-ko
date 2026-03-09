@@ -10,6 +10,22 @@ from templates.scripts import validate_template
 class ValidateTemplateTests(unittest.TestCase):
 
 
+    def test_readme_rejects_replacement_characters_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음",
+                "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모�",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("replacement characters" in error for error in errors))
+
+
     def test_readme_requires_bilingual_project_pitch_within_first_twenty_lines(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
