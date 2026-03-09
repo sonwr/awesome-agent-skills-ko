@@ -1,53 +1,32 @@
 # README 랜딩 빠른 시작 맵 / README landing quick-start map
 
-README 상단을 처음 보는 사람이 **소개 → 가치 → 대표 예시 → 빠른 시작**으로 자연스럽게 이동하도록 돕는 압축 맵입니다.
-
-English mirror:
-A compact map for keeping the README landing flow focused on **intro → value → featured examples → quick start**.
+README 첫 화면에서 **프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리 → 빠른 시작** 흐름을 한 번에 점검하기 위한 짧은 맵입니다.
+English mirror: A compact map for checking that the README first screen still flows through project intro -> audience -> value -> featured categories -> quick start.
 
 ## 첫 화면 우선순위 / First-screen priorities
 
-1. **프로젝트 소개** — 이 저장소가 무엇을 하고 왜 필요한지 먼저 설명합니다.
-2. **대상 사용자 + 제공 가치** — 누가 어떤 문제를 얼마나 빨리 해결할 수 있는지 보여줍니다.
-3. **대표 카테고리/활용 시나리오** — 실제로 무엇을 얻는지 예시로 증명합니다.
-4. **빠른 시작** — 첫 검증 명령과 다음 문서를 한 화면 안에서 찾게 합니다.
-5. **추천 시작 경로** — 탐색형/기여형/운영형 카드로 첫 방문자의 다음 클릭을 압축합니다.
-
-English mirror:
-1. **Project overview** — explain what the repo does and why it exists.
-2. **Audience + value** — show who benefits and what problem gets solved quickly.
-3. **Featured categories/use cases** — prove the value with concrete examples.
-4. **Quick start** — keep the first validation command and next document within the landing area.
-5. **Recommended starting paths** — compress the next click for explorer/contributor/operator visitors into one landing block.
-6. **Governance later** — move contribution/policy details lower or into dedicated docs.
+1. **프로젝트 소개 / Project intro** — 저장소가 무엇인지 첫 문단에서 바로 설명하는가?
+2. **대상 사용자 / Audience** — 누가 이 저장소를 쓰는지 첫 화면에 보이는가?
+3. **제공 가치 / Value** — 왜 이 저장소를 써야 하는지 즉시 이해되는가?
+4. **대표 카테고리 / Featured categories** — 바로 탐색할 수 있는 대표 문서/카테고리가 보이는가?
+5. **빠른 시작 / Quick start** — 첫 검증 명령과 다음 문서가 같은 화면에 있는가?
 
 ## README 상단 체크 질문 / README top-check questions
 
-- 첫 30초 안에 프로젝트 성격이 보이나?
-- 첫 실행 명령이 스크롤 많이 하지 않아도 보이나?
-- 초행자와 기여자, 운영자가 각각 다음 문서를 바로 찾을 수 있나?
-- 운영 규칙이 소개보다 먼저 튀어나오지 않나?
-
-English mirror:
-- Can a first-time visitor understand the repo within 30 seconds?
-- Is the first command visible without deep scrolling?
-- Can explorers, contributors, and operators all find their next doc quickly?
-- Do governance details stay below the intro/value area?
+- 첫 화면이 링크 모음이 아니라 프로젝트 소개로 시작하는가?
+- `python3 templates/scripts/validate_template.py`가 상단 실행 경로로 보이는가?
+- `examples/quickstart.md`와 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`가 다음 행동으로 연결되는가?
+- 운영/기여 규칙은 상단 소개 블록 아래로 내려가 있는가?
 
 ## 첫 화면 유지 루프 / First-screen maintenance loop
 
-- 한국어: README 상단을 고칠 때는 **프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 시작 예시/빠른 시작** 순서가 먼저 보이는지 확인합니다.
-- 한국어: 구조를 바꾼 뒤에는 `python3 templates/scripts/validate_template.py`를 실행하고, `docs/README_FIRST_SCREEN_CHECKLIST.md`로 사람이 다시 읽어봅니다.
-- English mirror: When editing the README top, keep **overview -> audience -> value -> featured examples/quick start** visible before governance detail.
-- English mirror: After every structural edit, run `python3 templates/scripts/validate_template.py` and then re-read `docs/README_FIRST_SCREEN_CHECKLIST.md` for a human check.
-- English mirror: Keep the project start map in `Explore first -> Validate now -> Contribute now -> Audit the structure` order so the first screen stays predictable.
+- README 상단을 편집할 때마다 소개 → 대상 사용자 → 가치 → 카테고리 → 빠른 시작 순서를 다시 확인합니다.
+- 구조를 바꿨다면 `python3 templates/scripts/validate_template.py`를 실행해 상단 가드가 깨지지 않았는지 검증합니다.
+- 세부 운영 문서를 올리고 싶어지면 먼저 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내릴 수 있는지 검토합니다.
 
+## 권장 연결 / Recommended handoff
 
-## 상단 재설계 체크리스트 / Landing redesign checklist
-
-- 한국어: 상단 1스크린에서 **프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 예시 → 빠른 시작**이 끊기지 않는지 본다.
-- 한국어: CONTRIBUTING/정책/운영 체크리스트 링크는 상단 핵심 가치 설명 뒤쪽으로 밀어낸다.
-- 한국어: 탐색형/기여형/운영형 사용자가 각각 다음 클릭 문서를 한 번에 찾을 수 있게 둔다.
-- English mirror: Keep **overview -> audience -> value -> featured examples -> quick start** readable within the first screen.
-- English mirror: Push contribution/policy/ops guardrails below the intro/value area or into dedicated docs.
-- English mirror: Ensure explorer/contributor/operator visitors can each find the next document in one click.
+- README 상단 요약 블록 → `examples/quickstart.md`
+- 역할별 진입 경로 → `docs/README_FAST_PATHS.md`
+- 랜딩 구조 점검 → `docs/README_FIRST_SCREEN_CHECKLIST.md`
+- 가치/메시지 근거 → `docs/README_AUDIENCE_VALUE_MAP.md`, `docs/README_VALUE_PROOF_POINTS.md`
