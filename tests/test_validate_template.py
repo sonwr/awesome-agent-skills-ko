@@ -2248,6 +2248,19 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 errors,
             )
 
+    def test_check_quickstart_validation_command_requires_first_visit_pack_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8").replace("docs/README_FIRST_VISIT_PACK.md", "docs/MISSING_FIRST_VISIT_PACK.md")
+            (root / "README.md").write_text(readme, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertIn(
+                "README.md: the first 100 lines must link docs/README_FIRST_VISIT_PACK.md so first-visit starter bundles stay attached to the intro-first landing block",
+                errors,
+            )
+
     def test_validate_template_requires_project_starter_pack_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -2275,6 +2288,7 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 "docs/README_LANDING_QUICKSTART_MAP.md",
                 "docs/README_PROJECT_INTRO_BLUEPRINT.md",
                 "docs/README_PROJECT_POSITIONING.md",
+                "docs/README_FIRST_VISIT_PACK.md",
                 "docs/README_FIRST_VISITOR_PROMISES.md",
                 "docs/README_FIRST_VISITOR_ROUTES.md",
                 "docs/README_ROLE_STARTERS.md",

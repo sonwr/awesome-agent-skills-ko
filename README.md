@@ -9,6 +9,7 @@
 - **대표 시작 예시 / Featured examples** — 검증 시작 `examples/quickstart.md`, 첫 PR 증빙 `examples/pr-evidence-mini-walkthrough.md`, 랜딩 점검 `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **대표 예시 경로 지도 / Featured example paths** — `docs/README_FEATURED_EXAMPLE_PATHS.md`
 - **프로젝트 스타터 팩 / Project starter pack** — `docs/README_PROJECT_STARTER_PACK.md`
+- **첫 방문 스타터 팩 / First-visit starter pack** — `docs/README_FIRST_VISIT_PACK.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders. Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
@@ -28,7 +29,7 @@ English mirror:
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
 - **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
-- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`
+- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_FIRST_VISIT_PACK.md`
 - **가치 증명 포인트 / Value proof points** — `docs/README_VALUE_PROOF_POINTS.md`
 - **프로젝트 가치 퀵체크 / Project value quick-check** — `docs/README_PROJECT_VALUE_QUICKCHECK.md`
 - **대표 카테고리 맵 / Featured category map** — `docs/README_FEATURED_CATEGORY_MAP.md`
