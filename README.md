@@ -17,13 +17,13 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
 - **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
-- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`
+- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`
 - **가치 증명 포인트 / Value proof points** — `docs/README_VALUE_PROOF_POINTS.md`
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **다음 열 문서 / Open next** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
-English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_INTRO_60S.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
+English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
 
 ## 프로젝트 소개 / Project overview
 
@@ -58,7 +58,7 @@ English mirror:
 - **탐색부터 / Explore first** — 프로젝트 소개와 대상 사용자를 빠르게 파악하려면 `프로젝트 소개 / Project overview` → `프로젝트 한눈에 보기 / Project at a glance`
 - **바로 실행 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **바로 기여 / Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **운영 구조 점검 / Audit the landing flow** — `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FAST_PATHS.md`
+- **운영 구조 점검 / Audit the landing flow** — `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FAST_PATHS.md` → `docs/README_FIRST_VISITOR_ROUTES.md`
 
 English mirror: Need a fast route? Explore the intro first, run validation immediately, jump into contribution evidence, or audit the landing structure with the README checklist.
 
@@ -480,7 +480,6 @@ English mirror:
 - **Operator** — follow the README audit route to confirm the intro-first IA still holds.
 
 ## 빠른 시작 / Quick start
-
 ### 처음 5분 기여 흐름 / First 5-minute contribution flow
 
 - 1분: README 상단의 프로젝트 소개/대상 사용자/제공 가치를 훑습니다.
@@ -491,16 +490,13 @@ English mirror:
 - Minute 1: scan the README overview, audience, and value sections.
 - Minute 2-3: run the quick start validation command below.
 - Minute 4-5: open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the PR evidence format.
-
 한국어 문서를 기본으로 유지하면서 병기 품질까지 함께 검증하려면 아래 명령을 사용하세요.
 English mirror: Run the command below to validate both baseline docs and bilingual quality markers.
-
 ```bash
 git clone https://github.com/sonwr/awesome-agent-skills-ko.git
 cd awesome-agent-skills-ko
 python3 templates/scripts/validate_template.py
 ```
-
 ### 빠른 시작 후 바로 볼 문서 / What to open right after quick start
 
 1. `examples/quickstart.md` — 첫 복붙 명령과 다음 읽기 순서

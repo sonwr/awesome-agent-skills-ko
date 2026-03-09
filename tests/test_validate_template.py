@@ -156,6 +156,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("first-visitor promises doc link" in error for error in errors))
 
+    def test_readme_requires_first_visitor_routes_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_FIRST_VISITOR_ROUTES.md",
+                "docs/README_FIRST_VISITOR_ROUTES_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first-visitor routes doc link" in error for error in errors))
+
     def test_readme_requires_bilingual_not_just_a_link_dump_value_prop_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

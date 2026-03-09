@@ -24,6 +24,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
     "docs/README_PROJECT_POSITIONING.md",
     "docs/README_FIRST_VISITOR_PROMISES.md",
+    "docs/README_FIRST_VISITOR_ROUTES.md",
     "docs/README_ROLE_STARTERS.md",
     "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
     "docs/PROJECT_OVERVIEW.md",
@@ -119,6 +120,15 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "무엇을 찾는 저장소인가?",
         "What kind of repo is this?",
+    ],
+    "docs/README_FIRST_VISITOR_ROUTES.md": [
+        "README 첫 방문 경로 / README first-visitor routes",
+        "## 한국어 기준 / Korean-first routes",
+        "## English mirror",
+        "Explore first",
+        "Validate now",
+        "Contribute now",
+        "Audit the structure",
     ],
     "docs/README_PROJECT_POSITIONING.md": [
         "README 프로젝트 포지셔닝 / README project positioning",
@@ -315,6 +325,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     intro_60s_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_INTRO_60S.md" in line), None)
     audience_quick_recipes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_AUDIENCE_QUICK_RECIPES.md" in line), None)
     first_visitor_promises_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_PROMISES.md" in line), None)
+    first_visitor_routes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_ROUTES.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
@@ -330,6 +341,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if first_visitor_promises_line is None or first_visitor_promises_line > 120:
         errors.append(
             "README.md: first-visitor promises doc link must appear within the first 120 lines so the README keeps explicit newcomer value promises near the landing block"
+        )
+    if first_visitor_routes_line is None or first_visitor_routes_line > 120:
+        errors.append(
+            "README.md: first-visitor routes doc link must appear within the first 120 lines so newcomers can choose explore/validate/contribute/audit paths without dropping into governance-heavy sections first"
         )
 
     top_order_window = "\n".join(lines[:140])
