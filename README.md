@@ -10,6 +10,7 @@
 - **대표 예시 경로 지도 / Featured example paths** — `docs/README_FEATURED_EXAMPLE_PATHS.md`
 - **프로젝트 스타터 팩 / Project starter pack** — `docs/README_PROJECT_STARTER_PACK.md`
 - **첫 방문 스타터 팩 / First-visit starter pack** — `docs/README_FIRST_VISIT_PACK.md`
+- **첫 방문 FAQ / First-visit FAQ** — `docs/README_PROJECT_OVERVIEW_FAQ.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders. Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.

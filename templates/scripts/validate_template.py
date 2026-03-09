@@ -866,9 +866,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: landing summary must link to docs/README_PROJECT_VALUE_QUICKSTART.md so contributors can keep the intro/audience/value/quick-start one-pager nearby"
         )
-    if "docs/README_PROJECT_OVERVIEW_FAQ.md" not in "\n".join(lines[:140]):
+    if "docs/README_PROJECT_OVERVIEW_FAQ.md" not in "\n".join(lines[:80]):
         errors.append(
-            "README.md: the first 140 lines must link docs/README_PROJECT_OVERVIEW_FAQ.md so first-time visitors can resolve intro/audience/quick-start questions without scrolling into governance sections"
+            "README.md: the first 80 lines must link docs/README_PROJECT_OVERVIEW_FAQ.md so first-time visitors can resolve intro/audience/quick-start questions without scrolling into governance sections"
         )
     if "docs/README_LANDING_QUICKSTART_MAP.md" not in "\n".join(lines[:140]):
         errors.append(
