@@ -86,6 +86,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("README_PROJECT_VALUE_QUICKSTART.md" in error for error in errors))
 
+    def test_readme_requires_intro_60_seconds_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_INTRO_60S.md",
+                "docs/README_PROJECT_INTRO_60S_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("intro-in-60-seconds doc link" in error for error in errors))
+
     def test_readme_requires_value_proof_points_link(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -2804,11 +2818,8 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                "docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
-                "역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
-            ).replace(
-                "docs/README_LANDING_QUICKSTART_MAP.md` → `Role-based 1-click next docs`",
-                "Role-based 1-click next docs`",
+                "docs/README_LANDING_QUICKSTART_MAP.md",
+                "docs/README_LANDING_QUICKSTART_MAP_REMOVED.md",
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
 

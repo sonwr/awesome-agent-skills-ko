@@ -18,6 +18,7 @@ REQUIRED_FILES = [
     "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
     "docs/README_TOP_CALLOUTS.md",
     "docs/README_AUDIENCE_VALUE_MAP.md",
+    "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_VALUE_PROOF_POINTS.md",
     "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
@@ -306,9 +307,14 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: first validation command must appear within the first 160 lines so visitors can act from the landing screen without deep scrolling"
         )
     role_starter_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_ROLE_STARTERS.md" in line), None)
+    intro_60s_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_INTRO_60S.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
             "README.md: role-based start map link must appear within the first 90 lines so explorer/contributor/operator visitors can branch from the landing block without hitting governance-heavy sections first"
+        )
+    if intro_60s_line is None or intro_60s_line > 120:
+        errors.append(
+            "README.md: intro-in-60-seconds doc link must appear within the first 120 lines so first-time visitors can verify the project-intro reading order before deep governance sections"
         )
 
     top_order_window = "\n".join(lines[:140])
@@ -478,6 +484,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "examples/pr-evidence-mini-walkthrough.md",
         "docs/README_FIRST_SCREEN_CHECKLIST.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
+    "docs/README_PROJECT_INTRO_60S.md",
         "English mirror:",
     ]
     missing_featured_example_markers = [marker for marker in required_featured_example_markers if marker not in featured_examples_section]
@@ -667,6 +674,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "docs/README_FAST_PATHS.md",
         "docs/README_LANDING_QUICKSTART_MAP.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
+    "docs/README_PROJECT_INTRO_60S.md",
         "docs/CURATION_POLICY.md",
     ]:
         if required_button not in core_start_buttons_section:
@@ -928,6 +936,7 @@ def _check_readme_top_callout_sync(root: Path) -> list[str]:
         "5-minute contribution flow",
         "docs/README_TOP_CALLOUTS.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
+    "docs/README_PROJECT_INTRO_60S.md",
         "docs/PROJECT_OVERVIEW.md",
         "docs/PROJECT_ENTRY_PATHS.md",
         "docs/PROJECT_DIRECTION.md",
