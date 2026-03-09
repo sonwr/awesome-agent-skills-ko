@@ -425,6 +425,27 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: landing section must include a bilingual 1-minute quick start block with validation, next-doc, and contributing-guide handoff cues"
         )
+    featured_examples_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 대표 시작 예시 / Featured starter examples"), None)
+    if featured_examples_line is None or featured_examples_line > 260:
+        errors.append(
+            "README.md: featured starter examples must appear within the first 260 lines so intro-first readers see runnable examples before deep governance details"
+        )
+    featured_examples_section = _extract_section(text, "대표 시작 예시 / Featured starter examples")
+    required_featured_example_markers = [
+        "python3 templates/scripts/validate_template.py",
+        "examples/quickstart.md",
+        "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
+        "examples/pr-evidence-mini-walkthrough.md",
+        "docs/README_FIRST_SCREEN_CHECKLIST.md",
+        "docs/README_AUDIENCE_VALUE_MAP.md",
+        "English mirror:",
+    ]
+    missing_featured_example_markers = [marker for marker in required_featured_example_markers if marker not in featured_examples_section]
+    if missing_featured_example_markers:
+        errors.append(
+            "README.md: featured starter examples must keep validation/contribution/audit example links with an English mirror -> "
+            + ", ".join(missing_featured_example_markers)
+        )
     if "## 역할별 첫 명령 / First command by role" not in text or "first command" not in text or "docs/README_FIRST_SCREEN_CHECKLIST.md" not in text:
         errors.append(
             "README.md: landing section must include bilingual role-based first command by role cues so explorer/contributor/operator visitors can see one command plus the next doc immediately"

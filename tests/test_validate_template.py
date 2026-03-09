@@ -223,6 +223,35 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("1-minute quick start" in error for error in errors))
 
+    def test_readme_requires_featured_starter_examples_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            (root / "README.md").write_text(
+                "## 프로젝트 소개 / Project overview\n"
+                + "\n".join([f"line {idx}" for idx in range(1, 262)])
+                + "\n## 대표 시작 예시 / Featured starter examples\n"
+                + "python3 templates/scripts/validate_template.py\n",
+                encoding="utf-8",
+            )
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("featured starter examples must appear within the first 260 lines" in error for error in errors))
+
+    def test_readme_requires_featured_starter_example_markers(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "English mirror:\n- **Start with validation**",
+                "English mirror removed:\n- **Start with validation**",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("featured starter examples must keep validation/contribution/audit example links" in error for error in errors))
+
     def test_readme_requires_quickstart_followup_doc_trio(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

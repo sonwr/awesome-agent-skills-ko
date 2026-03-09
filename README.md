@@ -196,11 +196,14 @@ English mirror:
 - **기여 준비 / Prepare a contribution** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 PR 최소 증빙 형식을 바로 복사합니다.
 - **운영 점검 / Audit the landing flow** — `docs/README_FAST_PATHS.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`를 열어 README 소개 우선 구조가 유지되는지 확인합니다.
 - **독자-가치 정렬 확인 / Check audience-value fit** — `docs/README_AUDIENCE_VALUE_MAP.md`를 열어 첫 화면 메시지가 탐색형/기여형/운영형 방문자에게 맞게 배치됐는지 빠르게 점검합니다.
+- **프로젝트 소개 우선 유지 / Keep the intro-first landing** — `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_AUDIENCE_VALUE_MAP.md`를 함께 열어 대표 예시가 소개/가치/빠른 시작 뒤에 붙어 있는지 확인합니다.
 
 English mirror:
 - **Start with validation** — run `python3 templates/scripts/validate_template.py`, then jump straight to `examples/quickstart.md`.
 - **Prepare a contribution** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum PR evidence format.
 - **Audit the landing flow** — open `docs/README_FAST_PATHS.md` and `docs/README_FIRST_SCREEN_CHECKLIST.md` to verify that the README stays intro-first.
+- **Check audience-value fit** — open `docs/README_AUDIENCE_VALUE_MAP.md` to verify that the first-screen message still matches explorer/contributor/operator visitors.
+- **Keep the intro-first landing** — open `docs/README_FIRST_SCREEN_CHECKLIST.md` and `docs/README_AUDIENCE_VALUE_MAP.md` together to confirm that featured examples stay below overview/value/quick-start, not above them.
 
 ## 대표 카테고리와 예시 / Featured categories and examples
 
