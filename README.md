@@ -12,6 +12,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 이동
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
+- **첫 화면 빠른 증명 / First-screen quick proof** — `docs/README_FIRST_SCREEN_QUICK_PROOF.md`
 - **첫 화면 프로젝트 개요 / First-screen project overview** — `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`
 English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`.
@@ -23,7 +24,7 @@ The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a 
 - **대표 시작 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 English mirror: Project intro, who it helps, immediate value, featured categories, featured examples, and quick start stay visible from the first screen.
-- **빠른 경로 묶음 / Fast-path bundle** — `docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`
+- **빠른 경로 묶음 / Fast-path bundle** — `docs/README_ROLE_STARTERS.md`, `docs/README_WHO_STARTS_WHERE.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_FIRST_LOOK.md`, `docs/README_PROJECT_QUICKSTART_FLOW.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_FIRST_SCREEN_QUICK_PROOF.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_VALUE_LADDER.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_FEATURED_CATEGORY_MAP.md`, `docs/README_FEATURED_EXAMPLE_PATHS.md`
 - **저장소 가치 한 줄 / Repo value in one line** — 좋아 보이는 링크 모음"이 아니라, README 첫 화면만 읽어도 실행·검증·기여 경로가 바로 보이는 출발점을 만들기 위해서입니다.
 English mirror: this repo is not just a link dump.
 It exists to make execution, validation, and contribution paths visible from the first README screen instead of a vague link dump.
@@ -67,7 +68,6 @@ English mirror:
 - **이 저장소는 링크 모음인가요? / Is this just a link list?** 아니요. README 첫 화면에서 프로젝트 소개, 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로까지 바로 찾게 만드는 한국어 기본 큐레이션 저장소입니다.
 - **처음에 뭘 해야 하나요? / What should I do first?** `python3 templates/scripts/validate_template.py`를 실행한 뒤 `examples/quickstart.md`로 이어가면 됩니다.
 - **기여 규칙은 어디서 보나요? / Where are the contribution rules?** 첫 화면 아래에서 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `CONTRIBUTING.md`로 이어집니다.
-
 English mirror:
 - **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
 - **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
@@ -91,7 +91,6 @@ English mirror:
 - **Intro first** — the top of the README leads with project meaning, audience, value, and quick start before governance detail.
 - **Action first** — the first command and next document stay on the same screen so newcomers can validate immediately.
 - **Contribution handoff** — the first PR evidence example and checklist stay near the landing block so contribution setup is easy to copy.
-
 ## 프로젝트 한눈에 보기 / Project at a glance
 
 - **누구를 위한 저장소인가요?** 한국어 기본 흐름으로 스킬을 탐색·검증·기여하려는 빌더/팀을 위한 저장소입니다.
@@ -102,7 +101,6 @@ English mirror:
 - **Who is this for?** Builders and teams who want Korean-first skill discovery, validation, and contribution flows.
 - **What can I do immediately?** Find the first validation command and next doc directly from the README landing area.
 - **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
-
 ## 빠른 적합성 체크 / Quick fit check
 
 - **이 저장소가 특히 맞는 경우 / Best fit** — 한국어 기본 문서 흐름으로 스킬 탐색부터 검증·기여까지 빠르게 연결하고 싶은 개인/팀
@@ -134,7 +132,6 @@ English mirror:
 - **Discover** — connect the project overview, featured categories, and quick start on the first screen so visitors understand what this repo is for before reading governance details.
 - **Validate** — surface the first command (`python3 templates/scripts/validate_template.py`) plus the next document (`examples/quickstart.md`) immediately to reduce execution friction.
 - **Contribute** — keep `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` together so first-time contributors can copy a PR evidence format without hunting.
-
 ## 첫 화면 30초 요약 / 30-second landing summary
 
 - **프로젝트 소개 한 줄 / Project intro** — 한국어 기본 큐레이션 저장소이며, 첫 화면에서 바로 검증 명령과 다음 문서를 찾게 만드는 구조를 지향합니다.
