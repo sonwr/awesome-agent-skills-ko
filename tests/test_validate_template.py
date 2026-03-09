@@ -146,6 +146,20 @@ class ValidateTemplateTests(unittest.TestCase):
 
             self.assertTrue(any("README_PROJECT_VALUE_QUICKSTART.md" in error for error in errors))
 
+    def test_readme_requires_project_first_look_doc_link_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "docs/README_PROJECT_FIRST_LOOK.md",
+                "docs/README_PROJECT_FIRST_LOOK_REMOVED.md",
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("README_PROJECT_FIRST_LOOK.md" in error for error in errors))
+
     def test_readme_requires_intro_60_seconds_doc_link_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
