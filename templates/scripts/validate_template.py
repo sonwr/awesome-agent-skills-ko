@@ -627,7 +627,6 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "docs/README_FAST_PATHS.md",
         "docs/README_LANDING_QUICKSTART_MAP.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
-    "docs/README_PROJECT_INTRO_BLUEPRINT.md",
         "docs/CURATION_POLICY.md",
     ]:
         if required_button not in core_start_buttons_section:
@@ -880,12 +879,11 @@ def _check_readme_top_callout_sync(root: Path) -> list[str]:
         "docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md",
         "5-minute contribution flow",
         "docs/README_TOP_CALLOUTS.md",
-    "docs/README_AUDIENCE_VALUE_MAP.md",
-    "docs/README_PROJECT_INTRO_BLUEPRINT.md",
-    "docs/PROJECT_OVERVIEW.md",
-    "docs/PROJECT_ENTRY_PATHS.md",
-    "docs/PROJECT_DIRECTION.md",
-    "docs/README_INFORMATION_ARCHITECTURE.md",
+        "docs/README_AUDIENCE_VALUE_MAP.md",
+        "docs/PROJECT_OVERVIEW.md",
+        "docs/PROJECT_ENTRY_PATHS.md",
+        "docs/PROJECT_DIRECTION.md",
+        "docs/README_INFORMATION_ARCHITECTURE.md",
     ]
     missing_markers = [marker for marker in required_markers if marker not in readme_section]
     if missing_markers:

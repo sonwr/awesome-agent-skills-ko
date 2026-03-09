@@ -109,7 +109,7 @@ English mirror:
 - **Best for**: individuals and teams who want Korean-first discovery, validation, and contribution flows in one place.
 - **Value flow on the first screen**: overview -> audience -> value -> featured categories -> quick start.
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
-- **Landing flow reference**: `docs/README_PROJECT_INTRO_BLUEPRINT.md`, `docs/README_LANDING_QUICKSTART_MAP.md`
+- **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
 
 ## 처음 방문 FAQ / First-time visitor FAQ
 
