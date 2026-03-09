@@ -10,6 +10,13 @@ from templates.scripts import validate_template
 
 class ValidateTemplateTests(unittest.TestCase):
 
+    def test_required_files_include_first_screen_jump_list_doc(self) -> None:
+        self.assertIn("docs/README_FIRST_SCREEN_JUMP_LIST.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 첫 화면 바로가기 / README first-screen jump list",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_FIRST_SCREEN_JUMP_LIST.md"],
+        )
+
     def test_required_files_include_project_one_screen_start_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_ONE_SCREEN_START.md", validate_template.REQUIRED_FILES)
         self.assertIn(
@@ -69,6 +76,21 @@ class ValidateTemplateTests(unittest.TestCase):
             errors = validate_template._check_quickstart_validation_command(root)
 
             self.assertTrue(any("first 20 lines must keep the bilingual project pitch" in error for error in errors))
+
+    def test_readme_requires_first_screen_jump_list_near_top(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme = Path(__file__).resolve().parents[1] / "README.md"
+            sample = readme.read_text(encoding="utf-8").replace(
+                "## 첫 화면 바로가기 / First-screen jump list\n",
+                "",
+                1,
+            )
+            (root / "README.md").write_text(sample, encoding="utf-8")
+
+            errors = validate_template._check_quickstart_validation_command(root)
+
+            self.assertTrue(any("first-screen jump list" in error for error in errors))
 
     def test_readme_requires_project_overview_heading_within_first_twenty_eight_lines(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

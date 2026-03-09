@@ -28,6 +28,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_QUICKSTART_BUNDLE.md",
     "docs/README_PROJECT_INTRO_60S.md",
     "docs/README_FIRST_SCREEN_MAP.md",
+    "docs/README_FIRST_SCREEN_JUMP_LIST.md",
     "docs/README_PROJECT_OVERVIEW_FAQ.md",
     "docs/README_VALUE_PROOF_POINTS.md",
     "docs/README_LANDING_QUICKSTART_MAP.md",
@@ -64,6 +65,7 @@ REQUIRED_FILES = [
 BILINGUAL_SECTION_MARKERS = {
     "README.md": [
         "English mirror:",
+        "## 첫 화면 바로가기 / First-screen jump list",
         "## 프로젝트 소개 / Project overview",
         "## 프로젝트 한눈에 보기 / Project at a glance",
         "## 빠른 적합성 체크 / Quick fit check",
@@ -149,6 +151,14 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "무엇을 찾는 저장소인가?",
         "What kind of repo is this?",
+    ],
+    "docs/README_FIRST_SCREEN_JUMP_LIST.md": [
+        "README 첫 화면 바로가기 / README first-screen jump list",
+        "## 한국어 기준 / Korean-first jump list",
+        "## English mirror",
+        "## 유지 규칙 / Maintenance rule",
+        "Project overview",
+        "Governance handoff",
     ],
     "docs/README_FIRST_VISITOR_ROUTES.md": [
         "README 첫 방문 경로 / README first-visitor routes",
@@ -417,6 +427,11 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
     top_intro_window = "\n".join(lines[:80])
     top_project_pitch_window = "\n".join(lines[:20])
+    jump_list_window = "\n".join(lines[:40])
+    if "## 첫 화면 바로가기 / First-screen jump list" not in jump_list_window or "Governance lives lower" not in jump_list_window:
+        errors.append(
+            "README.md: first-screen jump list must appear within the first 40 lines and keep the governance-handoff cue visible near the intro-first landing block"
+        )
     first_visit_15s_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 첫 방문 15초 선택 / 15-second first-visit chooser"), None)
     if "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음" not in top_project_pitch_window or "curated, practical collection of agent skills and runnable templates" not in top_project_pitch_window:
         errors.append(

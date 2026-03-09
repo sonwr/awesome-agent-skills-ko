@@ -26,6 +26,15 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 The intro-first promise stays in `docs/README_PROJECT_ENTRY_PROMISE.md`, with a one-page landing summary in `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`, a compact start-here card in `docs/README_PROJECT_START_HERE.md`, and the one-screen landing panel source in `docs/README_PROJECT_HOME_PANEL.md`.
 Contributor operations live separately in `docs/CONTRIBUTOR_OPERATIONS.md` so the landing block can stay project-first.
+## 첫 화면 바로가기 / First-screen jump list
+- **프로젝트 소개 먼저 보기 / Read the project intro first** — `## 프로젝트 소개 / Project overview`
+- **대상 사용자 빠르게 확인 / Check the target audience quickly** — `## 대상 사용자 / Who this is for`
+- **대표 가치 바로 확인 / See the immediate value** — `## 제공 가치 / What you get`
+- **대표 예시와 카테고리 / Featured examples and categories** — featured categories section + featured-use-cases section
+- **지금 실행 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+- **기여 규칙은 아래로 / Governance lives lower** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `CONTRIBUTING.md`, `docs/CURATION_POLICY.md`
+English mirror: Use this jump list to preserve the README first-screen order — intro, audience, value, featured examples/categories, quick start, then governance handoff.
+
 ## 첫 화면 핵심 3줄 / First-screen in 3 lines
 - **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
 - **누가 먼저 보면 좋은가? / Who should start here?** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
