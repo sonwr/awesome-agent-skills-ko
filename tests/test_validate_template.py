@@ -2385,6 +2385,7 @@ class FirstScreenWireframeValidationTests(unittest.TestCase):
                 "docs/README_FIRST_SCREEN_MAP.md",
                 "docs/README_FIRST_VISITOR_PROMISES.md",
                 "docs/README_FIRST_VISITOR_ROUTES.md",
+                "docs/README_FIRST_SCREEN_DECISION_TREE.md",
                 "docs/README_ROLE_STARTERS.md",
                 "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
                 "docs/PROJECT_OVERVIEW.md",

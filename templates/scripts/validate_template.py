@@ -32,6 +32,7 @@ REQUIRED_FILES = [
     "docs/README_FIRST_VISIT_PACK.md",
     "docs/README_FIRST_VISITOR_PROMISES.md",
     "docs/README_FIRST_VISITOR_ROUTES.md",
+    "docs/README_FIRST_SCREEN_DECISION_TREE.md",
     "docs/README_ROLE_STARTERS.md",
     "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
     "docs/PROJECT_OVERVIEW.md",
@@ -374,6 +375,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     audience_quick_recipes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_AUDIENCE_QUICK_RECIPES.md" in line), None)
     first_visitor_promises_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_PROMISES.md" in line), None)
     first_visitor_routes_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_VISITOR_ROUTES.md" in line), None)
+    first_screen_decision_tree_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_SCREEN_DECISION_TREE.md" in line), None)
     project_value_quickcheck_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_PROJECT_VALUE_QUICKCHECK.md" in line), None)
     if role_starter_line is None or role_starter_line > 90:
         errors.append(
