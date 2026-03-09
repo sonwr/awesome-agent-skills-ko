@@ -53,7 +53,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("first 75 lines" in error for error in errors))
+            self.assertTrue(any("first 170 lines" in error for error in errors))
 
     def test_readme_requires_start_here_summary_to_keep_intro_audience_value_category_quickstart_order(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -544,7 +544,7 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             (root / "README.md").write_text(
                 "## 프로젝트 소개 / Project overview\n"
-                + "\n".join([f"line {idx}" for idx in range(1, 267)])
+                + "\n".join([f"line {idx}" for idx in range(1, 321)])
                 + "\n## 대표 시작 예시 / Featured starter examples\n"
                 + "python3 templates/scripts/validate_template.py\n",
                 encoding="utf-8",
@@ -552,7 +552,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("featured starter examples must appear within the first 265 lines" in error for error in errors))
+            self.assertTrue(any("featured starter examples must appear within the first 320 lines" in error for error in errors))
 
     def test_readme_requires_featured_starter_example_markers(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1251,7 +1251,7 @@ These three docs are the default follow-up path after quick start, and the valid
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("overview -> first-time visitor FAQ -> at-a-glance" in error for error in errors))
+            self.assertTrue(any("overview -> audience -> value -> featured use cases -> quick start" in error for error in errors))
 
     def test_project_snapshot_requires_validation_command_and_quickstart_link(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
