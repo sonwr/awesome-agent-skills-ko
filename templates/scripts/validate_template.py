@@ -20,6 +20,7 @@ REQUIRED_FILES = [
     "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/README_PROJECT_VALUE_QUICKCHECK.md",
     "docs/README_PROJECT_INTRO_60S.md",
+    "docs/README_FIRST_SCREEN_MAP.md",
     "docs/README_PROJECT_OVERVIEW_FAQ.md",
     "docs/README_VALUE_PROOF_POINTS.md",
     "docs/README_LANDING_QUICKSTART_MAP.md",
@@ -188,6 +189,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## English mirror",
         "프로젝트 소개 → 대상 사용자 → 제공 가치",
         "overview -> audience -> value",
+    ],
+    "docs/README_FIRST_SCREEN_MAP.md": [
+        "README 첫 화면 지도 / README first-screen map",
+        "## 한국어 기준 / Korean-first map",
+        "## English mirror",
+        "프로젝트 소개 / Project intro",
+        "Governance handoff",
     ],
     "docs/README_FIRST_SCREEN_SCRIPT.md": [
         "README 첫 화면 스크립트 / README first-screen script",
@@ -585,6 +593,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "docs/README_FIRST_SCREEN_CHECKLIST.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
         "docs/README_PROJECT_INTRO_60S.md",
+    "docs/README_FIRST_SCREEN_MAP.md",
         "docs/README_PROJECT_OVERVIEW_FAQ.md",
         "English mirror:",
     ]
@@ -776,6 +785,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "docs/README_LANDING_QUICKSTART_MAP.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/README_PROJECT_INTRO_60S.md",
+    "docs/README_FIRST_SCREEN_MAP.md",
         "docs/CURATION_POLICY.md",
     ]:
         if required_button not in core_start_buttons_section:
@@ -871,6 +881,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     if "docs/README_FIRST_VISIT_PACK.md" not in "\n".join(lines[:100]):
         errors.append(
             "README.md: the first 100 lines must link docs/README_FIRST_VISIT_PACK.md so first-visit starter bundles stay attached to the intro-first landing block"
+        )
+    if "docs/README_FIRST_SCREEN_MAP.md" not in "\n".join(lines[:120]):
+        errors.append(
+            "README.md: the first 120 lines must link docs/README_FIRST_SCREEN_MAP.md so the intro -> audience -> value -> examples -> quick-start order stays visible during landing rewrites"
         )
     if "docs/README_PROJECT_POSITIONING.md" not in "\n".join(lines[:140]):
         errors.append(
@@ -1080,6 +1094,7 @@ def _check_readme_top_callout_sync(root: Path) -> list[str]:
         "docs/README_TOP_CALLOUTS.md",
         "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/README_PROJECT_INTRO_60S.md",
+    "docs/README_FIRST_SCREEN_MAP.md",
         "docs/PROJECT_OVERVIEW.md",
         "docs/PROJECT_ENTRY_PATHS.md",
         "docs/PROJECT_DIRECTION.md",

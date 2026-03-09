@@ -31,7 +31,7 @@ English mirror:
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
 - **대표 가치 / Immediate value** — 첫 검증 명령, 다음 문서, 첫 PR 증빙 경로를 한 번에 찾게 만듭니다.
 - **대표 카테고리 / Featured categories** — 온보딩·PR 증빙·큐레이션/운영 기준 문서를 우선 노출합니다.
-- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`
+- **역할별 시작 지도 + 상단 설계 압축본 / Role-based start map + landing one-pager** — `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `docs/README_FIRST_VISIT_PACK.md`
 - **가치 증명 포인트 / Value proof points** — `docs/README_VALUE_PROOF_POINTS.md`
 - **프로젝트 가치 퀵체크 / Project value quick-check** — `docs/README_PROJECT_VALUE_QUICKCHECK.md`
 - **대표 카테고리 맵 / Featured category map** — `docs/README_FEATURED_CATEGORY_MAP.md`
@@ -40,7 +40,7 @@ English mirror:
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **다음 열 문서 / Open next** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 
-English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, the project overview FAQ, positioning/maintenance docs, the starter-pack summary, persona quickstart cues, the first-action matrix, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
+English mirror: Project intro, who it helps, immediate value, featured categories, role-based start map, landing one-pager, the project overview FAQ, positioning/maintenance docs, the starter-pack summary, persona quickstart cues, the first-action matrix, featured examples, quick start, and open-next links stay visible from the first screen. Core links: `docs/README_ROLE_STARTERS.md`, `docs/README_PROJECT_VALUE_QUICKSTART.md`, `docs/README_PROJECT_VALUE_QUICKCHECK.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_PROJECT_OVERVIEW_FAQ.md`, `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_VISITOR_ROUTES.md`, `docs/README_PROJECT_POSITIONING.md`, `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`, `docs/README_PROJECT_STARTER_PACK.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`, `docs/README_FIRST_ACTION_MATRIX.md`, `examples/quickstart.md`, `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, `examples/pr-evidence-mini-walkthrough.md`.
 ## 프로젝트 소개 / Project overview
 
 이 저장소는 **한국어 기반 빌더를 위한 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
@@ -165,7 +165,7 @@ English mirror:
 - **대표 가치 흐름**: 프로젝트 소개 → 대상 사용자 → 제공 가치 → 대표 카테고리 → 빠른 시작 순서로 읽으면 첫 화면에서 방향이 잡힙니다.
 - **첫 화면 원칙**: README 상단은 소개/가치/빠른 시작을 먼저 보여주고, 운영 규칙은 아래 문서로 내립니다.
 - **상단 구조 가드**: 검증 스크립트가 `더 읽기`/`처음 기여할 때 읽는 순서`가 `빠른 시작` 위로 올라오지 않도록 막습니다.
-- **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_VALUE_PROOF_POINTS.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`
+- **랜딩 구조 참고 문서**: `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`, `docs/README_PROJECT_INTRO_60S.md`, `docs/README_AUDIENCE_QUICK_RECIPES.md`, `docs/README_VALUE_PROOF_POINTS.md`, `docs/README_FIRST_VISITOR_PROMISES.md`, `docs/README_PROJECT_QUICKSTART_PERSONAS.md`
 - **대상 사용자-가치 맵**: `docs/README_AUDIENCE_VALUE_MAP.md`
 - **상단 유지 루프**: README 상단 수정 후 `python3 templates/scripts/validate_template.py` 실행 → `docs/README_FIRST_SCREEN_CHECKLIST.md` 재검토
 
@@ -222,7 +222,7 @@ English mirror: The operations-heavy navigation blocks (`Core start buttons`, `R
 - **프로젝트 이해 / Understand the project** — `docs/README_PROJECT_INTRO_60S.md` → `docs/README_PROJECT_VALUE_QUICKSTART.md`
 - **바로 검증 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **첫 PR 준비 / Prepare the first PR** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
-- **운영 가이드 열기 / Open governance guides** — `docs/README_FAST_PATHS.md` → `docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `docs/CURATION_POLICY.md`
+- **운영 가이드 열기 / Open governance guides** — `docs/README_FAST_PATHS.md` → `docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_FIRST_SCREEN_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `docs/CURATION_POLICY.md`
 
 
 - **프로젝트를 먼저 이해 / Understand the project** → `프로젝트 소개 / Project overview` → `대표 카테고리와 예시 / Featured categories and examples` → `카테고리 바로가기 / Category jump links`
@@ -266,7 +266,7 @@ English mirror:
 - **기여 준비 / Prepare a contribution** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 열어 PR 최소 증빙 형식을 바로 복사합니다.
 - **운영 점검 / Audit the landing flow** — `docs/README_FAST_PATHS.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`를 열어 README 소개 우선 구조가 유지되는지 확인합니다.
 - **독자-가치 정렬 확인 / Check audience-value fit** — `docs/README_AUDIENCE_VALUE_MAP.md`를 열어 첫 화면 메시지가 탐색형/기여형/운영형 방문자에게 맞게 배치됐는지 빠르게 점검합니다.
-- **프로젝트 소개 우선 유지 / Keep the intro-first landing** — `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_AUDIENCE_VALUE_MAP.md`를 함께 열어 대표 예시가 소개/가치/빠른 시작 뒤에 붙어 있는지 확인합니다.
+- **프로젝트 소개 우선 유지 / Keep the intro-first landing** — `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_AUDIENCE_VALUE_MAP.md`를 함께 열어 대표 예시가 소개/가치/빠른 시작 뒤에 붙어 있는지 확인합니다.
 
 English mirror:
 - **Project overview FAQ** — open `docs/README_PROJECT_OVERVIEW_FAQ.md` for first-visit answers about the intro, audience, and quick-start path.
@@ -274,7 +274,7 @@ English mirror:
 - **Prepare a contribution** — open `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `examples/pr-evidence-mini-walkthrough.md` to copy the minimum PR evidence format.
 - **Audit the landing flow** — open `docs/README_FAST_PATHS.md` and `docs/README_FIRST_SCREEN_CHECKLIST.md` to verify that the README stays intro-first.
 - **Check audience-value fit** — open `docs/README_AUDIENCE_VALUE_MAP.md` to verify that the first-screen message still matches explorer/contributor/operator visitors.
-- **Keep the intro-first landing** — open `docs/README_FIRST_SCREEN_CHECKLIST.md` and `docs/README_AUDIENCE_VALUE_MAP.md` together to confirm that featured examples stay below overview/value/quick-start, not above them.
+- **Keep the intro-first landing** — open `docs/README_FIRST_SCREEN_CHECKLIST.md`, `docs/README_FIRST_SCREEN_MAP.md`, and `docs/README_AUDIENCE_VALUE_MAP.md` together to confirm that featured examples stay below overview/value/quick-start, not above them.
 
 ## 대표 카테고리와 예시 / Featured categories and examples
 
@@ -545,7 +545,7 @@ English mirror:
 
 ## 상단 핵심 콜아웃 / Top contributor callouts
 
-- **한국어 기본 + 영어 / Korean-first + English mirror** — 소개 우선 구조를 유지하면서 `docs/README_PROJECT_INTRO_60S.md`, `docs/README_AUDIENCE_VALUE_MAP.md`, `docs/README_TOP_CALLOUTS.md`를 함께 갱신합니다.
+- **한국어 기본 + 영어 / Korean-first + English mirror** — 소개 우선 구조를 유지하면서 `docs/README_PROJECT_INTRO_60S.md`, `docs/README_FIRST_SCREEN_MAP.md`, `docs/README_AUDIENCE_VALUE_MAP.md`, `docs/README_TOP_CALLOUTS.md`를 함께 갱신합니다.
 - **재현 명령 / 종료코드 / 핵심 출력 / Repro command / exit code / key output** — README 상단 변경 뒤 `python3 templates/scripts/validate_template.py`를 실행하고 핵심 결과를 PR 증빙에 남깁니다.
 - **다음 실행 / Next run** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md` → `docs/PROJECT_ENTRY_PATHS.md`
 - **5-minute contribution flow** — `docs/PROJECT_OVERVIEW.md` → `docs/PROJECT_DIRECTION.md` → `docs/README_INFORMATION_ARCHITECTURE.md`
