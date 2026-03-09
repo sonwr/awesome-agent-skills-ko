@@ -20,6 +20,7 @@ REQUIRED_FILES = [
     "docs/README_AUDIENCE_VALUE_MAP.md",
     "docs/README_LANDING_QUICKSTART_MAP.md",
     "docs/README_PROJECT_INTRO_BLUEPRINT.md",
+    "docs/README_PROJECT_POSITIONING.md",
     "docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md",
     "docs/PROJECT_OVERVIEW.md",
     "docs/PROJECT_ENTRY_PATHS.md",
@@ -107,6 +108,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 상단에 먼저 보여줄 것 / What should appear first",
         "## 뒤로 미룰 것 / What should move lower",
         "## English mirror",
+    ],
+    "docs/README_PROJECT_POSITIONING.md": [
+        "README 프로젝트 포지셔닝 / README project positioning",
+        "## 포지셔닝 문장 / Positioning statement",
+        "## 첫 화면에서 먼저 약속할 가치 / Value promises to show first",
+        "## 먼저 보이고 뒤로 내릴 것 / What stays first vs lower",
+        "English mirror:",
     ],
     "docs/README_INFORMATION_ARCHITECTURE.md": [
         "README 정보 구조 가이드 / README information architecture guide",

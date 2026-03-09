@@ -109,7 +109,7 @@ English mirror:
 - **Best for**: individuals and teams who want Korean-first discovery, validation, and contribution flows in one place.
 - **Value flow on the first screen**: overview -> audience -> value -> featured categories -> quick start.
 - **Landing-page rule**: keep the README top focused on intro/value/quick start, and move governance details lower.
-- **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`
+- **Landing flow reference**: `docs/README_LANDING_QUICKSTART_MAP.md`, `docs/README_FIRST_SCREEN_WIREFRAME.md`
 
 ## 처음 방문 FAQ / First-time visitor FAQ
 
@@ -524,6 +524,7 @@ English mirror: Keep the landing view focused on overview/value/quick start, and
 - 큐레이션/운영 기준 / Curation and governance standards: `docs/CURATION_POLICY.md`, `docs/TEMPLATE_STANDARD.md`, `docs/ROADMAP.md`
 - README 정보 구조 가이드 / README information architecture guide: `docs/README_INFORMATION_ARCHITECTURE.md`
 - README 소개형 상단 청사진 / README intro-first blueprint: `docs/README_PROJECT_INTRO_BLUEPRINT.md`
+- README 프로젝트 포지셔닝 / README project positioning: `docs/README_PROJECT_POSITIONING.md`
 - README 소개 우선 유지 루프 / README intro-first maintenance loop: `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`
 
 ---

@@ -2017,6 +2017,7 @@ if __name__ == "__main__":
 
     def test_required_files_include_intro_first_maintenance_loop_docs(self) -> None:
         self.assertIn("docs/README_PROJECT_INTRO_BLUEPRINT.md", validate_template.REQUIRED_FILES)
+        self.assertIn("docs/README_PROJECT_POSITIONING.md", validate_template.REQUIRED_FILES)
         self.assertIn("docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md", validate_template.REQUIRED_FILES)
         self.assertEqual(
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md"],
@@ -2025,6 +2026,16 @@ if __name__ == "__main__":
                 "## 1) 소개 먼저 확인 / Confirm the intro first",
                 "## 2) 경로를 끊지 않기 / Preserve the handoff path",
                 "## 3) 수정 후 검증 / Validate after edits",
+                "English mirror:",
+            ],
+        )
+        self.assertEqual(
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_POSITIONING.md"],
+            [
+                "README 프로젝트 포지셔닝 / README project positioning",
+                "## 포지셔닝 문장 / Positioning statement",
+                "## 첫 화면에서 먼저 약속할 가치 / Value promises to show first",
+                "## 먼저 보이고 뒤로 내릴 것 / What stays first vs lower",
                 "English mirror:",
             ],
         )
@@ -2754,7 +2765,7 @@ class ValidateTemplateRoleHandoffTests(unittest.TestCase):
                 "docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
                 "역할별 1클릭 다음 문서 / Role-based 1-click next docs`",
             ).replace(
-                "docs/README_LANDING_QUICKSTART_MAP.md` → `docs/README_AUDIENCE_VALUE_MAP.md` → `Role-based 1-click next docs`",
+                "docs/README_LANDING_QUICKSTART_MAP.md` → `Role-based 1-click next docs`",
                 "Role-based 1-click next docs`",
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
