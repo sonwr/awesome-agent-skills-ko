@@ -43,6 +43,7 @@ English mirror:
 - `docs/README_RECOMMENDED_STARTING_PATHS.md` — README 추천 시작 경로 / Recommended starting paths
 - `docs/README_ROLE_START_QUICK_GUIDE.md` — 역할별 시작 퀵 가이드 / Role start quick guide
 - **첫 화면 유지 신호 / Landing maintenance signal** — README 상단을 바꿀 때는 소개·대상 사용자·가치·대표 경로가 첫 화면에 남아 있는지 먼저 확인합니다.
+- **첫 화면 질문 / First-screen question** — 첫 화면을 다듬을 때는 “이 저장소가 무엇이고, 누가 쓰며, 지금 무엇을 하면 되는가?”가 첫 스크롤 안에 남는지 먼저 확인합니다.
 - **첫 화면 경계 규칙 / First-screen boundary rule** — `docs/README_FIRST_SCREEN_BOUNDARY.md`
 - **첫 화면 handoff 카드 / First-screen handoff card** — `docs/README_FIRST_SCREEN_HANDOFF.md`
 - **프로젝트 첫 화면 개요 / Project first-screen overview** — `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`
