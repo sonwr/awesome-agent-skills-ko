@@ -12,6 +12,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **대표 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **첫 검증 후 바로 볼 문서 / First doc after validation** — `docs/README_PROJECT_FIRST_LOOK.md`
+- **첫 소개 유지 루프 / Intro-first maintenance loop** — `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`
 - **빠른 시작 체크포인트 / Quickstart checkpoints** — `docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md`
 - **시작 신호 / Start signal** — `docs/README_PROJECT_START_SIGNAL.md`
 - **첫 화면 진입 약속 / First-screen entry promise** — README 첫 화면만 읽어도 프로젝트 소개 → 대상 사용자 → 가치 → 빠른 시작 순서를 잃지 않도록 유지합니다.
