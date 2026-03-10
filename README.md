@@ -53,6 +53,7 @@ It exists to make execution, validation, and contribution paths visible from the
 
 - 무엇을 하나요? 검증 가능한 스킬/템플릿을 모으고, 한국어 기본 문서 흐름과 영어 미러를 함께 제공합니다.
 - 왜 필요한가요? README 첫 화면만 읽어도 실행·검증·기여 경로가 보이는 출발점을 만들기 위해서입니다.
+- 첫 화면 유지보수 루프는 어디에 있나요? `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`에서 intro-first 구조를 점검합니다.
 - 첫 화면 원칙은 무엇인가요? 소개 → 대상 사용자 → 제공 가치 → 대표 예시/빠른 시작을 먼저 보여주고, 운영 규칙은 아래로 내립니다.
 - README 재설계 원칙은 무엇인가요? 프로젝트 소개와 빠른 시작은 상단에 고정하고, 운영 체크리스트와 심화 가이드는 하단/별도 문서로 분리합니다.
 
@@ -61,6 +62,7 @@ A curated collection of agent skills and runnable templates for Korean-speaking 
 
 - What does it do? It curates validation-ready skills/templates and keeps Korean-first docs plus practical English mirrors together.
 - Why does it matter? It gives teams an intro-first landing page that leads directly to runnable, reviewable building blocks — not just a link dump.
+- Where is the landing maintenance loop? Use `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md` to audit intro-first rewrites.
 - What is the landing rule? Put overview -> audience -> value -> examples/quick start first, and move governance details lower.
 - What changed in the README direction? Keep the project story and quick-start handoff at the top, while pushing contribution checklists and operations guidance lower or into dedicated docs.
 
