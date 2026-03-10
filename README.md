@@ -190,8 +190,9 @@ English mirror:
 - **바로 실행 / Validate now** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **바로 기여 / Contribute now** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `examples/pr-evidence-mini-walkthrough.md`
 - **운영 구조 점검 / Audit the landing flow** — `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FAST_PATHS.md` → `docs/README_FIRST_VISITOR_ROUTES.md`
+- **첫 실행 결정 / First-run decider** — `docs/README_FIRST_RUN_DECIDER.md`
 
-English mirror: Need a fast route? Explore the intro first, run validation immediately, jump into contribution evidence, or audit the landing structure with the README checklist.
+English mirror: Need a fast route? Explore the intro first, run validation immediately, jump into contribution evidence, audit the landing structure with the README checklist, or use the first-run decider.
 
 ## 프로젝트 첫 화면 약속 / First-screen promises
 
