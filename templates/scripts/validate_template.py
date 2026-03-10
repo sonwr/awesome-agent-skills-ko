@@ -37,6 +37,7 @@ REQUIRED_FILES = [
     "docs/README_PROJECT_POSITIONING.md",
     "docs/README_PROJECT_STARTER_PACK.md",
     "docs/README_PROJECT_START_MAP.md",
+    "docs/README_PROJECT_START_SIGNAL.md",
     "docs/README_PROJECT_ONE_MINUTE_VALUE.md",
     "docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md",
     "docs/README_PROJECT_FIRST_LOOK.md",
@@ -213,6 +214,13 @@ BILINGUAL_SECTION_MARKERS = {
         "## 유지 규칙 / Maintenance rule",
         "Project intro",
         "Governance handoff",
+    ],
+    "docs/README_PROJECT_START_SIGNAL.md": [
+        "README 프로젝트 시작 신호 / Project start signal",
+        "## 시작 신호 / Start signals",
+        "## 빠른 점검 질문 / Quick review questions",
+        "The repository identity is obvious on the first screen.",
+        "A beginner can see the first navigation path at a glance.",
     ],
     "docs/README_PROJECT_VALUE_LADDER.md": [
         "README 프로젝트 가치 사다리 / README project value ladder",

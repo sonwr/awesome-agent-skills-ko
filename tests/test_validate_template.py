@@ -46,6 +46,13 @@ class ValidateTemplateTests(unittest.TestCase):
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_START_MAP.md"],
         )
 
+    def test_required_files_include_project_start_signal_doc(self) -> None:
+        self.assertIn("docs/README_PROJECT_START_SIGNAL.md", validate_template.REQUIRED_FILES)
+        self.assertIn(
+            "README 프로젝트 시작 신호 / Project start signal",
+            validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_START_SIGNAL.md"],
+        )
+
     def test_required_files_include_project_home_panel_doc(self) -> None:
         self.assertIn("docs/README_PROJECT_HOME_PANEL.md", validate_template.REQUIRED_FILES)
         self.assertIn(
