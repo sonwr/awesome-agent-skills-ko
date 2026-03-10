@@ -12,6 +12,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **빠른 시작 체크포인트 / Quickstart checkpoints** — `docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md`
 - **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
+- **첫 방문 결정 카드 / First-visit decision card** — `docs/README_FIRST_VISITOR_DECISION_CARD.md`
 ## 첫 화면 바로가기 / First-screen jump list
 - 소개 → 대상 사용자 → 제공 가치 → 대표 예시/카테고리 → 빠른 시작 → 운영 문서 이관
 - `docs/README_PROJECT_START_HERE.md` — README 프로젝트 스타트히어 카드 / Start-here card
