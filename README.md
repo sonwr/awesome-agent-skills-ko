@@ -20,6 +20,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 화면 종료 약속 / First-screen exit promise** — `docs/README_FIRST_SCREEN_EXIT_PROMISE.md`
 - **랜딩 상태 메모 / Landing status note** — `docs/README_LANDING_STATUS_NOTE.md`
 - **첫 화면 상태 브리지 / First-screen status bridge** — `docs/README_FIRST_SCREEN_STATUS_BRIDGE.md`
+- **첫 화면 준비 신호 / First-screen ready signal** — `docs/README_FIRST_SCREEN_READY_SIGNAL.md`
 - **첫 클릭 근거 카드 / First-click proof card** — `docs/README_FIRST_CLICK_PROOF_CARD.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
 - **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
@@ -34,6 +35,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - `docs/README_RECOMMENDED_STARTING_PATHS.md` — README 추천 시작 경로 / Recommended starting paths
 - `docs/README_ROLE_START_QUICK_GUIDE.md` — 역할별 시작 퀵 가이드 / Role start quick guide
 - **운영 문서 위치 / Where governance lives** — 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, Governance lives lower so the README opens with project value first.
+English mirror: Governance details live below the landing block so the README can keep project value and first actions on the first screen.
 - **첫 화면 유지 신호 / Landing maintenance signal** — README 상단을 바꿀 때는 소개·대상 사용자·가치·대표 경로가 첫 화면에 남아 있는지 먼저 확인합니다.
 - **첫 화면 경계 규칙 / First-screen boundary rule** — `docs/README_FIRST_SCREEN_BOUNDARY.md`
 - **첫 화면 handoff 카드 / First-screen handoff card** — `docs/README_FIRST_SCREEN_HANDOFF.md`
