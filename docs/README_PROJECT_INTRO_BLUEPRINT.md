@@ -10,6 +10,7 @@ English mirror: The README first screen should behave like a project-introductio
 - 제공 가치
 - 대표 카테고리/예시
 - 빠른 시작 명령
+- 빠른 시작 바로 다음에 열 문서 1개
 - `좋아 보이는 링크 모음`이 아니라 `실행 가능한 프로젝트 소개형 저장소`라는 가치 문장
 
 English mirror:
@@ -18,6 +19,7 @@ English mirror:
 - Value proposition
 - Featured categories/examples
 - Quick start command
+- One follow-up doc to open right after quick start
 
 
 1. 프로젝트 소개 / Project overview
