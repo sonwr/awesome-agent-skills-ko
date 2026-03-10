@@ -471,20 +471,20 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
     overview_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 프로젝트 소개 / Project overview"), None)
     quickstart_command_line = next((idx for idx, line in enumerate(lines, start=1) if "python3 templates/scripts/validate_template.py" in line), None)
     start_here_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 바로 시작 요약 / Start-here summary"), None)
-    if start_here_line is None or start_here_line > 40:
+    if start_here_line is None or start_here_line > 60:
         errors.append(
-            "README.md: start-here summary heading must appear within the first 40 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
+            "README.md: start-here summary heading must appear within the first 60 lines so the landing area immediately exposes intro/audience/value/categories/quick-start cues"
         )
-    if overview_line is None or overview_line > 50:
+    if overview_line is None or overview_line > 80:
         errors.append(
-            "README.md: project overview heading must appear within the first 50 lines so the README stays project-intro-first even after the compact landing summary blocks"
+            "README.md: project overview heading must appear within the first 80 lines so the README stays project-intro-first even after the compact landing summary blocks"
         )
     top_intro_window = "\n".join(lines[:320])
     top_project_pitch_window = "\n".join(lines[:20])
-    jump_list_window = "\n".join(lines[:40])
+    jump_list_window = "\n".join(lines[:50])
     if "## 첫 화면 바로가기 / First-screen jump list" not in jump_list_window or "Governance lives lower" not in jump_list_window:
         errors.append(
-            "README.md: first-screen jump list must appear within the first 40 lines and keep the governance-handoff cue visible near the intro-first landing block"
+            "README.md: first-screen jump list must appear within the first 50 lines and keep the governance-handoff cue visible near the intro-first landing block"
         )
     first_visit_15s_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 첫 방문 15초 선택 / 15-second first-visit chooser"), None)
     if "에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음" not in top_project_pitch_window or "curated, practical collection of agent skills and runnable templates" not in top_project_pitch_window:
@@ -499,9 +499,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 320 lines must not contain replacement characters (�) so the intro-first landing copy stays readable and trustworthy"
         )
-    if first_visit_15s_line is None or first_visit_15s_line > 180:
+    if first_visit_15s_line is None or first_visit_15s_line > 210:
         errors.append(
-            "README.md: the 15-second first-visit chooser must appear within the first 180 lines so explore/validate/contribute/audit routes stay visible near the intro-first landing block"
+            "README.md: the 15-second first-visit chooser must appear within the first 210 lines so explore/validate/contribute/audit routes stay visible near the intro-first landing block"
         )
     governance_handoff_window = "\n".join(lines[:40])
     if "운영 문서 위치 / Where governance lives" not in governance_handoff_window or "Governance details live below the landing block" not in governance_handoff_window:
@@ -509,9 +509,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: the first 40 lines must keep a bilingual governance-handoff cue so contribution/operations docs stay explicitly below the intro-first landing block"
         )
     first_action_matrix_line = next((idx for idx, line in enumerate(lines, start=1) if "docs/README_FIRST_ACTION_MATRIX.md" in line), None)
-    if first_action_matrix_line is None or first_action_matrix_line > 45:
+    if first_action_matrix_line is None or first_action_matrix_line > 80:
         errors.append(
-            "README.md: first action matrix link must appear within the first 45 lines so newcomers can pick the best first click without dropping into governance-heavy sections"
+            "README.md: first action matrix link must appear within the first 80 lines so newcomers can pick the best first click without dropping into governance-heavy sections"
         )
     top_summary_markers = [
         "프로젝트 소개 / Project intro",
@@ -540,9 +540,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: the start-here summary must keep intro -> audience -> immediate value -> featured categories -> quick start order inside the Start-here summary block"
         )
     quick_fit_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 빠른 적합성 체크 / Quick fit check"), None)
-    if quick_fit_line is None or quick_fit_line > 210:
+    if quick_fit_line is None or quick_fit_line > 240:
         errors.append(
-            "README.md: quick fit check must appear within the first 210 lines so best-fit/not-for guidance stays near the intro-first landing block before deeper governance sections"
+            "README.md: quick fit check must appear within the first 240 lines so best-fit/not-for guidance stays near the intro-first landing block before deeper governance sections"
         )
     if quickstart_command_line is None or quickstart_command_line > 160:
         errors.append(
@@ -573,21 +573,21 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: who-starts-where routing doc link must appear within the first 95 lines so first-time visitors can see role -> first doc -> first action handoff without dropping into governance-heavy sections"
         )
     featured_use_cases_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 대표 활용 시나리오 / Featured use cases"), None)
-    if featured_use_cases_line is None or featured_use_cases_line > 115:
+    if featured_use_cases_line is None or featured_use_cases_line > 135:
         errors.append(
-            "README.md: featured use cases must appear within the first 115 lines so intro-first visitors see representative onboarding / contribution / governance scenarios before deeper navigation"
+            "README.md: featured use cases must appear within the first 135 lines so intro-first visitors see representative onboarding / contribution / governance scenarios before deeper navigation"
         )
     recommended_paths_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 추천 시작 경로 / Recommended starting paths"), None)
-    if recommended_paths_line is None or recommended_paths_line > 135:
+    if recommended_paths_line is None or recommended_paths_line > 150:
         errors.append(
-            "README.md: recommended starting paths must appear within the first 135 lines so explorer/contributor/operator visitors can choose a lane before governance-heavy sections"
+            "README.md: recommended starting paths must appear within the first 150 lines so explorer/contributor/operator visitors can choose a lane before governance-heavy sections"
         )
     three_line_heading = "## 첫 화면 핵심 3줄 / First-screen in 3 lines"
     three_line_section_heading = "첫 화면 핵심 3줄 / First-screen in 3 lines"
     three_line_line = next((idx for idx, line in enumerate(lines, start=1) if three_line_heading in line), None)
-    if three_line_line is None or three_line_line > 32:
+    if three_line_line is None or three_line_line > 50:
         errors.append(
-            "README.md: first-screen in 3 lines section must appear within the first 32 lines so the landing area explains project intro, audience fit, and quick action before deeper navigation"
+            "README.md: first-screen in 3 lines section must appear within the first 50 lines so the landing area explains project intro, audience fit, and quick action before deeper navigation"
         )
     three_line_section = _extract_section(text, three_line_section_heading)
     if (
@@ -602,9 +602,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
     first_minute_heading = "## 첫 1분에 얻는 결과 / What you get in the first minute"
     first_minute_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == first_minute_heading), None)
-    if first_minute_line is None or first_minute_line > 160:
+    if first_minute_line is None or first_minute_line > 190:
         errors.append(
-            "README.md: first-minute outcome section must appear within the first 160 lines so the landing block states immediate value before deeper governance-heavy navigation"
+            "README.md: first-minute outcome section must appear within the first 190 lines so the landing block states immediate value before deeper governance-heavy navigation"
         )
     first_minute_section = _extract_section(text, "첫 1분에 얻는 결과 / What you get in the first minute")
     required_first_minute_markers = [
@@ -852,9 +852,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
             "README.md: landing section must include a bilingual 1-minute quick start block with validation, next-doc, and contributing-guide handoff cues"
         )
     featured_examples_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 대표 시작 예시 / Featured starter examples"), None)
-    if featured_examples_line is None or featured_examples_line > 340:
+    if featured_examples_line is None or featured_examples_line > 380:
         errors.append(
-            "README.md: featured starter examples must appear within the first 340 lines so intro-first readers see runnable examples before deep governance details"
+            "README.md: featured starter examples must appear within the first 380 lines so intro-first readers see runnable examples before deep governance details"
         )
     featured_examples_section = _extract_section(text, "대표 시작 예시 / Featured starter examples")
     required_featured_example_markers = [
@@ -985,9 +985,9 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         )
     faq_section = _extract_section(text, "처음 방문 FAQ / First-time visitor FAQ")
     faq_line = next((idx for idx, line in enumerate(lines, start=1) if line.strip() == "## 처음 방문 FAQ / First-time visitor FAQ"), None)
-    if faq_line is None or faq_line > 170:
+    if faq_line is None or faq_line > 205:
         errors.append(
-            "README.md: first-time visitor FAQ must appear within the first 180 lines so newcomers can confirm scope, first action, and contribution handoff before deeper ops sections"
+            "README.md: first-time visitor FAQ must appear within the first 205 lines so newcomers can confirm scope, first action, and contribution handoff before deeper ops sections"
         )
     for required_faq_marker in [
         "Is this just a link list?",

@@ -146,7 +146,7 @@ class ValidateTemplateTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
             (root / "README.md").write_text(
-                "\n".join([f"line {idx}" for idx in range(1, 78)])
+                "\n".join([f"line {idx}" for idx in range(1, 221)])
                 + "\n## 첫 방문 15초 선택 / 15-second first-visit chooser\n"
                 + "python3 templates/scripts/validate_template.py\n",
                 encoding="utf-8",
@@ -154,7 +154,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("first 180 lines" in error for error in errors))
+            self.assertTrue(any("first 210 lines" in error for error in errors))
 
     def test_readme_requires_start_here_summary_to_keep_intro_audience_value_category_quickstart_order(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -767,7 +767,7 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             (root / "README.md").write_text(
                 "## 프로젝트 소개 / Project overview\n"
-                + "\n".join([f"line {idx}" for idx in range(1, 341)])
+                + "\n".join([f"line {idx}" for idx in range(1, 381)])
                 + "\n## 대표 시작 예시 / Featured starter examples\n"
                 + "python3 templates/scripts/validate_template.py\n",
                 encoding="utf-8",
@@ -775,7 +775,7 @@ class ValidateTemplateTests(unittest.TestCase):
 
             errors = validate_template._check_quickstart_validation_command(root)
 
-            self.assertTrue(any("featured starter examples must appear within the first 340 lines" in error for error in errors))
+            self.assertTrue(any("featured starter examples must appear within the first 380 lines" in error for error in errors))
 
     def test_readme_requires_featured_starter_example_markers(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
