@@ -19,10 +19,12 @@ English mirror:
 
 - 소개 → 빠른 시작 → 다음 문서(`examples/quickstart.md`) 흐름이 한 번에 이어져야 합니다.
 - 기여 경로는 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, 운영 경로는 `docs/README_FAST_PATHS.md`로 이어집니다.
+- 첫 화면에서 검증 명령(`python3 templates/scripts/validate_template.py`)이 사라지면 intro-first handoff가 끊긴 것으로 봅니다.
 
 English mirror:
 - Keep the intro -> quick start -> next doc (`examples/quickstart.md`) path continuous.
 - Hand contribution paths to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and operator paths to `docs/README_FAST_PATHS.md`.
+- If the first-screen validation command (`python3 templates/scripts/validate_template.py`) disappears, treat the intro-first handoff as broken.
 
 ## 3) 수정 후 검증 / Validate after edits
 
