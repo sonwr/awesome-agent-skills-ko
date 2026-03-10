@@ -22,6 +22,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **운영 문서 위치 / Where governance lives** — Governance lives lower. 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first. English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 - **첫 화면 빠른 자기점검 / First-screen self-check** — `docs/README_PROJECT_VALUE_QUICKCHECK.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
+- **프로젝트 소개 엔트리 카드 / Project intro entry card** — `docs/README_PROJECT_INTRO_ENTRY_CARD.md`
 - **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
 ## 첫 화면 핵심 3줄 / First-screen in 3 lines
 - **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
