@@ -19,6 +19,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **프로젝트 시작 맵 / Project start map** — `docs/README_PROJECT_START_MAP.md`
 - **첫 화면 결정 트리 / First-screen decision tree** — `docs/README_FIRST_SCREEN_DECISION_TREE.md`
 - **첫 방문 체크포인트 / First-visitor checkpoints** — `docs/README_FIRST_VISITOR_CHECKPOINTS.md`
+- **첫 방문 결정 카드 / First-visit decision card** — `docs/README_FIRST_VISIT_DECISION_CARD.md`
 - **대상별 빠른 레시피 / Audience quick recipes** — `docs/README_AUDIENCE_QUICK_RECIPES.md`
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
