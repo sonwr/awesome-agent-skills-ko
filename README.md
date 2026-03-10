@@ -5,6 +5,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 
 ## 첫 화면 랜딩 패널 / First-screen landing panel
 - **프로젝트 소개 / Project intro** — README 첫 화면에서 프로젝트 의미와 시작 동선을 먼저 보여주는 한국어 기본 큐레이션 저장소
+- **첫 60초 약속 / First 60-second promise** — 첫 화면만 읽어도 저장소 목적·대상 사용자·빠른 시작 명령·다음 문서가 바로 보여야 합니다. English mirror: The first screen should reveal the repo purpose, audience, first command, and next doc within 60 seconds.
 - **첫 30초 행동 / First 30-second action** — 검증 명령 → 대표 예시 → 첫 기여 문서 순서가 첫 화면에서 바로 보이도록 유지
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀
 - **제공 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 대표 카테고리·첫 검증 명령·다음 문서·첫 증빙 경로를 첫 화면에서 바로 찾게 함
@@ -19,17 +20,17 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 화면 진입 약속 / First-screen entry promise** — README 첫 화면만 읽어도 프로젝트 소개 → 대상 사용자 → 가치 → 빠른 시작 순서를 잃지 않도록 유지합니다.
 - **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
 - **운영 문서 위치 / Where governance lives** — Governance lives lower. 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first. English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
-- **첫 방문 결정 카드 / First-visit decision card** — `docs/README_FIRST_VISITOR_DECISION_CARD.md`
-- **첫 화면 종료 약속 / First-screen exit promise** — `docs/README_FIRST_SCREEN_EXIT_PROMISE.md`
 - **첫 화면 빠른 자기점검 / First-screen self-check** — `docs/README_PROJECT_VALUE_QUICKCHECK.md`
-- **랜딩 상태 메모 / Landing status note** — `docs/README_LANDING_STATUS_NOTE.md`
-- **첫 화면 상태 브리지 / First-screen status bridge** — `docs/README_FIRST_SCREEN_STATUS_BRIDGE.md`
-- **첫 화면 준비 신호 / First-screen ready signal** — `docs/README_FIRST_SCREEN_READY_SIGNAL.md`
-- **첫 화면 소개 점검 카드 / First-screen intro check** — `docs/README_FIRST_SCREEN_INTRO_CHECK.md`
-- **첫 화면 증빙 번들 / First-screen proof bundle** — `docs/README_FIRST_SCREEN_PROOF_BUNDLE.md`
-- **첫 클릭 근거 카드 / First-click proof card** — `docs/README_FIRST_CLICK_PROOF_CARD.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
 - **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
+## 첫 화면 핵심 3줄 / First-screen in 3 lines
+- **무엇을 하는 프로젝트인가? / What is this project?** 한국어 기반 빌더가 검증 가능한 에이전트 스킬과 템플릿을 바로 찾고 실행하게 돕는 큐레이션 저장소입니다.
+- **누가 먼저 보면 좋은가? / Who should start here?** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
+- **지금 바로 무엇을 하면 되나? / What should I do now?** `python3 templates/scripts/validate_template.py` 실행 → `examples/quickstart.md` 열기 → 첫 PR이면 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 이동합니다.
+English mirror:
+- **What is this project?** A curated repo that helps Korean-speaking builders find validation-ready agent skills and runnable templates quickly.
+- **Who should start here?** Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
+- **What should I do now?** Run `python3 templates/scripts/validate_template.py`, open `examples/quickstart.md`, and jump to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` for the first PR.
 ## 첫 화면 바로가기 / First-screen jump list
 - 소개 → 대상 사용자 → 제공 가치 → 대표 예시/카테고리 → 빠른 시작 → 운영 문서 이관
 - **첫 화면 사용 규칙 / First-screen usage rule** — 첫 화면에서는 소개·가치·첫 행동을 먼저 보고, 운영 규칙은 아래 문서로 넘깁니다.
@@ -55,7 +56,6 @@ English mirror:
 - **What is this project?** A curated repo that helps Korean-speaking builders find validation-ready agent skills and runnable templates quickly.
 - **Who should start here?** Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 - **What should I do now?** Run `python3 templates/scripts/validate_template.py`, open `examples/quickstart.md`, and jump to `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` for the first PR.
-
 ## 바로 시작 요약 / Start-here summary
 - **프로젝트 소개 / Project intro** — 한국어 기본 큐레이션 저장소이며, README 첫 화면에서 프로젝트 가치와 실행 경로를 먼저 보여줍니다.
 - **대상 사용자 / Who it helps** — 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다.
@@ -206,7 +206,6 @@ English mirror:
 English mirror:
 - **Is this just a link list?** No. It is a Korean-first curation repo whose first README screen points directly to the project intro, validation command, next docs, and first-PR evidence path.
 - **What should I do first?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
-- **Where are the contribution rules?** Continue below the landing area into `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` and `CONTRIBUTING.md`.
 ## 첫 방문 15초 선택 / 15-second first-visit chooser
 
 - **탐색부터 / Explore first** — 프로젝트 소개와 대상 사용자를 빠르게 파악하려면 `프로젝트 소개 / Project overview` → `프로젝트 한눈에 보기 / Project at a glance`
@@ -236,7 +235,7 @@ English mirror:
 English mirror:
 - **Who is this for?** Builders and teams who want Korean-first skill discovery, validation, and contribution flows.
 - **What can I do immediately?** Find the first validation command and next doc directly from the README landing area.
-- **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then open `examples/quickstart.md`.
+- **Where do I start?** Run `python3 templates/scripts/validate_template.py`, then continue with `examples/quickstart.md`.
 ## 빠른 적합성 체크 / Quick fit check
 
 - **이 저장소가 특히 맞는 경우 / Best fit** — 한국어 기본 문서 흐름으로 스킬 탐색부터 검증·기여까지 빠르게 연결하고 싶은 개인/팀
