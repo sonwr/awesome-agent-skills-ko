@@ -29,6 +29,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **스타트히어 카드 / Start-here card** — `docs/README_PROJECT_START_HERE.md`
 - **원스크린 스타트 / One-screen start** — `docs/README_PROJECT_ONE_SCREEN_START.md`
 - **첫 화면 빠른 증명 / First-screen quick proof** — `docs/README_FIRST_SCREEN_QUICK_PROOF.md`
+- **첫 화면 안심 체크 / First-screen reassurance check** — `docs/README_FIRST_SCREEN_REASSURANCE.md`
 - **첫 1분 결과 카드 / First-minute outcomes card** — `docs/README_FIRST_MINUTE_OUTCOMES.md`
 - **1분 가치 카드 / One-minute value card** — `docs/README_PROJECT_ONE_MINUTE_VALUE.md`
 - **첫 화면 프로젝트 개요 / First-screen project overview** — `docs/README_PROJECT_FIRST_SCREEN_OVERVIEW.md`
