@@ -15,6 +15,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 방문 결정 카드 / First-visit decision card** — `docs/README_FIRST_VISITOR_DECISION_CARD.md`
 - **첫 화면 종료 약속 / First-screen exit promise** — `docs/README_FIRST_SCREEN_EXIT_PROMISE.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
+- **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
 ## 첫 화면 바로가기 / First-screen jump list
 - 소개 → 대상 사용자 → 제공 가치 → 대표 예시/카테고리 → 빠른 시작 → 운영 문서 이관
 - `docs/README_PROJECT_START_HERE.md` — README 프로젝트 스타트히어 카드 / Start-here card
