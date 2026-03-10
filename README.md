@@ -6,6 +6,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 ## 첫 화면 랜딩 패널 / First-screen landing panel
 - **프로젝트 소개 / Project intro** — README 첫 화면에서 프로젝트 의미와 시작 동선을 먼저 보여주는 한국어 기본 큐레이션 저장소
 - **첫 60초 약속 / First 60-second promise** — 첫 화면만 읽어도 저장소 목적·대상 사용자·빠른 시작 명령·다음 문서가 바로 보여야 합니다. English mirror: The first screen should reveal the repo purpose, audience, first command, and next doc within 60 seconds.
+- **첫 소개 문장 규칙 / First intro sentence rule** — 첫 문단은 "무엇을 모았는가"보다 "누가 바로 써볼 수 있는가"를 먼저 드러내야 합니다. English mirror: The first intro sentence should reveal who can use the repo immediately, not only what is being curated.
 - **첫 30초 행동 / First 30-second action** — 검증 명령 → 대표 예시 → 첫 기여 문서 순서가 첫 화면에서 바로 보이도록 유지
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀
 - **제공 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 대표 카테고리·첫 검증 명령·다음 문서·첫 증빙 경로를 첫 화면에서 바로 찾게 함
@@ -21,6 +22,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
 - **운영 문서 위치 / Where governance lives** — Governance lives lower. 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first. English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 - **첫 화면 빠른 자기점검 / First-screen self-check** — `docs/README_PROJECT_VALUE_QUICKCHECK.md`
+- **첫 화면 FAQ 바로가기 / First-screen FAQ handoff** — `docs/README_PROJECT_OVERVIEW_FAQ.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
 - **프로젝트 소개 엔트리 카드 / Project intro entry card** — `docs/README_PROJECT_INTRO_ENTRY_CARD.md`
 - **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
