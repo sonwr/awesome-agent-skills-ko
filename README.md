@@ -20,6 +20,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 방문 체크포인트 / First-visitor checkpoints** — `docs/README_FIRST_VISITOR_CHECKPOINTS.md`
 - **대상별 빠른 레시피 / Audience quick recipes** — `docs/README_AUDIENCE_QUICK_RECIPES.md`
 - **프로젝트 진입 약속 / Project entry promise** — `docs/README_PROJECT_ENTRY_PROMISE.md`
+- **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
 - **프로젝트 가치 스타터 / Project value starters** — `docs/README_PROJECT_VALUE_STARTERS.md`
 - **소개 우선 스코어카드 / Intro-first scorecard** — `docs/README_PROJECT_INTRO_SCORECARD.md`
 - **스타트히어 카드 / Start-here card** — `docs/README_PROJECT_START_HERE.md`
