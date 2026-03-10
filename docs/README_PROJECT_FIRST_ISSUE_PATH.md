@@ -8,6 +8,14 @@ README 첫 화면에서 "첫 PR"뿐 아니라 "첫 이슈"로 진입하는 사�
 - 어떤 종류의 이슈를 열어야 하는지 빠르게 보여야 함
 - 재현/검증 링크가 이슈 전에 보여야 함
 - 운영 규칙은 첫 화면 하단이나 별도 문서로 내려야 함
+- 첫 이슈 링크는 quick start를 대체하지 않고, intro-first 흐름 뒤에서 보조 진입점으로 작동해야 함
+
+English mirror:
+- Keep the project intro visible before issue-routing guidance.
+- Show issue categories quickly, but only after the first validation and next-doc cues stay visible.
+- Keep reproducibility links ahead of backlog triage.
+- Move governance-heavy detail lower so the landing screen still feels project-first.
+- Treat the first-issue link as a support path after quick start, not as a replacement for the intro-first handoff.
 
 ## README 연결 위치 / README placement
 - 프로젝트 소개 다음이 아니라, 추천 시작 경로나 기여 준비 블록에서 연결
