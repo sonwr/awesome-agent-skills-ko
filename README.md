@@ -138,6 +138,7 @@ English mirror:
 
 - **탐색형 / Explorer path** — `프로젝트 소개 / Project overview` → `프로젝트 한눈에 보기 / Project at a glance` → `docs/README_PROJECT_OVERVIEW_FAQ.md`
 - **기여형 / Contributor path** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **첫 이슈 준비 / First issue prep** — `docs/README_PROJECT_FIRST_ISSUE_PATH.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` → `docs/CURATION_POLICY.md`
 - **운영형 / Operator path** — `docs/README_FIRST_SCREEN_CHECKLIST.md` → `docs/README_FAST_PATHS.md` → `docs/CURATION_POLICY.md`
 
 English mirror:
