@@ -163,6 +163,7 @@ These three docs are the default follow-up path after quick start, and the valid
 - **1분 뒤 실행한 것 / What you have run after 1 minute** — `python3 templates/scripts/validate_template.py`를 실행할 준비가 되거나 이미 실행했고, 다음 문서로 `examples/quickstart.md`를 열 수 있습니다.
 - **1분 뒤 이어갈 경로 / What you open next after 1 minute** — 탐색형은 `프로젝트 소개 / Project overview`, 기여형은 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`, 운영형은 `docs/README_FAST_PATHS.md`, `docs/README_FIRST_CLICK_GUIDE.md`로 자연스럽게 갈라집니다.
 - **1분 점검 기준 / 1-minute audit card** — README 상단을 다듬을 때는 `docs/README_FIRST_MINUTE_OUTCOMES.md`로 소개·첫 행동·다음 문서 handoff가 유지되는지 빠르게 확인합니다.
+- **첫 화면 증빙 루프 / First-screen proof loop** — `docs/README_FIRST_SCREEN_PROOF_LOOP.md`로 소개·실행·기여 handoff가 실제로 보이는지 빠르게 재점검합니다.
 
 English mirror:
 - **What you know after 1 minute** — who this repo is for, why it exists, and where to start.
