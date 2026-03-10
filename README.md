@@ -12,6 +12,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **빠른 시작 체크포인트 / Quickstart checkpoints** — `docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md`
 - **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
+- **첫 화면 다음 문서 카드 / First-screen next-docs card** — `docs/README_FIRST_SCREEN_NEXT_DOCS.md`
 - **랜딩 패널 기준 문서 / Landing panel source** — `docs/README_PROJECT_HOME_PANEL.md`, `docs/README_PROJECT_FAST_INTRO.md`, `docs/README_PROJECT_LANDING_BLUEPRINT.md`
 - **대표 활용 시나리오 설계 / Featured use-case map** — `docs/README_FEATURED_USE_CASES.md`
 - **추천 시작 경로 기준 / Recommended starting-path source** — `docs/README_RECOMMENDED_STARTING_PATHS.md`
