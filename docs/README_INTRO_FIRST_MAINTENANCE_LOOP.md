@@ -36,3 +36,14 @@ python3 templates/scripts/validate_template.py
 English mirror:
 - After every structural change, re-read `docs/README_FIRST_SCREEN_CHECKLIST.md` as a human review step.
 - When needed, refine the copy with `docs/README_PROJECT_INTRO_BLUEPRINT.md`.
+
+## 4) 첫 화면 handoff 문장을 남기기 / Leave a first-screen handoff sentence
+
+- 첫 화면을 손댄 날에는 **무엇을 하는 저장소인지 + 지금 무엇을 하면 되는지**를 한 줄로 다시 적어둡니다.
+- 소개 문단이 길어지면, 가치 설명은 남기고 운영 문장은 별도 문서로 내립니다.
+- `examples/quickstart.md` 또는 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 이어지는 다음 행동이 보이지 않으면 intro-first가 깨진 것으로 봅니다.
+
+English mirror:
+- On any day you touch the first screen, rewrite one sentence that states **what the repo is and what the reader should do now**.
+- If the intro grows too long, keep the value statement and push operating detail into supporting docs.
+- If the next action toward `examples/quickstart.md` or `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` disappears, treat the intro-first flow as broken.
