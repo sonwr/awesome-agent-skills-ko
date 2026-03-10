@@ -15,6 +15,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
 - **첫 방문 결정 카드 / First-visit decision card** — `docs/README_FIRST_VISITOR_DECISION_CARD.md`
 - **첫 화면 종료 약속 / First-screen exit promise** — `docs/README_FIRST_SCREEN_EXIT_PROMISE.md`
+- **첫 클릭 근거 카드 / First-click proof card** — `docs/README_FIRST_CLICK_PROOF_CARD.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
 - **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
 ## 첫 화면 바로가기 / First-screen jump list
@@ -297,6 +298,7 @@ English mirror:
 - **대상 사용자별 우선 가치는 어디서 보나요?** `docs/README_AUDIENCE_VALUE_MAP.md`에서 탐색형/기여형/운영형별 상단 메시지 우선순위를 바로 확인합니다.
 - **어떤 길을 먼저 고르나요?** `10초 시작 선택 / 10-second start chooser`에서 탐색/실행/기여/운영 중 하나를 바로 고릅니다.
 - **첫 방문 약속 압축본은 어디 있나요?** `docs/README_FIRST_VISITOR_PROMISES.md`에서 README 상단의 핵심 메시지를 빠르게 재검토합니다.
+- **첫 클릭이 왜 중요한가요?** `docs/README_FIRST_CLICK_PROOF_CARD.md`에서 첫 클릭이 소개→가치→빠른 시작 handoff를 제대로 만들고 있는지 빠르게 확인합니다.
 
 English mirror:
 - **Which route should I pick first?** Use the `10-second start chooser` to jump straight into explore / execute / contribute / audit.
