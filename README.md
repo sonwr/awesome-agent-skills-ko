@@ -22,6 +22,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
 ## 첫 화면 바로가기 / First-screen jump list
 - 소개 → 대상 사용자 → 제공 가치 → 대표 예시/카테고리 → 빠른 시작 → 운영 문서 이관
+- **첫 화면 사용 규칙 / First-screen usage rule** — 첫 화면에서는 소개·가치·첫 행동을 먼저 보고, 운영 규칙은 아래 문서로 넘깁니다.
 - `docs/README_PROJECT_START_HERE.md` — README 프로젝트 스타트히어 카드 / Start-here card
 - **원스크린 스타트 / One-screen start** — `docs/README_PROJECT_ONE_SCREEN_START.md`
 - `docs/README_FIRST_SCREEN_DECISION_TREE.md` — README 첫 화면 결정 트리 / First-screen decision tree
