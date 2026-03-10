@@ -5,6 +5,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 
 ## 첫 화면 랜딩 패널 / First-screen landing panel
 - **프로젝트 소개 / Project intro** — README 첫 화면에서 프로젝트 의미와 시작 동선을 먼저 보여주는 한국어 기본 큐레이션 저장소
+- **첫 30초 행동 / First 30-second action** — 검증 명령 → 대표 예시 → 첫 기여 문서 순서가 첫 화면에서 바로 보이도록 유지
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀
 - **제공 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 대표 카테고리·첫 검증 명령·다음 문서를 첫 화면에서 바로 찾게 함
 - **대표 카테고리 / Featured categories** — 온보딩, PR 증빙, 큐레이션/운영 기준
