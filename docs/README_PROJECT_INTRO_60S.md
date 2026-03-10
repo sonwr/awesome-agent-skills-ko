@@ -5,10 +5,11 @@
 ## 60초 읽기 순서 / 60-second reading order
 
 1. **프로젝트 소개 / Project overview** — 저장소가 무엇을 하는지 먼저 파악합니다.
-2. **대상 사용자 / Who this is for** — 이 저장소가 누구에게 맞는지 확인합니다.
-3. **제공 가치 / What you get** — 첫 화면에서 바로 얻는 실행 가치와 검증 경로를 확인합니다.
-4. **대표 카테고리와 예시 / Featured categories and examples** — 어떤 문서/예시가 중심 축인지 살핍니다.
-5. **빠른 시작 / Quick start** — 첫 검증 명령과 다음 문서를 실행합니다.
+2. **프로젝트 스냅샷 / Project snapshot** — 첫 검증 명령과 다음 문서가 첫 화면에 붙어 있는지 바로 확인합니다.
+3. **대상 사용자 / Who this is for** — 이 저장소가 누구에게 맞는지 확인합니다.
+4. **제공 가치 / What you get** — 첫 화면에서 바로 얻는 실행 가치와 검증 경로를 확인합니다.
+5. **대표 카테고리와 예시 / Featured categories and examples** — 어떤 문서/예시가 중심 축인지 살핍니다.
+6. **빠른 시작 / Quick start** — 첫 검증 명령과 다음 문서를 실행합니다.
 
 ## 왜 필요한가요? / Why it matters
 
