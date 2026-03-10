@@ -14,9 +14,11 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 검증 후 바로 볼 문서 / First doc after validation** — `docs/README_PROJECT_FIRST_LOOK.md`
 - **첫 소개 유지 루프 / Intro-first maintenance loop** — `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`
 - **빠른 시작 체크포인트 / Quickstart checkpoints** — `docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md`
+- **운영 문서 이관 / Governance handoff** — 운영 규칙·기여 체크리스트는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려 둡니다. English mirror: Governance handoff stays below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 - **시작 신호 / Start signal** — `docs/README_PROJECT_START_SIGNAL.md`
 - **첫 화면 진입 약속 / First-screen entry promise** — README 첫 화면만 읽어도 프로젝트 소개 → 대상 사용자 → 가치 → 빠른 시작 순서를 잃지 않도록 유지합니다.
 - **빠른 시작 번들 기준 / Quickstart bundle source** — `docs/README_PROJECT_QUICKSTART_BUNDLE.md`
+- **운영 문서 위치 / Where governance lives** — Governance lives lower. 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first. English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 - **첫 방문 결정 카드 / First-visit decision card** — `docs/README_FIRST_VISITOR_DECISION_CARD.md`
 - **첫 화면 종료 약속 / First-screen exit promise** — `docs/README_FIRST_SCREEN_EXIT_PROMISE.md`
 - **첫 화면 빠른 자기점검 / First-screen self-check** — `docs/README_PROJECT_VALUE_QUICKCHECK.md`
@@ -24,6 +26,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 화면 상태 브리지 / First-screen status bridge** — `docs/README_FIRST_SCREEN_STATUS_BRIDGE.md`
 - **첫 화면 준비 신호 / First-screen ready signal** — `docs/README_FIRST_SCREEN_READY_SIGNAL.md`
 - **첫 화면 소개 점검 카드 / First-screen intro check** — `docs/README_FIRST_SCREEN_INTRO_CHECK.md`
+- **첫 화면 증빙 번들 / First-screen proof bundle** — `docs/README_FIRST_SCREEN_PROOF_BUNDLE.md`
 - **첫 클릭 근거 카드 / First-click proof card** — `docs/README_FIRST_CLICK_PROOF_CARD.md`
 - **프로젝트 진입 약속 카드 / Project entry promise card** — `docs/README_PROJECT_ENTRY_PROMISE_CARD.md`
 - **60초 프로젝트 소개 / Project intro in 60 seconds** — `docs/README_PROJECT_INTRO_60S.md`
@@ -37,7 +40,6 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - `docs/README_FIRST_SCREEN_STATUS_NOTE.md` — README 첫 화면 상태 메모 / First-screen status note
 - `docs/README_RECOMMENDED_STARTING_PATHS.md` — README 추천 시작 경로 / Recommended starting paths
 - `docs/README_ROLE_START_QUICK_GUIDE.md` — 역할별 시작 퀵 가이드 / Role start quick guide
-- **운영 문서 위치 / Where governance lives** — Governance lives lower. 기여 규칙·체크리스트·운영 가이드는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려가 있으며, the README opens with project value first. English mirror: Governance details live below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
 - **첫 화면 유지 신호 / Landing maintenance signal** — README 상단을 바꿀 때는 소개·대상 사용자·가치·대표 경로가 첫 화면에 남아 있는지 먼저 확인합니다.
 - **첫 화면 경계 규칙 / First-screen boundary rule** — `docs/README_FIRST_SCREEN_BOUNDARY.md`
 - **첫 화면 handoff 카드 / First-screen handoff card** — `docs/README_FIRST_SCREEN_HANDOFF.md`
