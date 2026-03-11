@@ -88,6 +88,12 @@ class ValidateTemplateTests(unittest.TestCase):
             validate_template.BILINGUAL_SECTION_MARKERS["docs/README_PROJECT_QUICKSTART_BUNDLE.md"],
         )
 
+    def test_readme_mentions_first_screen_role_cue_doc_near_top(self) -> None:
+        readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8")
+
+        self.assertIn("docs/README_FIRST_SCREEN_ROLE_CUE.md", readme)
+        self.assertTrue((Path(__file__).resolve().parents[1] / "docs" / "README_FIRST_SCREEN_ROLE_CUE.md").exists())
+
     def test_readme_rejects_replacement_characters_near_top(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

@@ -4,10 +4,15 @@
 > 
 > Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
 한국어 기반 빌더가 **첫 화면에서 바로 시작 경로를 고를 수 있게 만든 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
+첫 화면에서 **누가 바로 시작할 수 있는지 → 지금 실행할 첫 명령 → 다음 문서** 순서가 보이도록 유지합니다. English mirror: Keep who can start, the first command, and the next doc visible in that order on the first screen.
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
 
 README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 먼저 누가 바로 시작할 수 있는지와 첫 행동을 보여주고, 세부 운영 규칙은 아래 문서로 넘깁니다. English mirror: The README stays intro-first: show who can start immediately and what to do first, then hand off deeper governance details below.
+첫 화면을 손볼 때 가장 먼저 확인할 짧은 상태 메모는 `docs/README_FIRST_SCREEN_STATUS_NOTE.md`입니다. English mirror: Start first-screen edits with `docs/README_FIRST_SCREEN_STATUS_NOTE.md` so the landing promise stays visible before deeper rewrites.
+첫 화면 소개를 더 짧게 다듬을 때는 `docs/README_PROJECT_START_MAP.md`와 `docs/README_FIRST_SCREEN_JUMP_LIST.md`를 함께 열어 intro-first 시작 경로를 먼저 고정합니다. English mirror: When tightening the first-screen intro, open `docs/README_PROJECT_START_MAP.md` and `docs/README_FIRST_SCREEN_JUMP_LIST.md` together so the intro-first routes stay obvious.
+역할별 첫 화면 handoff를 짧게 점검할 때는 `docs/README_FIRST_SCREEN_ROLE_CUE.md`를 먼저 열어 탐색형/기여형/운영형 경로가 첫 화면에 남는지 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_ROLE_CUE.md` first when checking whether explorer/contributor/operator routes still stay visible on the first screen.
+
 
 ## 첫 화면 랜딩 패널 / First-screen landing panel
 - **프로젝트 소개 / Project intro** — README 첫 화면에서 프로젝트 의미와 시작 동선을 먼저 보여주는 한국어 기본 큐레이션 저장소
@@ -23,6 +28,9 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 - **대표 예시 / Featured examples** — `examples/quickstart.md`, `examples/pr-evidence-mini-walkthrough.md`, `docs/README_FIRST_SCREEN_CHECKLIST.md`
 - **빠른 시작 / Quick start** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **첫 검증 후 바로 볼 문서 / First doc after validation** — `docs/README_PROJECT_FIRST_LOOK.md`
+- **첫 행동 매트릭스 / First action matrix** — `docs/README_FIRST_ACTION_MATRIX.md`
+- **스타터 팩 / Starter pack** — `docs/README_PROJECT_STARTER_PACK.md`
+- **빠른 적합도 점검 / Quick fit check** — `docs/README_QUICK_FIT_CHECK.md`
 - **첫 소개 유지 루프 / Intro-first maintenance loop** — `docs/README_INTRO_FIRST_MAINTENANCE_LOOP.md`
 - **빠른 시작 체크포인트 / Quickstart checkpoints** — `docs/README_PROJECT_QUICKSTART_CHECKPOINTS.md`
 - **운영 문서 이관 / Governance handoff** — 운영 규칙·기여 체크리스트는 첫 화면 아래 `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`로 내려 둡니다. English mirror: Governance handoff stays below the landing block in `CONTRIBUTING.md`, `docs/README_FAST_PATHS.md`, and `docs/CURATION_POLICY.md`.
