@@ -1,5 +1,9 @@
 # awesome-agent-skills-ko
-한국어 기반 빌더를 위한 **에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
+
+> 한국어 기본 에이전트 스킬 큐레이션 저장소이며, README 첫 화면에서 프로젝트 소개 → 대상 사용자 → 빠른 검증 경로가 바로 보여야 합니다.
+> 
+> Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
+한국어 기반 빌더가 **첫 화면에서 바로 시작 경로를 고를 수 있게 만든 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
 
@@ -9,7 +13,9 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 - **프로젝트 소개 / Project intro** — README 첫 화면에서 프로젝트 의미와 시작 동선을 먼저 보여주는 한국어 기본 큐레이션 저장소
 - **첫 60초 약속 / First 60-second promise** — 첫 화면만 읽어도 저장소 목적·대상 사용자·빠른 시작 명령·다음 문서가 바로 보여야 합니다. English mirror: The first screen should reveal the repo purpose, audience, first command, and next doc within 60 seconds.
 - **첫 소개 문장 규칙 / First intro sentence rule** — 첫 문단은 "무엇을 모았는가"보다 "누가 바로 써볼 수 있는가"를 먼저 드러내야 합니다. English mirror: The first intro sentence should reveal who can use the repo immediately, not only what is being curated.
+- **첫 스크롤 약속 / First-scroll promise** — 첫 스크롤 안에서 소개·대상 사용자·검증 명령·다음 문서가 모두 보여야 합니다. English mirror: Keep the intro, audience, validation command, and next doc visible within the first scroll.
 - **첫 30초 행동 / First 30-second action** — 검증 명령 → 대표 예시 → 첫 기여 문서 순서가 첫 화면에서 바로 보이도록 유지
+- **첫 10초 시작 신호 / First 10-second start signal** — 첫 화면 상단에서 검증 명령과 다음 문서(`examples/quickstart.md`)가 한 묶음으로 바로 보여야 합니다. English mirror: Keep the first command and next doc visible together on the first screen.
 - **첫 15초 선택지 / First 15-second chooser** — 탐색(소개) / 검증(첫 명령) / 기여(체크리스트) / 운영(체크리스트) 4갈래 진입점을 첫 화면 상단에서 바로 고를 수 있게 유지합니다. English mirror: Keep explore / validate / contribute / operate routes selectable from the first screen.
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀
 - **제공 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 대표 카테고리·첫 검증 명령·다음 문서·첫 증빙 경로를 첫 화면에서 바로 찾게 함
