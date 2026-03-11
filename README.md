@@ -32,6 +32,7 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 첫 화면 소개 다음에 시작 경로 4개가 바로 보이는지 점검하려면 `docs/README_FIRST_SCREEN_STARTER_PATHS.md`를 먼저 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_STARTER_PATHS.md` to confirm that the four starter paths still stay visible right after the intro.
 첫 화면에서 프로젝트 한 줄 소개와 첫 검증 명령이 같은 시야에 남는지 짧게 점검하려면 `docs/README_PROJECT_ONE_MINUTE_VALUE.md`를 먼저 확인합니다. English mirror: Open `docs/README_PROJECT_ONE_MINUTE_VALUE.md` to keep the one-line project pitch and first validation command visible in the same first-screen window.
 첫 화면에서 소개 바로 아래에 시작 경로 4개가 실제로 남는지 다시 확인하려면 `docs/README_FIRST_SCREEN_STARTER_PACK_LINKS.md`를 먼저 봅니다. English mirror: Open `docs/README_FIRST_SCREEN_STARTER_PACK_LINKS.md` to confirm that the four starter routes still stay directly under the intro.
+소개 문장 바로 아래에 대상 사용자와 첫 검증 명령이 같은 시야에 남는지 짧게 점검하려면 `docs/README_FIRST_SCREEN_INTRO_AUDIENCE_PROOF.md`를 먼저 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_INTRO_AUDIENCE_PROOF.md` to verify that the intro, audience cue, and first validation command still stay bundled on the first screen.
 
 ## 추천 시작 경로 / Recommended starting paths
 - **탐색형 / Explore** — `docs/README_PROJECT_START_MAP.md` → `docs/README_PROJECT_FIRST_LOOK.md`
