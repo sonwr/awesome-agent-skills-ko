@@ -11,7 +11,30 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 먼저 누가 바로 시작할 수 있는지와 첫 행동을 보여주고, 세부 운영 규칙은 아래 문서로 넘깁니다. English mirror: The README stays intro-first: show who can start immediately and what to do first, then hand off deeper governance details below.
 첫 화면을 손볼 때 가장 먼저 확인할 짧은 상태 메모는 `docs/README_FIRST_SCREEN_STATUS_NOTE.md`입니다. English mirror: Start first-screen edits with `docs/README_FIRST_SCREEN_STATUS_NOTE.md` so the landing promise stays visible before deeper rewrites.
 첫 화면 소개를 더 짧게 다듬을 때는 `docs/README_PROJECT_START_MAP.md`와 `docs/README_FIRST_SCREEN_JUMP_LIST.md`를 함께 열어 intro-first 시작 경로를 먼저 고정합니다. English mirror: When tightening the first-screen intro, open `docs/README_PROJECT_START_MAP.md` and `docs/README_FIRST_SCREEN_JUMP_LIST.md` together so the intro-first routes stay obvious.
+첫 화면에서 소개·대상 사용자·첫 명령·다음 문서 묶음이 같이 남는지 빠르게 확인하려면 `docs/README_INTRO_FIRST_BUNDLE_NOTE.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_BUNDLE_NOTE.md` to confirm that intro, audience, first command, and next doc still stay bundled on the first screen.
 역할별 첫 화면 handoff를 짧게 점검할 때는 `docs/README_FIRST_SCREEN_ROLE_CUE.md`를 먼저 열어 탐색형/기여형/운영형 경로가 첫 화면에 남는지 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_ROLE_CUE.md` first when checking whether explorer/contributor/operator routes still stay visible on the first screen.
+첫 화면 소개를 줄여도 첫 명령과 다음 문서 묶음이 남는지 확인하려면 `docs/README_INTRO_FIRST_COMMAND_CARD.md`를 먼저 확인합니다. English mirror: Use `docs/README_INTRO_FIRST_COMMAND_CARD.md` to verify that the first command plus next-doc bundle still survives intro-first compression.
+첫 화면에서 소개·대상 사용자·첫 명령이 한 화면에 남는지 빠르게 다시 읽으려면 `docs/README_FIRST_SCREEN_REFOCUS_CARD.md`를 먼저 엽니다. English mirror: Open `docs/README_FIRST_SCREEN_REFOCUS_CARD.md` when you want a quick refocus card for intro, audience, and first command on the first screen.
+
+## 추천 시작 경로 / Recommended starting paths
+- **탐색형 / Explore** — `docs/README_PROJECT_START_MAP.md` → `docs/README_PROJECT_FIRST_LOOK.md`
+- **검증형 / Validate** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+- **기여형 / Contribute** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **운영형 / Operate** — `docs/README_FAST_PATHS.md` → `docs/CURATION_POLICY.md`
+
+## 대표 사용 사례 / Featured use cases
+- **새 저장소 온보딩 / New repo onboarding** — 첫 소개 → 첫 검증 명령 → 빠른 시작 예시 확인
+- **첫 PR 증빙 / First PR evidence** — `examples/pr-evidence-mini-walkthrough.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **운영/큐레이션 점검 / Governance review** — `docs/README_FAST_PATHS.md` → `docs/CURATION_POLICY.md`
+
+## 첫 1분 뒤 결과 / First-minute outcomes
+- 프로젝트 소개, 대상 사용자, 대표 가치, 첫 검증 명령, 다음 문서를 첫 화면에서 바로 찾을 수 있어야 합니다.
+- English mirror: Within the first minute, a newcomer should see the project intro, audience, value, first validation command, and next document.
+
+## 처음 방문 FAQ / First-time visitor FAQ
+- **어디서 시작하나요? / Where do I start?** `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`로 이동합니다.
+- **기여 문서는 어디 있나요? / Where is the contribution doc?** `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+- **운영 문서는 어디 있나요? / Where do governance docs live?** `docs/README_FAST_PATHS.md`, `docs/CURATION_POLICY.md`
 
 
 ## 첫 화면 랜딩 패널 / First-screen landing panel
@@ -62,6 +85,7 @@ English mirror:
 - `docs/README_RECOMMENDED_STARTING_PATHS.md` — README 추천 시작 경로 / Recommended starting paths
 - `docs/README_ROLE_START_QUICK_GUIDE.md` — 역할별 시작 퀵 가이드 / Role start quick guide
 - **첫 화면 유지 신호 / Landing maintenance signal** — README 상단을 바꿀 때는 소개·대상 사용자·가치·대표 경로가 첫 화면에 남아 있는지 먼저 확인합니다.
+- **첫 화면 시작 압축 규칙 / First-screen start compression rule** — `docs/README_FIRST_SCREEN_START_COMPRESSION.md`
 - **첫 화면 질문 / First-screen question** — 첫 화면을 다듬을 때는 “이 저장소가 무엇이고, 누가 쓰며, 지금 무엇을 하면 되는가?”가 첫 스크롤 안에 남는지 먼저 확인합니다.
 - **첫 화면 경계 규칙 / First-screen boundary rule** — `docs/README_FIRST_SCREEN_BOUNDARY.md`
 - **첫 화면 handoff 카드 / First-screen handoff card** — `docs/README_FIRST_SCREEN_HANDOFF.md`
