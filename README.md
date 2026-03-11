@@ -10,6 +10,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 
 README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 먼저 누가 바로 시작할 수 있는지와 첫 행동을 보여주고, 세부 운영 규칙은 아래 문서로 넘깁니다. English mirror: The README stays intro-first: show who can start immediately and what to do first, then hand off deeper governance details below.
 첫 화면 압축 규칙: 소개 문장 바로 아래에 대상 사용자와 첫 검증 명령이 함께 남아 있어야 합니다. English mirror: Keep the audience cue and the first validation command directly under the opening intro.
+첫 화면 한 줄 점검: 소개 바로 아래에 "누가 시작하는가 / 첫 명령 / 다음 문서"가 한 덩어리로 남아 있어야 합니다. English mirror: Keep who starts, the first command, and the next doc bundled directly under the intro.
 첫 화면을 손볼 때 가장 먼저 확인할 짧은 상태 메모는 `docs/README_FIRST_SCREEN_STATUS_NOTE.md`입니다. English mirror: Start first-screen edits with `docs/README_FIRST_SCREEN_STATUS_NOTE.md` so the landing promise stays visible before deeper rewrites.
 첫 화면 소개를 더 짧게 다듬을 때는 `docs/README_PROJECT_START_MAP.md`와 `docs/README_FIRST_SCREEN_JUMP_LIST.md`를 함께 열어 intro-first 시작 경로를 먼저 고정합니다. English mirror: When tightening the first-screen intro, open `docs/README_PROJECT_START_MAP.md` and `docs/README_FIRST_SCREEN_JUMP_LIST.md` together so the intro-first routes stay obvious.
 첫 화면 빠른 시작 흐름을 소개 문장 바로 아래에서 다시 확인하려면 `docs/README_PROJECT_QUICKSTART_FLOW.md`를 먼저 엽니다. English mirror: Open `docs/README_PROJECT_QUICKSTART_FLOW.md` when you want the intro-first quickstart flow to stay visible under the opening pitch.
@@ -20,6 +21,7 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 첫 화면에서 소개·대상 사용자·첫 명령이 한 화면에 남는지 빠르게 다시 읽으려면 `docs/README_FIRST_SCREEN_REFOCUS_CARD.md`를 먼저 엽니다. English mirror: Open `docs/README_FIRST_SCREEN_REFOCUS_CARD.md` when you want a quick refocus card for intro, audience, and first command on the first screen.
 첫 화면 소개 바로 아래에서 대상 사용자 약속이 남는지 점검하려면 `docs/README_FIRST_SCREEN_AUDIENCE_PROMISE.md`를 먼저 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_AUDIENCE_PROMISE.md` to verify that the audience promise still stays directly under the opening intro.
 첫 화면 소개 다음에 시작 경로 4개가 바로 보이는지 점검하려면 `docs/README_FIRST_SCREEN_STARTER_PATHS.md`를 먼저 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_STARTER_PATHS.md` to confirm that the four starter paths still stay visible right after the intro.
+첫 화면에서 프로젝트 한 줄 소개와 첫 검증 명령이 같은 시야에 남는지 짧게 점검하려면 `docs/README_PROJECT_ONE_MINUTE_VALUE.md`를 먼저 확인합니다. English mirror: Open `docs/README_PROJECT_ONE_MINUTE_VALUE.md` to keep the one-line project pitch and first validation command visible in the same first-screen window.
 
 ## 추천 시작 경로 / Recommended starting paths
 - **탐색형 / Explore** — `docs/README_PROJECT_START_MAP.md` → `docs/README_PROJECT_FIRST_LOOK.md`
