@@ -3,6 +3,8 @@
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
 
+README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 먼저 누가 바로 시작할 수 있는지와 첫 행동을 보여주고, 세부 운영 규칙은 아래 문서로 넘깁니다. English mirror: The README stays intro-first: show who can start immediately and what to do first, then hand off deeper governance details below.
+
 ## 첫 화면 랜딩 패널 / First-screen landing panel
 - **프로젝트 소개 / Project intro** — README 첫 화면에서 프로젝트 의미와 시작 동선을 먼저 보여주는 한국어 기본 큐레이션 저장소
 - **첫 60초 약속 / First 60-second promise** — 첫 화면만 읽어도 저장소 목적·대상 사용자·빠른 시작 명령·다음 문서가 바로 보여야 합니다. English mirror: The first screen should reveal the repo purpose, audience, first command, and next doc within 60 seconds.
