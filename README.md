@@ -3,8 +3,10 @@
 > 한국어 기본 에이전트 스킬 큐레이션 저장소이며, README 첫 화면에서 프로젝트 소개 → 대상 사용자 → 빠른 검증 경로가 바로 보여야 합니다.
 > 
 > Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
-한국어 기반 빌더가 **첫 화면에서 누가 바로 시작할 수 있는지 확인하고, 검증 경로를 즉시 고를 수 있게 만든 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
+한국어 기반 빌더가 **첫 화면에서 바로 시작할 사람·첫 검증 명령·다음 문서를 한 번에 찾게 만드는 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
 대상 사용자 / Who should start: 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
+첫 행동 / First action: `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`를 엽니다. English mirror: Run `python3 templates/scripts/validate_template.py` and then open `examples/quickstart.md`.
+다음 문서 / Next doc: `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 이어가면 첫 PR 증빙 경로까지 바로 보입니다. English mirror: Continue with `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` to keep the first-PR evidence path visible from the top section.
 
 첫 화면에서는 **무엇을 모은 저장소인지 → 누구에게 맞는지 → 바로 검증할 첫 링크가 무엇인지**가 한 번에 보여야 합니다.  
 On the first screen, readers should immediately see **what this repo curates, who it helps, and which validation link to open first**.
@@ -27,6 +29,8 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 역할별 첫 화면 handoff를 짧게 점검할 때는 `docs/README_FIRST_SCREEN_ROLE_CUE.md`를 먼저 열어 탐색형/기여형/운영형 경로가 첫 화면에 남는지 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_ROLE_CUE.md` first when checking whether explorer/contributor/operator routes still stay visible on the first screen.
 첫 화면 소개를 줄여도 첫 명령과 다음 문서 묶음이 남는지 확인하려면 `docs/README_INTRO_FIRST_COMMAND_CARD.md`를 먼저 확인합니다. English mirror: Use `docs/README_INTRO_FIRST_COMMAND_CARD.md` to verify that the first command plus next-doc bundle still survives intro-first compression.
 첫 화면에서 소개 다음 순서가 대상 사용자 → 첫 명령 → 다음 문서로 유지되는지 짧게 점검하려면 `docs/README_FIRST_SCREEN_ACTION_ORDER.md`, `docs/README_FIRST_SCREEN_15S_CHECK.md`를 먼저 확인합니다. English mirror: Use `docs/README_FIRST_SCREEN_ACTION_ORDER.md`, `docs/README_FIRST_SCREEN_15S_CHECK.md` when checking that the first-screen action order stays audience -> first command -> next doc right after the intro.
+소개 바로 아래에 다음 문서 handoff까지 남는지 짧게 점검하려면 `docs/README_INTRO_FIRST_NEXT_DOC.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_NEXT_DOC.md` to verify that the next-doc handoff still stays directly under the intro.
+소개 바로 아래에서 대상 사용자·첫 검증 명령·다음 문서 순서가 유지되는지 짧게 점검하려면 `docs/README_INTRO_FIRST_NEXT_DOC_ORDER.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_NEXT_DOC_ORDER.md` to verify that audience, first validation command, and next doc still stay in order directly under the intro.
 첫 화면에서 소개·대상 사용자·첫 명령이 한 화면에 남는지 빠르게 다시 읽으려면 `docs/README_FIRST_SCREEN_REFOCUS_CARD.md`를 먼저 엽니다. English mirror: Open `docs/README_FIRST_SCREEN_REFOCUS_CARD.md` when you want a quick refocus card for intro, audience, and first command on the first screen.
 소개 바로 아래 증빙 묶음을 빠르게 점검하려면 `docs/README_INTRO_FIRST_PROOF_PACK.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_PROOF_PACK.md` to keep the intro, audience, first command, and next doc bundled in one proof pack.
 첫 화면 수정 뒤 한 줄 상태 점검이 필요하면 `docs/README_INTRO_FIRST_STATUS_LINE.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_STATUS_LINE.md` when you want a one-line intro-first status check after editing the README top section.
