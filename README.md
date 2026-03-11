@@ -16,6 +16,7 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 역할별 첫 화면 handoff를 짧게 점검할 때는 `docs/README_FIRST_SCREEN_ROLE_CUE.md`를 먼저 열어 탐색형/기여형/운영형 경로가 첫 화면에 남는지 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_ROLE_CUE.md` first when checking whether explorer/contributor/operator routes still stay visible on the first screen.
 첫 화면 소개를 줄여도 첫 명령과 다음 문서 묶음이 남는지 확인하려면 `docs/README_INTRO_FIRST_COMMAND_CARD.md`를 먼저 확인합니다. English mirror: Use `docs/README_INTRO_FIRST_COMMAND_CARD.md` to verify that the first command plus next-doc bundle still survives intro-first compression.
 첫 화면에서 소개·대상 사용자·첫 명령이 한 화면에 남는지 빠르게 다시 읽으려면 `docs/README_FIRST_SCREEN_REFOCUS_CARD.md`를 먼저 엽니다. English mirror: Open `docs/README_FIRST_SCREEN_REFOCUS_CARD.md` when you want a quick refocus card for intro, audience, and first command on the first screen.
+첫 화면 소개 바로 아래에서 대상 사용자 약속이 남는지 점검하려면 `docs/README_FIRST_SCREEN_AUDIENCE_PROMISE.md`를 먼저 확인합니다. English mirror: Open `docs/README_FIRST_SCREEN_AUDIENCE_PROMISE.md` to verify that the audience promise still stays directly under the opening intro.
 
 ## 추천 시작 경로 / Recommended starting paths
 - **탐색형 / Explore** — `docs/README_PROJECT_START_MAP.md` → `docs/README_PROJECT_FIRST_LOOK.md`
