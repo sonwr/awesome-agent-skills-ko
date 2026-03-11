@@ -8,6 +8,7 @@ English mirror: A curated, practical collection of agent skills and runnable tem
 - **첫 60초 약속 / First 60-second promise** — 첫 화면만 읽어도 저장소 목적·대상 사용자·빠른 시작 명령·다음 문서가 바로 보여야 합니다. English mirror: The first screen should reveal the repo purpose, audience, first command, and next doc within 60 seconds.
 - **첫 소개 문장 규칙 / First intro sentence rule** — 첫 문단은 "무엇을 모았는가"보다 "누가 바로 써볼 수 있는가"를 먼저 드러내야 합니다. English mirror: The first intro sentence should reveal who can use the repo immediately, not only what is being curated.
 - **첫 30초 행동 / First 30-second action** — 검증 명령 → 대표 예시 → 첫 기여 문서 순서가 첫 화면에서 바로 보이도록 유지
+- **첫 15초 선택지 / First 15-second chooser** — 탐색(소개) / 검증(첫 명령) / 기여(체크리스트) / 운영(체크리스트) 4갈래 진입점을 첫 화면 상단에서 바로 고를 수 있게 유지합니다. English mirror: Keep explore / validate / contribute / operate routes selectable from the first screen.
 - **대상 사용자 / Who it helps** — 한국어 기본 문서 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀
 - **제공 가치 / Immediate value** — 단순 링크 모음이 아니라(not just a link dump), 대표 카테고리·첫 검증 명령·다음 문서·첫 증빙 경로를 첫 화면에서 바로 찾게 함
 - **대표 카테고리 / Featured categories** — 온보딩, PR 증빙, 큐레이션/운영 기준
