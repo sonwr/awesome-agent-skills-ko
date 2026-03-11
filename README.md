@@ -3,7 +3,7 @@
 > 한국어 기본 에이전트 스킬 큐레이션 저장소이며, README 첫 화면에서 프로젝트 소개 → 대상 사용자 → 빠른 검증 경로가 바로 보여야 합니다.
 > 
 > Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
-한국어 기반 빌더가 **첫 화면에서 바로 시작 경로를 고를 수 있게 만든 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
+한국어 기반 빌더가 **첫 화면에서 누가 바로 시작할 수 있는지 확인하고, 검증 경로를 즉시 고를 수 있게 만든 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
 첫 화면에서 **누가 바로 시작할 수 있는지 → 지금 실행할 첫 명령 → 다음 문서** 순서가 보이도록 유지합니다. English mirror: Keep who can start, the first command, and the next doc visible in that order on the first screen.
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
