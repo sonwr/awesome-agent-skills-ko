@@ -1,19 +1,5 @@
-# README intro-first 상태 한 줄 가이드
+# README_INTRO_FIRST_STATUS_LINE
 
-README 첫 화면에서 방문자가 바로 이해해야 할 상태 한 줄을 정리한다.
+README 첫 화면을 다듬은 뒤에는 아래 한 줄을 먼저 확인합니다. English mirror: After editing the README top section, confirm the one-line intro-first status below first.
 
-## 목표
-
-- 프로젝트가 무엇인지 즉시 보이기
-- 왜 지금 읽어야 하는지 한 줄로 설명하기
-- 다음 클릭 위치를 바로 연결하기
-
-## 권장 문장 구조
-
-`이 저장소는 <대상>이 <문제/목표>를 빠르게 해결하도록 돕는 <큐레이션/가이드/모음집>입니다.`
-
-## 점검 질문
-
-- 첫 문장만 읽어도 저장소 성격이 보이는가?
-- 대상 독자가 드러나는가?
-- 바로 이어서 볼 링크가 붙어 있는가?
+- 상태 문장 / Status line — 소개 바로 아래에 대상 사용자, 첫 검증 명령, 다음 문서가 한 묶음으로 남아 있어야 합니다. English mirror: Keep the audience cue, first validation command, and next doc bundled directly under the intro.
