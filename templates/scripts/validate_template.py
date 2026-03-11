@@ -503,9 +503,10 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         errors.append(
             "README.md: the first 80 lines must keep the bilingual 'not just a link dump' value proposition so visitors see the repo is project-intro-first, not governance-first"
         )
-    if "�" in top_intro_window:
+    replacement_window = "\n".join(lines[:340])
+    if "�" in replacement_window:
         errors.append(
-            "README.md: the first 320 lines must not contain replacement characters (�) so the intro-first landing copy stays readable and trustworthy"
+            "README.md: the first 340 lines must not contain replacement characters (replacement characters / �) so the intro-first landing copy stays readable and trustworthy"
         )
     if first_visit_15s_line is None or first_visit_15s_line > 210:
         errors.append(
