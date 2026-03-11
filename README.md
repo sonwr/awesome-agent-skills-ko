@@ -9,6 +9,7 @@
 On the first screen, readers should immediately see **what this repo curates, who it helps, and which validation link to open first**.
 첫 화면에서 **누가 바로 시작할 수 있는지 → 지금 실행할 첫 명령 → 다음 문서** 순서가 보이도록 유지합니다. English mirror: Keep who can start, the first command, and the next doc visible in that order on the first screen.
 첫 실행 묶음 / First-run bundle: `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+첫 화면 1분 검증 / First-screen one-minute check: `docs/README_FIRST_SCREEN_ONE_MINUTE_CHECK.md`로 소개·대상 사용자·첫 명령·다음 문서가 한 화면에 남는지 먼저 확인합니다. English mirror: Use `docs/README_FIRST_SCREEN_ONE_MINUTE_CHECK.md` to confirm that the intro, audience, first command, and next doc still stay visible together on the first screen.
 > 목표: 품질 높은 스킬을 쉽게 찾고, 재현 가능하게 검증하고, 실무 프로젝트에 바로 적용할 수 있게 만듭니다.
 English mirror: A curated, practical collection of agent skills and runnable templates for Korean-speaking builders.
 
