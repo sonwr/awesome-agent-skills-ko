@@ -686,6 +686,8 @@ English mirror:
 - **Keep philosophy and long-term direction in dedicated docs**: use `docs/PROJECT_OVERVIEW.md` and `docs/PROJECT_DIRECTION.md` so the landing page stays focused.
 
 ## 더 읽기 / Learn more
+
+- `docs/README_PROJECT_ENTRY_NOTE.md`
 - 소개 블록 점검 / Project intro triage: `docs/README_PROJECT_INTRO_TRIAGE.md`
 
 랜딩 화면에서는 소개/가치/빠른 시작을 먼저 보여주고, 운영 철학과 장기 방향은 별도 문서로 분리합니다.
