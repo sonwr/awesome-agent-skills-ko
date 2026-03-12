@@ -14,6 +14,8 @@
 첫 화면 도착 신호 / First-screen arrival cue: 처음 10초 안에 `검증할 사람인지`와 `바로 실행할 명령인지`를 함께 판단할 수 있어야 합니다. English mirror: Within the first 10 seconds, readers should know both whether they are the right starter and which command to run immediately.
 첫 화면 intro-first 재확인 / Intro-first recheck: 소개 바로 아래에서 `누가 시작하는가 -> 첫 검증 명령 -> 다음 문서`가 끊기지 않아야 합니다. English mirror: Directly under the intro, keep `who starts -> first validation command -> next doc` visible as one uninterrupted path.
 
+첫 화면 진입 질문 / First-screen entry question: `내가 이 저장소를 지금 검증할 사람인가, 그리고 바로 어떤 문서를 열면 되는가?`가 첫 화면에서 바로 답되어야 합니다. English mirror: The first screen should answer `am I the right starter, and which doc should I open right now?` without making the reader scroll for context.
+
 첫 화면에서는 **무엇을 모은 저장소인지 → 누구에게 맞는지 → 바로 검증할 첫 링크가 무엇인지**가 한 번에 보여야 합니다.  
 On the first screen, readers should immediately see **what this repo curates, who it helps, and which validation link to open first**.
 첫 화면에서 **누가 바로 시작할 수 있는지 → 지금 실행할 첫 명령 → 다음 문서** 순서가 보이도록 유지합니다. English mirror: Keep who can start, the first command, and the next doc visible in that order on the first screen.
