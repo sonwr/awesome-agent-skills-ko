@@ -1,5 +1,7 @@
 # awesome-agent-skills-ko
 
+에이전트 스킬을 빠르게 훑고 바로 써볼 수 있게, 소개부터 먼저 읽히도록 정리하는 저장소입니다. / This repository stays intro-first so readers can scan skill value before diving into catalog depth.
+
 > 한국어 기본 에이전트 스킬 큐레이션 저장소이며, README 첫 화면에서 프로젝트 소개 → 대상 사용자 → 빠른 검증 경로가 바로 보여야 합니다.
 > 
 > Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
@@ -8,6 +10,7 @@
 **대상 사용자 / Who should start:** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 **첫 검증 명령 / First validation command:** `python3 templates/scripts/validate_template.py`
 **다음 문서 / Next doc:** `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+**첫 2단계 경로 / First 2-step path:** `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 대상 사용자 / Who should start: 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 첫 행동 / First action: `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`를 엽니다. English mirror: Run `python3 templates/scripts/validate_template.py` and then open `examples/quickstart.md`.
 첫 화면 약속 / First-screen promise: 소개를 읽는 사람도, 바로 실행하려는 사람도 README 상단에서 다음 문서를 즉시 찾을 수 있어야 합니다. English mirror: Both explorers and doers should find the next document immediately from the README top.
