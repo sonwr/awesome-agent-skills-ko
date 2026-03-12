@@ -4,6 +4,10 @@
 > 
 > Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
 한국어 기반 빌더가 **첫 화면에서 바로 시작할 사람·첫 검증 명령·다음 문서를 한 번에 찾게 만드는 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
+
+**대상 사용자 / Who should start:** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
+**첫 검증 명령 / First validation command:** `python3 templates/scripts/validate_template.py`
+**다음 문서 / Next doc:** `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
 대상 사용자 / Who should start: 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 첫 행동 / First action: `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`를 엽니다. English mirror: Run `python3 templates/scripts/validate_template.py` and then open `examples/quickstart.md`.
 첫 화면 약속 / First-screen promise: 소개를 읽는 사람도, 바로 실행하려는 사람도 README 상단에서 다음 문서를 즉시 찾을 수 있어야 합니다. English mirror: Both explorers and doers should find the next document immediately from the README top.
