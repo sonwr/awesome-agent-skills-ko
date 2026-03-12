@@ -23,6 +23,7 @@ On the first screen, readers should immediately see **what this repo curates, wh
 첫 화면에서 **누가 바로 시작할 수 있는지 → 지금 실행할 첫 명령 → 다음 문서** 순서가 보이도록 유지합니다. English mirror: Keep who can start, the first command, and the next doc visible in that order on the first screen.
 첫 화면 intro-first 신호 / Intro-first signal: 소개 아래에 **대상 사용자 → 첫 검증 명령 → 다음 문서**가 한 흐름으로 붙어 있어야 합니다. English mirror: Keep **audience -> first validation command -> next doc** connected directly under the intro.
 첫 화면 intro-first 빠른 경로 / Intro-first quick lane: 소개 아래에서 `검증형 / Validate`와 `기여형 / Contribute` 출발점이 같은 시야에 남아야 합니다. English mirror: Keep the `Validate` and `Contribute` starter cues visible in the same first-screen window right below the intro.
+첫 화면 intro-first 시작 카드 / Intro-first starter card: `docs/README_INTRO_FIRST_STARTER_CARD.md`로 소개 아래의 대상 사용자·첫 명령·다음 문서가 한 카드처럼 남는지 먼저 점검합니다. English mirror: Open `docs/README_INTRO_FIRST_STARTER_CARD.md` to verify that the audience, first command, and next doc still read like one card under the intro.
 한 줄 핸드오프 / One-line handoff: **소개 한 줄 뒤에 대상 사용자·첫 명령·다음 문서가 바로 이어진다**는 신호를 유지합니다. English mirror: Keep a one-line handoff where the audience, first command, and next doc follow the intro immediately.
 첫 실행 묶음 / First-run bundle: `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
 시작 카드 / Start card: `docs/README_PROJECT_START_HERE.md` → `docs/README_FIRST_SCREEN_DECISION_TREE.md` → `docs/README_PROJECT_STARTER_PACK.md`
