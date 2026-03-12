@@ -72,6 +72,7 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 소개 바로 아래에서 프로젝트 소개·대상 사용자·첫 검증 명령·다음 문서가 한 번에 남는지 보려면 `docs/README_INTRO_FIRST_ENTRY_BUNDLE.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_ENTRY_BUNDLE.md` to verify that the intro, audience, first validation command, and next doc still stay bundled together directly under the opening section.
 소개 바로 아래에서 한국어 intro 문장과 영어 미러가 같은 시작 경로를 가리키는지 짧게 점검하려면 `docs/README_INTRO_FIRST_BILINGUAL_START_SYNC.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_BILINGUAL_START_SYNC.md` to verify that the Korean intro and English mirror still point to the same starter path directly under the opening section.
 소개 바로 아래의 intro-first 흐름이 첫 10초 안에 읽히는지 확인하려면 `docs/README_INTRO_FIRST_TEN_SECOND_CHECK.md`를 먼저 확인하고, 첫 두 단계 이동 경로를 더 또렷하게 보이게 하려면 `docs/README_INTRO_FIRST_TWO_STEP_PATH.md`를 함께 참고합니다. English mirror: Open `docs/README_INTRO_FIRST_TEN_SECOND_CHECK.md` first to verify that the intro-first flow still reads clearly within the first 10 seconds, then use `docs/README_INTRO_FIRST_TWO_STEP_PATH.md` to keep the immediate next-step path obvious.
+소개 바로 아래의 검증형 시작 신호를 더 짧게 다시 확인하려면 `docs/README_INTRO_FIRST_VALIDATE_START_SIGNAL.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_START_SIGNAL.md` to re-check that the validate-first starter signal still stays visible directly under the intro.
 소개 바로 아래의 검증 명령·다음 문서·기여 체크리스트 3단 묶음을 한 줄로 재확인하려면 `docs/README_INTRO_FIRST_THREE_STEP_HANDOFF.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_THREE_STEP_HANDOFF.md` to keep the validation command, next doc, and contribution checklist visible as one intro-first three-step handoff.
 소개 바로 아래의 2단계 handoff를 더 짧게 재확인하려면 `docs/README_INTRO_FIRST_TWO_STEP_HANDOFF.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_TWO_STEP_HANDOFF.md` when you want a shorter two-step handoff check directly under the intro.
 소개 바로 아래에서 **누가 시작하는가 -> 첫 검증 명령 -> 다음 문서**가 한 줄 점검으로 남는지 보려면 `docs/README_INTRO_FIRST_COMMAND_HANDOFF_NOTE.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_COMMAND_HANDOFF_NOTE.md` to confirm that **who starts -> first validation command -> next doc** still survives as one landing-line handoff directly under the intro.
@@ -80,6 +81,7 @@ README는 계속 **intro-first** 원칙으로 다듬습니다: 첫 화면에서 
 소개를 더 줄인 뒤에도 소개·대상 사용자·첫 명령·다음 문서가 한 묶음으로 남는지 보려면 `docs/README_INTRO_FIRST_PATH_PROMISE.md`를 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_PATH_PROMISE.md` to keep the intro, audience, first command, and next doc bundled after a tighter first-screen pass.
 
 ## 추천 시작 경로 / Recommended starting paths
+- 첫 10분 안에 프로젝트 소개, 다음 문서, 첫 검증 명령을 찾게 하는 가이드: `docs/README_PROJECT_FIRST_10_MINUTES.md`
 - **탐색형 / Explore** — `docs/README_PROJECT_START_MAP.md` → `docs/README_PROJECT_FIRST_LOOK.md`
 - **검증형 / Validate** — `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 - **기여형 / Contribute** — `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`

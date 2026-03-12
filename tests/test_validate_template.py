@@ -286,8 +286,8 @@ class ValidateTemplateTests(unittest.TestCase):
             root = Path(tmpdir)
             readme = Path(__file__).resolve().parents[1] / "README.md"
             sample = readme.read_text(encoding="utf-8").replace(
-                "- **3단계 / Step 3**",
-                "- **3단�� / Step 3**",
+                "첫 행동 / First action",
+                "첫 행�� / First action",
                 1,
             )
             (root / "README.md").write_text(sample, encoding="utf-8")
