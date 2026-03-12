@@ -1,25 +1,18 @@
 from __future__ import annotations
 
-from pathlib import Path
 import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class ReadmeIntroFirstStarterPackLinksTests(unittest.TestCase):
-    def test_readme_keeps_intro_first_starter_pack_links(self) -> None:
-        root = Path(__file__).resolve().parents[1]
-        readme = (root / "README.md").read_text(encoding="utf-8")
+    def test_readme_mentions_intro_first_starter_pack_links_doc(self) -> None:
+        readme = (ROOT / 'README.md').read_text(encoding='utf-8')
 
-        required_docs = [
-            "docs/README_PROJECT_STARTER_PACK.md",
-            "docs/README_PROJECT_VALUE_STARTERS.md",
-            "docs/README_PROJECT_LANDING_BLUEPRINT.md",
-        ]
-
-        for doc in required_docs:
-            with self.subTest(doc=doc):
-                self.assertIn(doc, readme)
-                self.assertTrue((root / doc).exists(), f"missing doc: {doc}")
+        self.assertIn('docs/README_INTRO_FIRST_STARTER_PACK_LINKS.md', readme)
+        self.assertTrue((ROOT / 'docs' / 'README_INTRO_FIRST_STARTER_PACK_LINKS.md').exists())
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
