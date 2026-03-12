@@ -893,3 +893,5 @@ See [docs/ROADMAP.md](docs/ROADMAP.md) for phase details.
 MIT
 
 - README 소개 진입 신호 / README intro entry signal: `docs/README_PROJECT_INTRO_ENTRY_SIGNAL.md`
+
+첫 화면 intro-first 첫 행동 고정 / Intro-first first-action lock: `docs/README_INTRO_FIRST_FIRST_ACTION_LOCK.md`로 소개 아래의 첫 검증 명령과 다음 문서 handoff가 같은 묶음으로 남는지 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_FIRST_ACTION_LOCK.md` to verify that the first validation command and next-doc handoff still stay bundled directly under the intro.
