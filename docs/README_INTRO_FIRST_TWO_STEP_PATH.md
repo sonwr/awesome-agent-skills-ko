@@ -1,4 +1,9 @@
-# README intro-first two-step path
+# README intro-first 2-step path
 
-인트로를 읽은 직후에는 **무엇을 읽을지**와 **어디로 이동할지**가 바로 보여야 합니다.
-가능하면 영어 한 줄도 함께 붙여서, 한국어 독자와 영어권 방문자 모두가 첫 두 단계 이동 경로를 즉시 이해할 수 있게 유지합니다.
+소개 아래 첫 화면에서 **대상 사용자 -> 첫 검증 명령 -> 다음 문서**가 끊기지 않는지 확인합니다.
+
+권장 2단 경로 / Recommended 2-step path:
+1. `python3 templates/scripts/validate_template.py`
+2. `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+
+English mirror: Verify that the audience, first validation command, and next doc stay visible as one uninterrupted intro-first path on the first screen.
