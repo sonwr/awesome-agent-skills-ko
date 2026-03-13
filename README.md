@@ -10,6 +10,8 @@
 **대상 사용자 / Who should start:** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 **첫 검증 명령 / First validation command:** `python3 templates/scripts/validate_template.py`
 **다음 문서 / Next doc:** `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+**첫 화면 규칙 / First-screen rule:** 소개 바로 아래에서 대상 사용자 → 첫 검증 명령 → 다음 문서가 한 화면에 남아야 합니다. English mirror: Keep audience -> first validation command -> next doc visible directly under the intro.
+**첫 15초 점검 / First 15-second check:** README 첫 화면에서 `누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서`를 스크롤 없이 찾을 수 있어야 합니다. English mirror: Within 15 seconds, readers should find `who this repo is for -> first validation command -> next doc` without scrolling away from the intro block.
 **첫 2단계 경로 / First 2-step path:** `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
 대상 사용자 / Who should start: 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 첫 행동 / First action: `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`를 엽니다. English mirror: Run `python3 templates/scripts/validate_template.py` and then open `examples/quickstart.md`.
@@ -25,6 +27,7 @@
 첫 화면 intro-first 다음 문서 고정 / Intro-first next-doc lock: `docs/README_INTRO_FIRST_NEXT_DOC_LOCK.md`로 소개 아래의 다음 문서 handoff가 검증 명령 바로 뒤에 남는지 짧게 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_NEXT_DOC_LOCK.md` to re-check that the next-doc handoff still sits immediately after the validation command under the intro.
 첫 화면 intro-first 다음 단계 카드 / Intro-first validate next-step card: `docs/README_INTRO_FIRST_VALIDATE_NEXT_STEP_CARD.md`로 소개 아래의 대상 사용자·첫 검증 명령·다음 문서 3단 묶음이 같은 시야에 남는지 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_NEXT_STEP_CARD.md` to verify that the audience cue, first validation command, and next doc still stay together under the intro.
 첫 화면 intro-first 검증+다음 문서 원스크린 / Intro-first validate + next-doc one-screen: `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_ONE_SCREEN.md`로 소개 아래의 검증 명령과 다음 문서 handoff가 한 화면에 붙어 있는지 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_ONE_SCREEN.md` to confirm that the validation command and next-doc handoff still stay together in one first-screen block.
+첫 화면 intro-first 검증 상태 게이트 / Intro-first validate status gate: `docs/README_INTRO_FIRST_VALIDATE_STATUS_GATE.md`로 validator 통과 전에는 README intro-first 변경을 커밋/푸시하지 않는 규칙을 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_STATUS_GATE.md` to keep intro-first README changes behind a passing validator.
 
 첫 화면 도착 신호 / First-screen arrival cue: 처음 10초 안에 `검증할 사람인지`와 `바로 실행할 명령인지`를 함께 판단할 수 있어야 합니다. English mirror: Within the first 10 seconds, readers should know both whether they are the right starter and which command to run immediately.
 첫 화면 원스크린 약속 / First-screen one-screen promise: 소개 아래에 **대상 사용자 -> 첫 검증 명령 -> 다음 문서**가 한 화면에 남아야 합니다. English mirror: Keep **audience -> first validation command -> next doc** visible in one first-screen block directly under the intro.
@@ -41,6 +44,7 @@ On the first screen, readers should immediately see **what this repo curates, wh
 첫 화면 intro-first 신호 / Intro-first signal: 소개 아래에 **대상 사용자 → 첫 검증 명령 → 다음 문서**가 한 흐름으로 붙어 있어야 합니다. English mirror: Keep **audience -> first validation command -> next doc** connected directly under the intro.
 첫 화면 intro-first 빠른 경로 / Intro-first quick lane: 소개 아래에서 `검증형 / Validate`와 `기여형 / Contribute` 출발점이 같은 시야에 남아야 합니다. English mirror: Keep the `Validate` and `Contribute` starter cues visible in the same first-screen window right below the intro.
 첫 화면 intro-first 시작 카드 / Intro-first starter card: `docs/README_INTRO_FIRST_STARTER_CARD.md`로 소개 아래의 대상 사용자·첫 명령·다음 문서가 한 카드처럼 남는지 먼저 점검합니다. English mirror: Open `docs/README_INTRO_FIRST_STARTER_CARD.md` to verify that the audience, first command, and next doc still read like one card under the intro.
+첫 화면 행동 게이트 / Intro-first action gate: `docs/README_INTRO_FIRST_ACTION_GATE.md`로 소개 아래의 대상 사용자 → 첫 검증 명령 → 다음 문서 순서가 한 번에 읽히는지 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_ACTION_GATE.md` to verify that audience -> first validation command -> next doc still reads in one glance directly under the intro.
 첫 화면 2단 경로 / Intro-first 2-step path: `docs/README_INTRO_FIRST_TWO_STEP_PATH.md`로 첫 검증 명령 뒤 바로 이어질 다음 문서를 한 번에 점검합니다. English mirror: Open `docs/README_INTRO_FIRST_TWO_STEP_PATH.md` to confirm the next doc still follows the first validation command in one intro-first handoff.
 한 줄 핸드오프 / One-line handoff: **소개 한 줄 뒤에 대상 사용자·첫 명령·다음 문서가 바로 이어진다**는 신호를 유지합니다. English mirror: Keep a one-line handoff where the audience, first command, and next doc follow the intro immediately.
 첫 실행 묶음 / First-run bundle: `python3 templates/scripts/validate_template.py` → `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
@@ -378,6 +382,7 @@ English mirror:
 
 - **탐색 카드 / Discover** — 프로젝트 소개, 대표 카테고리, 빠른 시작까지 한 화면에서 연결해 "무엇을 왜 써야 하는지"를 먼저 이해하게 합니다.
 - **검증 카드 / Validate** — 첫 명령(`python3 templates/scripts/validate_template.py`)과 다음 문서(`examples/quickstart.md`)를 바로 보여줘 실행 진입 비용을 낮춥니다.
+- **검증 실패 시 보류 / Hold on validator failure** — validator가 실패하면 intro-first README 변경은 커밋·푸시하지 않고 상태만 짧게 보고합니다. English mirror: If the validator fails, keep intro-first README edits uncommitted/unpushed and report status only.
 - **기여 카드 / Contribute** — `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`와 `examples/pr-evidence-mini-walkthrough.md`를 함께 노출해 첫 PR 증빙 형식을 즉시 복사하게 합니다.
 
 English mirror:
