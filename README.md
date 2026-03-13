@@ -36,6 +36,7 @@
 첫 화면 intro-first 검증 후 다음 문서 상태 / Intro-first validate-then-next-doc status: `docs/README_INTRO_FIRST_VALIDATE_THEN_NEXT_DOC_STATUS.md`로 소개 아래의 대상 사용자·첫 검증 명령·다음 문서가 validator 이후에도 같은 화면에 남는지 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_THEN_NEXT_DOC_STATUS.md` to confirm that the audience cue, first validation command, and next doc still stay together after validation.
 
 첫 화면 intro-first 검증 화면 유지 / Intro-first validate keep-screen: `docs/README_INTRO_FIRST_VALIDATE_KEEP_SCREEN.md`로 소개 아래의 대상 사용자·첫 검증 명령·다음 문서가 같은 첫 화면에 남는지 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_KEEP_SCREEN.md` to verify that the audience cue, first validation command, and next doc still stay in the same first-screen view under the intro.
+첫 화면 intro-first 2단 시작 신호 / Intro-first validate two-step signal: `docs/README_INTRO_FIRST_VALIDATE_TWO_STEP_SIGNAL.md`로 소개 아래의 첫 검증 명령과 다음 문서 2단 handoff가 바로 이어지는지 짧게 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_TWO_STEP_SIGNAL.md` to verify that the first validation command and next doc still read as one immediate two-step handoff under the intro.
 
 첫 화면 도착 신호 / First-screen arrival cue: 처음 10초 안에 `검증할 사람인지`와 `바로 실행할 명령인지`를 함께 판단할 수 있어야 합니다. English mirror: Within the first 10 seconds, readers should know both whether they are the right starter and which command to run immediately.
 첫 화면 원스크린 약속 / First-screen one-screen promise: 소개 아래에 **대상 사용자 -> 첫 검증 명령 -> 다음 문서**가 한 화면에 남아야 합니다. English mirror: Keep **audience -> first validation command -> next doc** visible in one first-screen block directly under the intro.
@@ -922,3 +923,5 @@ MIT
 첫 화면 intro-first 첫 행동+다음 문서 고정 / Intro-first first action + next doc lock: `docs/README_INTRO_FIRST_FIRST_ACTION_NEXT_DOC_LOCK.md`로 소개 아래의 첫 검증 명령과 다음 문서 handoff가 같은 시야에 남는지 짧게 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_FIRST_ACTION_NEXT_DOC_LOCK.md` to verify that the first validation command and next-doc handoff still stay visible together directly under the intro.
 
 첫 화면 intro-first 시작 카드 / Intro-first start signal card: `docs/README_INTRO_FIRST_START_SIGNAL_CARD.md`를 먼저 열어 소개 아래의 대상 사용자·첫 검증 명령·다음 문서 묶음이 한 카드처럼 남는지 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_START_SIGNAL_CARD.md` to verify that the audience cue, first validation command, and next doc still stay bundled like one starter card under the intro.
+
+- `docs/README_INTRO_FIRST_VALUE_PATHS.md` — README 상단에서 소개 → 대상 사용자 → 가치 → 빠른 시작 흐름을 짧게 점검합니다.
