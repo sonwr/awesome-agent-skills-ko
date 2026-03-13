@@ -1,8 +1,5 @@
-# README 소개 한 줄 handoff 카드 / README intro-first one-line handoff card
+# README_INTRO_FIRST_ONE_LINE_HANDOFF
 
-README 소개 문장을 한 줄까지 줄여도 아래 두 요소는 바로 이어서 남겨 둡니다.
+소개 아래 첫 화면에서 **대상 사용자 → 첫 검증 명령 → 다음 문서**가 한 줄 handoff처럼 바로 읽히는지 다시 확인합니다.
 
-- 첫 검증 명령: `python3 templates/scripts/validate_template.py`
-- 다음 문서: `examples/quickstart.md` 또는 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
-
-English mirror: Even after trimming the opening pitch to one line, keep the first validation command and the next doc directly underneath so the README still feels intro-first instead of teaser-first.
+English mirror: Re-check that **audience -> first validation command -> next doc** still reads like a one-line handoff directly under the intro.
