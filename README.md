@@ -6,6 +6,7 @@
 > 
 > Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
 한국어 기반 빌더가 **첫 화면에서 바로 시작할 사람·첫 검증 명령·다음 문서를 한 번에 찾게 만드는 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
+첫 화면 intro-first 기준은 **소개 1문단 안에서 누구를 위한 저장소인지와 검증 후 바로 열 다음 문서가 동시에 보여야 한다**입니다. English mirror: The first-screen intro-first bar is simple: the opening block should reveal both who the repo is for and which document to open right after validation.
 
 **대상 사용자 / Who should start:** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 **첫 검증 명령 / First validation command:** `python3 templates/scripts/validate_template.py`
@@ -912,3 +913,5 @@ MIT
 
 첫 화면 intro-first 첫 행동 고정 / Intro-first first-action lock: `docs/README_INTRO_FIRST_FIRST_ACTION_LOCK.md`로 소개 아래의 첫 검증 명령과 다음 문서 handoff가 같은 묶음으로 남는지 먼저 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_FIRST_ACTION_LOCK.md` to verify that the first validation command and next-doc handoff still stay bundled directly under the intro.
 첫 화면 intro-first 첫 행동+다음 문서 고정 / Intro-first first action + next doc lock: `docs/README_INTRO_FIRST_FIRST_ACTION_NEXT_DOC_LOCK.md`로 소개 아래의 첫 검증 명령과 다음 문서 handoff가 같은 시야에 남는지 짧게 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_FIRST_ACTION_NEXT_DOC_LOCK.md` to verify that the first validation command and next-doc handoff still stay visible together directly under the intro.
+
+첫 화면 intro-first 시작 카드 / Intro-first start signal card: `docs/README_INTRO_FIRST_START_SIGNAL_CARD.md`를 먼저 열어 소개 아래의 대상 사용자·첫 검증 명령·다음 문서 묶음이 한 카드처럼 남는지 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_START_SIGNAL_CARD.md` to verify that the audience cue, first validation command, and next doc still stay bundled like one starter card under the intro.
