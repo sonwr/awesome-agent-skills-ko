@@ -7,10 +7,14 @@
 > Korean-first agent-skill curation repo where the README first screen should expose the project intro, audience, and first validation path immediately.
 한국어 기반 빌더가 **첫 화면에서 바로 시작할 사람·첫 검증 명령·다음 문서를 한 번에 찾게 만드는 에이전트 스킬 큐레이션 + 실행 가능한 템플릿 모음**입니다.
 첫 화면 intro-first 기준은 **소개 1문단 안에서 누구를 위한 저장소인지와 검증 후 바로 열 다음 문서가 동시에 보여야 한다**입니다. English mirror: The first-screen intro-first bar is simple: the opening block should reveal both who the repo is for and which document to open right after validation.
+첫 화면 intro-first 즉답 / Intro-first instant answer: `누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서`가 소개 아래 한 번에 보여야 합니다. English mirror: The README should answer `who this repo helps -> first validation command -> next doc` in one glance under the intro.
 첫 화면 빠른 약속 / First-screen quick promise: 소개 아래에서 **누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서**가 한 번에 보여야 합니다. English mirror: Directly under the intro, keep **who this repo helps -> first validation command -> next doc** visible in one scan.
 
+**intro-first 즉답 카드 / Intro-first instant-answer card:** `docs/README_INTRO_FIRST_INSTANT_ANSWER.md`
+**intro-first 한눈 카드 / Intro-first one-glance card:** `docs/README_INTRO_FIRST_ONE_GLANCE_NOTE.md`
 **대상 사용자 / Who should start:** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 **첫 화면 스타트 패킷 / First-screen start packet:** `docs/README_INTRO_FIRST_START_PACKET.md`
+**원스크린 시작 신호 / One-screen start signal:** `docs/README_INTRO_FIRST_ONE_SCREEN_START_SIGNAL.md`
 **첫 화면 한 줄 상태 / First-screen one-line status:** `누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서`를 소개 바로 아래에서 한 번에 찾을 수 있어야 합니다. English mirror: Keep `who this repo helps -> first validation command -> next doc` visible directly under the intro.
 **첫 검증 명령 / First validation command:** `python3 templates/scripts/validate_template.py`
 **검증 후 다음 상태 카드 / Post-validation next-doc status card:** `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_STATUS.md`
@@ -950,3 +954,5 @@ MIT
 첫 화면 intro-first 시작 카드 / Intro-first start signal card: `docs/README_INTRO_FIRST_START_SIGNAL_CARD.md`를 먼저 열어 소개 아래의 대상 사용자·첫 검증 명령·다음 문서 묶음이 한 카드처럼 남는지 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_START_SIGNAL_CARD.md` to verify that the audience cue, first validation command, and next doc still stay bundled like one starter card under the intro.
 
 - `docs/README_INTRO_FIRST_VALUE_PATHS.md` — README 상단에서 소개 → 대상 사용자 → 가치 → 빠른 시작 흐름을 짧게 점검합니다.
+
+첫 화면 intro-first 미세 점검 / Intro-first microcheck: 소개 아래에서 **대상 사용자 -> 첫 검증 명령 -> 다음 문서**가 한 번에 읽히는지 계속 확인합니다. English mirror: Keep **audience -> first validation command -> next doc** readable in one glance directly under the intro.
