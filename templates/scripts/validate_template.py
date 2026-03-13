@@ -61,6 +61,7 @@ REQUIRED_FILES = [
     "docs/README_INFORMATION_ARCHITECTURE.md",
     "docs/README_FIRST_SCREEN_CHECKLIST.md",
     "docs/README_FIRST_SCREEN_SCRIPT.md",
+    "docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_TRIPLE_LOCK.md",
     "docs/README_FIRST_SCREEN_WIREFRAME.md",
     "docs/README_USER_JOURNEYS.md",
     "docs/README_FAST_PATHS.md",
@@ -190,6 +191,10 @@ BILINGUAL_SECTION_MARKERS = {
         "## 유지 규칙 / Maintenance rule",
         "Project intro",
         "Quick start",
+    ],
+    "docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_TRIPLE_LOCK.md": [
+        "README 소개-우선 검증·다음 문서 3단 고정 / README intro-first validate-next-doc triple lock",
+        "## English mirror",
     ],
     "docs/README_PROJECT_ONE_MINUTE_VALUE.md": [
         "README 프로젝트 1분 가치 카드 / README project one-minute value card",
@@ -913,6 +918,7 @@ def _check_quickstart_validation_command(root: Path) -> list[str]:
         "docs/README_FAST_PATHS.md",
         "docs/README_FIRST_SCREEN_CHECKLIST.md",
         "docs/README_FIRST_SCREEN_SCRIPT.md",
+    "docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_TRIPLE_LOCK.md",
         "docs/README_INFORMATION_ARCHITECTURE.md",
         "docs/CURATION_POLICY.md",
     ]
