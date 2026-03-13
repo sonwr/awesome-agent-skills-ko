@@ -1,0 +1,1 @@
+소개 바로 아래에서 `python3 templates/scripts/validate_template.py -> examples/quickstart.md` 2단 handoff가 같은 첫 화면 묶음으로 남아야 합니다. English mirror: Keep `python3 templates/scripts/validate_template.py -> examples/quickstart.md` visible as one first-screen two-step handoff directly under the intro.
