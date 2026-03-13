@@ -9,10 +9,12 @@
 
 **대상 사용자 / Who should start:** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 **첫 검증 명령 / First validation command:** `python3 templates/scripts/validate_template.py`
+**검증 후 다음 상태 카드 / Post-validation next-doc status card:** `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_STATUS.md`
 **다음 문서 / Next doc:** `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
 **첫 화면 규칙 / First-screen rule:** 소개 바로 아래에서 대상 사용자 → 첫 검증 명령 → 다음 문서가 한 화면에 남아야 합니다. English mirror: Keep audience -> first validation command -> next doc visible directly under the intro.
 **첫 15초 점검 / First 15-second check:** README 첫 화면에서 `누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서`를 스크롤 없이 찾을 수 있어야 합니다. English mirror: Within 15 seconds, readers should find `who this repo is for -> first validation command -> next doc` without scrolling away from the intro block.
 **첫 2단계 경로 / First 2-step path:** `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+**첫 화면 다음 단계 고정 / First-screen next-step lock:** 검증 명령 바로 뒤에 `examples/quickstart.md`와 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`가 이어져야 합니다. English mirror: Keep `examples/quickstart.md` and `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` immediately after the validation command on the first screen.
 대상 사용자 / Who should start: 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 첫 행동 / First action: `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`를 엽니다. English mirror: Run `python3 templates/scripts/validate_template.py` and then open `examples/quickstart.md`.
 첫 화면 약속 / First-screen promise: 소개를 읽는 사람도, 바로 실행하려는 사람도 README 상단에서 다음 문서를 즉시 찾을 수 있어야 합니다. English mirror: Both explorers and doers should find the next document immediately from the README top.
