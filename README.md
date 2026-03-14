@@ -20,6 +20,7 @@
 **검증 후 다음 상태 카드 / Post-validation next-doc status card:** `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_STATUS.md`
 **phase-one 다음 문서 메모 / Phase-one next-doc note:** `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_PHASE_ONE_NOTE.md`
 **다음 문서 / Next doc:** `examples/quickstart.md` → `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+**한 화면 2단계 묶음 / One-screen two-step bundle:** `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`가 소개 아래 한 화면에 붙어 있어야 합니다. English mirror: Keep `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md` visible together under the intro.
 **첫 실행 10초 메모 / First 10-second action note:** `python3 templates/scripts/validate_template.py`를 실행하고 바로 `examples/quickstart.md`를 열 수 있어야 합니다. English mirror: Run `python3 templates/scripts/validate_template.py` and be able to open `examples/quickstart.md` immediately.
 **첫 화면 규칙 / First-screen rule:** 소개 바로 아래에서 대상 사용자 → 첫 검증 명령 → 다음 문서가 한 화면에 남아야 합니다. English mirror: Keep audience -> first validation command -> next doc visible directly under the intro.
 **첫 화면 검증 후 다음 문서 순서 메모 / First-screen post-validation next-doc order note:** `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_ORDER_ONE_SCREEN.md`로 첫 화면에서 검증 직후 열 문서 순서가 그대로 남는지 확인합니다. English mirror: Use `docs/README_INTRO_FIRST_VALIDATE_NEXT_DOC_ORDER_ONE_SCREEN.md` to verify that the post-validation next-doc order still stays visible on the first screen.
@@ -960,3 +961,5 @@ MIT
 - `docs/README_INTRO_FIRST_VALUE_PATHS.md` — README 상단에서 소개 → 대상 사용자 → 가치 → 빠른 시작 흐름을 짧게 점검합니다.
 
 첫 화면 intro-first 미세 점검 / Intro-first microcheck: 소개 아래에서 **대상 사용자 -> 첫 검증 명령 -> 다음 문서**가 한 번에 읽히는지 계속 확인합니다. English mirror: Keep **audience -> first validation command -> next doc** readable in one glance directly under the intro.
+
+첫 화면 intro-first 검증 화면 유지 / Intro-first validate keep-screen: `docs/README_INTRO_FIRST_VALIDATE_KEEP_SCREEN.md`로 소개 아래의 대상 사용자·첫 검증 명령·다음 문서가 같은 첫 화면에 남는지 다시 확인합니다. English mirror: Open `docs/README_INTRO_FIRST_VALIDATE_KEEP_SCREEN.md` to verify that the audience cue, first validation command, and next doc still stay in the same first-screen view under the intro.
