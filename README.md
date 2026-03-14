@@ -9,9 +9,12 @@
 첫 화면 intro-first 기준은 **소개 1문단 안에서 누구를 위한 저장소인지와 검증 후 바로 열 다음 문서가 동시에 보여야 한다**입니다. English mirror: The first-screen intro-first bar is simple: the opening block should reveal both who the repo is for and which document to open right after validation.
 첫 화면 intro-first 즉답 / Intro-first instant answer: `누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서`가 소개 아래 한 번에 보여야 합니다. English mirror: The README should answer `who this repo helps -> first validation command -> next doc` in one glance under the intro.
 첫 화면 빠른 약속 / First-screen quick promise: 소개 아래에서 **누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서**가 한 번에 보여야 합니다. English mirror: Directly under the intro, keep **who this repo helps -> first validation command -> next doc** visible in one scan.
+첫 화면 3줄 요약 / First-screen 3-line summary: **한국어 기본 스킬 큐레이션 -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`** 순서를 소개 아래에 바로 고정합니다. English mirror: Pin **Korean-first skill curation -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`** directly under the intro.
+첫 화면 3줄 즉답 / First-screen 3-line instant answer: **누구를 위한 저장소인지 -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`**를 소개 아래 첫 호흡으로 읽히게 유지합니다. English mirror: Keep **who this repo helps -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`** readable in the first breath under the intro.
 
 **intro-first 즉답 카드 / Intro-first instant-answer card:** `docs/README_INTRO_FIRST_INSTANT_ANSWER.md`
 **intro-first 한눈 카드 / Intro-first one-glance card:** `docs/README_INTRO_FIRST_ONE_GLANCE_NOTE.md`
+**첫 화면 3줄 시작 카드 / First-screen 3-line starter card:** `docs/README_FIRST_SCREEN_THREE_LINE_STARTER_CARD.md`
 **대상 사용자 / Who should start:** 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 **첫 화면 스타트 패킷 / First-screen start packet:** `docs/README_INTRO_FIRST_START_PACKET.md`
 **원스크린 시작 신호 / One-screen start signal:** `docs/README_INTRO_FIRST_ONE_SCREEN_START_SIGNAL.md`
