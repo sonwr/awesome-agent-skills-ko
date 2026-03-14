@@ -26,6 +26,7 @@
 **첫 화면 intro-first 압축 상태 / Intro-first compact status:** 소개 문단을 줄여도 `대상 사용자 -> 첫 검증 명령 -> 다음 문서` 순서가 바로 이어져야 합니다. English mirror: Even after compressing the intro copy, keep `audience -> first validation command -> next doc` visible as the immediate landing sequence.
 **첫 15초 점검 / First 15-second check:** README 첫 화면에서 `누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서`를 스크롤 없이 찾을 수 있어야 합니다. English mirror: Within 15 seconds, readers should find `who this repo is for -> first validation command -> next doc` without scrolling away from the intro block.
 **첫 2단계 경로 / First 2-step path:** `python3 templates/scripts/validate_template.py` → `examples/quickstart.md`
+**첫 화면 즉시 이동 / First-screen immediate handoff:** 검증 뒤 바로 `examples/quickstart.md`와 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`로 이어져야 합니다. English mirror: Right after validation, readers should move straight into `examples/quickstart.md` and `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`.
 **첫 화면 다음 단계 고정 / First-screen next-step lock:** 검증 명령 바로 뒤에 `examples/quickstart.md`와 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`가 이어져야 합니다. English mirror: Keep `examples/quickstart.md` and `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` immediately after the validation command on the first screen.
 대상 사용자 / Who should start: 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀입니다. English mirror: Individuals and teams who want a fast Korean-first path for discovery, validation, and contribution.
 첫 행동 / First action: `python3 templates/scripts/validate_template.py` 실행 후 `examples/quickstart.md`를 엽니다. English mirror: Run `python3 templates/scripts/validate_template.py` and then open `examples/quickstart.md`.
@@ -75,6 +76,7 @@
 
 첫 화면에서는 **무엇을 모은 저장소인지 → 누구에게 맞는지 → 바로 검증할 첫 링크가 무엇인지**가 한 번에 보여야 합니다.  
 On the first screen, readers should immediately see **what this repo curates, who it helps, and which validation link to open first**.
+첫 화면 재확인 / First-screen recheck: 소개 아래에서 `대상 사용자 -> 첫 검증 명령 -> 다음 문서`가 한 블록으로 남고, 막히면 validator 통과 전 커밋/푸시하지 않습니다. English mirror: Keep `audience -> first validation command -> next doc` as one landing block under the intro, and do not commit/push README intro-first changes before the validator passes.
 첫 화면에서 **누가 바로 시작할 수 있는지 → 지금 실행할 첫 명령 → 다음 문서** 순서가 보이도록 유지합니다. English mirror: Keep who can start, the first command, and the next doc visible in that order on the first screen.
 첫 화면 intro-first 신호 / Intro-first signal: 소개 아래에 **대상 사용자 → 첫 검증 명령 → 다음 문서**가 한 흐름으로 붙어 있어야 합니다. English mirror: Keep **audience -> first validation command -> next doc** connected directly under the intro.
 첫 화면 intro-first 빠른 경로 / Intro-first quick lane: 소개 아래에서 `검증형 / Validate`와 `기여형 / Contribute` 출발점이 같은 시야에 남아야 합니다. English mirror: Keep the `Validate` and `Contribute` starter cues visible in the same first-screen window right below the intro.
