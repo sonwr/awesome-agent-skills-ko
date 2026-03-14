@@ -11,6 +11,17 @@
 첫 화면 빠른 약속 / First-screen quick promise: 소개 아래에서 **누구를 위한 저장소인지 -> 첫 검증 명령 -> 다음 문서**가 한 번에 보여야 합니다. English mirror: Directly under the intro, keep **who this repo helps -> first validation command -> next doc** visible in one scan.
 첫 화면 3줄 요약 / First-screen 3-line summary: **한국어 기본 스킬 큐레이션 -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`** 순서를 소개 아래에 바로 고정합니다. English mirror: Pin **Korean-first skill curation -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`** directly under the intro.
 첫 화면 3줄 즉답 / First-screen 3-line instant answer: **누구를 위한 저장소인지 -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`**를 소개 아래 첫 호흡으로 읽히게 유지합니다. English mirror: Keep **who this repo helps -> `python3 templates/scripts/validate_template.py` -> `examples/quickstart.md`** readable in the first breath under the intro.
+첫 화면 검증 후 다음 문서 잠금 / Post-validation next-doc lock: `python3 templates/scripts/validate_template.py` 바로 뒤에 `examples/quickstart.md`와 `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`가 같은 시야에 남아야 합니다. English mirror: Keep `examples/quickstart.md` and `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md` visible immediately after `python3 templates/scripts/validate_template.py` on the first screen.
+
+## Project overview / 프로젝트 개요
+에이전트 스킬 큐레이션 + 실행 가능한 템플릿 저장소이며, 첫 화면에서 intro -> audience -> value -> quickstart가 바로 보여야 합니다. / This is a Korean-first agent-skill curation + runnable-template repo, and the first screen should expose intro -> audience -> value -> quickstart immediately.
+
+## First-screen in 3 lines / 첫 화면 3줄 시작
+- 대상 사용자 / Audience: 한국어 기본 흐름으로 탐색·검증·기여를 빠르게 시작하려는 개인/팀 / Individuals and teams who want a fast Korean-first start.
+- 첫 검증 명령 / First validation command: `python3 templates/scripts/validate_template.py`
+- 다음 문서 / Next doc: `examples/quickstart.md` -> `docs/BILINGUAL_CONTRIBUTION_CHECKLIST.md`
+
+빠른 점프 / Quick jump: `docs/README_PROJECT_START_HERE.md` · `docs/README_PROJECT_ONE_SCREEN_START.md` · `docs/README_FIRST_VISIT_PACK.md` · `docs/README_FIRST_SCREEN_QUICK_PROOF.md` · `docs/README_FIRST_CLICK_GUIDE.md` · `docs/README_FIRST_MINUTE_OUTCOMES.md` · `docs/README_PROJECT_VALUE_QUICKCHECK.md` · `docs/README_PROJECT_VALUE_LADDER.md` · `docs/README_PROJECT_INTRO_SCORECARD.md` · `docs/README_PROJECT_STARTER_PACK.md` · `docs/README_PROJECT_FIRST_LOOK.md` · `docs/README_PROJECT_FAST_INTRO.md` · `docs/README_PROJECT_ENTRY_PROMISE.md`
 
 **intro-first 즉답 카드 / Intro-first instant-answer card:** `docs/README_INTRO_FIRST_INSTANT_ANSWER.md`
 **intro-first 한눈 카드 / Intro-first one-glance card:** `docs/README_INTRO_FIRST_ONE_GLANCE_NOTE.md`
