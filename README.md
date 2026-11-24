@@ -346,6 +346,11 @@ English mirror:
 - **Operator path** — audit `docs/README_FIRST_SCREEN_CHECKLIST.md`, continue with `docs/README_FAST_PATHS.md`, then confirm the curation guardrails in `docs/CURATION_POLICY.md`.
 
 ## 빠른 시작 / Quick start
+
+## 공공 데이터 API (Apify)
+
+- [publicrecords-skills](https://github.com/GeminiGeorge22/publicrecords-skills) - Agent Skills + MCP plugin (Claude Code, Codex, Copilot, Cursor, Gemini CLI, Kiro) for 18 public-data Apify Actors: SAM.gov, Grants.gov, USAspending, EU/UK tenders, council meetings, ATS jobs, company socials, Google Ads, Etsy, sports odds, Spotify.
+
 ### 처음 5분 기여 흐름 / First 5-minute contribution flow
 
 - 1분: README 상단의 프로젝트 소개/대상 사용자/제공 가치를 훑습니다.
